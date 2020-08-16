@@ -1,0 +1,39 @@
+{
+  "name": "GULP",
+  "version": "1.0.0",
+  "description": "Gulp establishment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "gulp": "gulp"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://rbart010@bitbucket.ssi.govt.nz/scm/wdt/gulp.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "private": true,
+  "devDependencies": {
+    "autoprefixer": "^9.7.6",
+    "browser-sync": "^2.26.12",
+    "cssnano": "^4.1.10",
+    "gulp": "^4.0.2",
+    "gulp-cheerio": "^1.0.0",
+    "gulp-cli": "^2.2.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-inject": "^5.0.5",
+    "gulp-postcss": "^8.0.0",
+    "gulp-replace": "^1.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-svgmin": "^2.2.0",
+    "gulp-uglify": "^3.0.2",
+    "sass-mq": "^5.0.1"
+  },
+  "dependencies": {
+    "bourbon": "^7.0.0"
+  }
+}
