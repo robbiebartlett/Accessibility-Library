@@ -25,33 +25,33 @@
 
     <!-- Favicons
   ================================================== --> 
-  <link rel="shortcut icon" href="images/icons/msd/favicon.ico">  
+  <link rel="shortcut icon" href="dist/images/msd/favicon.ico">  
         
   <!--Apple IOS icons-->    
-  <link rel="apple-touch-icon" sizes="57x57" href="images/icons/msd/touch-icon-57.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="images/icons/msd/touch-icon-76.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="images/icons/msd/touch-icon-120.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="images/icons/msd/touch-icon-152.png">
+  <link rel="apple-touch-icon" sizes="57x57" href="dist/images/msd/touch-icon-57.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="dist/images/msd/touch-icon-76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="dist/images/msd/touch-icon-120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="dist/images/msd/touch-icon-152.png">
         
   <!--Windows icons-->     
-  <meta name="msapplication-square70x70logo" content="images/icons/msd/tile-icon-small.png">
-  <meta name="msapplication-square150x150logo" content="images/icons/msd/tile-icon-medium.png">
-  <meta name="msapplication-square310x310logo" content="images/icons/msd/tile-icon-large.png">
-  <meta name="msapplication-wide310x150logo" content="images/icons/msd/tile-icon-wide.png">
+  <meta name="msapplication-square70x70logo" content="dist/images/msd/tile-icon-small.png">
+  <meta name="msapplication-square150x150logo" content="dist/images/msd/tile-icon-medium.png">
+  <meta name="msapplication-square310x310logo" content="dist/images/msd/tile-icon-large.png">
+  <meta name="msapplication-wide310x150logo" content="dist/images/msd/tile-icon-wide.png">
   <meta name="msapplication-tilecolor" content="#121F6B">   
 
   <!-- CSS
   ================================================== -->
-  <link rel="stylesheet" href="dist/css/main.css?cb=1607309382838">
+  <link rel="stylesheet" href="dist/css/main.css?cb=1607310535986">
 
 </head>
 
-<body id="top">
+<body>
 
-  <div class="msd-pane"> 
+  <div id="skiplinks" class="msd-pane"> 
     <nav aria-label="Skip Link">
-      <a class="skip-link" href="/#main-content">Skip to the main content</a>
-      <a class="skip-link skip-link__non-mobile" href="/#page-nav">Skip to the menu for this section</a>
+      <a class="skip-link" href="#main-content">Skip to the main content</a>
+      <a class="skip-link skip-link__desktop" href="#page-nav">Skip to the menu for this section</a>
     </nav>
   
 
@@ -485,6 +485,24 @@
       <div class="msd-container">
         <div class="msd-grid">
 
+          <!-- Breadcrumbs -->
+          <div class="msd-pane__breadcrumb">
+            
+            <nav class="msd-breadcrumb">
+              <p id="msd-breadcrumb__label" class="sr-only">You are here:</p>
+              <ol class="msd-breadcrumb__section" aria-labelledby="msd-breadcrumb__label">
+                <li class="msd-breadcrumb__list-item">
+                  <a href="http://localhost:3000/index.html" class="msd-breadcrumb__link">
+                    Home
+                  </a>
+                </li> 
+                <li class="msd-breadcrumb__list-item">
+                  <span class="msd-breadcrumb__link--active">Visual design</span>
+                </li>
+              </ol>
+            </nav>
+          </div>
+
           <!-- Main content -->
           <div class="msd-grid__cell msd-grid--two-thirds msd-order-2">
             
@@ -496,7 +514,6 @@
               <p>Someone who is colour-blind should still be able to differentiate between distinct elements. The fonts, too, should be easy to read.</p>
               <p>It also helps others who find themselves with temporary or situational limitations.</p>
               <p>A clean and clear visual presentation helps make sense of information and functionality.</p>
-
 
               <div class="msd-callout msd-callout__note">
                 
@@ -529,7 +546,7 @@
           </div>
 
           <!-- Secondary navigation -->
-          <div class="msd-grid__cell msd-grid--one-third msd-order-1 sticky">
+          <div class="msd-grid__cell msd-grid--one-third sticky">
     
             <div class="msd-pane__sidenav">
               <nav id="msd-sidenav" class="msd-sidenav" aria-label="Secondary">
@@ -606,7 +623,7 @@
             <div class="msd-utilities__buttons no-print">
 
               <!--Back to top-->
-              <a tabindex="0" href="javascript:void(0)" class="back-to-top">
+              <a id="BackToTop" tabindex="0" href="javascript:void(0)" class="back-to-top">
                 <span class="sr-only">Return to the top of the page</span>
                 <span class="msd-utilities__btn--label" aria-hidden="true">Back to top</span>
               </a>
@@ -715,6 +732,6 @@
   <!-- JavaScript
   ================================================== -->
   <script src="dist/js/vendor/jquery-3.5.1.min.js"></script>
-  <script src="dist/js/scripts.js?cb=1607309382838"></script>
+  <script src="dist/js/scripts.js?cb=1607310535986"></script>
 </body>
 </html>
