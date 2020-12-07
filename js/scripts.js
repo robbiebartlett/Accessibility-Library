@@ -15,11 +15,13 @@ function backToTop() {
         featureDetected = false;
         
         //Edit height value here
-        if (scrTop >= 2400) {
+        if (scrTop >= 2160) {
             $(".back-to-top").addClass("active");
         } else {
             $(".back-to-top").removeClass("active");
-        }       
+        }
+
+         
 
     }
 
@@ -38,7 +40,7 @@ function backToTop() {
 
     $(".back-to-top").click(function () {
 	    $('html, body').animate({scrollTop: 0
-	    }, 50);
+        }, 50).parent().focus();
 	    return false;
     });
 
