@@ -1,0 +1,37 @@
+/* ========================================================================
+   #Masthead
+   ======================================================================== */
+
+/**
+ *  
+ * Set the masthead/banner path, extension and responsive images for desktop, 
+ * tablet and mobile. Set images accordingly ./components/masthead.scss
+ *
+ *
+ */
+
+
+//Set image path
+ $imgPath   : "../images/masthead/";
+
+//set image and file format extension
+@mixin background-image($image, $extension) {
+  background-image: url('#{$imgPath}/#{$image}-sm.#{$extension}');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+
+    @include mq($from: tablet ) {
+      background-image: url('#{$imgPath}/#{$image}-md.#{$extension}');
+    }  
+    
+    @include mq($from: desktop ) {
+      background-image: url('#{$imgPath}/#{$image}-lg.#{$extension}');
+    }
+    
+  }
+
+
+
+
+

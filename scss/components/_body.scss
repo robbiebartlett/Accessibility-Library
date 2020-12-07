@@ -1,0 +1,53 @@
+/* ========================================================================
+  #Body
+  ======================================================================== */
+
+/**
+ * Standard body and main content settings as per project
+ * 
+ */
+
+body {
+  background-color: color(govnz-white);
+  color: color(govnz-slate);
+  @include font(primary, medium);
+  padding: 0;
+}
+
+// page wrapper
+.msd-pane {
+  overflow-x: hidden;
+}
+
+// <main> container
+.main-container {
+  padding-bottom: 2rem;
+  min-height: 35vh;
+}
+
+// <main> content
+.main-container__content {
+  margin-top: $sm;
+
+  @include mq($from: tablet ) {
+    margin-top: $md;
+  }   
+  
+  @include mq($from: desktop ) {
+    margin-top: $lg;
+  } 
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+  

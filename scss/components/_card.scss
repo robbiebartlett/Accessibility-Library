@@ -1,0 +1,200 @@
+/* ==========================================================================
+   #Card
+   ========================================================================== */
+
+/**
+ * The card object gives control over the vertical alignments of the text and 
+ * image.
+ *
+ * Reference: https://inclusive-components.design/cards/
+ *
+ * 1. Ability to control vertical alignments.
+ * 2. Force the object to be the full width of its parent. Combined with [1],
+ *    this makes the object behave in a quasi-`display: block;` manner.
+ *    This is initially set as a full width element and double the margin-left 
+ *    in mobile 
+ * 3. Reset inherited `border-spacing` declarations.
+ */
+
+.msd-card-list {
+  border-spacing: 0; /* [3] */
+  list-style: none;
+  margin: 0 0 $lg -1.1rem; 
+  padding: 0;
+  width: calc(100% + 2.2rem); /* [2] */
+  display: flex;
+  flex-direction: row;  /* [1] */
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+
+  @include mq($from: phablet) {
+    margin-left: 0;
+    width: 100%;
+  }
+  
+}
+  
+//Card
+.msd-card {
+  border-top: 1px solid color(govnz-mid-grey);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
+  justify-content: space-between;
+  margin: 1px 0 0 0;
+  position: relative;
+  width: 100%;
+
+  &:first-child {
+    margin-top: $xs;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid color(govnz-mid-grey);
+  }
+
+  @include mq($from: phablet) {
+    border: 1px solid color(govnz-mid-grey);
+    margin: $xs $xs 2%;
+    width: calc(49% - 3%);
+  }
+
+  @include mq($from: tablet) {
+    width: calc(33% - 2%);
+  }
+
+  &:nth-child(n+3) {
+    margin-top: 1px;
+
+    @include mq($from: phablet) {
+      margin-top: $md;
+    }
+  
+    @include mq($from: tablet) {
+      margin-top: $xs;
+    }
+  
+  }
+
+  &:hover {
+    box-shadow: inset 3px 0px 0px color(govnz-link-hover), 
+                inset -3px 0px 0px color(govnz-link-hover), 
+                inset 0 1px 0px color(govnz-link-hover), 
+                inset 0 -2px 0px color(govnz-link-hover);
+    border-color: color(govnz-link-hover);
+    outline: 2px solid color(govnz-link-hover);
+    outline-offset: 0px;   
+    
+    @include mq($from: phablet) {
+      box-shadow: inset 2px 0px 0px color(govnz-link-hover), 
+                  inset -2px 0px 0px color(govnz-link-hover), 
+                  inset 0 2px 0px color(govnz-link-hover), 
+                  inset 0 -2px 0px color(govnz-link-hover);
+    }
+    
+  }
+
+}
+
+
+//Image
+.msd-card--image {
+  display: flex;
+  justify-content: center;
+  margin-bottom: $xs;
+  margin-top: $null;
+  position: relative;
+
+  @include mq($from: tablet) {
+    margin-bottom: $xs;
+  }
+
+}
+
+.msd-card--image > * {
+  display: block;
+  max-width: 100%;
+}
+
+
+//Title
+.msd-card--title {
+  @include font(primary, bold);
+  @include font-size(20px);
+  margin: $md 0 $xs;
+}
+
+
+//Content
+.msd-card--content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+  padding: 0 $xs;
+  text-align: center;
+
+  & > *:nth-last-child(2) {
+    margin-top: $xs;
+    margin-bottom: auto;
+  } 
+
+}
+
+.msd-card--text {
+  color: color(govnz-slate);
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 1.5;
+  margin: $md auto $lg;
+  max-width: 25ch;
+  text-align: center;
+  width: 100%;
+
+  @include mq($from: phablet) {
+    max-width: 30ch;
+    padding-left: $xs;
+    padding-right: $xs;
+  }
+
+}
+
+.msd-card--link {
+  align-self: flex-start;
+  border-bottom: 2px solid color(govnz-link);
+  color: color(govnz-link);
+  font-size: 1.25rem;
+  @include font-size(20px);
+  margin-top: 1.5rem;
+  padding-bottom: .125vh;
+  text-decoration: none;
+
+  &:hover:not(:focus) {
+    border-bottom: 2px solid color(govnz-link-hover);
+    color: color(govnz-link-hover);
+    outline: none;
+  }
+
+  &:focus:not(:hover) {
+    box-shadow: none;
+    outline: none;
+  }
+
+  //Full card selection
+    &:after {
+      bottom: 0; 
+      content:'';
+      left:0;
+      position: absolute;
+      right:0;
+      top: 0;
+    }
+
+    &:focus:not(:hover):after {
+      box-shadow: inset 0 0 0 3px color(govnz-black);
+      outline: 3px solid color(msd-focus);
+      outline-offset: 0px;
+    }
+  
+}

@@ -1,0 +1,273 @@
+/* ==========================================================================
+   #Navigation
+   ========================================================================== */
+
+ /**
+  *  Default navigation, current link referenced via 'aria'current' line :171
+  * 
+  *  Mobile navigation line :15
+  *  Desktop navigation line :140
+  *  Sidebar/sub navigation line :220
+  *
+  */
+
+
+// Mobile navigation
+ .msd-mobile-nav__toggle--wrapper {
+    display: flex;
+    justify-content: space-around;
+    margin-left: $sm;
+
+    @include mq($from: tablet) {
+       display: none;
+    }
+
+  }
+  
+  .msd-mobile-nav__toggle {
+    background: transparent;
+    border: 1px solid color(govnz-off-white);
+    color: color(govnz-off-white);
+    cursor: pointer;
+    @include font(primary, regular);
+    line-height: 1.25;
+    margin: 0;
+    overflow: hidden;
+    padding: $sm;
+    text-decoration: none;
+    user-select: none;
+    min-width: 75px;
+    z-index: z(overlay);
+
+    &[aria-expanded="true"] {
+      padding-left: .78rem;
+      padding-right: .78rem;
+    }
+  }
+   
+  .msd-mobile-nav__toggle, 
+  .msd-mobile-nav__toggle:hover:not(:focus), 
+  .msd-mobile-nav__toggle:active {
+    background-color: color(msd-brand);
+    box-shadow: none;
+    color: color(govnz-white);
+    outline: none;
+
+    &:focus:not(:hover) {
+      box-shadow: inset 0 0 0 4px color(govnz-black);
+      color: color(govnz-white);
+      outline: 3px solid color(msd-focus);
+      outline-offset: -2px;
+    }    
+
+  }
+   
+  .msd-mobile-nav {
+    background-color: color(govnz-off-white);
+    display: none;
+    z-index: z(overlay);
+
+    @include mq($from: tablet) {
+      display: none;
+    }
+
+  }
+  
+  // Dropdown menu
+  .msd-mobile-nav__list {
+    border-bottom: 1px solid color(govnz-light-grey);
+    list-style-type: none;
+    margin: 0;
+  }
+
+
+  .msd-mobile-nav__active  .msd-icon__arrow-down:first-of-type {
+    transform: translate(0, 0) rotate(180deg);
+  }
+
+  .msd-mobile__link:not(:focus) {
+    border-bottom-color: transparent;
+    color: color(govnz-link);
+  }
+
+  .msd-mobile__link:hover {
+    color: color(govnz-slate);
+  }
+ 
+  .msd-mobile__submenu {
+    background-color: color(govnz-white);
+    border-top: 1px solid color(govnz-light-grey);
+    border-bottom: 1px solid color(govnz-light-grey);
+    list-style-type: none;
+    margin-left: 0;
+    padding: $xs 0;
+  }
+  
+  .msd-mobile-nav__submenu--item {
+    border-bottom: none;
+    display: flex;
+    margin: 0 $null;
+    padding: $sm;
+    position: relative;
+  }
+  
+  .msd-mobile-nav__list-item{
+    cursor: pointer;
+    position: relative;
+  }
+ 
+  .msd-mobile__toggle {
+    display: flex;
+    margin-left: $sm;
+    margin-right: $sm;
+    padding: $null;
+    position: relative;
+  }
+
+  //Mobile menu links
+  .msd-mobile__toggle--link {
+    border-bottom: 2px solid transparent;
+    color: color(govnz-slate);
+    font-size: 1.175rem;
+    @include font(primary, bold);
+    text-decoration: none;
+}
+
+
+
+
+
+// Desktop navigation
+.msd-navigation {
+    background-color: color(msd-brand);
+    display: none;
+    font-size: 1.125rem;
+    position: relative;
+
+    @include mq($from: tablet) {
+      display: block;
+    }
+
+}
+
+.msd-navigation__list {
+    display: flex;
+    list-style-type: none;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.msd-navigation__list-item {
+    align-items: center;
+    box-shadow: inset 0 -6px 0 0 transparent;
+    display: flex;
+    left: -$md;
+    margin: 0 $md;
+    padding: 0;
+    position: relative;
+    z-index: z(header);
+}
+
+.msd-navigation__link {
+    @include font(primary, normal);
+    box-shadow: inset 0 -6px 0 0 transparent;
+    color: color(govnz-off-white);
+    line-height: 1.625;
+    outline: 3px solid transparent;
+    padding: $md 0;
+    text-decoration: none;
+
+    &:after {
+      content:"";
+      position:absolute;
+      top:0;
+      right:0;
+      bottom:0;
+      left:0
+    }
+
+    &:not(:focus):visited {
+      color: color(govnz-off-white);
+    }
+
+    &:focus:not(:hover) {
+      background-color: color(msd-focus);
+      box-shadow: 0 -2px color(msd-focus),0 4px color(govnz-link-active);
+      color: color(govnz-link-active);
+      outline: 3px solid transparent;
+      padding: 0;
+      text-decoration: none;
+    }
+
+    &:not(:focus):hover, &:active {
+      box-shadow: inset 0 -6px 0 0 color(govnz-off-white);
+      color:color(govnz-off-white);
+      outline: none;
+      text-decoration: none;
+    }
+    
+    //Current link
+    &[aria-current]:after {
+      box-shadow: inset 0 -6px 0 0 color(govnz-off-white);
+    }
+ 
+}
+
+
+//Sidebar navigation
+.msd-pane__sidenav{
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+}
+
+.msd-sidenav {
+  display: none;
+  font-size: $null;
+  line-height: 1.5;
+  margin-top: $md;
+  padding-right: $md;
+
+  @include mq($from: tablet) {
+    display: block;
+  }
+  
+}
+
+.msd-sidenav__section {
+  list-style-type: none;
+  margin: 0 0 $md;
+  padding: 0;
+
+  & [aria-current] {
+    border-left: 4px solid color(govnz-link);
+    font-weight: 600;       
+    margin-left: -$sm;
+    padding: 0 $xs .2rem .5rem;
+  }
+
+}
+
+.msd-sidenav__section--item {
+  margin-top: $xs;
+  margin-bottom: $sm;
+}
+
+.msd-sidenav__link {
+  border-bottom-color: transparent;
+  font-size: 1.125rem;
+  line-height: 1.5;
+  padding-bottom: .375vh;
+
+  &:focus, &:focus {
+    padding-bottom: 0;
+  }
+
+}
+
+.msd-sidenav__link:not(:focus):hover, 
+.msd-sidenav__button:hover {
+  color: color(govnz-link);
+  border-bottom-color: color(govnz-link);
+}

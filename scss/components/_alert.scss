@@ -1,0 +1,48 @@
+/* ==========================================================================
+   #Alert
+   ========================================================================== */
+
+  /**
+   * The alert bar can be used to notify users of significant information:
+   * warning, success and information.
+   *
+   */
+
+.global-bar-message{
+    border-left: 3px solid;
+    margin-bottom: $msd-spacing-unit;
+    padding: $msd-spacing-unit;
+
+    &[aria-current] {
+      display: none !important;
+    }
+  
+    &.msd-warning {
+      background: color(govnz-error);
+      border-color: color(govnz-error);
+      color: color(govnz-white);
+    }
+
+    &.msd-success {
+      background: color(govnz-success);
+      border-color: color(govnz-success);
+      color: color(govnz-white);
+    }
+  
+    &.msd-info {
+      background: color(govnz-info);
+      border-color: color(govnz-info);
+      color: color(govnz-white);
+    }
+  
+    p {
+      @include font(primary, bold);
+      @include font-size(20px);
+       
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+
+  }

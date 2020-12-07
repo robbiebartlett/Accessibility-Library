@@ -1,0 +1,62 @@
+/* ========================================================================
+   #Masthead
+   ======================================================================== */
+
+/**
+ * Background-image @mixin is imported, file naming format ends with -sm, -md, 
+ * -lg include image name and file type, i.e.
+ *
+ * File name: image-sm.jpg, image-md.jpg, image-lg.jpg
+ *
+ * .example {
+ *   @include background-image("image-name", jpg);
+ * }
+ *
+ */
+
+
+
+//Import masthead mixin 
+@import "tools/masthead";
+
+
+
+//Accessibility banner
+.msd-masthead__accessibility {
+  align-items: center;
+  background-color: color(govnz-off-white);
+  @include background-image("accessibility", jpg);
+  display: flex;
+  margin-bottom: $md;
+}
+
+// Banner content
+.msd-masthead__content {
+  background-color: color(msd-blue);
+  margin: $sm auto;
+  padding: $sm;
+  color: color(govnz-white);
+  width: 100%;
+
+  @include mq($from: mobile-wide ) {
+    margin: $md;
+    max-width: 80%;
+  }  
+
+  @include mq($from: phablet ) {
+    margin: $md;
+    max-width: 50%;
+  }  
+  
+  @include mq($from: desktop ) {
+    margin: $lg $md;
+    max-width: 45%;
+    padding: $md;
+  }
+}
+
+
+.msd-masthead__description {
+  @include font-size(24px);
+  margin: 0;
+}

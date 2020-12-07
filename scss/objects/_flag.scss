@@ -1,0 +1,202 @@
+/* ==========================================================================
+   #FLAG
+   ========================================================================== */
+
+/*
+ * Place any image- and text-like content side-by-side utilizing 
+ * `align-items: center;` to give control over the vertical alignments of the
+ * text and image.
+ *
+ *
+ * 1. Ability to control vertical alignments.
+ * 2. Force the object to be the full width of its parent. Combined with [1],
+ *    this makes the object behave in a quasi-`display: block;` manner.
+ * 3. Reset inherited `border-spacing` declarations.
+ * 4. Default to aligning content to their middles.
+ */
+
+.msd-media {
+  align-items: center; /* [4] */
+  border-spacing: 0; /* [3] */
+  display: flex; /* [1] */
+  width: 100%; /* [2] */
+}
+
+   
+/**
+ * Media images have a space between them and the body of the object.
+ *
+ */
+ 
+ .msd-media__image {
+    padding-right: $md;
+ 
+     /**
+      *    The direct child selector '>' needs to remain in order for nested media
+      *    object to not inherit their parent’s formatting. In case the image tag
+      *    is wrapped into another tag, e.g. an anchor for linking reasons, it will
+      *    disappear. 
+      *
+      *    i.e.:
+      *
+      *      <a href="/">
+      *        <div class="msd-media__img">
+      *          <img src="./link/to/image.jpg" alt="image alt text">
+      *        </div>
+      *      </a>
+      */
+ 
+      > img {
+          display: block;
+          max-width: 100%;
+        }
+ 
+   }
+ 
+/**
+ * The container for the main content of the media object.
+ *
+ * 1. Forces the `.msd-media__body` to take up all remaining space.
+ */
+ 
+.msd-media__body {
+  flex: 1;
+
+  p {
+    margin: 0;
+  }
+
+}
+ 
+ 
+
+
+// Gap size variants between image and content
+
+//Flush
+ .msd-media--flush {
+ 
+   > .msd-media__image {
+     padding-right: 0;
+     padding-left:  0;
+   }
+ 
+ }
+ 
+//Small 
+ .msd-media--small {
+ 
+   > .msd-media__image {
+     padding-right: $xs;
+   }
+ 
+   &.msd-media--reverse {
+      padding-right: 0;
+      padding-left: $xs;
+ 
+     > .msd-media__image {
+       padding-right: 0;
+       padding-left: $xs;
+     }
+ 
+   }
+ 
+ }
+ 
+ //Medium
+ .msd-media--medium {
+ 
+   > .msd-media__image {
+     padding-right: $sm;
+   }
+ 
+   &.msd-media--reverse {
+ 
+     > .msd-media__image {
+       padding-right: 0;
+       padding-left: $sm;
+     }
+ 
+   }
+ 
+ }
+ 
+ //Large
+ .msd-media--large {
+ 
+   > .msd-media__image {
+     padding-right: $lg;
+   }
+ 
+   &.msd-media--reverse {
+ 
+     > .msd-media__image {
+       padding-right: 0;
+       padding-left: $lg;
+     }
+ 
+   }
+ 
+ }
+ 
+ //Extra large
+ .msd-media--x-large {
+ 
+   > .msd-media__image {
+     padding-right: $xl;
+   }
+ 
+   &.msd-media--reverse {
+ 
+     > .msd-media__image {
+       padding-right: 0;
+       padding-left: $xl;
+     }
+ 
+   }
+ 
+ }
+ 
+
+ // Reversed flag
+
+ 
+ /**
+  * 1. Swap the rendered direction of the object…
+  * 2. …and reset it.
+  * 3. Reassign margins to the correct sides.
+  */
+ 
+ .msd-media--reverse {
+  flex-direction: row-reverse; /* [1] */
+
+   .msd-media__image,
+   .msd-media__body {
+     display: flex; /* [3] */
+     flex-direction: row-reverse; /* [2] */
+     padding-right: 0;
+     padding-left: $md; /* [3] */
+   }
+
+ }
+ 
+ 
+ 
+ 
+ // Alignment variants
+ 
+ /**
+  * Vertically align the image- and body-content differently. Defaults to middle.
+  */
+ 
+ .msd-media--top {
+        align-items: flex-start;
+   }
+ 
+ 
+ .msd-media--bottom {
+       align-items: flex-end;
+   }
+
+ 
+ 

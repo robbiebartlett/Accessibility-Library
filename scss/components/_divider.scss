@@ -1,0 +1,42 @@
+/* ==========================================================================
+   #Divider
+   ========================================================================== */
+
+/**
+ * The divider gives style control to the horizontal rule to provide a visual 
+ * break and divide content.
+ *
+ *  i.e.
+ *  <hr class="msd-divider .msd-divider--light" aria-hidden="true">
+ *
+ *  A divider can also be added to the base of the element:
+ *
+ *  i.e.
+ *  <div class="msd-add-divider msd-add-divider--light"></div>
+ */
+
+
+//Divider base styles
+.msd-divider {
+  @include horizontal-rule(color(govnz-dark-grey), solid, $xs/3);
+  height: 1px;
+  margin: $msd-hr-spacing 0;
+}
+
+.msd-divider--light {
+  color: color(govnz-light-grey);
+}
+
+
+
+
+//Divider applied on existing element
+.msd-add-divider {
+  border-bottom-color: color(govnz-dark-grey);
+  border-bottom-width: 1px;
+  border-bottom-style: solid; 
+}
+
+.msd-add-divider--light {
+  border-bottom-color: color(govnz-light-grey);
+}

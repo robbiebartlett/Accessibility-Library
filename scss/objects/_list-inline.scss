@@ -1,0 +1,17 @@
+/* ==========================================================================
+   #List-inline
+   ========================================================================== */
+
+/*
+ * The list-inline object simply displays a list of items in one line.
+ */
+
+.msd-list-inline {
+  margin-left: 0;
+  list-style: none;
+
+}
+
+  .msd-list-inline__item {
+    display: inline-flex;
+  }

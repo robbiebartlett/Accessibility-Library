@@ -1,0 +1,32 @@
+
+/* ========================================================================
+   #Horizontal-rules
+   ======================================================================== */
+
+/**
+ * Horizontal rules to extend HR - further settings at 
+ * _./components/divider.scss
+ * 
+ * Reference: https://css-tricks.com/simple-styles-for-horizontal-rules/
+ *
+ * <hr class="example">
+ *
+ * .example {
+ *    @include horizontal-rule(color(light-grey), dotted, 3px); 
+ *  }
+ *
+ */ 
+
+ @mixin horizontal-rule ($color, $style, $width) {
+  color: $color;
+  border: none;
+  border-bottom-width: $width;
+  border-bottom-style: $style;
+  margin-top: ($msd-line-height / 1em) / ($msd-font-size / 1em) * $xs; 
+  margin-bottom: ($msd-line-height / 1em) / ($msd-font-size / 1em) * $xs; 
+} 
+
+
+
+
+

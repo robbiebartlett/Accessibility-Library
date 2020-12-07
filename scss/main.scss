@@ -1,0 +1,268 @@
+/* ==========================================================================
+   Ministry of Social Development
+   ========================================================================== */
+
+//SETTINGS 
+
+/**
+ * This is where global variables and site settings are located. 
+ *
+ * core.................core file establishes key setup variables.
+ * global...............overall project variables and settings.
+ */
+
+
+
+
+
+//TOOLS 
+
+/**
+ * The tools folder defines the project mixins and functions
+ *
+ * typography...........Functions & Mixins to establish font stack and weight.
+ * font-size............Mixin to automatically scale font size.
+ * clearfix.............Micro clearfix Mixin.
+ * colours..............colours & function to setup colour values by name.
+ * links................shorthand for paragraph anchor links.
+ * aliases..............shorthand for longer naming conventions.
+ * z-index..............function to setup z-index by names.
+ * media queries........default media query manager.
+ * sprites..............function & mixins for SVG elements
+ * border...............border function generated as classes.
+ * border-radius........one line methodology for setting border-radius.
+ * columns..............set column count, gaps and rules.
+ * placeholder..........style all browser placeholder settings.
+ * masthead.............mixin to set the masthead image to device width
+ */
+ 
+
+
+
+
+//GENERIC
+
+/**
+ * Low-specificity, far-reaching rulesets such as normalize.css and reset.
+ *
+ * box-sizing...........default `box-sizing`.
+ * normalize.css........render browsers more consistently with modern standards.
+ * reset................reset to complement Normalize.css.
+ * shared...............sensibly and tersely share some global commonalities.
+    
+ 
+
+
+
+//ELEMENTS
+
+/**
+ * Styles required for unclassed HTML elements - links, blockquotes, 
+ * pages, images, tables etc. - create simple stylesheets in this folder
+ * 
+ * page.................document’s default font-size, line-height, word-spacing
+ * headings.............minimal (i.e. only font-size information) for
+ *                      headings 1 through 6.
+ * images...............base image styles.
+ * tables...............accessible table styles.
+ * blockquote...........simple blockquote styles.
+ * paragraph............set paragraph leading
+ * phrasing.............phrasing-level elements, abbreviations & acronyms
+ * horizontal-rule......set horizontal rule styles.
+ * callouts.............base callout styles.
+
+
+
+
+
+
+//OBJECTS 
+
+/**
+ * Place objects, abstractions, and design patterns here (i.e. .layout {})
+ *
+ * container............page width constraint object.
+ * flexbox..............generic layout module utlizing Flexbox.
+ * media................image and text-like content side by side. 
+ * list.................lists with bullet and indent options.
+ * list-bare............lists with no bullets or indents.
+ * list-inline..........A list whose items all site in a line.
+ * box..................simple boxing abstraction.
+ * block................image-on-top-of-text object.
+ * ratio................container for maintaining aspect ratio of content.
+ * crop.................provide a cropping context for media (images, etc.).
+ * table................classes for manipulating `table`s.
+
+
+
+
+
+
+
+//UTILITIES
+
+/**
+ * This folder is for all the high-specificity, very explicit selectors 
+ * including overrides and helpers. (i.e. .hidden)
+ * 
+ * hidden...............correct semantics for inclusive design
+ * headings.............reassigning heading styles to helper classes.
+ * print................reset-like styles taken from the HTML5 Boilerplate.
+ * spacings.............nudge bits of the DOM with these spacing classes.                      
+ * widths...............simple width helper classes.
+ */
+
+
+
+
+  
+//Components 
+
+/**
+ * Contains specific sections of UI modules such as sliders, loaders, widgets  
+ * (i.e. .msd-carousel {}).
+ * 
+ * Alert................Alerts below the header for events of significance
+ * Back to top..........Standard return to the top of page link
+ * Body.................Base body styles, font, background etc
+ * Buttons..............An example button component, and how it fits into the
+ * Caption..............Used as a subject prior to a main title
+ * Divider..............Base element divider
+ * Icons................Style icon elements against the Sprite mixin 
+ * Page-header..........Generic Header
+ * Page-footer..........Generic footer
+ * Navigation...........Generic navigation
+ * Search...............Generic search bar
+ * Masthead.............Page banner settings
+ * Utilities............Page sub footer utilties, date, print, return to top
+ */
+
+
+
+
+
+//Product 
+
+/**
+ * Contains elements specific to products
+ * (i.e. .studylink-title {}).
+ * 
+ * Design system
+ *
+ * Title..............Specific homepage title
+ */
+
+
+
+
+// SETTINGS
+@import "./settings/core";
+@import "./settings/global";
+
+
+
+
+
+// TOOLS
+@import "./tools/typography";
+@import "./tools/font-size";
+@import "./tools/clearfix";
+@import "./tools/colors";
+@import "./tools/links";
+@import "./tools/aliases";
+@import "./tools/z-index";
+@import "./tools/media-queries"; 
+@import "./tools/sprites";
+@import "./tools/border";
+@import "./tools/border-radius";
+@import "./tools/columns";
+@import "./tools/placeholder";
+@import "./tools/masthead";
+
+
+
+
+
+// GENERIC
+@import "./generic/box-sizing";
+@import "./generic/normalize";
+@import "./generic/reset";
+@import "./generic/shared";
+
+
+
+
+
+// ELEMENTS
+@import "./elements/page";
+@import "./elements/headings";
+@import "./elements/images";
+@import "./elements/tables";
+@import "./elements/blockquotes";
+@import "./elements/paragraphs";
+@import "./elements/phrasing";
+@import "./elements/horizontal-rule";
+@import "./elements/callouts";
+
+
+
+
+// OBJECTS
+@import './objects/container';
+@import './objects/flexbox';
+@import './objects/media';
+@import './objects/list';
+@import './objects/list-bare';
+@import './objects/list-inline';
+@import './objects/box';
+@import './objects/block';
+@import './objects/ratio';
+@import './objects/crop';
+@import './objects/table';
+
+
+
+
+
+// UTILITIES
+@import "./utilities/hidden";
+@import "./utilities/headings";
+@import "./utilities/print";
+@import "./utilities/spacings";
+@import "./utilities/widths";
+
+
+
+
+// COMPONENTS
+@import "./components/alert";
+@import './components/back-to-top';
+@import "./components/body";
+@import "./components/buttons";
+@import "./components/breadcrumbs";
+@import './components/caption';
+@import './components/card';
+@import "./components/divider";
+@import "./components/icons";
+@import "./components/page-header";
+@import "./components/page-footer";
+@import "./components/navigation";
+@import "./components/search";
+@import "./components/skip-links";
+@import "./components/masthead";
+@import "./components/articles";
+@import "./components/page-utilities";
+
+
+
+
+
+// Product
+
+//Design System
+@import "./product/msd/design-system/title"
+
+
+
+
+

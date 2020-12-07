@@ -1,0 +1,90 @@
+/* ========================================================================
+  #Colours
+  ======================================================================== */
+ 
+ /**
+ * The color settings contain nz govt, MSD amd standard project wide tokens.
+ *
+ * 
+ * .example {
+ *   background-color: color(msd-brand);
+ * }
+ *
+ */
+
+
+// Main Color tokens
+$color-map: (
+
+    //Core govt colours
+    govnz-black              :           #000000, 
+    govnz-dark-grey          :           #363636,  
+    govnz-white              :           #FFFFFF,  
+
+    //Grey suite
+    govnz-off-white          :           #F4F4F4,  
+    govnz-light-grey         :           #D3D3D3, 
+    govnz-mid-grey           :           #595959,  
+    govnz-slate              :           #2A2A2A,  
+
+    //MSD text colours
+    msd-text                 :           #2A2A2A,  
+    msd-secondary-text       :           #595959,  
+
+    //Alerts
+    govnz-error              :           #B10E1E,  
+    govnz-warning            :           #D47500,  
+    govnz-success            :           #088A20,  
+    govnz-info               :           #1F1BFB,  
+    govnz-disabled           :           #AAAAAA,  
+
+    //Interaction states
+    govnz-link               :           #005DBB,  
+    govnz-link-visited       :           #4C2C92,  
+    govnz-link-hover         :           #000C48,  
+    govnz-link-active        :           #0B0C0C,  
+    govnz-focus              :           #B53CDE, 
+    msd-focus                :           #FFDD00, 
+
+    //Social Media
+    linkedIn                 :           #0077B5,  
+    facebook                 :           #3b5998,  
+    twitter                  :           #55acee,  
+    youtube                  :           #FF0000,  
+
+    //Branding Colours
+
+    //MSD primary
+    msd-brand                :           #121F6B,  
+
+    //MSD secondary 
+    msd-blue                 :           #005987, 
+    msd-teal                 :           #005F63,  
+    msd-green                :           #316724,  
+    msd-tangerine            :           #C76D1F,  
+    msd-red-brick            :           #B32F21,  
+    msd-red                  :           #9F1C2B,  
+    msd-fuschia              :           #990F47,  
+    msd-indigo               :           #76346d, 
+       
+) !default;
+
+
+
+
+
+
+// Function to setup color by name and optionally give a color schema map  
+
+@function color($name, $opacity:1, $schema:$color-map) {
+    @if map-has-key($schema, $name) {
+        @return rgba(map-get($schema, $name),$opacity);
+    } @else {
+        @warn "The value #{$name} is not in the map '$schema'";
+    @return null;
+    }
+};
+
+
+
+

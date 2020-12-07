@@ -1,0 +1,59 @@
+/* ==========================================================================
+   #Block
+   ========================================================================== */
+
+/*
+ * Stacked image-with-text object. A simple abstraction to cover a common
+ * occurring design pattern.
+ *
+ */
+
+.msd-block {
+  display: block;
+  text-align: center;
+}
+
+  .msd-block__img {
+    margin-bottom: $md;
+
+
+    // Size variants
+    .msd-block--flush > & {
+      margin-bottom: 0;
+    }
+
+    .msd-block--sm> & {
+      margin-bottom: $xs;
+    }
+
+    .msd-block--md > & {
+      margin-bottom: $sm;
+    }
+
+    .msd-block--lg > & {
+      margin-bottom: $lg;
+    }
+
+    .msd-block--xl > & {
+      margin-bottom:  $xl;
+    }
+
+  }
+
+  .msd-block__body {
+    display: block;
+  }
+
+
+
+
+
+// Alignment variants
+
+.msd-block--right {
+  text-align: right;
+}
+
+.msd-block--left {
+  text-align: left;
+}

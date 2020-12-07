@@ -1,0 +1,43 @@
+/* ==========================================================================
+   #Headings
+   ========================================================================== */
+
+/**
+ * Redefine the basic heading elements against element classes to allow for
+ * double stranded heading hierarchy, i.e. semantically an H2 is required,
+ * but is required to be sized like an H1 i.e.:
+ *
+ * <h2 class="msd-h1"></h2>
+ *
+ */
+
+ 
+ //MSD
+ .msd-h1 {
+  @include font-size(45px);
+ }
+
+.msd-h2 {
+  @include font-size(32px);
+}
+
+.msd-h3 {
+  @include font-size(25px);
+}
+
+.msd-h4 {
+  font-size: 20px;
+}
+
+.msd-h5 {
+  font-size: 18px;
+}
+
+.msd-h6 {
+  font-size: 16px;
+}
+
+
+
+
+

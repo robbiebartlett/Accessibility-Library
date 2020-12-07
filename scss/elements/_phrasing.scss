@@ -1,0 +1,43 @@
+/* ==========================================================================
+   #PHRASING 
+   ========================================================================== */
+
+/**
+  * Phrasing-level elements, abbreviations & acronyms.
+  * Visual indication of available title attributes.
+  *
+  */
+
+
+// abbr - change value to adjust width between letters  
+abbr {
+    @include msd-fontwidth(50);
+  
+    &[title] {
+      cursor: help;
+      border-bottom: 1px dotted;
+    }
+  }
+  
+
+  // Codeblocks.
+  code {
+    font-family: monospace;
+    white-space: pre;
+  }
+  
+  // Highlighted text.
+  //
+  // Add a small amount of padding to give the text some room within
+  // the background colour.
+  mark {
+    padding: 0.2em;
+  }
+  
+
+  // Small print.
+  small {
+    font-size: 1.5ex;
+    font-weight: normal;
+  }
+  

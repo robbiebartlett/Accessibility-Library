@@ -1,0 +1,153 @@
+/* ========================================================================
+  #Icons
+  ======================================================================== */
+ 
+/**
+ * Redefine the sprite elements against tools classes to allow for
+ * element manipulation and styling, i.e. colour and scale:
+ *
+ * .example {
+ *   @extend .my--shape;
+ * }
+ *
+ */
+
+//Import rendered sprites, updated when additional elements added to the
+//source folder
+ @import "tools/sprites";
+
+
+//Fill colour based on icon colour value
+[class^="msd-icon"] > use {
+  fill: currentColor;
+}
+
+//MSD logo
+.msd-icon__msd-logo {
+    @extend .msd--logo;
+    color: color(govnz-off-white);
+    @include font-size(61px);
+    max-width: 100%;
+}
+
+//New Zealand Government logo
+.msd-icon__nz-govt-logo {
+    @extend .nz-govt--logo;
+    fill: color(govnz-off-white);
+    font-size: 1.7rem;
+    height: 24px;
+    width: 230px;
+
+    &:hover {
+       fill: color(govnz-white); 
+    }
+
+}
+.nz-govt--tagline {
+  bottom: 0;
+  fill: color(govnz-off-white);
+  font-family: arial, sans-serif;
+  font-size: .875rem;
+  margin-top: $xs;
+  position: relative;
+
+  &:hover {
+    fill: color(govnz-white); 
+ }
+
+}
+
+//New Zealand Government - Coat of Arms
+.msd-icon__coat-of-arms {
+    @extend .nz-govt--crown;
+    fill: color(govnz-off-white);
+    font-size: 6.75rem;
+    margin: $xs;
+    max-width: 100%;
+
+    &:hover {
+      color: color(govnz-white); 
+   }
+
+}
+
+.msd-icon__creative-commons {
+  @extend .icons--creative-commons;
+  fill: color(govnz-off-white);
+  font-size: 2rem;
+  max-width: 100%;
+  height: 30px;
+
+  &:hover {
+    fill: color(govnz-white); 
+ }
+
+}
+
+.msd-icon__creative-commons-attribution {
+  @extend .icons--creative-commons-attribution;
+  fill: color(govnz-off-white);
+  font-size: 2rem;
+  max-width: 100%;
+  height: 30px;
+
+  &:hover {
+    fill: color(govnz-white); 
+ }
+ 
+}
+
+.msd-icon__search {
+  @extend .icons--search;
+  color: color(govnz-slate);
+  font-size: 1.4rem;
+  min-width: 1.2rem;
+}
+
+.msd-icon__arrow-down{
+  @extend .icons--arrow-down;
+  bottom: 0;
+  fill: color(govnz-slate);
+  font-size: 1rem;
+  margin: auto;
+  position: absolute;
+  right: $md;
+  top: 0;
+  max-width: 100%;
+}
+
+
+//Accessibility homepage
+.msd-icon__wrapper--design {
+  padding: $md;
+}
+
+.msd-icon__accessibility {
+  @extend .icons--accessibility;
+  @include font-size(100px);
+} 
+
+.msd-icon__product {
+  @extend .icons--product;
+  @include font-size(100px);
+} 
+
+.msd-icon__content {
+  @extend .icons--content;
+  @include font-size(100px);
+} 
+
+.msd-icon__ux {
+  @extend .icons--ux;
+  @include font-size(100px);
+} 
+
+.msd-icon__visual {
+  @extend .icons--visual;
+  @include font-size(100px);
+} 
+
+.msd-icon__development {
+  @extend .icons--development;
+  @include font-size(100px);
+} 

@@ -1,0 +1,70 @@
+/* ==========================================================================
+   #Back to top
+   ========================================================================== */
+
+/**
+ * The back to top link is set to display: none until the page is longer than
+ * 4 screens in height. Edit the height value in ./js/scripts.js
+ *
+ * Reference: https://www.nngroup.com/articles/back-to-top/
+ *
+ */
+
+
+.back-to-top {
+  align-items: center;
+  border-top: 2px solid transparent;
+  border-bottom: 2px solid transparent;
+  color: color(govnz-slate);
+  display: none;
+  font-size: $null;
+  height: 1.5rem;
+  line-height: 1.5;
+  margin-right: $lg;
+  padding-bottom: .125vh;
+  text-decoration: none;
+  width: 0;
+  z-index: z(overlay);
+  
+  &:hover:not(:focus)  {
+    border-bottom: 2px solid color(govnz-link-hover);
+    color: color(govnz-link-hover);
+  }
+
+}
+
+.back-to-top::before {
+  color: color(govnz-slate);
+  content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 22.2'%3E%3Cpath fill='%232A2A2A' d='M7.5 0L15 6.9l-1.9 1.7-4.2-3.8V15H6.1V4.8L1.9 8.6 0 6.9z'/%3E%3C/svg%3E");
+  height: 1.75rem;
+  position: relative;
+  right: 0;
+  top: 5px;
+  width: 1.75rem;
+}
+
+.back-to-top:hover::before {
+  color: color(govnz-link-hover);
+} 
+
+//Active state
+.back-to-top.active {
+  display: flex;
+  width: auto;
+
+  &:focus::before{
+    color: color(govnz-link-active);
+  }
+
+  &:focus:not(:hover) {
+    background-color: color(msd-focus);
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    box-shadow: 0 -2px color(msd-focus),0 4px color(govnz-link-active);
+    color: color(govnz-link-active);
+    outline: 3px solid transparent;
+    text-decoration: none;
+  }
+
+}
+

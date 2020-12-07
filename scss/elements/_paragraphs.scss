@@ -1,0 +1,78 @@
+/* ========================================================================
+  #Paragraphs
+  ======================================================================== */
+ 
+ /**
+ * Set paragraph leading. Change font-size if required line :39
+ *
+ * [1] Fonts on OSX will look more consistent with other systems that do not
+ *     render text using sub-pixel anti-aliasing.
+ *
+ * [2] Provides information to the rendering engine about what to optimize  
+ *     when rendering text
+ *
+ * [3] Paragraph line length is set to a maximum of 66 characters, to provide  
+ *     more efficient reading. Reference: 
+ *     http://web-accessibility.carnegiemuseums.org/design/font/
+ *
+ * [4] Font is set at legible size 
+ *
+ */
+
+// Mixin to set font spacing.
+ @mixin msd-fontwidth($val, $is-centered: false) {
+
+  @if type-of($val) == number {
+    $space: $val;
+
+    @if unitless($val) {
+      $space: ($val / 1000) * 1em;
+    }
+
+    @if $is-centered == true {
+      margin-left: $space;
+    }
+
+    font-kerning: normal;
+    letter-spacing: $space;
+  } @else {
+    @warn "✘ ‘#{$val}’ is not a number value.";
+  }
+
+}
+
+
+p {
+    font-size: 1.125rem; /* [4] */
+    margin-top: 0;
+    margin-bottom: $md;
+    max-width: 66ch; /* [3] */
+    -moz-osx-font-smoothing: grayscale; /* [1] */
+    -webkit-font-smoothing: antialiased; /* [1] */ 
+    text-transform: none;
+    text-rendering: optimizeLegibility; /* [2] */
+  
+    &.lead {
+      @include font-size(20px);
+      max-width: 70ch;
+    }
+
+  }
+  
+
+  // First-line indentation style.
+  //
+  // Wrap paragraps with `indented` class to remove margin and indent first line
+  // of adjacent paragraphs.
+  //
+  .indented {
+  
+    p {
+  
+      + p {
+        margin-top: -#{$msd-spacing-unit};
+        text-indent: $msd-spacing-unit;
+      }
+    }
+  }
+  

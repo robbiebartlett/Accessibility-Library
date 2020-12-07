@@ -1,0 +1,31 @@
+/* ========================================================================
+  #SPRITES
+  ======================================================================== */
+ 
+/**
+  * Sprites rendered through the Mustache template
+  *
+  *  _./templates/sprite_template.scss
+  *
+  * embed within _./components/icons.scss
+  *
+  * .example {
+  *   @extend .my--shape;
+  * }
+  *
+  */
+
+  .msd-icon {
+    display: inline-flex;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+  }
+  
+  
+{{#shapes}}
+  .{{base}} {
+    font-size:({{height.inner}}/10)*1rem;
+    width:({{width.inner}}/{{height.inner}})*1em;
+  }
+{{/shapes}}

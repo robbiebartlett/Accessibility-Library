@@ -1,0 +1,83 @@
+/* ==========================================================================
+   #Articles
+   ========================================================================== */
+
+  /**
+   * Articles can be set as columns and/or rows, specifying the numbers
+   * accordingly.
+   *
+   */
+
+.msd-article-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 0 $lg;
+  padding: 0;
+  position: relative;
+
+  @include mq($from: tablet-wide) {
+    flex-direction: row;
+ }
+
+}
+
+.msd-article {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: $lg;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  @include mq($from: tablet-wide) {
+    flex-basis: 31%;
+    margin-bottom: 0;
+  }
+
+}
+
+.msd-article__title {
+  margin-bottom: $null;
+  order: 2;
+  padding: 0;
+}
+
+.msd-article--link {
+  border-bottom: 2px solid color(govnz-link);
+  color: color(govnz-link);
+  @include font(primary, bold);
+  @include font-size(20px);
+  line-height: 1.5;
+  padding-bottom: .125vh;
+  text-decoration: none;
+
+  &:hover:not(:focus) {
+    border-bottom: 2px solid color(govnz-link-hover);
+    color: color(govnz-link-hover);
+    outline: none;
+  }
+
+  &:focus:not(:hover) {
+    background-color: color(msd-focus);
+    border-bottom: 2px solid transparent;
+    box-shadow: 0 -2px color(msd-focus),0 4px color(govnz-link-active);
+    color: color(govnz-link-active);
+    outline: 3px solid transparent;
+    padding: 0;
+    text-decoration: none;
+  }   
+
+}
+
+.msd-article__date {
+  font-size: .875rem;
+  order: 1;
+}
+
+.msd-article__summary {
+  margin: 0;
+  order: 3;
+}

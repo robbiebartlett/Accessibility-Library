@@ -1,0 +1,316 @@
+/* ==========================================================================
+   #Flexbox
+   ========================================================================== */
+
+/*
+ * Flexbox grid system. Support is for IE11+ 
+ *
+ * Cells are full-width and will stack as rows by default, media-queries are 
+ * based off ./tools/media-queries.scss and ./utilities/widths.
+ *
+ * <div class="msd-grid">
+ *   <div class="msd-grid__cell">
+ *   </div>
+ *   <div class="msd-grid__cell">
+ *   </div>
+ * </div>
+ *
+ * Cells will in most cases be accompanied by utility classes that divide
+ * the grid into fractions:
+ *
+ * <div class="msd-grid">
+ *   <div class="msd-grid__cell msd-grid-one-third">
+ *   </div>
+ *   <div class="msd-grid__cell msd-grid-two-thirds">
+ *   </div>
+ * </div>
+ *
+ * Cells can be spaced equally using msd-grid--auto without the need for 
+ * utility classes:
+ *
+ *  <div class="msd-grid msd-grid--auto">
+ *   <div class="msd-grid__cell">
+ *     50%
+ *   </div>
+ *  <div class="msd-grid__cell">
+ *    50%
+ *  </div>
+ * </div>
+ *
+ * Order of cells can be changed, use with caution when ordering content
+ * in a meaningful sequence:
+ *
+ *  <div class="msd-grid msd-grid--auto">
+ *   <div class="msd-grid__cell msd-order-2">
+ *     50%
+ *   </div>
+ *  <div class="msd-grid__cell msd-order-1">
+ *    50%
+ *  </div>
+ * </div>
+ *
+ */
+
+
+// Specify a map of possible gutter widths. By default use the global
+// spacing units from core.scss and their conventional class
+// name suffixes (--small, --medium, --large etc).
+
+$msd-flexbox-spacing-sizes: (
+       null    :  $msd-spacing-unit,
+    '--small'  :  $xs,
+    '--medium' :  $sm,
+    '--large'  :  $lg,
+    '--x-large':  $xl,
+    '--flush'  :  0,
+) !default;
+
+
+// Specify possible alignment values
+
+$msd-flexbox-alignment-values: (
+    '--top': 'flex-start',
+    '--middle': 'center',
+    '--bottom': 'flex-end',
+    '--baseline': 'baseline',
+    '--stretch': 'stretch',
+) !default;
+
+// Specify possible justify values
+// If you want to omit some of the modifiers,
+// or change their suffixes (--middle, --bottom etc.), 
+// simply add to the $msd-flexgrid-justify-values below
+
+$msd-flexbox-justify-values: (
+    '--left': 'flex-start',
+    '--center': 'center',
+    '--right': 'flex-end',
+    '--between': 'space-between',
+    '--around': 'space-around',
+) !default;
+
+
+
+// The Flexbox grid
+
+.msd-grid {
+    display: flex;
+    flex-flow: row wrap;
+    list-style: none;
+    padding: 0;
+}
+
+/**
+ * 1. Cells are full-width and stack on top of each other by default.
+ */
+
+.msd-grid__cell {
+    flex: 0 1 auto;
+    width: 100%; /* [1] */
+}
+
+
+// Gutters
+
+/**
+ * 1. The map $msd-flexbox-spacing-sizes contains a `null` key which
+ *    is the default gutter size.
+ * 2. Add a negative margin on one side only for a wrapper with the 
+ *    same amount of spacing.
+ * 3. Neutralize the left margin on `msd-grid`.
+ */
+
+@each $size-namespace, $size in $msd-flexbox-spacing-sizes {
+    .msd-grid#{$size-namespace} { /* [1] */
+        margin-left: -$size; /* [2] */
+        & > .msd-grid__cell {
+            padding-left: $size; /* [3] */
+        }
+    }
+}
+
+/**
+ * Gutter widths provided a modifier class. For example, the following 
+ * block will generate a grid with "large" gutters and a grid with no
+ * gutters at all:
+ *
+ * <div class="msd-grid msd-grid--large">
+ *    <div class="msd-grid__cell">
+ *  </div>
+ * </div>
+ *
+ * <div class="msd-grid msd-grid--flush">
+ *   <div class="msd-grid__cell">
+ *   </div>
+ * </div>
+ *
+ * Without a modifier, the default size is equal to $msd-spacing-unit.
+ */
+
+
+
+// Automatically size cells by distributing them equally
+// Stack vertically in mobile
+
+.msd-grid--auto {
+    & > .msd-grid__cell {
+        flex: 1 0 0;
+    }
+}
+
+
+// Horizontal alignment
+
+/**
+ *  Align cells left (default):
+ *  .msd-grid--left {
+ *     justify-content: flex-start;
+ *  }
+ *  
+ *  Horizontally center cells:
+ *  .msd-grid--center {
+ *    justify-content: center;
+ *  }
+ *
+ *  Align cells right:
+ *  .msd-grid--right {  
+ *    justify-content: flex-end;
+ *  }
+ *
+ *  Distribute free space between the cells:
+ *  .msd-grid--between {  
+ *    justify-content: space-between;
+ *  }
+ *
+ *  Distribute free space around the cells. 
+ *  .msd-grid--around {
+ *    justify-content: space-around;
+ *  } 
+ *   i.e.:
+ *  <div class="msd-grid--center"></div>
+ *
+ */
+
+@each $namespace, $value in $msd-flexbox-justify-values {
+    .msd-grid#{$namespace} {
+        justify-content: #{$value};
+    }
+}
+
+
+// Pull behavior
+
+/**
+ * Pull cells to the left or the right with 
+ * the following modifier classes:
+ */
+
+.msd-grid__cell--pull-left {
+    margin-right: auto;
+}
+
+.msd-grid__cell--pull-right {
+    margin-left: auto;
+}
+
+
+// Vertical alignment
+
+/**
+ * .msd-grid can be used with the following modifiers 
+ * for vertical alignment:
+ *
+ * Stretch cells to fit the container (default): 
+ * .msd-grid--stretch { 
+ *   align-items: stretch 
+ * }
+ *
+ * Vertically center cells:
+ * .msd-grid--middle {
+ *   align-items: center;
+ * }
+ *
+ * Align cells to the bottom:
+ * .msd-grid--bottom {
+ *   align-items: flex-end;
+ * }
+ *
+ * Align cells to the top:
+ * .msd-grid--top {
+ *    align-items: flex-start;
+ * }
+ *
+ * Position cells at the baseline of the container:
+ * .msd-grid--baseline {
+ *       align-items: baseline;
+ * }
+ *  i.e.: 
+ *
+ *  <div class="msd-grid--middle"></div>
+ *
+ * You can also align specific cells by using the following modifier classes
+ * 
+ * .msd-grid__cell--stretch - Stretch cell to fit the container.
+ * .msd-grid__cell--middle - Vertically align cell.
+ * .msd-grid__cell--bottom - Align cell to the bottom.
+ * .msd-grid__cell--top - Align cell to the top.
+ * .msd-grid__cell--baseline - Position cell at the baseline of the container.
+ *
+ *
+ */
+
+@each $namespace, $value in $msd-flexbox-alignment-values {
+    .msd-grid#{$namespace} {
+        align-items: #{$value};
+    }
+}
+
+@each $namespace, $value in $msd-flexbox-alignment-values {
+    .msd-grid__cell#{$namespace} {
+        align-self: #{$value};
+    }
+}
+
+
+// Content distribution
+
+/**
+ * Change the direction cells are placed in the layout with 
+ * the following classes:
+ */
+
+//Cells are laid out top to bottom instead of left to right:
+ .msd-grid--column {
+    flex-direction: column;
+}
+
+//Cells are laid out from bottom to top:
+.msd-grid--column-reverse {
+    flex-direction: column-reverse;
+}
+
+//Place cells from right to left:
+.msd-grid--reverse {
+    flex-direction: row-reverse;
+}
+
+
+
+//Place cells in order
+.msd-order-first {order:1;}
+.msd-order-last  {order:13;}
+.msd-order-0     {order:0;}
+.msd-order-1     {order:1;}
+.msd-order-2     {order:2;}
+.msd-order-3     {order:3;}
+.msd-order-4     {order:4;}
+.msd-order-5     {order:5;}
+.msd-order-6     {order:6;}
+.msd-order-7     {order:7;}
+.msd-order-8     {order:8;}
+.msd-order-9     {order:9;}
+.msd-order-10    {order:10;}
+.msd-order-11    {order:11;}
+.msd-order-12    {order:12;}
+.msd-order-13    {order:13;}
+

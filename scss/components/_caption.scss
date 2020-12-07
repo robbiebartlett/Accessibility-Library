@@ -1,0 +1,24 @@
+
+/* ==========================================================================
+   #Caption
+   ========================================================================== */
+
+  /**
+   * Use captions as a subject prior to main titles
+   * 
+   */
+
+.msd-caption {
+  color: color(msd-text);
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include font-size(20px);
+  @include font(primary, regular);
+  line-height: 1.5;
+
+  @media print {
+    font-family: sans-serif; 
+  }
+  
+}

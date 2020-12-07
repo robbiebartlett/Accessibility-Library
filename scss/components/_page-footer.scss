@@ -1,0 +1,169 @@
+/* ==========================================================================
+   #Page Footer
+   ========================================================================== */
+
+.msd-footer {
+    background-color: color(govnz-dark-grey);
+    padding: $md 0;
+    position: relative;
+    z-index: z(footer);
+}
+
+//links
+.msd-footer__nz-govt--link {
+    color: color(govnz-white);
+    font-family: arial;
+    text-decoration: none;
+    position: absolute;
+    left: 1rem;
+    bottom: -$xs;
+    font-size: $sm;
+    left: $sm;
+}
+
+.msd-footer__link {
+    @include font(primary, regular);
+    @include linkColours ((color(govnz-light-grey)), (color(govnz-light-grey)), 
+    (color(govnz-white)), (color(govnz-white)));
+}
+
+// External links 
+// base64 format used as background image
+.msd-footer__link--external::after {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 576 512'%3E%3Cpath fill='%23D3D3D3' d='M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 00384 303.765V448H64V128h264a24.003 24.003 0 0016.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z'/%3E%3C/svg%3E");
+    display: inline-flex;
+    left: 4px;
+    position: relative;
+    top: 1px;
+    width: 1rem;
+}
+
+.msd-footer__link--external:hover:not(:focus)::after {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 576 512'%3E%3Cpath fill='%23FFF' d='M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 00384 303.765V448H64V128h264a24.003 24.003 0 0016.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z'/%3E%3C/svg%3E");
+}
+
+.msd-footer__link--external:focus:not(:hover)::after {
+    content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 576 512'%3E%3Cpath fill='%230B0C0C' d='M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 00384 303.765V448H64V128h264a24.003 24.003 0 0016.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z'/%3E%3C/svg%3E");
+}
+
+
+//list
+.msd-footer__list{
+    left: -1.2rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: left;
+}
+
+.msd-footer__list-item {
+    display: flex;
+    margin: $xs $md $xs $xs;
+    padding: $sm $sm; 
+    
+    @include mq($from: phablet ) {
+        display: inline-flex;
+      }
+
+}
+
+.msd-footer__small-text {
+    color: color(govnz-white);
+    font-size: .9375rem;
+    margin-bottom: $sm;
+    @include font(primary, regular);
+
+     // External icon size
+     .msd-footer__link--external::after {
+        left: 0;
+        top: 1px;
+        width: $sm;
+    }
+}
+
+
+//logos
+.msd-footer__logotype {
+    display: flex;
+    margin: 0;
+}
+
+.msd-footer__logotype--item {
+    color: color(govnz-white);
+    display: flex;
+    flex-direction: column;
+    font-size: $sm;
+    text-decoration: none;
+
+    &:hover:not(:focus) {
+      background-color: none;
+      box-shadow: none;
+      color: color(govnz-off-white);
+      outline: 3px solid transparent;
+      padding: 0;
+      text-decoration: none;
+    } 
+
+    &:focus:not(:hover) {
+      background-color: color(msd-focus);
+      box-shadow: 0 -2px color(msd-focus),0 4px color(govnz-link-active);
+      color: color(govnz-link-active);
+      outline: 3px solid transparent;
+      padding: 0;
+      text-decoration: none;
+    }
+    
+}
+
+.msd-footer__logotype--nz-govt-logo {
+    margin: 1.125rem 0;
+}
+
+.msd-footer__nz-govt-logo:focus{
+    outline: 3px solid color(govnz-focus);
+    outline-offset: 0;
+}
+
+//Coat of arms
+.msd-footer__logotype--coat-of-arms {
+    height: 100%;
+    justify-content: flex-start;
+
+    @include mq($from: tablet) {
+        justify-content: flex-end;
+      }
+}
+
+.msd-footer__logotype--coat-of-arms 
+.msd-footer__logotype--item {
+   align-self: flex-end;
+   margin-bottom: $sm;
+   margin-top: $sm;
+   text-align: center;
+}
+
+
+//copyright
+.msd-footer__copyright {
+    color: color(govnz-white);
+    display: inline-flex;
+    margin-bottom: $sm;
+    text-decoration: none;
+
+    &:focus:not(:hover) {
+        background-color: color(msd-focus);
+        box-shadow: 0 -2px color(msd-focus),0 4px color(govnz-link-active);
+        color: color(govnz-slate);
+        outline: 3px solid transparent;
+        padding: 0;
+        text-decoration: none;
+    }
+
+}
+
+.msd-footer__copyright--item {
+    text-decoration: none;
+    display: flex;
+    margin-bottom: $xs;
+}
+

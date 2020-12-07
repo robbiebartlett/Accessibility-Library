@@ -1,0 +1,56 @@
+/* ==========================================================================
+   #Skip link
+   ========================================================================== */
+
+ /**
+  * The skip (navigation) link provides a way for users of assistive technology
+  * to bypass large or repetitive blocks of content.
+  *
+  */
+
+  .skip-link {
+    color: color(msd-text);
+    @include font-size(18px);
+    @include font(primary, regular);
+    position: absolute;
+    left: -100%;
+    top: -100%;
+    width:auto;
+    padding: $sm;
+    z-index: z(dropdown); 
+  }
+
+  //Target hidden in mobile
+  .skip-link__non-mobile {
+    display: none;
+
+    @include mq($from: tablet) {
+      display: block;
+    }
+
+  }
+  
+  .skip-link:not([tabindex="-1"]) {
+    outline: .2rem solid transparent;
+    outline-offset: $sm;
+  }
+  
+  .skip-link:active, .skip-link:focus {
+    position: absolute;
+    left: 0;
+    top: 0;
+    outline-color: transparent;
+    margin: $sm;
+  }
+  
+  .skip-link:focus {
+    outline: 3px solid transparent;
+    color: color(govnz-link-active);
+    background-color: color(msd-focus);
+    box-shadow: 0 -2px color(msd-focus), 0 4px color(govnz-link-active);
+    padding: $xs;
+    text-decoration: none;
+  }
+
+
+
