@@ -145,9 +145,11 @@ function cacheTask(){
 // Watch task
 function watchTask(){
     browserSync.init(null, {
+        "open": true,
         "port": 3000,
         "server": {
-        "baseDir": "."
+        "baseDir": ".",
+        "directory": "true" //adds directory to select individual html files
         },
 
         "browser": [
