@@ -1,3 +1,73 @@
 /* ==========================================================================
    #Breadcrumbs
    ========================================================================== */
+
+  /**
+   * Breadcrumbs act as an additional reference to site location
+   * 
+   */
+
+   .msd-pane__breadcrumb {
+      width: 100%;
+   }
+
+   .msd-breadcrumb {
+      display: block;
+   }
+
+    .msd-breadcrumb__section {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 0;
+      margin-bottom: $lg;
+      padding: 0;
+
+      @include mq($from: desktop) {
+         margin-top: -2rem;
+       }
+      
+    }
+
+    .msd-breadcrumb__list-item {   
+      font-size: .9375rem;
+      line-height: 2;
+
+      & + .msd-breadcrumb__list-item {
+         padding-left: $sm;
+      }
+
+      & + .msd-breadcrumb__list-item::before {
+         color: color(govnz-dark-grey);
+         content: "/";
+         display: inline-flex;
+         padding-right: $xs;
+     }
+
+    }
+
+   .msd-breadcrumb__link {
+      border-bottom: 2px solid color(govnz-link);
+      color: color(govnz-link);
+      padding-bottom: .375vh;
+      text-decoration: none;
+
+     &:hover:not(:focus) {
+         border-bottom-color: #000c48;
+         color: #000c48;
+     }
+
+     &:focus:not(:hover) {
+      background-color: color(msd-focus);
+      border-bottom-color: transparent;
+      box-shadow: 0 -2px color(msd-focus), 0 4px color(govnz-link-active);
+      color: color(govnz-link-active);
+      outline: 3px solid transparent;
+      padding-bottom: .15vh; 
+      text-decoration: none;
+     }
+
+   }
+
+  .msd-breadcrumb__link--active {
+    color: color(msd-text);
+  }
