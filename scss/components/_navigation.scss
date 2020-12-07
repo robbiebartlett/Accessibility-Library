@@ -163,10 +163,16 @@
     box-shadow: inset 0 -6px 0 0 transparent;
     display: flex;
     left: -$md;
-    margin: 0 $md;
+    margin: 0 $sm;
     padding: 0;
     position: relative;
+    transition: $msd-transition;
     z-index: z(header);
+
+    @include mq($from: tablet-wide) {
+      margin: 0 $md;
+    }
+
 }
 
 .msd-navigation__link {
