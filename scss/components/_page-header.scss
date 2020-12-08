@@ -5,14 +5,14 @@
 .msd-header {
     background-color: color(msd-brand);
     margin: 0;
-    padding: $sm 0 0;
+    padding: $null 0 0;
     position: relative;
     z-index: z(header);
 }
 
 .msd-header__divider {
     border: none;
-    padding-bottom: $sm;
+    padding-bottom: $null;
 
     @include mq($from: tablet) {
       border-bottom: 1px solid color(govnz-off-white);
