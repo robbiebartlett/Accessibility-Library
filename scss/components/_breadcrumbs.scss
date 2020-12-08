@@ -18,14 +18,8 @@
     .msd-breadcrumb__section {
       display: flex;
       flex-wrap: wrap;
-      margin-top: 0;
-      margin-bottom: $lg;
+      margin-top: $sm;
       padding: 0;
-
-      @include mq($from: desktop) {
-         margin-top: -2rem;
-       }
-      
     }
 
     .msd-breadcrumb__list-item {   
