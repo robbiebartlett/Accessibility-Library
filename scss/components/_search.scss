@@ -2,6 +2,15 @@
    #Search
    ========================================================================== */
 
+  /**
+   * Search input value is set to accomodate teh standard user query length - 
+   *  typically about 27 characters 
+   *
+   *
+   * ref: https://www.algolia.com/blog/3-key-ux-design-elements-of-the-search-bar/
+   */
+   
+
 .msd-search__wrapper {
   display: flex;
   align-items: center;
@@ -60,11 +69,11 @@
   width: 100%;
 
   @include mq($from: tablet) {
-    width: 13rem;
+    width: 25ch;
   }
 
   @include mq($from: tablet-wide) {
-    width: 16rem;
+    width: 30ch;
   }
 
   &:focus{
