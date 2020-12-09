@@ -15,11 +15,12 @@
   display: flex;
   align-items: center;
   height: 100%;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin: $xs 0;
   width: 100%;
 
   @include mq($from: tablet) {
+    justify-content: flex-end;
     margin: 0;
   }
   
@@ -27,17 +28,21 @@
 
 .msd-search[role=search]  {
   display: flex;
-  justify-content: flex-end;
+  justify-content: flex-start;
   margin: 0;
   padding: 0;
   position: relative;
   width: 100%;
   z-index: z(header);
 
-  @include mq($from: tablet) {
-    justify-content: flex-end;
+  @include mq($from: mobile-wide) {
     width: auto;
   }
+
+  @include mq($from: tablet) {
+    justify-content: flex-end;
+  }
+
 }
 
 .msd-search__item {
@@ -45,15 +50,10 @@
   border: 1px solid color(govnz-mid-grey);
   display: flex;
   width: 100%;
-
-  @include mq($from: tablet) {
-    width: auto;
-  }
-
 }
 
 .msd-search__label {
-  width:100%;
+  width: 100%;
 }
 
 .msd-search__input {
@@ -68,8 +68,8 @@
   padding: $sm $xs $sm $sm;
   width: 100%;
 
-  @include mq($from: tablet) {
-    width: 25ch;
+  @include mq($from: mobile-wide) {
+    width: 27ch;
   }
 
   @include mq($from: tablet-wide) {
