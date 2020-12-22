@@ -3,14 +3,15 @@
    ========================================================================== */
 
   /**
-   * Search input value is set to accomodate teh standard user query length - 
+   * Search input value is set to accomodate the standard user query length - 
    *  typically about 27 characters 
    *
    *
    * ref: https://www.algolia.com/blog/3-key-ux-design-elements-of-the-search-bar/
+   *
+   * Search results - :115
    */
    
-
 .msd-search__wrapper {
   display: flex;
   align-items: center;
@@ -26,7 +27,8 @@
   
 }
 
-.msd-search[role=search]  {
+.msd-search[role=search],
+.msd-search-listing[role=search] {
   display: flex;
   justify-content: flex-start;
   margin: 0;
@@ -39,24 +41,27 @@
     width: auto;
   }
 
-  @include mq($from: tablet) {
-    justify-content: flex-end;
-  }
-
 }
 
-.msd-search__item {
+.msd-search__item,
+.msd-search-listing__item {
   background-color: color(govnz-white);
   border: 1px solid color(govnz-mid-grey);
   display: flex;
   width: 100%;
+
+  @include mq($from: mobile-wide) {
+    width: auto;
+  }
+
 }
 
 .msd-search__label {
   width: 100%;
 }
 
-.msd-search__input {
+.msd-search__input,
+.msd-search-listing__input {
   background-color: transparent;
   border: none;
   border-radius: 0;
@@ -108,3 +113,55 @@
   }
   
 }
+
+
+
+//Search results
+.search-title {
+  margin-bottom: 1.5rem;
+}
+
+.msd-search__results-count {
+  @include font-size(18px);
+  margin-top: $md;
+  margin-bottom: $md;
+
+  @include mq($from: tablet-wide) {
+    margin-top: $mp;
+    margin-bottom: $mp;
+  }
+
+}
+
+.msd-search__result {
+  line-height: initial;
+  margin: initial;
+  padding: initial;
+}
+
+.msd-search__result--item {
+  list-style: none;
+  margin-bottom: $mp;
+  border-top: 1px solid color(govnz-mid-grey);
+  padding-top: $mp;
+}     
+
+.msd-search__result--title {
+  font-weight: bold;
+  margin-bottom: $sm;
+  padding: 0;
+}
+
+.msd-search__inline-details {
+  color: color(govnz-mid-grey);
+  @include font-size(16px);
+  margin-bottom: $sm;
+}
+
+.msd-search-listing__result-summary {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+
+
