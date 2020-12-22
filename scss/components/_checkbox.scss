@@ -1,0 +1,98 @@
+/* ==========================================================================
+   #Checkbox
+   ========================================================================== */
+
+  /**
+   * Re-usable styling for checkboxes styles
+   *
+   */
+
+	 .msd-checkboxes {
+		  margin-top: $md;
+		  margin-left: .25rem;
+	 }
+
+	 .msd-checkboxes__item {
+			display: block;
+			font-weight: 400;
+			font-size: 1.1rem;
+			line-height: 1.5;
+			min-height: $mp;
+			margin-bottom: $md;
+			padding-left: $mp;
+			position: relative;
+	 }
+
+	 .msd-checkboxes__input {
+			cursor: pointer;
+			height: $mp;
+			left: -2px;
+			margin: 0;
+			opacity: 0;
+			position: absolute;
+			top: -2px;
+			width: $mp;
+			z-index: z(footer);
+
+      &:focus+.msd-checkboxes__label:before {
+				border-width:3px;
+				box-shadow:0 0 0 3px #fd0
+			}
+
+			&:checked+.msd-checkboxes__label:after {
+				opacity:1
+			}
+
+			&:disabled,
+			&:disabled+.msd-checkboxes__label {
+				cursor:default;
+				opacity:.5;
+			}
+
+	 }
+
+	 .msd-checkboxes__label {
+			display: inline-block;
+			font-size: 1.1875rem;
+			line-height: 1.5;
+			margin-bottom: 0;
+			padding: .05rem $null $sm;
+			cursor: pointer;
+			-ms-touch-action: manipulation;
+			touch-action: manipulation;
+
+      //box shape
+			&:before  {
+				background: transparent;
+				border: 2px solid currentColor;
+				content: "";
+				height: 2rem;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 2rem;
+			}
+			
+      //tick symbol
+			&:after {
+				background: transparent;
+				border: solid;
+				border-width: 0 0 4px 4px;
+				border-top-color: transparent;
+				content: "";
+				height: 9px;
+				left: 6px;
+				opacity: 0;
+				position: absolute;
+				top: 10px;
+				transform: rotate(-45deg);
+				width: 19px;
+			}
+			
+	 }
+
+
+
+
+
+
