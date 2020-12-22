@@ -42,7 +42,7 @@
 
   <!-- CSS
   ================================================== -->
-  <link rel="stylesheet" href="dist/css/main.css?cb=1608243432012">
+  <link rel="stylesheet" href="dist/css/main.css?cb=1608491632928">
 
 </head>
 
@@ -52,7 +52,7 @@
 ================================================== -->  
   <nav id="skiplinks" aria-label="Skip Link">
     <a class="skip-link" href="#main-content">Skip to the main content</a>
-    <a class="skip-link skip-link__desktop" href="#page-nav">Skip to the menu for this section</a>
+    <a class="skip-link" href="#search-refine">Skip to search refinement</a>
   </nav>
   
 
@@ -91,8 +91,8 @@
                   <input id="msd-accessibility-query" class='msd-search__input' placeholder="Search" type="search" name="search">
                 </label>
                 
-                <button type='submit' class="msd-search__button" name="commit" aria-label="Search">
-                  <svg width="24px" height="24px" aria-hidden="true" focusable="false" aria-label="Submit Search" class="msd-icon msd-icon__search">
+                <button type='submit' class="msd-search__button" name="commit" aria-label="Submit Search">
+                  <svg width="24px" height="24px" aria-hidden="true" focusable="false" class="msd-icon msd-icon__search">
                     <use href="dist/images/sprites/sprite.svg#icons--search"></use>
                   </svg>
                 </button>
@@ -493,6 +493,8 @@
 
       <div class="msd-grid">
 
+      
+
         <!-- Main content -->
         <div class="msd-grid__cell msd-grid--two-thirds msd-order-2">
 
@@ -501,22 +503,19 @@
             <form class="msd-search-listing" role="search" action="search" method="get">
               <div class="msd-search-listing__item">
 
-                <label for="msd-search-input" class="msd-search-listing__label">
+                <label for="msd-search-input" class="msd-search__label">
                   <span class="sr-only">Search Accessiblity for MSD</span>
                   <input id="msd-search-input" class="msd-search-listing__input" placeholder="Search Accessiblity for MSD" type="search" name="query" title="Search query" value="keyboard">
                 </label>
                 
-                <button type="submit" class="msd-search-listing__submit" name="commit">
-                  <span class="sr-only">Submit your search</span>
-                  <svg width="24px" height="24px" aria-hidden="true" focusable="false" aria-label="Submit Search" class="msd-icon msd-icon__search">
+                <button type="submit" class="msd-search__button" name="commit" aria-label="Submit Search">
+                  <svg width="24px" height="24px" aria-hidden="true" focusable="false" class="msd-icon msd-icon__search">
                     <use href="dist/images/sprites/sprite.svg#icons--search"></use>
                   </svg>
                 </button>
 
               </div>
             </form>
-
-
 
 
           <!-- Search result count -->
@@ -534,8 +533,8 @@
               <ol class="msd-search__result" start="1">
             
                 <li class="msd-search__result--item">        
-                  <h3 class="msd-search__result--title">
-                    <a href="/visual-design/keyboard-access"><strong>Keyboard</strong> access | Accessibility for MSD</a>
+                  <h3 class="msd-h4 msd-search__result--title">
+                    <a class="msd-link" href="/visual-design/keyboard-access"><strong>Keyboard</strong> access | Accessibility for MSD</a>
                   </h3>
                     <!-- detail--> 
                     <p class="msd-search__inline-details">
@@ -550,8 +549,8 @@
                 </li>
 
                 <li class="msd-search__result--item">        
-                  <h3 class="msd-search__result--title">
-                    <a href="/development/keyboard-access"><strong>Keyboard</strong> access | Accessibility for MSD</a>
+                  <h3 class="msd-h4 msd-search__result--title">
+                    <a class="msd-link" href="/development/keyboard-access"><strong>Keyboard</strong> access | Accessibility for MSD</a>
                   </h3>
                     <!-- detail--> 
                     <p class="msd-search__inline-details">
@@ -565,8 +564,8 @@
                 </li>
 
                 <li class="msd-search__result--item">        
-                  <h3 class="msd-search__result--title">
-                    <a href="/visual-design/colour-and-contrast">Colour and contrast | Accessibility for MSD</a>
+                  <h3 class="msd-h4 msd-search__result--title">
+                    <a class="msd-link" href="/visual-design/colour-and-contrast">Colour and contrast | Accessibility for MSD</a>
                   </h3>
                     <!-- detail--> 
                     <p class="msd-search__inline-details">
@@ -580,8 +579,8 @@
                 </li>
 
                 <li class="msd-search__result--item">        
-                  <h3 class="msd-search__result--title">
-                    <a href="/ux/navigation-shortcuts">Navigation shortcuts | Accessibility for MSD</a>
+                  <h3 class="msd-h4 msd-search__result--title">
+                    <a class="msd-link" href="/ux/navigation-shortcuts">Navigation shortcuts | Accessibility for MSD</a>
                   </h3>
                     <!-- detail--> 
                     <p class="msd-search__inline-details">
@@ -595,8 +594,8 @@
                 </li>
 
                 <li class="msd-search__result--item">        
-                  <h3 class="msd-search__result--title">
-                    <a href="/ux/tab-order">Tab order | Accessibility for MSD</a>
+                  <h3 class="msd-h4 msd-search__result--title">
+                    <a class="msd-link" href="/ux/tab-order">Tab order | Accessibility for MSD</a>
                   </h3>
                     <!-- detail--> 
                     <p class="msd-search__inline-details">
@@ -610,8 +609,8 @@
                 </li>              
                 
                 <li class="msd-search__result--item">        
-                  <h3 class="msd-search__result--title">
-                    <a href="/ux/humanise-accessibility">Humanise accessibility | Accessibility for MSD</a>
+                  <h3 class="msd-h4 msd-search__result--title">
+                    <a class="msd-link" href="/ux/humanise-accessibility">Humanise accessibility | Accessibility for MSD</a>
                   </h3>
                     <!-- detail--> 
                     <p class="msd-search__inline-details">
@@ -625,8 +624,8 @@
                 </li>              
                 
                 <li class="msd-search__result--item">        
-                  <h3 class="msd-search__result--title">
-                    <a href="/visual-design/mobile">Mobile | Accessibility for MSD</a>
+                  <h3 class="msd-h4 msd-search__result--title">
+                    <a class="msd-link" href="/visual-design/mobile">Mobile | Accessibility for MSD</a>
                   </h3>
                     <!-- detail--> 
                     <p class="msd-search__inline-details">
@@ -640,8 +639,8 @@
                 </li>              
                 
                 <li class="msd-search__result--item">        
-                  <h3 class="msd-search__result--title">
-                    <a href="/visual-design/layout-and-heirarchy">Layout and hierarchy | Accessibility for MSD</a>
+                  <h3 class="msd-h4 msd-search__result--title">
+                    <a class="msd-link" href="/visual-design/layout-and-heirarchy">Layout and hierarchy | Accessibility for MSD</a>
                   </h3>
                     <!-- detail--> 
                     <p class="msd-search__inline-details">
@@ -655,8 +654,8 @@
                 </li>
 
                 <li class="msd-search__result--item">        
-                  <h3 class="msd-search__result--title">
-                    <a href="/visual-design/forms">Forms | Accessibility for MSD</a>
+                  <h3 class="msd-h4 msd-search__result--title">
+                    <a class="msd-link" href="/visual-design/forms">Forms | Accessibility for MSD</a>
                   </h3>
                     <!-- detail--> 
                     <p class="msd-search__inline-details">
@@ -670,8 +669,8 @@
                 </li>
 
                 <li class="msd-search__result--item">        
-                  <h3 class="msd-search__result--title">
-                    <a href="/ux/assistive-technology">Assistive technology | Accessibility for MSD</a>
+                  <h3 class="msd-h4 msd-search__result--title">
+                    <a class="msd-link" href="/ux/assistive-technology">Assistive technology | Accessibility for MSD</a>
                   </h3>
                     <!-- detail--> 
                     <p class="msd-search__inline-details">
@@ -692,30 +691,79 @@
 
         </div> 
 
-        <!-- Filter -->
-        <div class="msd-grid__cell msd-grid--one-third msd-pane__sidenav">
+        <!-- Search filter -->
+        <div class="msd-grid__cell msd-grid--one-third msd-pane__sidenav msd-order-1">
 
-          <div id="page-nav" role="group" aria-labelledby="refine_results">
-            <h4 id="refine_results" class="msd-h3">Refine by</h4>
+          <div id="search-refine" data-js="msd-filter__panel" class="msd-filter" aria-label="Search filter">
 
-            <div class="msd-checkbox">
-              <input id="product" type="checkbox" name="accessibility" value="product">
-              <label for="product">Product</label>
+          <h2 class="msd-h4 msd-filter__heading" data-js="heading">Refine by</h2> 
 
-              <input id="content" type="checkbox" name="accessibility" value="content">
-              <label for="content">Content</label>
+            <div class="msd-filter__section" aria-labelledby="msd-filter-button" data-js="msd-filter__section">
+              
+              <h2 id="msd-filter-button" data-js="msd-filter__heading">Refine by <span class="sr-only ">Select to expand or collapse</span></h2> 
+              
+              <div id="content" class="msd-filter__content" data-js="msd-filter__content"> 
+                
+              <div class="msd-checkboxes">
 
-              <input id="ux" type="checkbox" name="accessibility" value="ux">
-              <label for="ux">UX</label>
+                <div class="msd-checkboxes__item">
+                  <input class="msd-checkboxes__input" id="product" name="product" type="checkbox" value="design">
+                  <label class="msd-checkboxes__label" for="product">
+                    Product
+                  </label>
+                </div>
 
-              <input id="visual-design" type="checkbox" name="accessibility" value="visual-design">
-              <label for="visual-design">Visual Design</label>
+                <div class="msd-checkboxes__item">
+                  <input class="msd-checkboxes__input" id="content-design" name="content" type="checkbox" value="design">
+                  <label class="msd-checkboxes__label" for="content-design">
+                    Content
+                  </label>
+                </div>
 
-              <input id="development" type="checkbox" name="accessibility" value="development">
-              <label for="development">Development</label>
-            </div>
+                <div class="msd-checkboxes__item">
+                  <input class="msd-checkboxes__input" id="ux" name="user" type="checkbox" value="experience">
+                  <label class="msd-checkboxes__label" for="ux">
+                    UX
+                  </label>
+                </div>
+
+                <div class="msd-checkboxes__item">
+                  <input class="msd-checkboxes__input" id="visual-design" name="visual" type="checkbox" value="design">
+                  <label class="msd-checkboxes__label" for="visual-design">
+                    Visual Design
+                  </label>
+                </div>
+
+                <div class="msd-checkboxes__item">
+                  <input class="msd-checkboxes__input" id="web-dev" name="web" type="checkbox" value="development">
+                  <label class="msd-checkboxes__label" for="web-dev">
+                    Development
+                  </label>
+                </div>
+
+                
+  
+               
+  
+                </div>
+
+              </div>
+              
+            </div> 
+              
+              
+            
+              
+          
+           
 
           </div>
+          </div>
+
+       
+          
+
+
         </div>
     
       </div>
@@ -858,6 +906,6 @@
   <!-- JavaScript
   ================================================== -->
   <script src="dist/js/vendor/jquery-3.5.1.min.js"></script>
-  <script src="dist/js/scripts.js?cb=1608243432012"></script>
+  <script src="dist/js/scripts.js?cb=1608491632928"></script>
 </body>
 </html>
