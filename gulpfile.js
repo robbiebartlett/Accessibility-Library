@@ -1,8 +1,10 @@
 // Initialize modules
+/*jshint esversion: 6 */
 
 // Importing specific gulp API functions lets you write them below 
 // as series() instead of gulp.series()
 const { src, dest, watch, series, parallel } = require('gulp');
+const gulpSVGSprite = require('gulp-svg-sprite');
     sourcemaps = require('gulp-sourcemaps'),
     sass = require('gulp-sass'),
     concat = require('gulp-concat'),
@@ -12,7 +14,9 @@ const { src, dest, watch, series, parallel } = require('gulp');
     cssnano = require('cssnano'),
     svgSprite = require('gulp-svg-sprite'),
     svgmin = require('gulp-svgmin'),
-	cheerio = require('gulp-cheerio'),
+    cheerio = require('gulp-cheerio'),
+    newer = require('gulp-newer'),
+    imagemin = require('gulp-imagemin'),
     replace = require('gulp-replace'),
     browserSync = require('browser-sync').create();
 
@@ -23,8 +27,9 @@ const { src, dest, watch, series, parallel } = require('gulp');
 const files = {
     scssPath: 'src/scss/**/*.scss',
     jsPath: 'src/js/**/*.js',
+    imagesPath: 'src/images/**/*',
     spritePath: 'src/images/**/*.svg'
-}
+};
 
 
 
@@ -130,6 +135,24 @@ function spriteTask() {
 
 
 
+// Image task
+function imageTask() {
+    //destination
+    const out = 'dist/' + 'images/';
+
+    return src(files.imagesPath)
+    .pipe(newer('dist/images'))
+    .pipe(imagemin({ optimizationlevel: 5 }))
+    .pipe(dest('dist/images'))
+    .pipe(browserSync.reload({
+        stream: true
+      })
+    );
+}
+
+
+
+
 
 // Caching task
 const cbString = new Date().getTime();
@@ -145,7 +168,7 @@ function cacheTask(){
 // Watch task
 function watchTask(){
     browserSync.init(null, {
-        "open": true,
+        "open": false,
         "port": 3000,
         "server": {
         "baseDir": ".",
@@ -157,9 +180,9 @@ function watchTask(){
             "C:\\Program Files\\Firefox Developer Edition\\firefox.exe"
         ]
     });
-    watch([files.scssPath, files.jsPath],
+    watch([files.scssPath, files.jsPath, files.imagesPath],
         series(
-            parallel(scssTask, jsTask),
+            parallel(scssTask, jsTask, imageTask),
             cacheTask
         )
     );    
@@ -169,7 +192,7 @@ function watchTask(){
 
 // Default task
 exports.default = series(
-    parallel(scssTask, jsTask, spriteTask), 
+    parallel(scssTask, jsTask, spriteTask, imageTask), 
     cacheTask,
     watchTask
 );
