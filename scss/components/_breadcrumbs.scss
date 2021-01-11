@@ -3,8 +3,15 @@
    ========================================================================== */
 
   /**
-   * Breadcrumbs act as an additional reference to site location
-   * 
+   * In this markup the <nav> element has an aria-label="breadcrumb" to announce 
+   * this as a "breadcrumb navigation" to screen readers. 
+   *
+   * The aria-current="page" is placed on the last element in the breadcrumb  
+   * navigation to append "current page to the announcement of the accessible  
+   * name of the link. 
+   *
+   * i.e. "About, current page"
+   *  
    */
 
    .msd-pane__breadcrumb {
@@ -37,6 +44,11 @@
          padding-right: $xs;
      }
 
+     //Current link
+     &[aria-current] {
+       color: color(msd-text);
+     }
+
     }
 
    .msd-breadcrumb__link {
@@ -62,6 +74,3 @@
 
    }
 
-  .msd-breadcrumb__link--active {
-    color: color(msd-text);
-  }
