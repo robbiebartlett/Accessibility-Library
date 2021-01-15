@@ -144,6 +144,11 @@
   margin-bottom: $mp;
   border-top: 1px solid color(govnz-mid-grey);
   padding-top: $mp;
+
+  &:last-of-type {
+    border-bottom: 1px solid color(govnz-mid-grey);
+    padding-bottom: $mp;
+  }
 }     
 
 .msd-search__result--title {
