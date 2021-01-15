@@ -21,17 +21,13 @@ body {
 
 // <main> container
 .main-container {
-  padding-bottom: 2rem;
+  padding-bottom: $null;
   min-height: 35vh;
 }
 
 // <main> content
 .main-container__content {
-  margin-top: $sm;
-
-  @include mq($from: tablet ) {
-    margin-top: $md;
-  }   
+  margin-top: $md;
   
   @include mq($from: desktop ) {
     margin-top: $lg;
