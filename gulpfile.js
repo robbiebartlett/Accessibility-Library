@@ -17,19 +17,46 @@ const gulpSVGSprite = require('gulp-svg-sprite');
     cheerio = require('gulp-cheerio'),
     newer = require('gulp-newer'),
     imagemin = require('gulp-imagemin'),
+    htmlmin = require('gulp-htmlmin'),
     replace = require('gulp-replace'),
     browserSync = require('browser-sync').create();
 
-
     
-
 // File path variables
 const files = {
+    htmlPath: 'src/html/**/*.html',
     scssPath: 'src/scss/**/*.scss',
     jsPath: 'src/js/**/*.js',
     imagesPath: 'src/images/**/*',
     spritePath: 'src/images/**/*.svg'
 };
+
+
+
+
+// Html task:
+function htmlTask() {
+
+  //destination
+  const out = 'dist/' + 'html/';
+
+  return src(files.htmlPath)   
+      .pipe(replace('../../dist/', '../')) //set dist URLS  
+      .pipe(htmlmin({
+        removeComments: true, //Clear HTML comments
+        collapseWhitespace: false, //Compress HTML for production
+        minifyJS: true, //Compressed page JS
+        minifyCSS: true, //Compressed page CSS
+        minifyURLs: true
+      }))
+      .pipe(dest('dist/html'))
+      .pipe(browserSync.reload({
+          stream: true
+        })
+  ); 
+}
+
+
 
 
 
@@ -180,9 +207,9 @@ function watchTask(){
             "C:\\Program Files\\Firefox Developer Edition\\firefox.exe"
         ]
     });
-    watch([files.scssPath, files.jsPath, files.imagesPath],
+    watch([files.htmlPath, files.scssPath, files.jsPath, files.imagesPath],
         series(
-            parallel(scssTask, jsTask, imageTask),
+            parallel(htmlTask, scssTask, jsTask, imageTask),
             cacheTask
         )
     );    
@@ -192,7 +219,7 @@ function watchTask(){
 
 // Default task
 exports.default = series(
-    parallel(scssTask, jsTask, spriteTask, imageTask), 
+    parallel(htmlTask, scssTask, jsTask, spriteTask, imageTask), 
     cacheTask,
     watchTask
 );
