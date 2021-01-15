@@ -19,7 +19,7 @@
 			line-height: 1.5;
 			min-height: $mp;
 			margin-bottom: $md;
-			padding-left: $mp;
+			padding-left: 2rem;
 			position: relative;
 	 }
 
@@ -53,7 +53,7 @@
 
 	 .msd-checkboxes__label {
 			display: inline-block;
-			font-size: 1.1875rem;
+			font-size: 1.125rem;
 			line-height: 1.5;
 			margin-bottom: 0;
 			padding: .05rem $null $sm;
@@ -66,11 +66,11 @@
 				background: transparent;
 				border: 2px solid currentColor;
 				content: "";
-				height: 2rem;
+				height: 1.75rem;
 				position: absolute;
 				top: 0;
 				left: 0;
-				width: 2rem;
+				width: 1.75rem;
 			}
 			
       //tick symbol
@@ -81,10 +81,10 @@
 				border-top-color: transparent;
 				content: "";
 				height: 9px;
-				left: 6px;
+				left: 5px;
 				opacity: 0;
 				position: absolute;
-				top: 10px;
+				top: 8px;
 				transform: rotate(-45deg);
 				width: 19px;
 			}
