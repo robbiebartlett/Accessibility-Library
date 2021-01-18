@@ -48,11 +48,13 @@
 
 <body>
 
-  <div id="skiplinks" class="msd-pane"> 
-    <nav aria-label="Skip Link">
-      <a class="skip-link" href="#main-content">Skip to the main content</a>
-      <a class="skip-link skip-link__desktop" href="#page-nav">Skip to the menu for this section</a>
-    </nav>
+<!-- Skiplinks
+================================================== -->  
+<nav id="skiplinks" aria-label="Skip Link">
+  <a class="skip-link" href="#main-content">Skip to the main content</a>
+  <a class="skip-link" href="#page-nav">Skip to menu for this section</a>
+</nav>
+
   
 
 
@@ -481,32 +483,30 @@
 ============================================== -->
   <main id="main-content" aria-hidden="false" class="main-container">  
 
-              <!-- Breadcrumbs -->
-              <div class="msd-pane__breadcrumb">
-                <div class="msd-container">
-                  <div class="msd-grid">
-                <nav class="msd-breadcrumb">
-                  <p id="msd-breadcrumb__label" class="sr-only">You are here:</p>
-                  <ol class="msd-breadcrumb__section" aria-labelledby="msd-breadcrumb__label">
-                    <li class="msd-breadcrumb__list-item">
-                      <a href="http://localhost:3000/index.html" class="msd-breadcrumb__link">
-                        Home
-                      </a>
-                    </li>
-                    <li class="msd-breadcrumb__list-item"  aria-current="Current page">
-                      Visual design
-                    </li>
-                  </ol>
-                </nav>
-              </div>
-              </div>
-              </div>
+    <!-- Breadcrumbs -->
+    <div class="msd-pane__breadcrumb">
+      <div class="msd-container">
+        <div class="msd-grid">
+      <nav class="msd-breadcrumb">
+        <p id="msd-breadcrumb__label" class="sr-only">You are here:</p>
+        <ol class="msd-breadcrumb__section" aria-labelledby="msd-breadcrumb__label">
+          <li class="msd-breadcrumb__list-item">
+            <a href="http://localhost:3000/index.html" class="msd-breadcrumb__link">
+              Home
+            </a>
+          </li>
+          <li class="msd-breadcrumb__list-item"  aria-current="Current page">
+            Visual design
+          </li>
+        </ol>
+      </nav>
+    </div>
+    </div>
+    </div>
 
     <div class="main-container__content">
       <div class="msd-container">
         <div class="msd-grid">
-
-
 
           <!-- Main content -->
           <div class="msd-grid__cell msd-grid--two-thirds msd-order-2">
@@ -551,12 +551,12 @@
           </div>
 
           <!-- Secondary navigation -->
-          <div class="msd-grid__cell msd-grid--one-third sticky">
+          <div class="msd-grid__cell msd-grid--one-third msd-order-1">
     
             <div class="msd-pane__sidenav">
-              <nav id="msd-sidenav" class="msd-sidenav" aria-label="Secondary">
+              <nav id="page-nav" class="msd-sidenav" aria-label="Secondary">
                       
-               <ul id="page-nav" class="msd-sidenav__section">
+               <ul class="msd-sidenav__section">
                     
                   <li class="msd-sidenav__section--item" aria-current="page">
                     <a class="msd-sidenav__link msd-link" href="#">Introduction</a>
