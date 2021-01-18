@@ -47,13 +47,14 @@
 
 </head>
 
-<body id="top">
+<body>
 
 <!-- Skiplinks
-================================================== -->   
+================================================== -->  
 <nav id="skiplinks" aria-label="Skip Link">
-      <a class="skip-link" href="#main">Skip to main content</a>
-  </nav>
+  <a class="skip-link" href="#main-content">Skip to the main content</a>
+</nav>
+
   
 
 
@@ -481,7 +482,7 @@
   
 <!-- Main Content
 ============================================== -->
-  <main id="main" aria-hidden="false" class="main-container">  
+  <main id="main-content" aria-hidden="false" class="main-container">  
 
     <div class="msd-masthead__accessibility">
    
@@ -524,7 +525,7 @@
            </div>
             <div class="msd-card--content">
               <h2 class="msd-h4 msd-card--title">
-                <a href="#" class="msd-card--link">Overview</a>
+                <a href="#" class="msd-link msd-card--link">Overview</a>
               </h2>
               <p class="msd-card--text">
                 Accessibility guidance and the principles that underlie it.
@@ -540,7 +541,7 @@
              </div>
             <div class="msd-card--content">
                  <h2 class="msd-h4 msd-card--title">
-                  <a href="#" class="msd-card--link">Product</a>
+                  <a href="#" class="msd-link msd-card--link">Product</a>
                  </h2>
               <p class="msd-card--text">
                 Guidance and resources for leaders and managers.
@@ -556,7 +557,7 @@
             </div>
             <div class="msd-card--content">
               <h2 class="msd-h4 msd-card--title">
-                <a href="#" class="msd-card--link">Content</a>
+                <a href="#" class="msd-link msd-card--link">Content</a>
               </h2>
               <p class="msd-card--text">
                 Steps to ensure your content is easier to read.
@@ -572,7 +573,7 @@
             </div>
             <div class="msd-card--content">
               <h2 class="msd-h4 msd-card--title">
-                <a href="#" class="msd-card--link">UX</a>
+                <a href="#" class="msd-link msd-card--link">UX</a>
               </h2>
               <p class="msd-card--text">
                 How to implement accessibility as a facet of user experience.
@@ -588,7 +589,7 @@
             </div>
             <div class="msd-card--content">
               <h2 class="msd-h4 msd-card--title">
-                <a href="#" class="msd-card--link">Visual Design</a>
+                <a href="#" class="msd-link msd-card--link">Visual Design</a>
               </h2>
               <p class="msd-card--text">
                 Steps and resources to assist people with different visual abilities.
@@ -604,7 +605,7 @@
             </div>
             <div class="msd-card--content">
               <h2 class="msd-h4 msd-card--title">
-                <a href="#" class="msd-card--link">Development</a>
+                <a href="#" class="msd-link msd-card--link">Development</a>
               </h2>
               <p class="msd-card--text">
                Resources to ensure users can access content.
@@ -662,6 +663,35 @@
 
         </div>
       </div>
+
+
+       <!-- Page utilities -->
+       <div class="msd-container">
+        <div class="msd-grid">
+
+         <div class="msd-grid__cell">
+           <div class="msd-utilities">
+
+            <div class="msd-utilities__elements">
+
+              <!--Back to top-->
+              <button id="BackToTop" tabindex="0" href="javascript:void(0)" class="back-to-top">
+                <span class="sr-only">Return to the top of the page</span>
+                <span class="msd-utilities__btn--label" aria-hidden="true">Back to top</span>
+              </button>
+              
+              <button id="msd-print-button" class="msd-link msd-print__button">
+                <span class="sr-only">Print the page content</span>
+                <span class="msd-utilities__btn--label">Print</span>
+              </button>
+          
+            </div>
+
+           </div>
+          </div>
+        </div>  
+      </div>
+
     </div>
     
   </main>
