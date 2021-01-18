@@ -476,8 +476,6 @@
     </ul>
 </nav>
 
-
-
   
 <!-- Main Content
 ============================================== -->
@@ -691,28 +689,37 @@
           <!-- Pagination -->
             <nav class="msd-pane__pagination" aria-label="Pages">
               <ol class="msd-pagination">
+
                 <!-- previous page temporarily disabled-->
                 <li class="msd-pagination__section disabled">
-                  <a class="msd-pagination__link  msd-pagination__previous-page" href="search.html?collection=">
-                    Previous<span class="sr-only">set of pages</span>
+                  <a class="msd-pagination__link  msd-pagination__previous" href="search.html?collection=">
+                    <span class="msd-pagination__previous--page">Previous<span class="sr-only">Set of pages</span></span>
                   </a>
                 </li>
 
-                <li class="msd-pagination__section"><span class="msd-pagination__link msd-pagination__link" href="search.html?collection=" aria-current="Page"><span class="sr-only">page</span> 1</span></li>
-                <li class="msd-pagination__section"><a class="msd-pagination__link" href="search.html?collection="><span class="sr-only">page</span> 2</a></li>
-                <li class="msd-pagination__section"><a class="msd-pagination__link" href="search.html?collection="><span class="sr-only">page</span> 3</a></li>
                 <li class="msd-pagination__section">
-                  <a class="msd-pagination__link msd-pagination__next-page" href="search.html?collection=">
-                    Next <span class="sr-only">set of pages</span>
+                  <span class="msd-pagination__link msd-pagination__link" href="search.html?collection=" aria-current="Page">
+                  <span class="sr-only">page</span> 1</span></li>
+                <li class="msd-pagination__section">
+                  <a class="msd-pagination__link" href="search.html?collection=">
+                    <span class="sr-only">page</span>
+                    <span class="msd-pagination__value">2</span>
+                  </a>
+                </li>
+                <li class="msd-pagination__section">
+                  <a class="msd-pagination__link" href="search.html?collection=">
+                    <span class="sr-only">page</span>
+                    <span class="msd-pagination__value">3</span>
+                  </a>
+                </li>   
+                <li class="msd-pagination__section">
+                  <a class="msd-pagination__link  msd-pagination__next" href="search.html?collection=">
+                    <span class="msd-pagination__next--page">Next<span class="sr-only">Set of pages</span></span>
                   </a>
                 </li>
               </ol>
             </nav>
-  
-          
-  
-
-        </div> 
+          </div> 
 
         <!-- Search filter -->
         <div class="msd-grid__cell msd-grid--one-third msd-pane__sidenav msd-order-1">
@@ -894,11 +901,12 @@
   </div>
 </footer>
 
-</div>
 
-  <!-- JavaScript
-  ================================================== -->
+
+<!-- JavaScript
+================================================== -->
   <script src="../../dist/js/vendor/jquery-3.5.1.min.js"></script>
   <script src="../../dist/js/scripts.js?cb=1610392452898"></script>
+
 </body>
 </html>
