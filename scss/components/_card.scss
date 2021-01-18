@@ -176,11 +176,6 @@
     outline: none;
   }
 
-  &:focus:not(:hover) {
-    box-shadow: none;
-    outline: none;
-  }
-
   //Full card selection
     &:after {
       bottom: 0; 
@@ -189,12 +184,6 @@
       position: absolute;
       right:0;
       top: 0;
-    }
-
-    &:focus:not(:hover):after {
-      box-shadow: inset 0 0 0 3px color(govnz-black);
-      outline: 3px solid color(msd-focus);
-      outline-offset: 0px;
     }
   
 }
