@@ -224,19 +224,22 @@
 
 //Sidebar navigation
 .msd-pane__sidenav {
-  display: block;
+  position: relative;
+
+  @include mq($from: tablet) {
+    position: sticky;
+    top: 10px;
+  }
+
 }
 
 .msd-sidenav {
- 
   display: none;
   font-size: $null;
   line-height: 1.5;
   margin-top: $md;
   padding-right: $md;
-  position: -webkit-sticky;
-  position: sticky;
-  top: 10px;
+
 
   @include mq($from: tablet) {
     display: flex;
