@@ -127,8 +127,8 @@
   margin-bottom: $md;
 
   @include mq($from: tablet-wide) {
-    margin-top: $mp;
-    margin-bottom: $mp;
+    margin-top:lg;
+    margin-bottom: $lg;
   }
 
 }
@@ -141,13 +141,13 @@
 
 .msd-search__result--item {
   list-style: none;
-  margin-bottom: $mp;
+  margin-bottom: $lg;
   border-top: 1px solid color(govnz-mid-grey);
-  padding-top: $mp;
+  padding-top: $lg;
 
   &:last-of-type {
     border-bottom: 1px solid color(govnz-mid-grey);
-    padding-bottom: $mp;
+    padding-bottom: $lg;
   }
 }     
 
