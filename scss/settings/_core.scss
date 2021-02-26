@@ -23,8 +23,9 @@ $msd-spacing-unit-factor-xs:      1 !default;   //  .375rem
 $msd-spacing-unit-factor-sm:      2 !default;   //  .750rem  
 $msd-spacing-unit-factor-md:      3 !default;   //  1.125rem 
 $msd-spacing-unit-factor:         4 !default;   //  1.5rem
-$msd-spacing-unit-factor-lg:      8 !default;   //  3.0rem
-$msd-spacing-unit-factor-xl:     16 !default;   //  6.0rem
+$msd-spacing-unit-factor-lg:      6 !default;   //  2.0rem
+$msd-spacing-unit-factor-xl:      8 !default;   //  3.0rem
+$msd-spacing-unit-factor-xxl:     16 !default;  //  6.0rem
 
 
 
@@ -39,6 +40,7 @@ $msd-spacing-unit-sm:    $msd-baseline * $msd-spacing-unit-factor-sm !default;
 $msd-spacing-unit-md:    $msd-baseline * $msd-spacing-unit-factor-md !default;
 $msd-spacing-unit-lg:    $msd-baseline * $msd-spacing-unit-factor-lg !default;
 $msd-spacing-unit-xl:    $msd-baseline * $msd-spacing-unit-factor-xl !default;
+$msd-spacing-unit-xxl:   $msd-baseline * $msd-spacing-unit-factor-xxl !default;
 
 
 
@@ -79,7 +81,8 @@ $msd-close-quote:              ” !default;
       $msd-spacing-unit-factor-sm
       $msd-spacing-unit-factor-md
       $msd-spacing-unit-factor-lg
-      $msd-spacing-unit-factor-xl {
+      $msd-spacing-unit-factor-xl
+      $msd-spacing-unit-factor-xxl {
 
   @if (type-of($_msd-spacing-unit) == number) {
 
