@@ -17,7 +17,7 @@
 			font-weight: 400;
 			font-size: 1.1rem;
 			line-height: 1.5;
-			min-height: $mp;
+			min-height: $lg;
 			margin-bottom: $md;
 			padding-left: 2rem;
 			position: relative;
@@ -25,18 +25,18 @@
 
 	 .msd-checkboxes__input {
 			cursor: pointer;
-			height: $mp;
+			height: $lg;
 			left: -2px;
 			margin: 0;
 			opacity: 0;
 			position: absolute;
 			top: -2px;
-			width: $mp;
+			width: $lg;
 			z-index: z(footer);
 
       &:focus+.msd-checkboxes__label:before {
 				border-width:3px;
-				box-shadow:0 0 0 3px #fd0
+				box-shadow:0 0 0 3px color(msd-focus)
 			}
 
 			&:checked+.msd-checkboxes__label:after {
