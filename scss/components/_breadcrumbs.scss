@@ -26,11 +26,12 @@
       display: flex;
       flex-wrap: wrap;
       margin-top: $sm;
-      padding: 0;
+      margin-left: $null;
+      padding: $sm;
     }
 
     .msd-breadcrumb__list-item {   
-      font-size: .9375rem;
+      @include font-size(15px);
       line-height: 2;
 
       & + .msd-breadcrumb__list-item {
@@ -52,14 +53,14 @@
     }
 
    .msd-breadcrumb__link {
-      border-bottom: 2px solid color(govnz-link);
+      border-bottom: 2px solid transparent;
       color: color(govnz-link);
       padding-bottom: .375vh;
       text-decoration: none;
 
      &:hover:not(:focus) {
-         border-bottom-color: #000c48;
-         color: #000c48;
+         border-bottom-color: color(govnz-link-hover);
+         color: color(govnz-link-hover);
      }
 
      &:focus:not(:hover) {
