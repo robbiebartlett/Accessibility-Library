@@ -15,15 +15,11 @@
   display: block; /* [1] */
   padding: $md;
 
-  > :last-child {
-    margin-bottom: 0;
+    > :last-child {
+      margin-bottom: 0;
+    }
+
   }
-
-}
-
-
-
-
 
 // Size variants
 .msd-box--flush {

@@ -30,9 +30,16 @@
   *
   */
  .msd-list__item {
+   font-size: 1.125rem;
    margin-top: $xs;
-   margin-left: $sm;
+   margin-bottom: $lg;
+   margin-left: $xs;
    padding-left: $sm;
+
+   &:last-of-type {
+     margin-bottom: 0;
+   }
+
  }
  
  .msd-list__item--square {
@@ -45,6 +52,16 @@
 
   .msd-list--number{
     list-style-type: decimal;
+  }
+
+  .msd-list__sub-list {
+    margin-top: $md;
+    margin-left: 0;
+  }
+
+  .msd-list__no-link {
+    line-height: 1.5;
+    margin: $xs $xs $md $null;
   }
 
 

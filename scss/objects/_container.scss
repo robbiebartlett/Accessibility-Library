@@ -16,8 +16,9 @@
  .msd-container{
    margin-right: $md;
    margin-left: $md;
+   transition: $msd-transition;
 
-   @include mq($from: tablet-wide) {
+   @include mq($from: tablet) {
     margin-right: $lg;
     margin-left: $lg;
     max-width: $msd-container-width;
@@ -26,7 +27,6 @@
    @include mq($from: desktop) {
      margin-right: auto;
      margin-left:  auto;
-     width: $msd-container-width;
    }
 
  }
