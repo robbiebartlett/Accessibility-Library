@@ -2,49 +2,55 @@
 <html lang="en">
 
 <head>
-  
+  <!-- Basic Page Needs
+  ================================================== -->
   <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
   <meta name="ROBOTS" content="INDEX, FOLLOW">
 
-  
-  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+  <!-- Mobile Specific 
+  ================================================== -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
   
         
   <title>Accessibility for MSD</title>
 
-    
-     
+    <!-- Mobile Specific Metatags
+  ================================================== -->
+  <!--Status Bar Android-->   
   <meta name="theme-color" content="#121F6B">
-       
+  <!--Status Bar Windows-->     
   <meta name="msapplication-navbutton-color" content="#121F6B">
-       
+  <!--Status Bar Apple-->     
   <meta name="apple-mobile-web-sidebar-status-bar-style" content="#121F6B">  
 
-     
-  <link rel="shortcut icon" href="../images/msd/favicon.ico">  
+    <!-- Favicons
+  ================================================== --> 
+  <link rel="shortcut icon" href="../../dist/images/msd/favicon.ico">  
         
-      
-  <link rel="apple-touch-icon" sizes="57x57" href="../images/msd/touch-icon-57.png">
-  <link rel="apple-touch-icon" sizes="76x76" href="../images/msd/touch-icon-76.png">
-  <link rel="apple-touch-icon" sizes="120x120" href="../images/msd/touch-icon-120.png">
-  <link rel="apple-touch-icon" sizes="152x152" href="../images/msd/touch-icon-152.png">
+  <!--Apple IOS icons-->    
+  <link rel="apple-touch-icon" sizes="57x57" href="../../dist/images/msd/touch-icon-57.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../dist/images/msd/touch-icon-76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../dist/images/msd/touch-icon-120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../dist/images/msd/touch-icon-152.png">
         
-       
-  <meta name="msapplication-square70x70logo" content="../images/msd/tile-icon-small.png">
-  <meta name="msapplication-square150x150logo" content="../images/msd/tile-icon-medium.png">
-  <meta name="msapplication-square310x310logo" content="../images/msd/tile-icon-large.png">
-  <meta name="msapplication-wide310x150logo" content="../images/msd/tile-icon-wide.png">
+  <!--Windows icons-->     
+  <meta name="msapplication-square70x70logo" content="../../dist/images/msd/tile-icon-small.png">
+  <meta name="msapplication-square150x150logo" content="../../dist/images/msd/tile-icon-medium.png">
+  <meta name="msapplication-square310x310logo" content="../../dist/images/msd/tile-icon-large.png">
+  <meta name="msapplication-wide310x150logo" content="../../dist/images/msd/tile-icon-wide.png">
   <meta name="msapplication-tilecolor" content="#121F6B">   
 
-  
-  <link rel="stylesheet" href="../css/main.css">
+  <!-- CSS
+  ================================================== -->
+  <link rel="stylesheet" href="../../dist/css/main.css">
 
 
 </head>
 
 <body>
 
-  
+<!-- Skiplinks
+================================================== -->  
 <nav id="skiplinks" aria-label="Skip Link">
   <a class="skip-link" href="#main-content">Skip to the main content</a>
 </nav>
@@ -53,7 +59,8 @@
 
 
 
-  
+<!-- Header
+================================================== -->  
 <header class="msd-header">
   <div class="msd-container msd-header__divider">
     <div class="msd-grid">
@@ -63,7 +70,7 @@
           <h1 class="msd-header__site-logo">
             <span class="sr-only">Ministry of Social Development</span>
               <svg width="300px" height="150px" aria-hidden="true" focusable="false" class="msd-icon msd-icon__msd-logo">
-               <use href="../images/sprites/sprite.svg#msd--logo"></use>
+               <use href="../../dist/images/sprites/sprite.svg#msd--logo"></use>
              </svg>
             </h1>
              <span class="msd-header__product-name" aria-hidden="true">
@@ -74,7 +81,7 @@
 
     <div class="msd-grid__cell msd-grid--one-half">
 
-       
+       <!-- search -->
         <div class="msd-search__wrapper">
          
           <form class="msd-search" role="search" action="/" method="get">
@@ -82,19 +89,19 @@
 
               <label class="msd-search__label" for="msd-accessibility-query">
                 <span class="sr-only">Search</span>
-                <input id="msd-accessibility-query" class="msd-search__input" placeholder="Search" type="search" name="search">
+                <input id="msd-accessibility-query" class='msd-search__input' placeholder="Search" type="search" name="search">
               </label>
               
-              <button type="submit" class="msd-search__button" name="commit" aria-label="Submit Search">
+              <button type='submit' class="msd-search__button" name="commit" aria-label="Submit Search">
                 <svg width="24px" height="24px" aria-hidden="true" focusable="false" class="msd-icon msd-icon__search">
-                  <use href="../images/sprites/sprite.svg#icons--search"></use>
+                  <use href="../../dist/images/sprites/sprite.svg#icons--search"></use>
                 </svg>
               </button>
             </div>
           </form>
 
 
-          
+          <!-- mobile nav button -->
           <section class="msd-navigation__toggle--wrapper">
             <button aria-expanded="false" aria-label="Mobile menu" class="msd-navigation__toggle">Menu</button>
           </section>
@@ -110,7 +117,8 @@
 
 
 
-
+<!-- Navigation
+============================================== -->
 <nav class="msd-navigation" aria-label="main menu">
   <ul class="msd-navigation__list msd-navigation__level-one">
 
@@ -129,7 +137,7 @@
         <ul class="msd-navigation__level-two">
           <li class="msd-navigation__list-item">
             <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/what-is-digitial-accessibility.html">What is Digital Accessibility?</a>
-          </li><li class="msd-navigation__list-item">
+          <li class="msd-navigation__list-item">
             <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/perceivable.html">Perceivable</a>
           </li>
           <li class="msd-navigation__list-item">
@@ -178,7 +186,7 @@
         <ul class="msd-navigation__level-two">
                 <li class="msd-navigation__list-item">
                   <a class="msd-link msd-navigation__level-two-link" href="/dist/html/product/overview.html">Accessibility overview</a>
-                </li><li class="msd-navigation__list-item">
+                <li class="msd-navigation__list-item">
                   <a class="msd-link msd-navigation__level-two-link" href="/dist/html/product/diverse-users.html">Diverse users</a>
                 </li>
                 <li class="msd-navigation__list-item">
@@ -206,7 +214,7 @@
               <ul class="msd-navigation__level-two">
                 <li class="msd-navigation__list-item">
                   <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/plain-language.html">Plain language</a>
-                </li><li class="msd-navigation__list-item">
+                <li class="msd-navigation__list-item">
                   <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/reference-materials.html">Reference materials</a>
                 </li>
                 <li class="msd-navigation__list-item">
@@ -245,7 +253,7 @@
               <ul class="msd-navigation__list msd-navigation__level-two">
                 <li class="msd-navigation__list-item">
                   <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/inclusive-design.html">Inclusive Design</a>
-                </li><li class="msd-navigation__list-item">
+                <li class="msd-navigation__list-item">
                   <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/assistive-technology.html">Assisstive Technology</a>
                 </li>
                 <li class="msd-navigation__list-item">
@@ -287,7 +295,7 @@
               <ul class="msd-navigation__level-two">
                 <li class="msd-navigation__list-item">
                   <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/colour-and-contrast.html">Colour and Contrast</a>
-                </li><li class="msd-navigation__list-item">
+                <li class="msd-navigation__list-item">
                   <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/layout-and-hierarchy.html">Layout and Hierarchy</a>
                 </li>
                 <li class="msd-navigation__list-item">
@@ -329,7 +337,7 @@
               <ul class="msd-navigation__level-two">
                 <li class="msd-navigation__list-item">
                   <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/keyboard-access.html">Keyboard access</a>
-                </li><li class="msd-navigation__list-item">
+                <li class="msd-navigation__list-item">
                   <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/screen-reader.html">Screen reader</a>
                 </li>
                 <li class="msd-navigation__list-item">
@@ -364,7 +372,8 @@
 
 
   
-
+<!-- Main Content
+============================================== -->
   <main id="main-content" aria-hidden="false" class="main-container">  
 
     <div class="msd-masthead__accessibility">
@@ -387,7 +396,7 @@
       <div class="msd-container">
         <div class="msd-grid msd-grid--column">
         <div class="msd-grid__cell">
-         
+         <!-- Intro -->
          <h2 class="msd-h1">Nau mai, haere mai</h2>
            <div class="msd-column-count">
               <p>Accessibility for MSD builds upon the <a class="msd-link" href="http://msd.govt.nz/about-msd-and-our-work/work-programmes/accessibility/the-accessibility-charter.html">Accessibility Charter</a> and the <a class="msd-link msd__link--external" href="https://www.digital.govt.nz/standards-and-guidance/nz-government-web-standards/">New Zealand Government Web Standards<span class="sr-only">(this link opens an external website)</span></a>. Everyone has a role to play to make our information and services more accessible.</p>
@@ -396,14 +405,14 @@
             </div>
         </div>
 
-       
+       <!-- Cards -->
        <div class="msd-grid__cell">
         <h2 class="msd-h2">Choose the guide that fits your role:</h2>
         <ul class="msd-card-list">
           <li class="msd-card">
             <div class="msd-card--image msd-icon__wrapper--design">
               <svg aria-hidden="true" focusable="false" class="msd-icon msd-icon__accessibility">
-                  <use href="../images/sprites/sprite.svg#icons--accessibility"></use>
+                  <use href="../../dist/images/sprites/sprite.svg#icons--accessibility"></use>
                </svg> 
            </div>
             <div class="msd-card--content">
@@ -419,7 +428,7 @@
           <li class="msd-card">
             <div class="msd-card--image msd-icon__wrapper--design">
               <svg aria-hidden="true" focusable="false" class="msd-icon msd-icon__product">
-                <use href="../images/sprites/sprite.svg#icons--product"></use>
+                <use href="../../dist/images/sprites/sprite.svg#icons--product"></use>
               </svg>
              </div>
             <div class="msd-card--content">
@@ -435,7 +444,7 @@
           <li class="msd-card">
             <div class="msd-card--image msd-icon__wrapper--design">
               <svg aria-hidden="true" focusable="false" class="msd-icon msd-icon__content">
-                <use href="../images/sprites/sprite.svg#icons--content"></use>
+                <use href="../../dist/images/sprites/sprite.svg#icons--content"></use>
               </svg>
             </div>
             <div class="msd-card--content">
@@ -451,7 +460,7 @@
           <li class="msd-card">
             <div class="msd-card--image msd-icon__wrapper--design">
               <svg aria-hidden="true" focusable="false" class="msd-icon msd-icon__ux">
-                  <use href="../images/sprites/sprite.svg#icons--ux"></use>
+                  <use href="../../dist/images/sprites/sprite.svg#icons--ux"></use>
                 </svg>
             </div>
             <div class="msd-card--content">
@@ -467,7 +476,7 @@
           <li class="msd-card">
             <div class="msd-card--image msd-icon__wrapper--design">
               <svg aria-hidden="true" focusable="false" class="msd-icon msd-icon__visual">
-                  <use href="../images/sprites/sprite.svg#icons--visual"></use>
+                  <use href="../../dist/images/sprites/sprite.svg#icons--visual"></use>
                 </svg>
             </div>
             <div class="msd-card--content">
@@ -483,7 +492,7 @@
           <li class="msd-card">
             <div class="msd-card--image msd-icon__wrapper--design">
               <svg aria-hidden="true" focusable="false" class="msd-icon msd-icon__development">
-                  <use href="../images/sprites/sprite.svg#icons--development"></use>
+                  <use href="../../dist/images/sprites/sprite.svg#icons--development"></use>
                 </svg>
             </div>
             <div class="msd-card--content">
@@ -501,7 +510,7 @@
 
        </div>
    
-      
+      <!-- Articles -->
       <div class="msd-grid__cell">
 
       <h2 class="msd-h2 msd-sub-heading">Updates</h2>
@@ -509,7 +518,7 @@
       <div class="msd-article-list">
         <article class="msd-article">
           <h3 class="msd-h3 msd-article__title">
-            <a href="https://www.digital.govt.nz/digital-government/programmes-and-projects/digital-inclusion/digital-inclusion-research/report-digital-inclusion-user-insights-for-disabled-people/" class="msd-article--link msd__link--external">
+            <a href="https://www.digital.govt.nz/digital-government/programmes-and-projects/digital-inclusion/digital-inclusion-research/report-digital-inclusion-user-insights-for-disabled-people/" class="msd-article--link  msd__link--external">
               Report: Digital inclusion user insights - Disabled people<span class="sr-only">(this link opens an external website)</span></a>
             </h3> 
             <time datetime="24/08/2020" class="msd-article__date">30 Oct 2020</time> 
@@ -520,7 +529,7 @@
 
         <article class="msd-article">
           <h3 class="msd-h3 msd-article__title">
-            <a href="https://www.digital.govt.nz/digital-government/programmes-and-projects/digital-inclusion/digital-inclusion-action-plans/2020-digital-inclusion-action-plan/" class="msd-article--link msd__link--external">
+            <a href="https://www.digital.govt.nz/digital-government/programmes-and-projects/digital-inclusion/digital-inclusion-action-plans/2020-digital-inclusion-action-plan/" class="msd-article--link  msd__link--external">
               2020 Digital Inclusion Action Plan<span class="sr-only">(this link opens an external website)</span></a>
             </h3> 
             <time datetime="24/08/2020" class="msd-article__date">24 Aug 2020</time> 
@@ -548,7 +557,7 @@
       </div>
 
 
-       
+       <!-- Page utilities -->
        <div class="msd-container">
         <div class="msd-grid">
 
@@ -557,7 +566,7 @@
 
             <div class="msd-utilities__elements">
 
-              
+              <!--Back to top-->
               <button id="BackToTop" tabindex="0" href="javascript:void(0)" class="back-to-top">
                 <span class="sr-only">Return to the top of the page</span>
                 <span class="msd-utilities__btn--label" aria-hidden="true">Back to top</span>
@@ -582,7 +591,8 @@
 
 
 
-
+<!-- Footer
+============================================== -->
 <footer class="msd-footer">
   <div class="msd-container">
 
@@ -614,7 +624,7 @@
             <span class="sr-only">New Zealand Government copyright and attribution</span>
             <svg width="230px" height="24px" id="New Zealand Government" class="msd-icon__nz-govt-logo" aria-hidden="true" focusable="false">
               <title>New Zealand Government</title>
-              <use href="../images/sprites/sprite.svg#nz-govt--logo"></use>
+              <use href="../../dist/images/sprites/sprite.svg#nz-govt--logo"></use>
             </svg>
             <span class="nz-govt--tagline" aria-hidden="true">Te Kāwanatanga o Aotearoa</span>
           </a>
@@ -628,13 +638,13 @@
           <a href="https://creativecommons.org/licenses/by/4.0/" class="msd-footer__copyright">
             <span class="sr-only">Creative Commons 4.0 International Licence</span>
             <svg width="24px" height="24px" class="msd-icon__creative-commons" aria-hidden="true" focusable="false">
-              <use href="../images/sprites/sprite.svg#icons--creative-commons"></use>
+              <use href="../../dist/images/sprites/sprite.svg#icons--creative-commons"></use>
             </svg>
               &nbsp;
             <svg width="24px" height="24px" class="msd-icon__creative-commons-attribution" aria-hidden="true" focusable="false">
-              <use href="../images/sprites/sprite.svg#icons--creative-commons-attribution"></use>
+              <use href="../../dist/images/sprites/sprite.svg#icons--creative-commons-attribution"></use>
             </svg>
-                    
+          </span>          
         </a>
      
         <p class="msd-footer__small-text">Unless indicated otherwise, all content is licensed for re-use under a 
@@ -650,7 +660,7 @@
             <span class="sr-only">New Zealand Government copyright and attribution</span>
             <svg width="112px" height="108px" aria-hidden="true" focusable="false" class="msd-icon msd-icon__coat-of-arms">
               <title id="copyright">Crown Copyright 2020</title>
-              <use href="../images/sprites/sprite.svg#nz-govt--crown"></use>
+              <use href="../../dist/images/sprites/sprite.svg#nz-govt--crown"></use>
             </svg>
             © Crown copyright
           </a>
@@ -664,8 +674,9 @@
 
 
 
-  
-  <script src="../js/vendor/jquery-3.5.1.min.js"></script>
-  <script src="../js/scripts.js?cb=1610392452898"></script>
+  <!-- JavaScript
+  ================================================== -->
+  <script src="../../dist/js/vendor/jquery-3.5.1.min.js"></script>
+  <script src="../../dist/js/scripts.js?cb=1610392452898"></script>
 </body>
 </html>
