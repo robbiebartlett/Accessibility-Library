@@ -3,223 +3,387 @@
    ========================================================================== */
 
  /**
-  *  Default navigation, current link referenced via 'aria'current' line :171
+  *  Default navigation, current link referenced via 'aria'current' line :203
   * 
-  *  Mobile navigation line :15
-  *  Desktop navigation line :140
-  *  Sidebar/sub navigation line :220
+  *  Sidebar/secondary navigation line: 390
   *
   */
 
 
-// Mobile navigation
- .msd-mobile-nav__toggle--wrapper {
-    display: flex;
-    justify-content: space-around;
-    margin-left: $sm;
 
-    @include mq($from: tablet) {
-       display: none;
-    }
 
-  }
-  
-  .msd-mobile-nav__toggle {
-    background: transparent;
-    border: 1px solid color(govnz-off-white);
-    color: color(govnz-off-white);
-    cursor: pointer;
-    @include font(primary, regular);
-    line-height: 1.25;
-    margin: 0;
-    overflow: hidden;
-    padding: $sm;
-    text-decoration: none;
-    user-select: none;
-    min-width: 75px;
-    z-index: z(overlay);
+// Mobile Navigation Button 
+.msd-navigation__toggle--wrapper {
+  display: flex;
+  justify-content: space-around;
+  margin-left: $sm;
 
-    &[aria-expanded="true"] {
-      padding-left: .78rem;
-      padding-right: .78rem;
-    }
-  }
-   
-  .msd-mobile-nav__toggle, 
-  .msd-mobile-nav__toggle:hover:not(:focus), 
-  .msd-mobile-nav__toggle:active {
-    background-color: color(msd-brand);
-    box-shadow: none;
-    color: color(govnz-white);
-    outline: none;
-
-    &:focus:not(:hover) {
-      box-shadow: inset 0 0 0 4px color(govnz-black);
-      color: color(govnz-white);
-      outline: 3px solid color(msd-focus);
-      outline-offset: -2px;
-    }    
-
-  }
-   
-  .msd-mobile-nav {
-    background-color: color(govnz-off-white);
+  @include mq($from: tablet) {
     display: none;
-    z-index: z(overlay);
-
-    @include mq($from: tablet) {
-      display: none;
-    }
-
-  }
-  
-  // msd-dropdown menu
-  .msd-mobile-nav__list {
-    border-bottom: 1px solid color(govnz-light-grey);
-    list-style-type: none;
-    margin: 0;
   }
 
-
-  .msd-mobile-nav__active  .msd-icon__arrow-down:first-of-type {
-    transform: translate(0, 0) rotate(180deg);
-  }
-
-  .msd-mobile__link:not(:focus) {
-    border-bottom-color: transparent;
-    color: color(govnz-link);
-  }
-
-  .msd-mobile__link:hover {
-    color: color(govnz-slate);
-  }
- 
-  .msd-mobile__submenu {
-    background-color: color(govnz-white);
-    border-top: 1px solid color(govnz-light-grey);
-    border-bottom: 1px solid color(govnz-light-grey);
-    list-style-type: none;
-    margin-left: 0;
-    padding: $xs 0;
-  }
-  
-  .msd-mobile-nav__submenu--item {
-    border-bottom: none;
-    display: flex;
-    margin: 0 $null;
-    padding: $sm;
-    position: relative;
-  }
-  
-  .msd-mobile-nav__list-item{
-    cursor: pointer;
-    position: relative;
-  }
- 
-  .msd-mobile__toggle {
-    display: flex;
-    margin-left: $sm;
-    margin-right: $sm;
-    padding: $null;
-    position: relative;
-  }
-
-  //Mobile menu links
-  .msd-mobile__toggle--link {
-    border-bottom: 2px solid transparent;
-    color: color(govnz-slate);
-    font-size: 1.175rem;
-    @include font(primary, bold);
-    text-decoration: none;
 }
 
+.msd-navigation__toggle {
+  background-color: color(msd-brand);
+  border: 1px solid color(govnz-white);
+  box-shadow: none;
+  color: color(govnz-white);
+  cursor: pointer;
+  line-height: 1.25;
+  margin: 0;
+  outline: none;
+  overflow: hidden;
+  padding: 0.75rem;
+  position: relative;
+  text-decoration: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  min-width: 75px;
+  z-index: z(overlay);
 
+  &:active:focus:not(:hover),
+  &:focus:not(:hover),
+  &:hover:not(:focus):focus:not(:hover) {
+    box-shadow: inset 0 0 0 4px color(govnz-link-active);
+    outline: 3px solid color(msd-focus);
+    outline-offset: -2px;
+  }
 
+}
 
-
-// Desktop navigation
+// Primary navigation
 .msd-navigation {
-    background-color: color(msd-brand);
-    display: none;
-    font-size: 1.125rem;
-    position: relative;
+  background-color: color(govnz-off-white);
+  display: none;
+  @include font-size(1        7px);
+  position: relative;
+  width: 100%;
+  z-index: z(overlay);
 
-    @include mq($from: tablet) {
-      display: block;
-    }
+  &.active {
+    display: block;
+  }
+
+  @include mq($from: tablet) {
+    background-color: color(msd-brand);
+    display: block;
+    position: static;
+    width: 100%;
+  }
 
 }
 
 .msd-navigation__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  border-bottom: 1px solid color(govnz-light-grey);
+
+  @include mq($from: tablet) {
+    border-bottom: none;
     display: flex;
-    list-style-type: none;
-    position: relative;
-    margin-top: 0;
-    margin-bottom: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-right: 3rem;
+    margin-left: 3rem;
+  }
+
+  @include mq($from: desktop) {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1100px;
+  }
+
 }
 
 .msd-navigation__list-item {
-    align-items: center;
-    box-shadow: inset 0 -6px 0 0 transparent;
+  border-bottom: none;
+  cursor: pointer;
+  padding: $null 0;  
+  position: relative;
+
+  //expand secondary navigation in mobile
+  &.active > .msd-navigation__level-two {
+    display: block;
+  
+    @include mq($from: tablet) {
+      margin-left: 0;
+    }
+  
+  }
+
+  @include mq($from: tablet) {
     display: flex;
-    left: -.8rem;
-    margin: 0 $sm;
+    padding: 0;  
+    text-align: center;
+
+    &:hover > .msd-navigation-link:after,
+    &.js-focus > .msd-navigation-link:after {
+      left: 0;
+    }
+
+    &:hover > .msd-navigation__level-two,
+    &.js-focus > .msd-navigation__level-two {
+        left: 0;
+        visibility: visible;
+    }
+
+    &:last-child:hover .msd-navigation__level-two,
+    &:last-child.js-focus .msd-navigation__level-two {
+        right: 0;
+        left: auto;
+    }
+
+    &.js-focus .msd-navigation-sr-expand__wrapper .msd-navigation-sr-expand__btn:focus::after {
+      top: 4px;
+       transform: rotate(225deg);
+    } 
+
+  }
+
+}
+
+.msd-navigation__level-one {
+
+  > .msd-navigation__list-item:first-of-type {
+    margin-left: 0;
+  }  
+  
+  > .msd-navigation__list-item:last-of-type {
+    margin-right: 0;
+  }
+} 
+
+.msd-navigation-link {
+  border-bottom: 2px solid transparent;
+  display: inline-block;
+  color: color(govnz-slate);
+  margin: 0 $md;
+  
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+
+  @include mq($from: tablet) {
+      color: color(govnz-white);
+      padding: 0;
+      position: relative;
+      margin: $null 0;
+
+      &:active, 
+      &:visited,
+      &:not(:focus):hover {
+        border-bottom: 2px solid transparent;
+        color: color(govnz-white);
+        outline: none;
+        text-decoration: none;
+      }
+
+      &:after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        top: auto;
+        left: -9999em;
+        height: 8px;
+        background: color(govnz-white);
+        z-index: z(modal);
+        transition: all 0s ease;
+        transition-delay: 0.25s;
+        width: 100%;
+      }
+    
+  }
+
+  &[aria-current]::after {
+    box-shadow: inset 0 -6px 0 0 color(govnz-white);
+    left: 0;
+    position: absolute;
+  }
+
+}
+
+.msd-navigation__level-two {
+  display: none;
+  background-color: color(govnz-white);
+  border-top: 1px solid color(govnz-light-grey);
+  border-bottom: 1px solid color(govnz-light-grey);
+  list-style-type: none;
+  margin: $null 0 0;
+  padding: $null 0;
+  width: 100%;
+
+  @include mq($from: tablet) {
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
+    display: block;
+    left: -9999em;
+    margin: 0;
+    padding: $sm $xs;
+    position: absolute;
+    top: 100%;
+    transition: all 0s ease;
+    transition-delay: 0.25s;
+    visibility: hidden;
+    width: 280px;
+    z-index: z(overlay);
+  }
+
+  @include mq($from: desktop) {
+    padding: $sm $md;
+    width: 320px;
+  }
+
+}
+
+.msd-navigation__toggle-level {
+  background: color(govnz-off-white);
+  border: 0;
+  box-shadow: inset 1px 0 0 0 color(govnz-mid-grey), inset 0 1px 0 0 transparent, inset 0 0 1px 0 transparent, inset 0 0 0 1px transparent;
+  cursor: pointer;
+  height: 2.75rem;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  right: $xs;
+  top: $sm;
+  width: 2.75rem;
+
+  &:after {
+    border-top: 2px solid color(govnz-mid-grey);
+    border-right: 2px solid color(govnz-mid-grey);
+    content: "";
+    height: $sm;
+    left: $sm;
+    pointer-events: none;
+    position: absolute;
+    top: .5rem;
+    transform: rotate(135deg) translateY(-50%);
+    width: $sm;
+  }
+
+   &[aria-expanded="true"]::after {
+    transform: rotate(315deg) translate(-35%,75%);
+  }
+
+  &:active:focus:not(:hover),
+  &:active:focus-within:not(:hover), 
+  &:focus:not(:hover),
+  &:focus-within:not(:hover) {
+    box-shadow: inset 0 0 0 4px color(govnz-link-active);
+    color: color(govnz-white);
+    outline: 3px solid color(msd-focus);
+    outline-offset: -2px;
+  }
+
+  @include mq($from: tablet) {
+    display: none;
+  }
+
+}
+
+.msd-navigation__level-two-link {
+  border-bottom: 2px solid transparent;
+  margin: $sm $null;
+  position: relative;
+  text-align: left;
+
+  &:not(:focus) {
+    border-bottom-color: transparent;
+    color: color(govnz-link);
+  }
+
+  @include mq($from: desktop) {
+    display: flex;
+    color: color(govnz-slate);
+    text-align: left;
+    margin: $sm 0;
+
+    &:active, 
+    &:not(:focus):hover {
+      color: color(govnz-link-hover);
+  }
+
+  }
+
+}
+
+//Desktop dropdown menu keyboard access
+.msd-navigation-sr-expand__wrapper {
+  display: none;
+
+  @include mq($from: tablet) {
+    border: none;
+    display: block;
+    margin: 0;
     padding: 0;
     position: relative;
-    transition: $msd-transition;
-    z-index: z(header);
+    width: 0;
+  }
 
-    @include mq($from: tablet-wide) {
-      margin: 0 $md;
-      left: -$md;
+}
+.msd-navigation-sr-expand__btn {
+
+  @include mq($from: tablet) {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+
+    &:focus {
+        background: color(msd-brand);
+        border: none;
+        box-shadow: inset 0 0 0 4px color(msd-brand);
+        clip: auto;
+        height: 14px;
+        margin: 0;
+        overflow: visible;
+        position: absolute;
+        outline: 2px solid color(msd-focus);
+        padding: 0;
+        right: -18px;
+        top: 40%;
+        transition: right .25s ease-in-out;
+        width: 14px;
+
+        &::after {
+          content: "";
+          border-right: 2px solid color(govnz-white);
+          border-bottom: 2px solid color(govnz-white);
+          height: 10px;
+          left: 2px;
+          position: absolute;
+          top: -1px;
+          transform: rotate(45deg);
+          width: 10px;
+        }
+
     }
+  }
+
+  @include mq($from: desktop) {
+
+    &:focus {
+      right: -25px;
+    }
+
+  }
+
 
 }
 
-.msd-navigation__link {
-    @include font(primary, normal);
-    box-shadow: inset 0 -6px 0 0 transparent;
-    color: color(govnz-off-white);
-    line-height: 1.625;
-    outline: 3px solid transparent;
-    padding: $md 0;
-    text-decoration: none;
 
-    &:after {
-      content:"";
-      position:absolute;
-      top:0;
-      right:0;
-      bottom:0;
-      left:0
-    }
 
-    &:not(:focus):visited {
-      color: color(govnz-off-white);
-    }
 
-    &:focus:not(:hover) {
-      background-color: color(msd-focus);
-      box-shadow: 0 -2px color(msd-focus),0 4px color(govnz-link-active);
-      color: color(govnz-link-active);
-      outline: 3px solid transparent;
-      padding: 0;
-      text-decoration: none;
-    }
 
-    &:not(:focus):hover, &:active {
-      box-shadow: inset 0 -6px 0 0 color(govnz-off-white);
-      color:color(govnz-off-white);
-      outline: none;
-      text-decoration: none;
-    }
-    
-    //Current link
-    &[aria-current]:after {
-      box-shadow: inset 0 -6px 0 0 color(govnz-off-white);
-    }
- 
-}
 
 
 //Sidebar navigation
@@ -237,7 +401,7 @@
   display: none;
   font-size: $null;
   line-height: 1.5;
-  margin-top: $md;
+  margin-top: $sm;
   padding-right: $md;
 
 
