@@ -19,7 +19,7 @@
 .msd-card-list {
   border-spacing: 0; /* [3] */
   list-style: none;
-  margin: 0 0 $lg -1.1rem; 
+  margin: 0 0 $xl -1.1rem; 
   padding: 0;
   width: calc(100% + 2.2rem); /* [2] */
   display: flex;
@@ -147,7 +147,7 @@
   font-size: 1.125rem;
   font-weight: normal;
   line-height: 1.5;
-  margin: $md auto $lg;
+  margin: $md auto $xl;
   max-width: 25ch;
   text-align: center;
   width: 100%;
@@ -161,7 +161,6 @@
 }
 
 .msd-card--link {
-  align-self: flex-start;
   border-bottom: 2px solid color(govnz-link);
   color: color(govnz-link);
   font-size: 1.25rem;
