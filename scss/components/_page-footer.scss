@@ -96,7 +96,7 @@
     text-decoration: none;
 
     &:hover:not(:focus) {
-      background-color: none;
+      background-color: transparent;
       box-shadow: none;
       color: color(govnz-off-white);
       outline: 3px solid transparent;
