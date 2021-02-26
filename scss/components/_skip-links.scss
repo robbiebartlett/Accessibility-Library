@@ -21,7 +21,7 @@
   }
 
   //Target hidden in mobile
-  .skip-link__non-mobile {
+  .skip-link__desktop {
     display: none;
 
     @include mq($from: tablet) {
