@@ -15,10 +15,11 @@
   *   Will render as:
   *
   *   .msd-callout {
-  *       border-left: .375rem solid #595959;
+  *       border-left: .375rem solid color(govnz-mid-grey);
   *       margin: 1.125rem 0;
   *       padding: 1.125rem;
   *    }
+  *
   *   .msd-callout__note {
   *       background-color: #f4f4f4;
   *       border-left-color: #005987;
@@ -29,17 +30,29 @@
   .msd-callout {
     background-color: transparent;
     border-left: .1875rem solid color(govnz-mid-grey);
-    padding: $md;
-    margin: $lg 0;
+    padding: $md $md $lg $md;
+    margin: $lg 0 $md;
+
+    @include mq($from: tablet) {
+      margin-bottom: $lg;
+    }
+
   }
 
   .msd-callout__title {
     margin-top: 0;
-    margin-bottom: $xs;
-    margin-left: $sm;
+    margin-bottom: $md;
+    margin-left: $lg;
+  }
+
+  .msd-callout__sub-title {
+    font-weight: normal;
+    margin-left: $lg;
+    margin-top: $lg;
   }
 
   .msd-callout__text {
+    margin-top: $md;
     margin-bottom: $xs;
     margin-left: $sm;
 
@@ -51,7 +64,8 @@
   }
 
   .msd-callout__link {
-    margin: $xs;
+    line-height: 1.5;
+    margin: $xs $xs $sm $lg;
   }
   
   .msd-callout__code {
@@ -64,9 +78,9 @@
 
 
 // Mixin
-@mixin msd-callout-variant($background, $color) {
+@mixin msd-callout($background, $border-color) {
   background-color: $background;
-  border-left-color: $color;
+  border-left-color: $border-color;
 }
 
 
@@ -74,15 +88,15 @@
 
 // Variations
 .msd-callout__note { 
-  @include msd-callout-variant(color(govnz-off-white), color(msd-blue)); 
+  @include msd-callout(color(govnz-off-white), color(msd-blue)); 
 }
 
 .msd-callout__highlight { 
-  @include msd-callout-variant(color(govnz-off-white), color(msd-green)); 
+  @include msd-callout(color(govnz-off-white), color(msd-green)); 
 }
 
 .msd-callout__important { 
-  @include msd-callout-variant(color(govnz-off-white), color(msd-red-brick)); 
+  @include msd-callout(color(govnz-off-white), color(msd-red-brick)); 
 }
 
 
