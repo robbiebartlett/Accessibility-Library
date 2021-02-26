@@ -10,8 +10,8 @@
 
 .global-bar-message{
     border-left: 3px solid;
-    margin-bottom: $msd-spacing-unit;
-    padding: $msd-spacing-unit;
+    margin-bottom: $null;
+    padding: $null;
 
     &[aria-current] {
       display: none !important;
