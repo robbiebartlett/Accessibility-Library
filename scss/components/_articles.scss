@@ -13,7 +13,7 @@
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin: 0 0 $lg;
+  margin: 0 0 $xl;
   padding: 0;
   position: relative;
 
@@ -26,7 +26,8 @@
 .msd-article {
   display: flex;
   flex-direction: column;
-  margin-bottom: $lg;
+  margin-bottom: $xl;
+  position: relative;
 
   &:last-of-type {
     margin-bottom: 0;
