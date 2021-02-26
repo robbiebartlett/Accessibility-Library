@@ -20,7 +20,12 @@
 /**
  * Halves
  */
-.msd-grid--one-half, .msd-grid--two-quarters, .msd-grid--three-sixths, .msd-grid--four-eighths, .msd-grid--five-tenths, .msd-grid--six-twelfths {
+.msd-grid--one-half, 
+.msd-grid--two-quarters, 
+.msd-grid--three-sixths, 
+.msd-grid--four-eighths, 
+.msd-grid--five-tenths, 
+.msd-grid--six-twelfths {
   width: 100%;
 
   @include mq($from: tablet) {
@@ -32,7 +37,9 @@
 /**
  * Thirds
  */
-.msd-grid--one-third, .msd-grid--two-sixths, .msd-grid--four-twelfths {
+.msd-grid--one-third, 
+.msd-grid--two-sixths, 
+.msd-grid--four-twelfths {
   width: 100%;
 
   @include mq($from: tablet) {
@@ -41,7 +48,9 @@
 
 }
 
-.msd-grid--two-thirds, .msd-grid--four-sixths, .msd-grid--eight-twelfths {
+.msd-grid--two-thirds, 
+.msd-grid--four-sixths, 
+.msd-grid--eight-twelfths {
   width: 100%;
 
   @include mq($from: tablet) {
@@ -53,7 +62,9 @@
 /**
  * Quarters
  */
-.msd-grid--one-quarter, .msd-grid--two-eighths, .msd-grid--three-twelfths {
+.msd-grid--one-quarter, 
+.msd-grid--two-eighths, 
+.msd-grid--three-twelfths {
   width: 100%;
 
   @include mq($from: tablet) {
@@ -61,7 +72,9 @@
   }
 }
 
-.msd-grid--three-quarters, .msd-grid--six-eighths, .msd-grid--nine-twelfths {
+.msd-grid--three-quarters, 
+.msd-grid--six-eighths, 
+.msd-grid--nine-twelfths {
   width: 100%;
 
   @include mq($from: tablet) {
@@ -72,7 +85,8 @@
 /**
  * Fifths
  */
-.msd-grid--one-fifth, .msd-grid--two-tenths {
+.msd-grid--one-fifth, 
+.msd-grid--two-tenths {
   width: 100%;
 
   @include mq($from: tablet) {
@@ -80,7 +94,8 @@
   }
 }
 
-.msd-grid--two-fifths, .msd-grid--four-tenths {
+.msd-grid--two-fifths, 
+.msd-grid--four-tenths {
   width: 100%;
 
   @include mq($from: tablet) {
@@ -88,7 +103,8 @@
   }
 }
 
-.msd-grid--three-fifths, .msd-grid--six-tenths {
+.msd-grid--three-fifths, 
+.msd-grid--six-tenths {
   width: 100%;
 
   @include mq($from: tablet) {
@@ -96,7 +112,8 @@
   }
 }
 
-.msd-grid--four-fifths, .msd-grid--eight-tenths {
+.msd-grid--four-fifths, 
+.msd-grid--eight-tenths {
   width: 100%;
 
   @include mq($from: tablet) {
@@ -107,7 +124,8 @@
 /**
  * Sixths
  */
-.msd-grid--one-sixth, .msd-grid--two-twelfths {
+.msd-grid--one-sixth, 
+.msd-grid--two-twelfths {
   width: 100%;
 
   @include mq($from: tablet) {
