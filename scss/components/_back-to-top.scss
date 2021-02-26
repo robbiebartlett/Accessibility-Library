@@ -22,8 +22,8 @@
   display: none;
   height: 1.5rem;
   line-height: 1.5;
-  margin-left: $mp;
-  margin-right: $mp;
+  margin-left: $lg;
+  margin-right: $lg;
   padding: 0 0 .125vh 0;
   position: relative;
   text-decoration: none;
@@ -47,9 +47,9 @@
 
   @include mq($from: mobile-wide) {
     left: 0;
-    margin-right: $mp;
+    margin-right: $lg;
     position: relative;
-    right: $lg;
+    right: $xl;
   }
 
   @include mq($from: tablet) {
