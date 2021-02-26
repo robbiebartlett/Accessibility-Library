@@ -102,7 +102,7 @@
   .msd-filter__section {
     border-top: 1px solid color(govnz-mid-grey);
     border-bottom: 1px solid color(govnz-mid-grey);
-    margin: 0 0 $mp;
+    margin: 0 0 $lg;
     padding: $null 0;
 
      @include mq($from: tablet) {
@@ -115,7 +115,7 @@
 
   .msd-filter__section--items {
     list-style-type: none;
-    margin: $md 0 0 $xs;
+    margin: $lg 0 0 $xs;
     position: relative;
 
     @include mq($from: tablet) {
