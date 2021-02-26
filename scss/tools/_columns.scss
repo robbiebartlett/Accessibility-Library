@@ -41,7 +41,7 @@
 
 
   .msd-column-count { 
-    margin-bottom: $lg;
+    margin-bottom: $xl;
     @include column-split(1, 0, $null); 
 
     @include mq($from: tablet) {

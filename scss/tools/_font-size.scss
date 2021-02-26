@@ -56,7 +56,7 @@ $responsive-font-class: false !default;
 // 1 rem = $responsive-font-rem-value px
 $responsive-font-rem-value: 16 !default;
 
-// Safari iframe resize bug: https://bit.ly/2YEz4f1
+// Safari iframe resize bug: https://github.com/ampproject/amphtml/issues/11133
 $responsive-font-safari-iframe-resize-bug-fix: false !default;
 
 // Disable responsive-font by setting $enable-responsive-font to false

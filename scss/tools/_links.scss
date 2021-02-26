@@ -23,7 +23,8 @@
 
 @mixin linkColours ($link, $visited, $hover, $active) {
     border-bottom: 2px solid $link;
-    color:$link;
+    color: $link;
+    line-height: 1.65;   
     text-decoration: none;
     padding-bottom: .125vh;
 
