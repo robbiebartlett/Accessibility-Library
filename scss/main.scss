@@ -1,8 +1,7 @@
 /* ==========================================================================
-   Ministry of Social Development
+   Settings
    ========================================================================== */
 
-//SETTINGS 
 
 /**
  * This is where global variables and site settings are located. 
@@ -120,37 +119,27 @@
 
 /**
  * Contains specific sections of UI modules such as sliders, loaders, widgets  
- * (i.e. .msd-carousel {}).
+ * (i.e. .msd-checkbox {}).
  * 
  * Alert................Alerts below the header for events of significance
  * Back to top..........Standard return to the top of page link
  * Body.................Base body styles, font, background etc
  * Buttons..............An example button component, and how it fits into the
  * Caption..............Used as a subject prior to a main title
+ * Checkbox.............mixin  & function to setup checkboxes 
  * Divider..............Base element divider
  * Icons................Style icon elements against the Sprite mixin 
  * Page-header..........Generic Header
  * Page-footer..........Generic footer
  * Navigation...........Generic navigation
  * Search...............Generic search bar
+ * Filter...............Filter used to refine search results or forms
  * Masthead.............Page banner settings
  * Utilities............Page sub footer utilties, date, print, return to top
+ * Pagination...........Generic pagination
  */
 
 
-
-
-
-//Product 
-
-/**
- * Contains elements specific to products
- * (i.e. .studylink-title {}).
- * 
- * Design system
- *
- * Title..............Specific homepage title
- */
 
 
 
@@ -183,6 +172,7 @@
 
 
 
+
 // GENERIC
 @import "./generic/box-sizing";
 @import "./generic/normalize";
@@ -203,6 +193,7 @@
 @import "./elements/phrasing";
 @import "./elements/horizontal-rule";
 @import "./elements/callouts";
+
 
 
 
@@ -234,6 +225,7 @@
 
 
 
+
 // COMPONENTS
 @import "./components/alert";
 @import './components/back-to-top';
@@ -242,25 +234,19 @@
 @import "./components/breadcrumbs";
 @import './components/caption';
 @import './components/card';
+@import './components/checkbox';
 @import "./components/divider";
 @import "./components/icons";
 @import "./components/page-header";
 @import "./components/page-footer";
 @import "./components/navigation";
 @import "./components/search";
+@import "./components/filter";
 @import "./components/skip-links";
 @import "./components/masthead";
 @import "./components/articles";
 @import "./components/page-utilities";
-
-
-
-
-
-// Product
-
-//Design System
-@import "./product/msd/design-system/title"
+@import "./components/pagination";
 
 
 
