@@ -26,10 +26,10 @@
  }
 
  /*
-  * Refernce: https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html
+  * Reference: https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html
   *
   */
- .msd-list__item {
+ .msd-list__section {
    font-size: 1.125rem;
    margin-top: $xs;
    margin-bottom: $lg;
@@ -42,7 +42,7 @@
 
  }
  
- .msd-list__item--square {
+ .msd-list__section--square {
    list-style-type: square;
  }
 
@@ -59,7 +59,7 @@
     margin-left: 0;
   }
 
-  .msd-list__no-link {
+  .msd-list__section--item {
     line-height: 1.5;
     margin: $xs $xs $md $null;
   }
