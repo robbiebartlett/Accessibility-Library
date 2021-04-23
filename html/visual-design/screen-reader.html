@@ -12,7 +12,7 @@
   ================================================== -->
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">  
         
-  <title>Colour and contrast | Accessibility for MSD</title>
+  <title>Screen reader | Accessibility for MSD</title>
 
     <!-- Mobile Specific Metatags
   ================================================== -->
@@ -103,7 +103,6 @@
        </div>
     </div>
 </header>
-
 
 
 
@@ -370,209 +369,196 @@
   
 <!-- Main Content
 ============================================== -->
-<main id="main-content" aria-hidden="false" class="main-container">  
+  <main id="main-content" aria-hidden="false" class="main-container">  
 
-  <!-- Breadcrumbs -->
-  <div class="msd-pane__breadcrumb">
-    <div class="msd-container">
-      <div class="msd-grid">
-    <nav class="msd-breadcrumb" aria-label="breadcrumbs">
-      <p id="msd-breadcrumb__label" class="sr-only">You are here:</p>
-      <ol class="msd-breadcrumb__section" aria-labelledby="msd-breadcrumb__label">
-        <li class="msd-breadcrumb__list-item">
-          <a href="/dist/html/index.html" class="msd-breadcrumb__link">
-            Home
-          </a>
-        </li>
-        <li class="msd-breadcrumb__list-item">
-          <a href="/dist/html/visual-design/index.html" class="msd-breadcrumb__link">
-            Visual design
-          </a>
-        </li>
-        <li class="msd-breadcrumb__list-item">
-          Colour and Contrast
-        </li>
-      </ol>
-    </nav>
-  </div>
-  </div>
-  </div>
+    <!-- Breadcrumbs -->
+    <div class="msd-pane__breadcrumb">
+      <div class="msd-container">
+        <div class="msd-grid">
+      <nav class="msd-breadcrumb" aria-label="breadcrumbs">
+        <p id="msd-breadcrumb__label" class="sr-only">You are here:</p>
+        <ol class="msd-breadcrumb__section" aria-labelledby="msd-breadcrumb__label">
+          <li class="msd-breadcrumb__list-item">
+            <a href="/dist/html/index.html" class="msd-breadcrumb__link">
+              Home
+            </a>
+          </li>
+          <li class="msd-breadcrumb__list-item">
+            <a href="/dist/html/visual-design/index.html" class="msd-breadcrumb__link">
+              Visual design
+            </a>
+          </li>
+          <li class="msd-breadcrumb__list-item">
+            Screen reader
+          </li>
+        </ol>
+      </nav>
+    </div>
+    </div>
+    </div>
 
-  <div class="main-container__content">
-    <div class="msd-container">
-      <div class="msd-grid">
+    <div class="main-container__content">
+      <div class="msd-container">
+        <div class="msd-grid">
 
-        <!-- Main content -->
-        <div class="msd-grid__cell msd-grid--two-thirds msd-order-2">
-          
-          <h1 class="msd-h1">Colour and contrast</h1>
+          <!-- Main content -->
+          <div class="msd-grid__cell msd-grid--two-thirds msd-order-2">
             
-            <p class="lead">Is there enough contrast between text, interactive elements and their background colours?</p>
-
-            <h2 class="msd-h3">Why it’s important</h2> 
+            <h1 class="msd-h1">Screen reader</h1>
+             
+            <p class="lead">Can you use a screen reader to access the page content?</p>
+          
+            <h2 class="msd-h3">Why it’s important:</h2> 
             <div class="msd-list">
               <ul class="msd-list__section msd-list__section--square">
-                <li class="msd-list__section--item">Terehia has low vision and needs content to have enough contrast to decipher it.</li>
-                <li class="msd-list__section--item">Jack has achromatopsia and cannot distinguish information conveyed by colour alone.</li>
+                <li class="msd-list__section--item">Evelyn is visually impaired and uses a screen reader to navigate the web.</li>
               </ul>
             </div> 
+              
+              <h2 class="msd-h3">Next steps</h2>
+              <div class="msd-list">
+                <ol class="msd-list__section msd-list--number">         
+                  <li class="msd-list__section--item">Confirm a screen reader can select controls and announcement of information is correct. <a class="msd-link msd__link--external" href="https://www.nvaccess.org/download">Download NVDA screen reader (NV Access)</a> or request through your IT service provider.</li>  
+                  <li class="msd-list__section--item">Announcement of information should be in the appropriate order and context. For example labels before form fields, headers before content.</li>                    
+                  <li class="msd-list__section--item">Check that HTML documents include a language attribute (html lang="en"). This will assist the screen reader to use the correct accent and pronunciation.</li>  
+                  <li class="msd-list__section--item">If forms are present, make sure the screen reader reads labels and instructions.</li>   
+                  <li class="msd-list__section--item">Some screen readers don't announce the asterisk character. Include 'required' in all labels or apply the <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA2">aria-required="true"</a> attribute.</li>    
+                  <li class="msd-list__section--item">Check contextualized page titles are in use, each web page needs its own title. If the page is part of a multi-step process such as a sign-up form or checkout flow, include the step number such as Step 1 of 3.</li>  
+                  <li class="msd-list__section--item">Make sure all links are descriptive. For example, the link  text 'Read More' provides no context about where the user will go if they click it.'Read more about our services' describes what’s on the other side of the link.</li> 
+                </ol>
+              </div> 
             
-            <h2 class="msd-h3">Next steps</h2>
-            <div class="msd-list">
-              <ol class="msd-list__section msd-list--number">
-                <li class="msd-list__section--item">The contrast between text and background needs to be greater than or equal to 4.5:1 for small text and 3:1 for large text.</li>
-                <li class="msd-list__section--item">Graphics and user interface components (such as form input borders) need a contrast ratio of at least 3:1.</li>
-                <li class="msd-list__section--item">Test colour combinations with an accessible <a class="msd-link msd__link--external" href="https://color.adobe.com/create/color-accessibility">Colour Palette Generator<span class="sr-only">(this link opens an external website)</span></a> or a <a class="msd-link msd__link--external" href="https://contrast-grid.eightshapes.com">Colour Contrast Grid<span class="sr-only">(this link opens an external website)</span></a>.</li>
-                <li class="msd-list__section--item">Check the contrast between text and background colours with tools like <a class="msd-link msd__link--external" href="https://webaim.org/resources/contrastchecker/">WebAim's Colour Contrast Checker<span class="sr-only">(this link opens an external website)</span></a> or an <a class="msd-link msd__link--external" href="https://xd.adobelanding.com/en/xd-plugin-download/?name=6cbf275e">Adobe XD<span class="sr-only">(this link opens an external plugin)</span></a> plugin.</li>
-                <li class="msd-list__section--item">Exceptions:
-                  <ul class="msd-list__sub-list">
-                    <li class="msd-list__section--item msd-list__section--square">Colour contrast requirements for logos or incidental graphic elements are not required.</li>
-                    <li class="msd-list__section--item msd-list__section--square">Text included in disabled buttons or a disabled control's state is not required to meet the minimum contrast ratio.</li>
-                    <li class="msd-list__section--item msd-list__section--square">Text that is part of a logo has no minimum contrast requirement.</li>
-                  </ul>
 
-                </li>
-                <li class="msd-list__section--item">Temper the contrast between the text and background colour. Avoiding pure black text on white assists users with Irlen Syndrome, light sensitivity, dyslexia and autism.</li>
-                <li class="msd-list__section--item">When using text over images, add a solid background behind the text or a dark overlay to the image.</li>
-                <li class="msd-list__section--item">Non underlined links need a contrast ratio of 4.5:1 with the surrounding body text. The body text needs a contrast ratio of 3:1 with the background colour. Test the link contrast with tools like <a class="msd-link msd__link--external" href="https://webaim.org/resources/linkcontrastchecker">WebAim's Link Contrast Checker<span class="sr-only">(this link opens an external website)</span></a>.</li>
-                <li class="msd-list__section--item">Colour alone should not convey meaning. Use icons, written content and other visual elements to reinforce clear content communication. </li>
-                <li class="msd-list__section--item">To simulate the visual challenges people face use tools like <a class="msd-link msd__link--external" href="https://www.color-blindness.com/coblis-color-blindness-simulator/">Coblis<span class="sr-only">(this link opens an external website)</span></a> or <a class="msd-link msd__link--external" href="https://chrome.google.com/webstore/detail/nocoffee/jjeeggmbnhckmgdhmgdckeigabjfbddl/related">NoCoffee Vision Simulator<span class="sr-only">(this link opens an external website)</span></a> to simulate.</li>
-              </ol>
-            </div> 
-          
+              <div class="msd-callout msd-callout__note">
+               <h2 class="msd-callout__title">References</h2>
 
-            <div class="msd-callout msd-callout__note">
-              <h2 class="msd-callout__title">References</h2>
+                <h3 class="msd-callout__sub-title">Resources</h3>
 
-              <h3 class="msd-callout__sub-title">Resources</h3>
+                <ul class="msd-list__section msd-list__section--square">
+                  <li class="msd-callout__link">
+                    <a class="msd-link msd__link--external" href="https://designmodo.com/screen-reader-accessible-design/">12 Screen reader facts for Accessible Web Design<span class="sr-only">(this link opens an external website)</span></a>
+                  </li>  
+                  <li class="msd-callout__link">
+                    <a class="msd-link msd__link--external" href="https://webaim.org/techniques/screenreader/">Designing for Screen Reader Compatibility<span class="sr-only">(this link opens an external website)</span></a>
+                  </li>  
+                  <li class="msd-callout__link">
+                    <a class="msd-link msd__link--external" href="https://www.youtube.com/watch?v=8Rn5pXCdZWU">Video: Web Accessibility Perspectives: Text to Speech<span class="sr-only">(this link opens an external website)</span></a>
+                  </li>                  
+                </ul>
 
-              <ul class="msd-list__section msd-list__section--square">
-                <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://digitalaccess.ucsf.edu/guide/color">What is an accessible use of colour?<span class="sr-only">(this link opens an external website)</span></a> 
-                </li>
-                <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.youtube.com/watch?v=LBmLspdAtxM">Video tutorial: How to check for accessible colours<span class="sr-only">(this link opens an external website)</span></a>
-                </li>  
-              </ul>
+                <h3 class="msd-callout__sub-title">New Zealand Government</h3>
 
-              <h3 class="msd-callout__sub-title">New Zealand Government</h3>
+                <ul class="msd-list__section msd-list__section--square">
+                  <li class="msd-callout__link">
+                    <a class="msd-link msd__link--external" href="https://www.digital.govt.nz/standards-and-guidance/design-and-ux/accessibility/accessible-language/"">Accessible language<span class="sr-only">(this link opens an external website)</span></a> 
+                  </li>
+                </ul>
 
-              <ul class="msd-list__section msd-list__section--square">
-                <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.digital.govt.nz/standards-and-guidance/design-and-ux/accessibility/colour-and-contrast/">Colour and contrast<span class="sr-only">(this link opens an external website)</span></a> 
-                </li>
-              </ul>
 
-              <h3 class="msd-callout__sub-title">World Content Accessibility Guidelines</h3>
+                <h3 class="msd-callout__sub-title">World Content Accessibility Guidelines</h3>
 
-              <ul class="msd-list__section msd-list__section--square">
-                <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.w3.org/TR/WCAG21/#use-of-color">1.4.1 Use of Color<span class="sr-only">(this link opens an external website)</span></a> 
-                </li>
-                <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">1.4.3 Contrast Minimum<span class="sr-only">(this link opens an external website)</span></a> 
-                </li>                  
-                <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">1.4.11 Non-text Contrast<span class="sr-only">(this link opens an external website)</span></a> 
-                </li>
-              </ul>
+                <ul class="msd-list__section msd-list__section--square">
+                  <li class="msd-callout__link">
+                    <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#info-and-relationships">1.3.1 Info and Relationships<span class="sr-only">(this link opens an external website)</span></a> 
+                  </li>                  
+                </ul>
 
             </div>
-        </div>
-
-        <!-- Secondary navigation -->
-        <div class="msd-grid__cell msd-grid--one-third msd-order-1">
-  
-          <div class="msd-pane__sidenav">
-            <nav id="page-nav" class="msd-sidenav" aria-label="Secondary">
-                    
-              <ul class="msd-sidenav__section">
-                  
-                <li class="msd-sidenav__section--item"  aria-current="page">
-                  <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/colour-and-contrast.html">Colour & Contrast</a>
-                </li>
-        
-                <li class="msd-sidenav__section--item">
-                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/layout-and-hierarchy.html">Layout & Hierarchy</a>
-                </li>
-        
-                <li class="msd-sidenav__section--item">
-                  <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/typography.html">Typography</a>
-                </li>
-        
-                <li class="msd-sidenav__section--item">
-                  <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/graphics-and-images.html">Graphics & images</a>
-                </li>
-        
-                <li class="msd-sidenav__section--item">
-                  <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/data-visualisations.html">Data visualisations</a>
-                </li>
-        
-                <li class="msd-sidenav__section--item">
-                  <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/forms.html">Forms</a>
-                </li>
-        
-                <li class="msd-sidenav__section--item">
-                  <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/mobile.html">Mobile</a>
-                </li>
-        
-                <li class="msd-sidenav__section--item">
-                  <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/keyboard-access.html">Keyboard access</a>
-                </li>
-        
-                <li class="msd-sidenav__section--item">
-                  <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/screen-reader.html">Screen reader</a>
-                </li>
-      
-              </ul>
-                    
-            </nav>
           </div>
 
-        </div>
+          <!-- Secondary navigation -->
+          <div class="msd-grid__cell msd-grid--one-third msd-order-1">
     
-      </div>
-    </div>
+            <div class="msd-pane__sidenav">
+              <nav id="page-nav" class="msd-sidenav" aria-label="Secondary">
+                      
+               <ul class="msd-sidenav__section">
 
-
-      <!-- Page utilities -->
-      <div class="msd-container">
-      <div class="msd-grid">
-
-        <div class="msd-grid__cell">
-          <div class="msd-utilities">
-
-          <p class="msd-utilities__last-modified">
-            Last modified:&nbsp;
-              <time datetime="2020-12-03">
-                3 December 2020
-              </time>
-            </p>
+                  <li class="msd-sidenav__section--item">
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/colour-and-contrast.html">Colour & Contrast</a>
+                  </li>
           
-
-          <div class="msd-utilities__elements">
-
-            <!--Back to top-->
-            <button id="BackToTop" tabindex="0" href="javascript:void(0)" class="back-to-top">
-              <span class="sr-only">Return to the top of the page</span>
-              <span class="msd-utilities__btn--label" aria-hidden="true">Back to top</span>
-            </button>
-            
-            <button id="msd-print-button" class="msd-link msd-print__button">
-              <span class="sr-only">Print the page content</span>
-              <span class="msd-utilities__btn--label">Print</span>
-            </button>
+                  <li class="msd-sidenav__section--item">
+                      <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/layout-and-hierarchy.html">Layout & Hierarchy</a>
+                  </li>
+          
+                  <li class="msd-sidenav__section--item">
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/typography.html">Typography</a>
+                  </li>
+          
+                  <li class="msd-sidenav__section--item">
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/graphics-and-images.html">Graphics & images</a>
+                  </li>
+          
+                  <li class="msd-sidenav__section--item">
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/data-visualisations.html">Data visualisations</a>
+                  </li>
+          
+                  <li class="msd-sidenav__section--item">
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/forms.html">Forms</a>
+                  </li>
+          
+                  <li class="msd-sidenav__section--item">
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/mobile.html">Mobile</a>
+                  </li>
+          
+                  <li class="msd-sidenav__section--item">
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/keyboard-access.html">Keyboard access</a>
+                  </li>
+          
+                  <li class="msd-sidenav__section--item" aria-current="page">
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/screen-reader.html">Screen reader</a>
+                  </li>
         
-          </div>
+                </ul>
+                      
+              </nav>
+            </div>
 
           </div>
+      
         </div>
-      </div>  
+      </div>
+
+
+       <!-- Page utilities -->
+       <div class="msd-container">
+        <div class="msd-grid">
+
+         <div class="msd-grid__cell">
+           <div class="msd-utilities">
+
+            <p class="msd-utilities__last-modified">
+              Last modified:&nbsp;
+               <time datetime="2020-12-03">
+                 8 March 2021
+               </time>
+              </p>
+           
+
+            <div class="msd-utilities__elements">
+
+              <!--Back to top-->
+              <button id="BackToTop" tabindex="0" href="javascript:void(0)" class="back-to-top">
+                <span class="sr-only">Return to the top of the page</span>
+                <span class="msd-utilities__btn--label" aria-hidden="true">Back to top</span>
+              </button>
+              
+              <button id="msd-print-button" class="msd-link msd-print__button">
+                <span class="sr-only">Print the page content</span>
+                <span class="msd-utilities__btn--label">Print</span>
+              </button>
+          
+            </div>
+
+           </div>
+          </div>
+        </div>  
+      </div>
+
     </div>
 
-  </div>
-
-</main>
+  </main>
   
 
 

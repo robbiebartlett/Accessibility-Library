@@ -1,18 +1,18 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-  <!-- Basic Page Needs
+  <!-- Miscellaneous metadata
   ================================================== -->
-  <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="ROBOTS" content="INDEX, FOLLOW">
 
   <!-- Mobile Specific 
   ================================================== -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-  
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">  
         
-  <title>Data visualisations - Accessibility for MSD</title>
+  <title>Data visualisations | Accessibility for MSD</title>
 
     <!-- Mobile Specific Metatags
   ================================================== -->
@@ -47,7 +47,7 @@
 </head>
 
 <body>
-
+  
 <!-- Skiplinks
 ================================================== -->  
 <nav id="skiplinks" aria-label="Skip Link">
@@ -58,59 +58,51 @@
   
 
 
+
 <!-- Header
 ================================================== -->  
-  <header class="msd-header">
-    <div class="msd-container msd-header__divider">
-      <div class="msd-grid">
-       
-        <div class="msd-grid__cell msd-grid--six-tenths">
-          <div class="msd-header__logotype">
-            <a href="/dist/html/index.html" class="msd-header__site-logo">
-              <span class="sr-only">Ministry of Social Development - Accessibility for MSD</span>
-                <svg aria-hidden="true" focusable="false" class="msd-icon msd-icon__msd-logo">
-                 <use href="../../../dist/images/sprites/sprite.svg#msd--logo"></use>
-               </svg>
-              </a>
-               <span class="msd-header__product-name" aria-hidden="true">
-                Accessibility for MSD
-              </span>
-          </div>
+<header class="msd-header">
+  <div class="msd-container msd-header__divider">
+    <div class="msd-grid">
+     
+      <div class="msd-grid__cell msd-grid--six-tenths">
+        <div class="msd-header__logotype">
+          <a href="/dist/html/index.html" class="msd-header__site-logo">
+            <span class="sr-only">Ministry of Social Development - Accessibility for MSD</span>
+              <svg role="img" class="msd-icon msd-icon__msd-logo" aria-labelledby="msd-logo" aria-hidden="true" focusable="false">
+                <title id="msd-logo">Ministry of Social Development</title>
+               <use href="../../../dist/images/sprites/sprite.svg#msd--logo"></use>
+             </svg>
+            </a>
+             <span class="msd-header__product-name" aria-hidden="true">
+              Accessibility for MSD
+            </span>
         </div>
+      </div>
 
       <div class="msd-grid__cell msd-grid--four-tenths">
-
+        <div class="msd-header__actions">
+  
          <!-- search -->
-          <div class="msd-search__wrapper">
-           
+          <div class="msd-search__header">
             <form class="msd-search" role="search" action="/" method="get">
-              <div class="msd-search__item">
-
-                <label class="msd-search__label" for="msd-accessibility-query">
-                  <span class="sr-only">Search</span>
-                  <input id="msd-accessibility-query" class='msd-search__input' placeholder="Search" type="search" name="search">
-                </label>
-                
-                <button type='submit' class="msd-search__button" name="commit" aria-label="Search">
-                  <svg aria-hidden="true" focusable="false" aria-label="Submit Search" class="msd-icon msd-icon__search">
-                    <use href="../../../dist/images/sprites/sprite.svg#icons--search"></use>
-                  </svg>
-                </button>
-              </div>
+              <label for="msd-accessibility-query" class="sr-only">Search</label>
+              <input type="text" class="msd-search__input" id="msd-accessibility-query" placeholder="Search" name="query">
+              <button class="msd-search__button"><span class="sr-only">Submit search</span></button>
             </form>
-
-
+          </div>
+  
           <!-- mobile nav button -->
           <section class="msd-navigation__toggle--wrapper">
             <button aria-expanded="false" aria-label="Mobile menu" class="msd-navigation__toggle">Menu</button>
           </section>
-          </div>
-
-        </div> 
-
+        </div>
+  
+      </div> 
+  
        </div>
     </div>
-  </header>
+</header>
 
 
 
@@ -120,248 +112,253 @@
 <nav class="msd-navigation" aria-label="main menu">
   <ul class="msd-navigation__list msd-navigation__level-one">
 
-      <li class="msd-navigation__list-item">
+    <li class="msd-navigation__list-item">
 
-           <a class="msd-link msd-navigation-link" href="/dist/html/overview/index.html" aria-label="accessibility overview">Overview</a>
-       
-          <div class="msd-navigation-sr-expand__wrapper">
-            <button class="msd-navigation-sr-expand__btn">
-              <span class="sr-only">Show the submenu for "Accessibility Overview"</span>
-            </button>
-          </div>
-        <button aria-expanded="false" class="msd-navigation__toggle-level">
-          <span class="sr-only">Accessibility Overview Menu</span>
-        </button>
-        <ul class="msd-navigation__level-two">
-          <li class="msd-navigation__list-item">
-            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/what-is-digitial-accessibility.html">What is Digital Accessibility?</a>
-          <li class="msd-navigation__list-item">
-            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/perceivable.html">Perceivable</a>
-          </li>
-          <li class="msd-navigation__list-item">
-            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/operable.html">Operable</a>
-          </li>
-          <li class="msd-navigation__list-item">
-            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/understandable.html">Understandable</a>
-          </li>
-          <li class="msd-navigation__list-item">
-            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/auditory-disabilities.html">Auditory Disabilities</a>
-          </li>
-          <li class="msd-navigation__list-item">
-            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/cognitive-neurological-disabilities.html">Cognitive and Neurological Disabilities</a>
-          </li>
-          <li class="msd-navigation__list-item">
-            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/physical-disabilities.html">Physical Disabilities</a>
-          </li>
-          <li class="msd-navigation__list-item">
-            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/speech-disabilities.html">Speech Disabilities</a>
-          </li>
-          <li class="msd-navigation__list-item">
-            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/visual-disabilities.html">Visual Disabilities</a>
-          </li>
-        </ul>
-
-      </li>
-
-      <li class="msd-navigation__list-item">
-
+          <a class="msd-link msd-navigation-link" href="/dist/html/overview/index.html" aria-label="accessibility overview">Overview</a>
       
-        <a class="msd-link msd-navigation-link" href="/dist/html/product/index.html">
-          Product
-        </a>
-       
-
         <div class="msd-navigation-sr-expand__wrapper">
-            <button class="msd-navigation-sr-expand__btn">
-              <span class="sr-only">Show submenu for "Product"</span>
-            </button>
+          <button class="msd-navigation-sr-expand__btn">
+            <span class="sr-only">Show the submenu for "Accessibility Overview"</span>
+          </button>
         </div>
+      <button aria-expanded="false" class="msd-navigation__toggle-level">
+        <span class="sr-only">Accessibility Overview Menu</span>
+      </button>
+      <ul class="msd-navigation__level-two">
+        <li class="msd-navigation__list-item">
+          <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/what-is-digitial-accessibility.html">What is Digital Accessibility?</a>
+        </li>  
+        <li class="msd-navigation__list-item">
+          <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/perceivable.html">Perceivable</a>
+        </li>
+        <li class="msd-navigation__list-item">
+          <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/operable.html">Operable</a>
+        </li>
+        <li class="msd-navigation__list-item">
+          <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/understandable.html">Understandable</a>
+        </li>
+        <li class="msd-navigation__list-item">
+          <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/auditory-disabilities.html">Auditory Disabilities</a>
+        </li>
+        <li class="msd-navigation__list-item">
+          <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/cognitive-neurological-disabilities.html">Cognitive and Neurological Disabilities</a>
+        </li>
+        <li class="msd-navigation__list-item">
+          <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/physical-disabilities.html">Physical Disabilities</a>
+        </li>
+        <li class="msd-navigation__list-item">
+          <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/speech-disabilities.html">Speech Disabilities</a>
+        </li>
+        <li class="msd-navigation__list-item">
+          <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/visual-disabilities.html">Visual Disabilities</a>
+        </li>
+      </ul>
+
+    </li>
+
+    <li class="msd-navigation__list-item">
+
+      <a class="msd-link msd-navigation-link" href="/dist/html/product/index.html">
+        Product
+      </a>
       
-
-        <button aria-expanded="false" class="msd-navigation__toggle-level">
-              <span class="sr-only">Product Menu</span>
-        </button>
-        <ul class="msd-navigation__level-two">
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/product/overview.html">Accessibility overview</a>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/product/diverse-users.html">Diverse users</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/product/project-workflow.html">Project workflow</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/product/final-review.html">Final review</a>
-                </li>
-        </ul>
-       
-      </li>
-
-      <li class="msd-navigation__list-item">
-       
-          <a class="msd-link msd-navigation-link" href="/dist/html/content/index.html">Content</a>
-       
-          <div class="msd-navigation-sr-expand__wrapper">
-            <button class="msd-navigation-sr-expand__btn">
-              <span class="sr-only">Show submenu for "Website Content"</span>
-            </button>
-          </div>
-            <button aria-expanded="false" class="msd-navigation__toggle-level">
-              <span class="sr-only">Website Content Menu</span>
-            </button>
-              <ul class="msd-navigation__level-two">
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/plain-language.html">Plain language</a>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/reference-materials.html">Reference materials</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/graphic-elements.html">Graphic Elements</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/scannable-content.html">Scannable content</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/images.html">Images</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/links-and-buttons.html">Links & Buttons</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/information-architecture.html">Information Architecture</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/video-and-multimedia.html">Video and Multimedia</a>
-                </li>
-                </ul>
-      </li>
-
-      <li class="msd-navigation__list-item">
-      
-          <a class="msd-link msd-navigation-link" href="/dist/html/ux/index.html">User Experience</a>
-       
-          <div class="msd-navigation-sr-expand__wrapper">
-            <button class="msd-navigation-sr-expand__btn">
-              <span class="sr-only">Show submenu for "User Experience"</span>
-            </button>
-          </div>
-            <button aria-expanded="false" class="msd-navigation__toggle-level">
-              <span class="sr-only">User Experience Menu</span>
-            </button>
-              <ul class="msd-navigation__list msd-navigation__level-two">
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/inclusive-design.html">Inclusive Design</a>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/assistive-technology.html">Assisstive Technology</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/tab-order.html">Tab order</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/focus.html">Focus</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/navigation-shortcuts.html">Navigation shortcuts</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/forms.html">Forms</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/images.html">Images</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/touch-targets.html">Touch Targets</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/personas.html">Personas</a>
-                </li>
-                </ul>
-      </li>
-
-      <li class="msd-navigation__list-item">
-      
-          <a class="msd-link msd-navigation-link" href="/dist/html/visual-design/index.html" aria-current="page">Visual design</a>
-   
-          <div class="msd-navigation-sr-expand__wrapper">
-            <button class="msd-navigation-sr-expand__btn">
-              <span class="sr-only">Show submenu for "Visual Design"</span>
-            </button>
-          </div>
-            <button aria-expanded="false" class="msd-navigation__toggle-level">
-              <span class="sr-only">Visual Design Menu</span>
-            </button>
-              <ul class="msd-navigation__level-two">
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/colour-and-contrast.html">Colour and Contrast</a>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/layout-and-hierarchy.html">Layout and Hierarchy</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/typography.html">Typography</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/graphics-and-images.html">Graphics and Images</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/data-visualisations.html">Data Visualisations</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/forms.html">Forms</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/mobile.html">Mobile</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/keyboard-access.html">Keyboard Access</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/screen-reader.html">Screen reader</a>
-                </li>
-                </ul>
-      </li>
-
-      <li class="msd-navigation__list-item">
-   
-          <a class="msd-link msd-navigation-link" href="/dist/html/development/index.html">Development</a>
+      <div class="msd-navigation-sr-expand__wrapper">
+          <button class="msd-navigation-sr-expand__btn">
+            <span class="sr-only">Show submenu for "Product"</span>
+          </button>
+      </div>
     
-          <div class="msd-navigation-sr-expand__wrapper">
-            <button class="msd-navigation-sr-expand__btn">
-              <span class="sr-only">Show submenu for "Development"</span>
-            </button>
-          </div>
-            <button aria-expanded="false" class="msd-navigation__toggle-level">
-              <span class="sr-only">Development Menu</span>
-            </button>
-              <ul class="msd-navigation__level-two">
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/keyboard-access.html">Keyboard access</a>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/screen-reader.html">Screen reader</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/headings.html">Headings</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/page-structure.html">Page structure</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/images.html">Images</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/colour-and-contrast.html">Colour and Contrast</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/automated-testing.html">Automated testing</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/buttons.html">Buttons</a>
-                </li>
-                <li class="msd-navigation__list-item">
-                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/landmarks.html">Landmarks</a>
-                </li>
-              </ul>
-      </li>
+      <button aria-expanded="false" class="msd-navigation__toggle-level">
+            <span class="sr-only">Product Menu</span>
+      </button>
+      <ul class="msd-navigation__level-two">
+        <li class="msd-navigation__list-item">
+          <a class="msd-link msd-navigation__level-two-link" href="/dist/html/product/overview.html">Accessibility overview</a>
+        </li>  
+        <li class="msd-navigation__list-item">
+          <a class="msd-link msd-navigation__level-two-link" href="/dist/html/product/diverse-users.html">Diverse users</a>
+        </li>
+        <li class="msd-navigation__list-item">
+          <a class="msd-link msd-navigation__level-two-link" href="/dist/html/product/project-workflow.html">Project workflow</a>
+        </li>
+        <li class="msd-navigation__list-item">
+          <a class="msd-link msd-navigation__level-two-link" href="/dist/html/product/final-review.html">Final review</a>
+        </li>
+      </ul>
+      
+    </li>
 
+    <li class="msd-navigation__list-item">
+      
+        <a class="msd-link msd-navigation-link" href="/dist/html/content/index.html">Content</a>
+      
+        <div class="msd-navigation-sr-expand__wrapper">
+          <button class="msd-navigation-sr-expand__btn">
+            <span class="sr-only">Show submenu for "Website Content"</span>
+          </button>
+        </div>
+          <button aria-expanded="false" class="msd-navigation__toggle-level">
+            <span class="sr-only">Website Content Menu</span>
+          </button>
+            <ul class="msd-navigation__level-two">
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/plain-language.html">Plain language</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/reference-materials.html">Reference materials</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/graphic-elements.html">Graphic Elements</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/scannable-content.html">Scannable content</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/images.html">Images</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/links-and-buttons.html">Links & Buttons</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/information-architecture.html">Information Architecture</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/video-and-multimedia.html">Video and Multimedia</a>
+              </li>
+            </ul>
+    </li>
+
+    <li class="msd-navigation__list-item">
+    
+        <a class="msd-link msd-navigation-link" href="/dist/html/ux/index.html">User Experience</a>
+      
+        <div class="msd-navigation-sr-expand__wrapper">
+          <button class="msd-navigation-sr-expand__btn">
+            <span class="sr-only">Show submenu for "User Experience"</span>
+          </button>
+        </div>
+          <button aria-expanded="false" class="msd-navigation__toggle-level">
+            <span class="sr-only">User Experience Menu</span>
+          </button>
+            <ul class="msd-navigation__list msd-navigation__level-two">
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/inclusive-design.html">Inclusive Design</a>
+              </li>             
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/assistive-technology.html">Assistive technology</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/humanise-accessibility.html">Humanise accessibility</a>
+              </li>   
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/tab-order.html">Tab order</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/focus.html">Focus</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/navigation-shortcuts.html">Navigation shortcuts</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/forms.html">Forms</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/images.html">Images</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/touch-targets.html">Touch Targets</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/personas.html">Personas</a>
+              </li>
+              </ul>
+    </li>
+
+    <li class="msd-navigation__list-item">
+    
+        <a class="msd-link msd-navigation-link" href="/dist/html/visual-design/index.html" aria-current="page">Visual design</a>
+  
+        <div class="msd-navigation-sr-expand__wrapper">
+          <button class="msd-navigation-sr-expand__btn">
+            <span class="sr-only">Show submenu for "Visual Design"</span>
+          </button>
+        </div>
+          <button aria-expanded="false" class="msd-navigation__toggle-level">
+            <span class="sr-only">Visual Design Menu</span>
+          </button>
+            <ul class="msd-navigation__level-two">
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/colour-and-contrast.html">Colour and Contrast</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/layout-and-hierarchy.html">Layout and Hierarchy</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/typography.html">Typography</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/graphics-and-images.html">Graphics and Images</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/data-visualisations.html">Data Visualisations</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/forms.html">Forms</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/mobile.html">Mobile</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/keyboard-access.html">Keyboard Access</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/screen-reader.html">Screen reader</a>
+              </li>
+            </ul>
+    </li>
+
+    <li class="msd-navigation__list-item">
+  
+        <a class="msd-link msd-navigation-link" href="/dist/html/development/index.html">Development</a>
+  
+        <div class="msd-navigation-sr-expand__wrapper">
+          <button class="msd-navigation-sr-expand__btn">
+            <span class="sr-only">Show submenu for "Development"</span>
+          </button>
+        </div>
+          <button aria-expanded="false" class="msd-navigation__toggle-level">
+            <span class="sr-only">Development Menu</span>
+          </button>
+            <ul class="msd-navigation__level-two">
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/keyboard-access.html">Keyboard access</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/screen-reader.html">Screen reader</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/headings.html">Headings</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/page-structure.html">Page structure</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/images.html">Images</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/colour-and-contrast.html">Colour and Contrast</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/automated-testing.html">Automated testing</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/buttons.html">Buttons</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/landmarks.html">Landmarks</a>
+              </li>
+            </ul>
+    </li>
 
   </ul>
 </nav>
@@ -409,27 +406,26 @@
             
             <h1 class="msd-h1">Data visualisations</h1>
              
-            <p class="lead">Can you understand the trend of the graph?</p>
-            <p class="lead">Can you grasp the relationship between parts of the data?</p>
+            <p class="lead">Can you understand the trend of the graph and grasp the relationship between parts of the data?</p>
           
             <h2 class="msd-h3">Why it’s important:</h2> 
             <div class="msd-list">
-              <ul class="msd-list__item msd-list__item--square">
-                <li class="msd-list__no-link">Amanda has difficulty reading graphs with small text.</li>
-                <li class="msd-list__no-link">Nikau is colourblind and cannot rely on colour to explain the data.</li>
+              <ul class="msd-list__section msd-list__section--square">
+                <li class="msd-list__section--item">Amanda has difficulty reading graphs with small text.</li>
+                <li class="msd-list__section--item">Nikau is colourblind and cannot rely on colour to explain the data.</li>
               </ul>
             </div> 
               
-              <h2 class="msd-h3">Steps to take</h2>
+              <h2 class="msd-h3">Next steps</h2>
               <div class="msd-list">
-                <ol class="msd-list__item msd-list--number">
-                  <li class="msd-list__no-link">Follow data visualisation best practices instead of the latest aesthetic trends. Dictate the format and style through your data and communication goals.</li>                  
-                  <li class="msd-list__no-link">Support the visuals with a brief description of the trend that’s generated by the chart to give context. </li>  
-                  <li class="msd-list__no-link">Where applicable label each axis and their tick marks. This should be visible to the user and accessible through assistive technology.</li>          
-                  <li class="msd-list__no-link">When designing accessible maps and info-graphics use a combination of colour and texture. By combining colour with a pattern users will have two pieces of information to decipher.</li>    
-                  <li class="msd-list__no-link">Use generous colour contrast ratios for all graphics to assist Colour blind users.</li>
-                  <li class="msd-list__no-link">Consider complementing the graph with a table of information. This will assist screen readers and easier to read in mobile view.</li>
-                  <li class="msd-list__no-link">Avoid using sliders or other intricate tools to allow users to manipulate graphs. Dropdown inputs have more support with screen readers.</li>
+                <ol class="msd-list__section msd-list--number">
+                  <li class="msd-list__section--item">Follow data visualisation best practices instead of the latest aesthetic trends. Dictate the format and style through your data and communication goals.</li>                  
+                  <li class="msd-list__section--item">Support the visuals with a brief description of the trend that’s generated by the chart to give context. </li>  
+                  <li class="msd-list__section--item">Where applicable label each axis and their tick marks. This should be visible to the user and accessible through Assistive technology.</li>          
+                  <li class="msd-list__section--item">When designing accessible maps and info-graphics use a combination of colour and texture. By combining colour with a pattern users will have two pieces of information to decipher.</li>    
+                  <li class="msd-list__section--item">Use generous colour contrast ratios for all graphics to assist Colour blind users.</li>
+                  <li class="msd-list__section--item">Consider complementing the graph with a table of information. This will assist screen readers and easier to read in mobile view.</li>
+                  <li class="msd-list__section--item">Avoid using sliders or other intricate tools to allow users to manipulate graphs. Dropdown inputs have more support with screen readers.</li>
                 </ol>
               </div> 
             
@@ -438,7 +434,7 @@
                <h2 class="msd-callout__title">References</h2>
 
                 <h3 class="msd-callout__sub-title">Resources</h3>
-                 <ul class="msd-list__item msd-list__item--square">
+                 <ul class="msd-list__section msd-list__section--square">
                   <li class="msd-callout__link">
                     <a class="msd-link msd__link--external" href="https://psmag.com/social-justice/how-to-make-visiualizations-more-accessible">The Importance of Accessibility in Data Visualisations<span class="sr-only">(this link opens an external website)</span></a> 
                   </li>                  
@@ -452,7 +448,7 @@
 
                 <h3 class="msd-callout__sub-title">New Zealand Government</h3>
 
-                <ul class="msd-list__item msd-list__item--square">
+                <ul class="msd-list__section msd-list__section--square">
                   <li class="msd-callout__link">
                     <a class="msd-link msd__link--external" href="https://www.digital.govt.nz/standards-and-guidance/nz-government-web-standards/web-accessibility-standard-1-1/">Complex visual maps<span class="sr-only">(this link opens an external website)</span></a> 
                   </li>
@@ -460,7 +456,7 @@
 
                 <h3 class="msd-callout__sub-title">World Content Accessibility Guidelines</h3>
 
-                <ul class="msd-list__item msd-list__item--square">
+                <ul class="msd-list__section msd-list__section--square">
                   <li class="msd-callout__link">
                     <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/WCAG20/quickref/?showtechniques=11%2C111#text-equiv">1.1 Text Alternatives (Guideline)<span class="sr-only">(this link opens an external website)</span></a> 
                   </li>   
@@ -583,51 +579,54 @@
 
     <div class="msd-grid">
 
-      <div class="msd-grid__cell">
-        <ul class="msd-footer__list">
-          <li class="msd-footer__list-item">
-            <a class="msd-footer__link" href="#">Privacy</a>
-          </li>
-          <li class="msd-footer__list-item">
-            <a class="msd-footer__link" href="#">Accessibility</a>
-          </li>
-          <li class="msd-footer__list-item">
-            <a class="msd-footer__link" href="#">Contact</a>
-          </li>
-        </ul>
+      <div class="msd-grid__cell msd-grid--one-half">
+      
+        <div class="msd-footer__logotype">
+          <a href="https://www.govt.nz/" class="msd-footer__logotype--nz-govt-logo">
+            <span class="sr-only">New Zealand Government</span>
+              <svg class="msd-icon msd-icon__nz-govt-logo" role="img" aria-labelledby="nz-govt-logo" aria-hidden="true" focusable="false">
+                <title id="nz-govt-logo">New Zealand Government</title>
+               <use href="../../../dist/images/sprites/sprite.svg#nz-govt--logo"></use>
+             </svg>
+            </a>
+        </div>
+        <p class="msd-footer__small-text">© Crown copyright</p>
+
+      </div>
+    
+      <div class="msd-grid__cell msd-grid--one-half">
+        <div class="msd-grid__cell">
+          <ul class="msd-footer__list">
+            <li class="msd-footer__list-item">
+              <a class="msd-footer__link" href="#">Privacy</a>
+            </li>
+            <li class="msd-footer__list-item">
+              <a class="msd-footer__link" href="#">Accessibility</a>
+            </li>
+            <li class="msd-footer__list-item">
+              <a class="msd-footer__link" href="#">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
 
     </div>
 
-
     <div class="msd-grid">
+      <div class="msd-grid__cell">
 
-      <div class="msd-grid__cell msd-grid--one-half">
-      
-        <div class="msd-footer__logotype msd-footer__logotype--nz-govt-logo">
-          <a href="https://www.govt.nz" class="msd-footer__logotype--item">
-            <span class="sr-only">New Zealand Government copyright and attribution</span>
-            <svg width="230px" height="24px" id="New Zealand Government" class="msd-icon__nz-govt-logo" aria-hidden="true" focusable="false">
-              <title>New Zealand Government</title>
-              <use href="../../../dist/images/sprites/sprite.svg#nz-govt--logo"></use>
-            </svg>
-            <span class="nz-govt--tagline" aria-hidden="true">Te Kāwanatanga o Aotearoa</span>
-          </a>
-        </div>
-
-        
-
-        <p class="msd-footer__small-text">Contains public sector information licensed under the Open Government Licence v3.0.</p>
+      <div class="msd-footer__copyright">
+          <p class="msd-footer__small-text">Contains public sector information licensed under the Open Government Licence v3.0.</p>
 
      
-          <a href="https://creativecommons.org/licenses/by/4.0/" class="msd-footer__copyright">
+          <a href="https://creativecommons.org/licenses/by/4.0/" class="msd-footer__copyright--logo">
             <span class="sr-only">Creative Commons 4.0 International Licence</span>
             <svg width="24px" height="24px" class="msd-icon__creative-commons" aria-hidden="true" focusable="false">
-              <use href="../../../dist/images/sprites/sprite.svg#icons--creative-commons"></use>
+              <use href="../../dist/images/sprites/sprite.svg#icons--creative-commons"></use>
             </svg>
-              &nbsp;
+            &nbsp;
             <svg width="24px" height="24px" class="msd-icon__creative-commons-attribution" aria-hidden="true" focusable="false">
-              <use href="../../../dist/images/sprites/sprite.svg#icons--creative-commons-attribution"></use>
+              <use href="../../dist/images/sprites/sprite.svg#icons--creative-commons-attribution"></use>
             </svg>
           </span>          
         </a>
@@ -635,33 +634,21 @@
         <p class="msd-footer__small-text">Unless indicated otherwise, all content is licensed for re-use under a 
           
           <a class="msd-footer__link msd-footer__link--external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International Licence
-            <span class="sr-only">(this link opens an external website)</span></a>.</p>
-          
-      </div>
-    
-      <div class="msd-grid__cell msd-grid--one-half">
-        <div class="msd-footer__logotype msd-footer__logotype--coat-of-arms">
-          <a href="https://www.govt.nz/about/using-this-website/copyright-and-attribution/" class="msd-footer__logotype--item">
-            <span class="sr-only">New Zealand Government copyright and attribution</span>
-            <svg width="112px" height="108px" aria-hidden="true" focusable="false" class="msd-icon msd-icon__coat-of-arms">
-              <title id="copyright">Crown Copyright 2020</title>
-              <use href="../../../dist/images/sprites/sprite.svg#nz-govt--crown"></use>
-            </svg>
-            © Crown copyright
-          </a>
-        </div>
-      </div>
- 
-    </div>
+            <span class="sr-only">(this link opens an external website)</span></a>&nbsp;.</p>
+       </div>
 
-  </div>
+      </div>
+    </div>
 </footer>
 
-</div>
 
-  <!-- JavaScript
-  ================================================== -->
-  <script src="../../../dist/js/vendor/jquery-3.5.1.min.js"></script>
-  <script src="../../../dist/js/scripts.js?cb=1607455229852"></script>
+
+
+
+<!-- JavaScript
+================================================== -->
+<script src="../../../dist/js/vendor/jquery-3.5.1.min.js"></script>
+<script src="../../../dist/js/scripts.js?cb=1607455229852"></script>
+
 </body>
 </html>
