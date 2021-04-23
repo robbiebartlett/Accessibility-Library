@@ -2,169 +2,206 @@
    #Pagination
    ========================================================================== */
 
-   .msd-pane__pagination {
-      display: inline-flex;
-      justify-content: flex-start;
-   }
+.msd-pagination {
+  display: flex;
+  justify-content: flex-start;
+  margin: $xl 0;
+}
 
-   .msd-pagination {
-     display: flex;
-     margin: 0;
-     padding: 0;
-   }
-   
-   .msd-pagination__section {
-     display: flex;
-     margin: 0;
-     padding: 0;
+.msd-pagination__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.msd-pagination__item {
+  border-bottom-color: transparent;
+  font-size: $md;
+  line-height: 1.5;
 
-     &.disabled {
-      display: none;
-    }
-
-   }
-
-   .msd-pagination__section--item {
-     border-bottom-color: transparent;
-     font-size: $md;
-     line-height: 1.5;
-
-     & + .msd-pagination__section--item {
-       padding-left: $md;
-     }
-   }
-
-   .msd-pagination__link {
-      border-top: 2px solid transparent;
-      border-bottom: 2px solid transparent;
-      color: color(msd-text);
-      font-size: 1.125rem;
-      line-height: 1.5;
-      margin: 0 .275rem;
-      padding: 0 $sm;
-      text-align: center;
-      text-decoration: none;
-
-      &:nth-of-type(-n+2) {
-        margin-left: 0;
-      }
-
-      &:focus {
-        background-color: color(msd-focus);
-        border-bottom: 2px solid transparent;
-        box-shadow: 0 -2px color(msd-focus),0 4px color(govnz-link-active);
-        color: color(govnz-link-active);
-        outline: 3px solid transparent;
-
-        & .msd-pagination__value,
-        & .msd-pagination__next--page, 
-        & .msd-pagination__previous--page {
-          border-bottom: 2px solid transparent;
-          color: color(govnz-link-active);
-        }
-
-      }
-
-      //Current link
-      &[aria-current] {
-        font-weight: bold;
-      }
-
-   }
-
-  .msd-pagination__value {
-    border-bottom: 2px solid color(govnz-link);
-    color: color(govnz-link);
-
-    &:hover:not(:focus) {
-      border-bottom: 2px solid color(govnz-link-active);
-      color: color(govnz-link-active);
-    }
-
+  & + .msd-pagination__item {
+    padding-left: $md;
   }
 
-  //Previous, next
-  .msd-pagination__previous, 
-  .msd-pagination__next {
-    padding: 0 $sm;
-    position: relative;
-    text-decoration: none;
+  &.disabled {
+    display: none;
   }
 
-  .msd-pagination__previous {
-      margin-left: $null;
+}
+
+.msd-pagination__link { 
+  color: color(govnz-link);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin: 0 $xs;
+  padding: 0 $xs;
+  text-align: center;
+  text-decoration: none;
+
+  &:not(:focus):hover {
+    color: color(govnz-link-hover);
   }
 
-  .msd-pagination__previous--page {
-    border-bottom: 2px solid color(govnz-link);
-    color: color(govnz-link);
-    font-size: $md;
-    position: relative;
+  &:not(:hover):focus {
+    background-color: color(msd-focus);
+    border-bottom: 2px solid transparent;
+    box-shadow: 0 -2px color(msd-focus),0 4px color(govnz-link-active);
+    color: color(govnz-link-active);
+    outline: 3px solid transparent;
+  }
 
-    &:not(:focus):hover {
-      border-bottom: 2px solid color(govnz-link-hover);
-      color: color(govnz-link-hover);
-    }
+  //Current link
+  &[aria-current] {
+    color: color(msd-text);
+    font-weight: bold;
+  }
 
-    &:after {
-      color: color(msd-text);
+}
+
+
+//Previous, Next arrows
+
+.msd-pagination__previous {
+  position: relative;
+
+  .msd-pagination__link {
+    margin-left: 0;
+    padding-left: 0;
+
+    &::before {
+      display: inline-block;
       content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23005dbb' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
-      height: 1.1rem;
-      margin-left: -$sm;
-      position: absolute;
-      left: -15px;
-      top: 0;
-      width: 1.1rem;
+      height: 1rem;
+      position: relative;
+      // transform: scaleX(-1);
+      margin-right: $sm;
+      top: 2px;
+      width: 1rem;
     }
 
-    &:not(:focus):hover::after {
-      content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000c48' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
-    }
+    &:focus,
+    &:hover {
 
-    &.disabled {
-      display: none;
+      &:before {
+          content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000C48' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
+      }
     }
 
   }
-
-  .msd-pagination__next--page {
-    border-bottom: 2px solid color(govnz-link);
-    color: color(govnz-link);
-    font-size: $md;
-    position: relative;
-
-    &:not(:focus):hover {
-      border-bottom: 2px solid color(govnz-link-hover);
-      color: color(govnz-link-hover);
-    }
-
-    &:after {
-      color: color(msd-text);
-      content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23005dbb' d='M20 13.1L9.8 23.5c-.7.7-1.7.7-2.4 0s-.7-1.7 0-2.4l9.1-9.1-9.1-9c-.7-.7-.7-1.7 0-2.4s1.7-.7 2.4 0L20 10.8c.3.3.5.8.5 1.2s-.2.8-.5 1.1z'/%3E%3C/svg%3E");
-      height: 1.1rem;
-      margin-left: -$sm;
-      position: absolute;
-      right: -25px;
-      top: 0;
-      width: 1.1rem;
-    }
-
-    &:not(:focus):hover::after {
-      content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000C48' d='M20 13.1L9.8 23.5c-.7.7-1.7.7-2.4 0s-.7-1.7 0-2.4l9.1-9.1-9.1-9c-.7-.7-.7-1.7 0-2.4s1.7-.7 2.4 0L20 10.8c.3.3.5.8.5 1.2s-.2.8-.5 1.1z'/%3E%3C/svg%3E");
-    }
-
-    &.disabled {
-      display: none;
-    }
-    
-  }
-
-
-
-
-
-
-
- 
   
+ }
+
+ .msd-pagination__next {
+  position: relative;
+
+  .msd-pagination__link {
+    margin-right: 0;
+    padding-right: 0;
+
+    &::after {
+      display: inline-block;
+      content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23005dbb' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
+      height: 1rem;
+      position: relative;
+      transform: scaleX(-1);
+      margin-left: $sm;
+      top: 2px;
+      width: 1rem;
+    }
+
+    &:focus,
+    &:hover {
+
+      &:after {
+          content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000C48' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
+      }
+    }
+
+
+  }
+
+  
+  
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // .msd-pagination__next {
+  //   position: relative;
+  //   left: $null;
+  //   padding-right: $xs;
+  
+  //   &::before {
+  //     content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23005dbb' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
+  //     height: 1rem;
+  //     position: absolute;
+  //     right: -1rem;
+  //     padding-top: 1px;
+  //     padding-bottom: 21px;
+  //     top: 0;
+  //     transform: scaleX(-1);
+  //     width: 1rem;
+  //   }
+  
+  //     &:not(:focus):hover:before {
+  //        content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232A2A2A' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
+  //     }
+  
+  //     &:not(:hover):focus:before {
+  //       background-color: color(msd-focus);
+  //       border-bottom: 2px solid transparent;
+  //       box-shadow: 0 -2px color(msd-focus),0 4px color(govnz-link-active);
+  //       content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232A2A2A' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
+  //       outline: 3px solid transparent;
+  //     }
+  
+  //   }
+
+
+
+
+
+  // &:not(:focus):hover:before {
+  //   content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232A2A2A' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
+  // }
+
+  // &:not(:hover):focus:before {
+  //   content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232A2A2A' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
+  // }
+
+
+
+// .msd-pagination__next {
+
+    
+
+//   // Next arrow
+//   &::after {
+//     left: auto;
+//     right: -1rem;
+//     transform: scaleX(-1);
+//   }
+// }
+
 

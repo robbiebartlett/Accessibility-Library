@@ -34,48 +34,20 @@
 .msd-icon__nz-govt-logo {
     @extend .nz-govt--logo;
     fill: color(govnz-off-white);
-    font-size: 1.7rem;
-    height: 24px;
-    width: 230px;
-
-    &:hover {
-       fill: color(govnz-white); 
-    }
-
-}
-.nz-govt--tagline {
-  bottom: 0;
-  fill: color(govnz-off-white);
-  font-family: arial, sans-serif;
-  font-size: .875rem;
-  margin-top: $xs;
-  position: relative;
-
-  &:hover {
-    fill: color(govnz-white); 
- }
-
-}
-
-//New Zealand Government - Coat of Arms
-.msd-icon__coat-of-arms {
-    @extend .nz-govt--crown;
-    fill: color(govnz-off-white);
-    font-size: 6.75rem;
-    margin: $xs;
+    @include font-size(100px);
     max-width: 100%;
 
     &:hover {
-      color: color(govnz-white); 
-   }
+      fill: color(govnz-white); 
+    }
 
 }
+
 
 .msd-icon__creative-commons {
   @extend .icons--creative-commons;
   fill: color(govnz-off-white);
   font-size: 2rem;
-  max-width: 100%;
   height: 30px;
 
   &:hover {
@@ -88,7 +60,6 @@
   @extend .icons--creative-commons-attribution;
   fill: color(govnz-off-white);
   font-size: 2rem;
-  max-width: 100%;
   height: 30px;
 
   &:hover {
@@ -102,9 +73,17 @@
   color: color(govnz-slate);
   font-size: 1.4rem;
   min-width: 1.2rem;
+
+  //Windows High contrast
+  @media (-ms-high-contrast: active) and (forced-colors: active) {
+    filter: invert(100%) sepia(120%) saturate(5000%) hue-rotate(50deg) brightness(815%) contrast(125%);
+  }
+
 }
 
-.msd-icon__arrow-down{
+
+
+.msd-icon__arrow-down {
   @extend .icons--arrow-down;
   bottom: 0;
   fill: color(govnz-slate);

@@ -2,12 +2,12 @@
    #Page Header
    ========================================================================== */
 
-   .msd-header {
-    background-color: color(msd-brand);
-    margin: 0;
-    padding: $null 0 0;
-    position: relative;
-    z-index: z(header);
+.msd-header {
+  background-color: color(msd-brand);
+  margin: 0;
+  padding: $null 0 0;
+  position: relative;
+  z-index: z(header);
 }
 
 .msd-header__divider {
@@ -65,4 +65,19 @@
     margin-left: $md;
   }
   
+}
+
+.msd-header__actions {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-start;
+  margin: $sm 0 0;
+  position: relative;
+  width: 100%;
+
+  @include mq($from: tablet) {
+    justify-content: flex-end;
+    margin: 0;
+  }
 }

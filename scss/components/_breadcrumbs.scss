@@ -50,12 +50,22 @@
        color: color(msd-text);
      }
 
+     //Hide current link in mobile
+     &:last-of-type {
+        display: none;
+
+        @include mq($from: tablet) {
+         display: block;
+       }
+
+     }
+
     }
 
    .msd-breadcrumb__link {
-      border-bottom: 2px solid transparent;
+      border-bottom: 2px solid color(govnz-link);
       color: color(govnz-link);
-      padding-bottom: .375vh;
+      padding-bottom: .125vh;
       text-decoration: none;
 
      &:hover:not(:focus) {
@@ -74,4 +84,3 @@
      }
 
    }
-
