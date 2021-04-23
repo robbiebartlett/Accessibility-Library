@@ -19,7 +19,7 @@ figure,
 hr,
 table,
 fieldset {
-  margin-bottom: $msd-spacing-unit;
+  margin-bottom: $null;
 }
 
 
@@ -27,7 +27,7 @@ fieldset {
 //Consistent indentation for lists.
 
 dd, ol, ul {
-  margin-left: $msd-spacing-unit;
+  margin-left: $null;
 }
 
 
