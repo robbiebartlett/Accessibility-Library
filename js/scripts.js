@@ -74,6 +74,8 @@ if (e.keyCode === 27) {
 
 
 
+
+
 //Back to Top
 function backToTop() {
   "use strict";
@@ -127,6 +129,8 @@ function backToTop() {
 
 
 
+
+
 //Print page
 function printPage() {
   "use strict";
@@ -140,6 +144,18 @@ function printPage() {
  });
  
 }
+
+
+
+
+
+//TimeStamp
+function timeStamp() {
+  $('#year').html(new Date().getFullYear());
+}
+
+
+
 
 
 
@@ -303,6 +319,8 @@ function dropdown() {
 
 
 
+
+
 //Re-order search filter in mobile
 function filterReorder() {
 
@@ -322,11 +340,15 @@ $(window).on("load resize", function () {
 }
 
 
+
+
+
 //Document - load
 $(document).ready(function () {
   primaryNav();
   backToTop();
   printPage();
+  timeStamp();
   dropdown();
   filterReorder();
 });
