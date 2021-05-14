@@ -12,7 +12,7 @@
   ================================================== -->
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
 
-  <title>Screen reader | Accessibility for MSD</title>
+  <title>Automated testing | Accessibility for MSD</title>
 
   <!-- Mobile Specific Metatags
   ================================================== -->
@@ -126,7 +126,6 @@
           <span class="sr-only">Accessibility Overview Menu</span>
         </button>
         <ul class="msd-navigation__level-two">
-
           <li class="msd-navigation__list-item">
             <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/perceivable.html">Perceivable</a>
           </li>
@@ -353,6 +352,7 @@
           <li class="msd-navigation__list-item">
             <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/automated-testing.html">Automated testing</a>
           </li>
+
         </ul>
       </li>
 
@@ -366,7 +366,6 @@
   <!-- Main Content
    ============================================== -->
   <main role="main" id="main-content" aria-hidden="false" class="main-container">
-
     <div class="msd-pane__breadcrumb">
       <div class="msd-container">
         <div class="msd-grid">
@@ -384,7 +383,7 @@
                 </a>
               </li>
               <li class="msd-breadcrumb__list-item">
-                Screen reader
+                Automated testing
               </li>
             </ol>
           </nav>
@@ -399,29 +398,38 @@
 
           <div class="msd-grid__cell msd-grid--two-thirds msd-order-2">
 
-            <h1 class="msd-h1">Screen reader</h1>
+            <h1 class="msd-h1">Automated testing</h1>
 
-            <p class="lead">Can you use a screen reader to access the page content?</p>
+            <p class="lead">Did your accessibility testing tools provide accurate results?</p>
 
             <h2 class="msd-h3">Why it’s important</h2>
             <div class="msd-list">
               <ul class="msd-list__section msd-list__section--square">
-                <li class="msd-list__section--item">Eric has low vision due to glaucoma and regularly uses a screen reader for assistance.</li>
-                <li class="msd-list__section--item">Morgan is blind and uses a screen reader to navigate the web.</li>
+                <li class="msd-list__section--item">Including automated testing throughout development can help quickly catch <a class="msd-link msd__link--external" href="https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/">many accessibility errors<span class="sr-only">(this link opens an external website)</span></a>.</li>
+                <li class="msd-list__section--item">Automated testing cannot gaurantee that your product is accessible.</li>
+                <li class="msd-list__section--item">Always combine automated testing with ongoing manual testing.</li>
               </ul>
             </div>
 
             <h2 class="msd-h3">Next steps</h2>
             <div class="msd-list">
               <ol class="msd-list__section msd-list--number">
-                <li class="msd-list__section--item">Add <a class="msd-link msd__link--external" href="https://webaim.org/techniques/css/invisiblecontent/">invisible Content for screen reader users<span class="sr-only">(this link opens an external website)</span></a>. For example low vision users may need to be aware when a modal has opened. </li>
-                <li class="msd-list__section--item">Use a screen reader to make sure you can land on controls and that they’re announcing elements correctly.</li>
-                <li class="msd-list__section--item">Determine whether the HTML document has a language attribute so that the screen reader will read it with the correct accent. <br>e.g. <code><b>&lt;html lang="en"&gt;</b></code></li>
-                <li class="msd-list__section--item">If forms are present, make sure the screen reader reads labels and instructions. </li>
-                <li class="msd-list__section--item">Check that all <a class="msd-link" href="/dist/html/development/headings.html">headings</a> are marked correctly so the screen reader can identify them.</li>
-                <li class="msd-list__section--item">Make sure all links are descriptive. For example the link text "Read more" provides no context where the user will go if they click it. Give a more descriptive title of what's on the other side of the link, e.g. Read more about accessibility.</li>
-                <li class="msd-list__section--item">Check that any links leading to an external site have an element only visible to the screen reader. 
-                  For example the following code will tell the user the link leads to another website: <br><code><b>&lt;span class="sr-only">(this link opens an external website)&lt;/span&gt;</b></code></li>
+                <li class="msd-list__section--item">Use automated tools to quickly check for common errors in your browser. For example <a class="msd-link msd__link--external" href="https://chrome.google.com/webstore/detail/axe-devtools-web-accessib/lhdoppojpmngadmnindnejefpokejbdd?hl=en-US">aXe<span class="sr-only">(this link opens an external website)</span></a>, <a class="msd-link msd__link--external" href="https://chrome.google.com/webstore/detail/wave-evaluation-tool/jbbplnpkjmmeebjpijfedlgcdilocofh">WAVE<span class="sr-only">(this link opens an external website)</span></a>, <a class="msd-link msd__link--external" href="http://squizlabs.github.io/HTML_CodeSniffer/">HTML_CodeSniffer<span class="sr-only">(this link opens an external website)</span></a> or <a class="msd-link msd__link--external" href="https://chrome.google.com/webstore/detail/ibm-equal-access-accessib/lkcagbfjnkomcinoddgooolagloogehp">Equal Access Accessibility Checker<span class="sr-only">(this link opens an external website)</span></a>.
+                </li>
+                <li class="msd-list__section--item">Integrate tools like <a class="msd-link msd__link--external" href="https://github.com/dequelabs/axe-core">axe-core<span class="sr-only">(this link opens an external website)</span></a>, <a class="msd-link msd__link--external" href="https://github.com/GoogleChrome/lighthouse/blob/master/docs/readme.md#using-programmatically">Lighthouse Audits<span class="sr-only">(this link opens an external website)</span></a>, or <a class="msd-link msd__link--external" href="https://github.com/accesslint/accesslint.js/tree/master">AccessLint.js<span class="sr-only">(this link opens an external website)</span></a> into your development.</li>
+                <li class="msd-list__section--item">If using Github a tool like <a class="msd-link msd__link--external" href="https://www.accesslint.com/">AccessLint<span class="sr-only">(this link opens an external website)</span></a> can find accessibility issues in your pull requests.</li>
+                <li class="msd-list__section--item">Understand the problems faced by people with slight to extreme vision problems. Use tools like the Mozilla plugin <a class="msd-link msd__link--external" href="https://addons.mozilla.org/en-US/firefox/addon/axe-devtools/">No Coffee Vision Simulator<span class="sr-only">(this link opens an external website)</span></a> or Chromium's 'Emulate vision deficiencies' within the DevTools to simulate: 
+                
+                    <ul class="msd-list__sub-list">
+                      <li class="msd-list__section--item msd-list__section--square">colour blindness</li>
+                      <li class="msd-list__section--item msd-list__section--square">low vision</li>
+                      <li class="msd-list__section--item msd-list__section--square">visual snow, glare and ghosting</li>
+                      <li class="msd-list__section--item msd-list__section--square">obstructed visual field</li>
+                      <li class="msd-list__section--item msd-list__section--square">low contrast sensitivity</li>
+                    </ul>
+                  
+                
+                </li>
               </ol>
             </div>
 
@@ -434,28 +442,26 @@
               <h3 class="msd-callout__sub-title">Resources</h3>
 
               <ul class="msd-list__section msd-list__section--square">
+
                 <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.evinced.com/blog/screen-readers-101-for-front-end-developers-windows/">Screen Readers 101 For Front End Developers<span class="sr-only">(this link opens an external website)</span></a>
+                  <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/ER/tools/">Web Accessibility Evaluation Tools List (W3C)<span class="sr-only">(this link opens an external website)</span></a>
                 </li>
+
                 <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.w3.org/TR/WCAG21/#dfn-assistive-technologies">Assistive technologies<span class="sr-only">(this link opens an external website)</span></a>
-                </li>
+                  <a class="msd-link msd__link--external" href="https://www.smashingmagazine.com/2018/09/importance-manual-accessibility-testing/">The Importance Of Manual Accessibility Testing<span class="sr-only">(this link opens an external website)</span></a>
+                </li>                
+             
                 <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://youtu.be/cOmehxAU_4s?t=3m25s">Video: Screen reader accessibility check (YouTube)<span class="sr-only">(this link opens an external website)</span></a>
-                </li>
-                <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.nvaccess.org/download/">Download NVDA screen reader (NV Access)<span class="sr-only">(this link opens an external website)</span></a>
-                </li>
+                  <a class="msd-link msd__link--external" href="https://accessibility.blog.gov.uk/2017/02/24/what-we-found-when-we-tested-tools-on-the-worlds-least-accessible-webpage/">What we found when we tested tools on the world’s least-accessible webpage (Gov.uk)<span class="sr-only">(this link opens an external website)</span></a>
+                </li>                
+
               </ul>
 
               <h3 class="msd-callout__sub-title">New Zealand Government</h3>
 
               <ul class="msd-list__section msd-list__section--square">
                 <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.digital.govt.nz/standards-and-guidance/design-and-ux/accessibility/accessibility-supported-technologies?rf=1">Accessibility supported technologies<span class="sr-only">(this link opens an external website)</span></a>
-                </li>                
-                <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.digital.govt.nz/standards-and-guidance/design-and-ux/accessibility/accessible-language/">Accessible language<span class="sr-only">(this link opens an external website)</span></a>
+                  <a class="msd-link msd__link--external" href="https://www.digital.govt.nz/standards-and-guidance/design-and-ux/accessibility/colour-and-contrast/">Colour and contrast<span class="sr-only">(this link opens an external website)</span></a>
                 </li>
               </ul>
 
@@ -463,13 +469,17 @@
 
               <ul class="msd-list__section msd-list__section--square">
                 <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#info-and-relationships">1.3.1 Info and Relationships<span class="sr-only">(this link opens an external website)</span></a>
+                  <a class="msd-link msd__link--external" href="https://www.w3.org/TR/WCAG21/#use-of-color">1.4.1 Use of Color<span class="sr-only">(this link opens an external website)</span></a>
                 </li>
+                <li class="msd-callout__link">
+                  <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html">1.4.3 Contrast (Minimum)<span class="sr-only">(this link opens an external website)</span></a>
+                </li>
+                <li class="msd-callout__link">
+                  <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-contrast.html">1.4.11 Non-text Contrast<span class="sr-only">(this link opens an external website)</span></a>
+                </li>                         
               </ul>
 
             </div>
-
-
 
           </div>
 
@@ -485,7 +495,7 @@
                     <a class="msd-sidenav__link msd-link" href="/dist/html/development/keyboard-access.html">Keyboard access</a>
                   </li>
 
-                  <li class="msd-sidenav__section--item" aria-current="page">
+                  <li class="msd-sidenav__section--item">
                     <a class="msd-sidenav__link msd-link" href="/dist/html/development/screen-reader.html">Screen reader</a>
                   </li>
 
@@ -509,9 +519,9 @@
                     <a class="msd-sidenav__link msd-link" href="/dist/html/development/colour-and-contrast.html">Colour and Contrast</a>
                   </li>
 
-                  <li class="msd-sidenav__section--item">
+                  <li class="msd-sidenav__section--item" aria-current="page">
                     <a class="msd-sidenav__link msd-link" href="/dist/html/development/automated-testing.html">Automated testing</a>
-                  </li> 
+                  </li>
 
                 </ul>
 
@@ -533,8 +543,8 @@
 
               <p class="msd-utilities__last-modified">
                 Last modified:&nbsp;
-                <time datetime="2021-05-05">
-                  5 May 2021
+                <time datetime="2021-13-05">
+                  13 May 2021
                 </time>
               </p>
 

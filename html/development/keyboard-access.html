@@ -52,7 +52,7 @@
   ================================================== -->
   <nav id="skiplinks" aria-label="Skip Link">
     <a class="skip-link" href="#main-content">Skip to the main content</a>
-    <a class="skip-link" href="#page-nav">Skip to menu for this section</a>
+    <a class="skip-link skip-link__desktop" href="#page-nav">Skip to menu for this section</a>
   </nav>
 
 
@@ -61,7 +61,7 @@
 
   <!-- Header
   ================================================== -->
-  <header class="msd-header">
+  <header role="banner" class="msd-header">
     <div class="msd-container msd-header__divider">
       <div class="msd-grid">
 
@@ -110,7 +110,7 @@
 
   <!-- Navigation
   ============================================== -->
-  <nav class="msd-navigation" aria-label="main menu">
+  <nav role="navigation" class="msd-navigation" aria-label="main menu">
     <ul class="msd-navigation__list msd-navigation__level-one">
 
       <li class="msd-navigation__list-item">
@@ -126,9 +126,7 @@
           <span class="sr-only">Accessibility Overview Menu</span>
         </button>
         <ul class="msd-navigation__level-two">
-          <li class="msd-navigation__list-item">
-            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/what-is-digitial-accessibility.html">What is Digital Accessibility?</a>
-          </li>
+
           <li class="msd-navigation__list-item">
             <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/perceivable.html">Perceivable</a>
           </li>
@@ -218,7 +216,7 @@
             <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/images.html">Images</a>
           </li>
           <li class="msd-navigation__list-item">
-            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/links-and-buttons.html">Links & Buttons</a>
+            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/links-and-buttons.html">Links and Buttons</a>
           </li>
           <li class="msd-navigation__list-item">
             <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/information-architecture.html">Information Architecture</a>
@@ -347,16 +345,13 @@
             <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/images.html">Images</a>
           </li>
           <li class="msd-navigation__list-item">
+            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/links-and-buttons.html">Links and Buttons</a>
+          </li>
+          <li class="msd-navigation__list-item">
             <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/colour-and-contrast.html">Colour and Contrast</a>
           </li>
           <li class="msd-navigation__list-item">
             <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/automated-testing.html">Automated testing</a>
-          </li>
-          <li class="msd-navigation__list-item">
-            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/buttons.html">Buttons</a>
-          </li>
-          <li class="msd-navigation__list-item">
-            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/landmarks.html">Landmarks</a>
           </li>
         </ul>
       </li>
@@ -370,7 +365,7 @@
 
   <!-- Main Content
   ============================================== -->
-  <main id="main-content" aria-hidden="false" class="main-container">
+  <main role="main" id="main-content" aria-hidden="false" class="main-container">
 
 
     <div class="msd-pane__breadcrumb">
@@ -407,7 +402,7 @@
 
             <h1 class="msd-h1">Keyboard access</h1>
 
-            <p class="lead">Can you reach anything that’s interactive using the tab key?</p>
+            <p class="lead">Can you reach all interactive elements using the tab key?</p>
 
             <h2 class="msd-h3">Why it’s important</h2>
             <div class="msd-list">
@@ -440,21 +435,21 @@
 
               <h2 class="msd-callout__title">References</h2>
 
-              <p class="msd-callout__text">Resources</p>
+              <h3 class="msd-callout__sub-title">Resources</h3>
 
-              <ul class="msd-list__section msd-list__section--square">
-                <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://webaim.org/techniques/keyboard/">Keyboard Accessibility (webAIM)<span class="sr-only">(this link opens an external website)</span></a>
-                </li>
-                <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.nngroup.com/articles/keyboard-accessibility/">Keyboard only navigation for improved Accessibility<span class="sr-only">(this link opens an external website)</span></a>
-                </li>
-                <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.youtube.com/watch?v=1rBwxGMT9ZM">Video - Keyboard Compatibility<span class="sr-only">(this link opens an external website)</span></a>
-                </li>
-              </ul>
+                <ul class="msd-list__section msd-list__section--square">
+                  <li class="msd-callout__link">
+                    <a class="msd-link msd__link--external" href="https://webaim.org/techniques/keyboard/">Keyboard Accessibility (webAIM)<span class="sr-only">(this link opens an external website)</span></a>
+                  </li>
+                  <li class="msd-callout__link">
+                    <a class="msd-link msd__link--external" href="https://www.nngroup.com/articles/keyboard-accessibility/">Keyboard only navigation for improved Accessibility<span class="sr-only">(this link opens an external website)</span></a>
+                  </li>
+                  <li class="msd-callout__link">
+                    <a class="msd-link msd__link--external" href="https://www.youtube.com/watch?v=1rBwxGMT9ZM">Video - Keyboard Compatibility<span class="sr-only">(this link opens an external website)</span></a>
+                  </li>
+                </ul>
 
-              <p class="msd-callout__text">World Wide Web Consortium</p>
+              <h3 class="msd-callout__sub-title">World Content Accessibility Guidelines</h3>
 
               <ul class="msd-list__section msd-list__section--square">
                 <li class="msd-callout__link">
@@ -512,7 +507,7 @@
                   </li>
 
                   <li class="msd-sidenav__section--item">
-                    <a class="msd-sidenav__link msd-link" href="/dist/html/development/buttons.html">Buttons</a>
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/development/links-and-buttons.html">Links and Buttons</a>
                   </li>
 
                   <li class="msd-sidenav__section--item">
@@ -579,7 +574,7 @@
 
   <!-- Footer
   ============================================== -->
-  <footer class="msd-footer">
+  <footer role="contentinfo" class="msd-footer">
     <div class="msd-container">
 
       <div class="msd-grid">
@@ -591,11 +586,11 @@
               <span class="sr-only">New Zealand Government</span>
               <svg class="msd-icon msd-icon__nz-govt-logo" role="img" aria-labelledby="NZ_Government" aria-hidden="true" focusable="false">
                 <title id="NZ_Government">New Zealand Government</title>
-                <use href="../../dist/images/sprites/sprite.svg#nz-govt--logo"></use>
+                <use href="../../../dist/images/sprites/sprite.svg#nz-govt--logo"></use>
               </svg>
             </a>
           </div>
-          <p class="msd-footer__small-text">© Crown copyright</p>
+          <p class="msd-footer__small-text">Crown copyright <span id="year"></span></p>
 
         </div>
 
