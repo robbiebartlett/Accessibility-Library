@@ -1,6 +1,6 @@
-MSD Accessibility Standards
+Accessibility Standards
 
-This is the preliminary stage for developing an accessibility design system to meet Government standards, WCAG 2.1 and Ministry of Social Development methodologies.
+This project is an accessibility design system to meet Government standards, WCAG 2.1 and MSD methodologies.
 
 An inclusive design approach is being undertaken where accessibility is integrated at the earliest phase of the design process to limit updates within testing.
 
@@ -10,4 +10,4 @@ direction for both our staff internally and our vendors to work towards MSD prot
 The framework is initially based off the All of Government (AoG) alpha release, references to gov.uk and communication with the Vendor working on the AoG release.
 This will create a minimal transition when AoG reaches production.
 
-Any questions please email Rob.Bartlett010@msd.govt.nz
+
