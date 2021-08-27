@@ -9,21 +9,25 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://rbart010@bitbucket.ssi.govt.nz/scm/wdt/gulp.git"
+    "url": "https://bitbucket.ssi.govt.nz/projects/WDT/repos/accessibility.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "private": true,
   "devDependencies": {
-    "autoprefixer": "^9.7.6",
+    "autoprefixer": "^9.8.6",
     "browser-sync": "^2.26.12",
+    "browsersync": "0.0.1-security",
     "cssnano": "^4.1.10",
     "gulp": "^4.0.2",
     "gulp-cheerio": "^1.0.0",
     "gulp-cli": "^2.2.0",
     "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-inject": "^5.0.5",
+    "gulp-newer": "^1.4.0",
     "gulp-postcss": "^8.0.0",
     "gulp-replace": "^1.0.0",
     "gulp-sass": "^4.1.0",
@@ -31,9 +35,12 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-svgmin": "^2.2.0",
     "gulp-uglify": "^3.0.2",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.1",
     "sass-mq": "^5.0.1"
   },
   "dependencies": {
-    "bourbon": "^7.0.0"
+    "bourbon": "^7.0.0",
+    "uuid": "^8.3.2"
   }
 }
