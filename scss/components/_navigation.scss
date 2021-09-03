@@ -162,7 +162,7 @@
 
 .msd-navigation-link {
   border-bottom: 2px solid transparent;
-  display: inline-block;
+  display: inline;
   color: color(govnz-slate);
   margin: 0 $md;
   
@@ -422,7 +422,7 @@
     border-left: 4px solid color(govnz-link);
     font-weight: 600;       
     margin-left: -$sm;
-    padding: 0 $xs .2rem .5rem;
+    padding: 0 $xs 0 .5rem;
   }
 
 }
@@ -435,7 +435,7 @@
 .msd-sidenav__link {
   border-bottom-color: transparent;
   font-size: 1.125rem;
-  line-height: 1.5;
+  line-height: 1.6;
   padding-bottom: .125vh;
 }
 
