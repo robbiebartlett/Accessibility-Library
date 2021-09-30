@@ -33,23 +33,23 @@
 // Banner content
 .msd-masthead__content {
   background-color: color(msd-blue);
-  margin: $sm auto;
+  margin: $md auto;
   padding: $sm;
   color: color(govnz-white);
   width: 100%;
 
   @include mq($from: mobile-wide ) {
-    margin: $md;
+    margin: $lg $md;
     max-width: 80%;
   }  
 
   @include mq($from: phablet ) {
-    margin: $md;
+    margin: $xl $lg;
     max-width: 50%;
   }  
   
   @include mq($from: desktop ) {
-    margin: $lg $md;
+    margin: $xxl $md;
     max-width: 45%;
     padding: $md;
   }

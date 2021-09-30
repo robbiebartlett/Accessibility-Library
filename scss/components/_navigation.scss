@@ -69,11 +69,18 @@
     display: block;
   }
 
+
+
   @include mq($from: tablet) {
     background-color: color(msd-brand);
     display: block;
+    @include font-size(16px);
     position: static;
     width: 100%;
+  }
+
+  @include mq($from: tablet-wide) {
+    @include font-size(18px);
   }
 
 }
@@ -90,8 +97,8 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-right: 3rem;
-    margin-left: 3rem;
+    margin-right: 2.25rem;
+    margin-left: 2.25rem;
   }
 
   @include mq($from: desktop) {
@@ -122,6 +129,7 @@
     display: flex;
     padding: 0;  
     text-align: center;
+    margin: 0 $xs;
 
     &:hover > .msd-navigation-link:after,
     &.js-focus > .msd-navigation-link:after {
@@ -409,6 +417,17 @@
 
   @include mq($from: tablet) {
     display: flex;
+    flex-direction: column;
+  }
+  
+}
+
+.msd-sidenav__header {
+  display: flex;
+
+  .msd-link {
+    border-bottom-color: color(govnz-slate);
+    color: color(govnz-slate);
   }
   
 }
@@ -435,7 +454,7 @@
 .msd-sidenav__link {
   border-bottom-color: transparent;
   font-size: 1.125rem;
-  line-height: 1.6;
+  line-height: 1.65;
   padding-bottom: .125vh;
 }
 

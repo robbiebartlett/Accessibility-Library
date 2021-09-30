@@ -32,7 +32,7 @@
 
     .msd-breadcrumb__list-item {   
       @include font-size(15px);
-      line-height: 2;
+      line-height: 1.67;
 
       & + .msd-breadcrumb__list-item {
          padding-left: $sm;
@@ -65,7 +65,7 @@
    .msd-breadcrumb__link {
       border-bottom: 2px solid color(govnz-link);
       color: color(govnz-link);
-      padding-bottom: .125vh;
+      padding-bottom: 2px;
       text-decoration: none;
 
      &:hover:not(:focus) {
@@ -79,7 +79,7 @@
       box-shadow: 0 -2px color(msd-focus), 0 4px color(govnz-link-active);
       color: color(govnz-link-active);
       outline: 3px solid transparent;
-      padding-bottom: .15vh; 
+      padding-bottom: 0;
       text-decoration: none;
      }
 

@@ -151,11 +151,11 @@
 .msd-search__result--item {
   list-style: none;
   margin-bottom: $lg;
-  border-top: 1px solid color(govnz-mid-grey);
+  border-top: 2px solid color(govnz-light-grey);
   padding-top: $lg;
 
   &:last-of-type {
-    border-bottom: 1px solid color(govnz-mid-grey);
+    border-bottom: 1px solid color(govnz-light-grey);
     padding-bottom: $lg;
   }
 }     

@@ -1,0 +1,81 @@
+/* ==========================================================================
+   #Accordion
+   ========================================================================== */
+
+  /**
+   * The alert bar can be used to notify users of significant information:
+   * warning, success and information.
+   *
+   * Reference: https://www.hassellinclusion.com/blog/accessible-accordions-part-2-using-details-summary/
+   *
+   */
+
+    .msd-accordion {
+      border-top: 1px solid color(govnz-light-grey);
+      display: flex;
+      flex-direction: column;
+      margin-top: $lg;
+      margin-bottom: $lg;
+    }
+    
+    .msd-accordion__details {
+      border-bottom: 1px solid color(govnz-light-grey);
+      color: color(govnz-slate);
+      padding: 0;
+
+      & > summary::-webkit-details-marker {
+        display: none;
+      }
+
+      &[open] > .msd-accordion__summary span::after {
+        content: '\2212';
+        color: color(govnz-slate);
+      }
+
+    }
+
+  
+    .msd-accordion__summary {
+      cursor: pointer;
+      list-style: none;
+      margin: $sm 0;
+      padding: $xs 0;
+      position: relative;
+
+      &:focus:not(:hover) {
+        background-color: #fd0;
+        border-bottom: none;
+        box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+        color: #0b0c0c;
+        outline: 3px solid transparent;
+        text-decoration: none;
+      }
+
+      &:hover:not(:focus) {
+        cursor: pointer;
+        outline: none;
+      }
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+      span::after {
+        content: '+';
+        font-size: 1.875rem;
+        position: absolute;
+        right: $xs;
+        top: -.075rem;
+        pointer-events: none;
+      }
+
+    }
+
+    .msd-accordion__title {
+      margin: 0 $lg 0 0;
+      padding: 0;
+    }
+
+    .msd-accordion__content {
+        margin: $sm 0;
+    }

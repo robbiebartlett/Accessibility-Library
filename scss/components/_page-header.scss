@@ -10,6 +10,14 @@
   z-index: z(header);
 }
 
+.msd-subheader {
+  display: flex;  
+  @include font-size(16px);
+  margin: $null 0 0;
+  padding: 0;
+  z-index: z(header);
+}
+
 .msd-header__divider {
     border: none;
     padding-bottom: $null;
@@ -81,3 +89,4 @@
     margin: 0;
   }
 }
+
