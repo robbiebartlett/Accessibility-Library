@@ -12,7 +12,7 @@
   ================================================== -->
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
 
-  <title>Headings | Accessibility for MSD</title>
+  <title>CSS dependence | Accessibility for MSD</title>
 
   <!-- Mobile Specific Metatags
   ================================================== -->
@@ -379,7 +379,7 @@
                 </a>
               </li>
               <li class="msd-breadcrumb__list-item">
-                Headings
+                CSS dependence
               </li>
             </ol>
           </nav>
@@ -388,37 +388,45 @@
     </div>
 
     <div class="main-container__content">
-
+      
       <div class="msd-container">
         <div class="msd-grid">
 
           <!-- Main content -->
           <div id="main-content" class="msd-grid__cell msd-grid--two-thirds msd-order-2">
 
-            <h1 class="msd-h1">Headings</h1>
+            <h1 class="msd-h1">CSS dependence</h1>
 
-            <p class="lead">Are you using the correct structure for headings on your page?</p>
+            <p class="lead">Can users understand and access content independant of CSS?</p>
 
             <h2 class="msd-h3">Why it’s important</h2>
             <div class="msd-list">
               <ul class="msd-list__section msd-list__section--square">
-                <li class="msd-list__section--item">Veronica is blind and uses a screen reader to navigate the web. She hears an outline of the page's main subjects, then backtracks to read the parts she is most interested in.</li>
+                <li class="msd-list__section--item">Mana has a colour deficiency and overrides page colours to enforce certain colours.</li>
+                <li class="msd-list__section--item">Susan is low-sighted and is reliant on a screen reader to convey content in the correct order.</li>
+                <li class="msd-list__section--item">Beatrice has dyslexia and prefers to change the fonts and text spacing for better readability.</li>
               </ul>
             </div>
+
+            <p>CSS dependence refers to websites that are reliant on CSS to be functional or understandable.</p>
+
+            <p>A common CSS dependence issue is content order which can be reordered with CSS. This may be an issue as assistive technology will read the content in an incorrect order.</p>
 
             <h2 class="msd-h3">Next steps</h2>
             <div class="msd-list">
               <ol class="msd-list__section msd-list--number">
                 <li class="msd-list__section--item">
                   <ul class="msd-list__sub-list">
-                    Use only one h1 per page for the page title.
-                    <li class="msd-list__section--item msd-list__section--square">While HTML5 allows you to reset headings to h1 on new section elements, some screen reader users will have difficulty discerning the structure of pages with multiple h1s.
-                    </li>
+                    Disable CSS and check for:
+                    <li class="msd-list__section--item msd-list__section--square">Missing information, e.g. images and text.</li>
+                    <li class="msd-list__section--item msd-list__section--square">Code or other items intended for development only.</li>
+                    <li class="msd-list__section--item msd-list__section--square">Overlapping text.</li>
                   </ul>
                 </li>
-                <li class="msd-list__section--item">Avoid skipping heading levels: Always start with h1, use h2 next etc.</li>
-                <li class="msd-list__section--item">Using h1 and h2 will give users an introduction to a page and how its content is structured. The h3 - h6 elements provide a quick understanding of the details in each section.</li>
-                <li class="msd-list__section--item">Confirm heading tags are used and not text to give the visual appearance of headings.</li>
+                <li class="msd-list__section--item">Make sure the content order makes sense without CSS applied.</li>
+                <li class="msd-list__section--item">Use CSS to improve legibility by increasing line spacing, left and right margins and specifying fonts designed for a monitor.</li>
+                <li class="msd-list__section--item">If absolute positioning is used, be sure that the positioned element is in logical order, so that it will be coherent when CSS is disabled.</li>
+                <li class="msd-list__section--item">Use the <a class="msd-link msd__link--external" href="https://chrispederick.com/work/web-developer/">web developer</a> browser plugin for editing and disabling/enabling CSS.</li>
               </ol>
             </div>
 
@@ -432,25 +440,34 @@
 
               <ul class="msd-list__section msd-list__section--square">
                 <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/tutorials/page-structure/headings/">Headings (W3C)<span class="sr-only">(this link opens an external website)</span></a>
-                </li>
+                  <a class="msd-link msd__link--external" href="https://webaim.org/techniques/css/">Accessible CSS (WebAIM)<span class="sr-only">(this link opens an external website)</span></a>
+                </li>  
                 <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://web.dev/headings-and-landmarks/">Headings and Landmarks<span class="sr-only">(this link opens an external website)</span></a>
-                </li>
+                  <a class="msd-link msd__link--external" href="https://medium.com/@matuzo/writing-css-with-accessibility-in-mind-8514a0007939">Writing CSS with Accessibility in Mind<span class="sr-only">(this link opens an external website)</span></a>
+                </li>                  
                 <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.youtube.com/watch?v=ZHWcs5d9IqA">Video: Using headings (YouTube)<span class="sr-only">(this link opens an external website)</span></a>
-                </li>
-                <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://webaim.org/techniques/semanticstructure/">Semantic Structure (WebAIM)<span class="sr-only">(this link opens an external website)</span></a>
-                </li>
+                  <a class="msd-link msd__link--external" href="https://adrianroselli.com/2015/10/html-source-order-vs-css-display-order.html">HTML Source Order vs CSS Display Order<span class="sr-only">(this link opens an external website)</span></a>
+                </li>                   
               </ul>
 
               <h3 class="msd-callout__sub-title">World Content Accessibility Guidelines</h3>
 
               <ul class="msd-list__section msd-list__section--square">
                 <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#headings-and-labels">2.4.6 Headings and Labels<span class="sr-only">(this link opens an external website)</span></a>
-                </li>
+                  <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/WCAG21/Understanding/non-text-content.html">1.1.1 Non-text Content<span class="sr-only">(this link opens an external website)</span></a>
+                </li>                  
+                <li class="msd-callout__link">
+                  <a class="msd-link msd__link--external" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-programmatic.html">1.3.1 Info and Relationships<span class="sr-only">(this link opens an external website)</span></a>
+                </li>                 
+                <li class="msd-callout__link">
+                  <a class="msd-link msd__link--external" href="https://www.w3.org/TR/UNDERSTANDING-WCAG20/content-structure-separation-sequence.html">1.3.2 Meaningful sequence<span class="sr-only">(this link opens an external website)</span></a>
+                </li>                  
+                <li class="msd-callout__link">
+                  <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/WCAG21/Understanding/reflow.html">1.4.10: Reflow<span class="sr-only">(this link opens an external website)</span></a>
+                </li>      
+                <li class="msd-callout__link">
+                  <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#focus-order">2.4.3 Focus Order<span class="sr-only">(this link opens an external website)</span></a>
+                </li>          
               </ul>
 
             </div>
@@ -475,7 +492,7 @@
                     <a class="msd-sidenav__link msd-link" href="/dist/html/development/screen-reader.html">Screen reader</a>
                   </li>
 
-                  <li class="msd-sidenav__section--item" aria-current="page">
+                  <li class="msd-sidenav__section--item">
                     <a class="msd-sidenav__link msd-link" href="/dist/html/development/headings.html">Headings</a>
                   </li>
 
@@ -483,7 +500,7 @@
                     <a class="msd-sidenav__link msd-link" href="/dist/html/development/page-structure.html">Page structure</a>
                   </li>
 
-                  <li class="msd-sidenav__section--item">
+                  <li class="msd-sidenav__section--item" aria-current="page">
                     <a class="msd-sidenav__link msd-link" href="/dist/html/development/css-dependence.html">CSS dependence</a>
                   </li>
 
@@ -502,6 +519,7 @@
                   <li class="msd-sidenav__section--item">
                     <a class="msd-sidenav__link msd-link" href="/dist/html/development/automated-testing.html">Automated testing</a>
                   </li>
+
                 </ul>
 
               </nav>
@@ -513,6 +531,7 @@
       </div>
 
 
+
       <div class="msd-container">
         <div class="msd-grid">
 
@@ -521,8 +540,8 @@
 
               <p class="msd-utilities__last-modified">
                 Last modified:&nbsp;
-                <time datetime="2021-05-05">
-                  5 May 2021
+                <time datetime="2021-09-20">
+                  20 September 2021
                 </time>
               </p>
 
