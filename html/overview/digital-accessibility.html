@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Miscellaneous metadata
+  ================================================== -->
+  <meta charset="UTF-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="ROBOTS" content="INDEX, FOLLOW">
+
+  <!-- Mobile Specific 
+  ================================================== -->
+  <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
+
+  <title>Digital Accessibility? | Accessibility for MSD</title>
+
+  <!-- Mobile Specific Metatags
+  ================================================== -->
+  <!--Status Bar Android-->
+  <meta name="theme-color" content="#121F6B">
+  <!--Status Bar Windows-->
+  <meta name="msapplication-navbutton-color" content="#121F6B">
+  <!--Status Bar Apple-->
+  <meta name="apple-mobile-web-sidebar-status-bar-style" content="#121F6B">
+
+  <!-- Favicons
+  ================================================== -->
+  <link rel="shortcut icon" href="../../images/msd/favicon.ico">
+
+  <!--Apple IOS icons-->
+  <link rel="apple-touch-icon" sizes="57x57" href="../../images/msd/touch-icon-57.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../../images/msd/touch-icon-76.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../../images/msd/touch-icon-120.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../../images/msd/touch-icon-152.png">
+
+  <!--Windows icons-->
+  <meta name="msapplication-square70x70logo" content="../../images/msd/tile-icon-small.png">
+  <meta name="msapplication-square150x150logo" content="../../images/msd/tile-icon-medium.png">
+  <meta name="msapplication-square310x310logo" content="../../images/msd/tile-icon-large.png">
+  <meta name="msapplication-wide310x150logo" content="../../images/msd/tile-icon-wide.png">
+  <meta name="msapplication-tilecolor" content="#121F6B">
+
+  <!-- CSS
+  ================================================== -->
+  <link rel="stylesheet" href="../../../dist/css/main.css?cb=1607455229852">
+
+</head>
+
+<body>
+
+  <!-- Skiplinks
+  ================================================== -->
+  <nav id="skiplinks" aria-label="Skip Link">
+    <a class="skip-link" href="#main-content">Skip to the main content</a>
+    <a class="skip-link skip-link__desktop" href="#page-nav">Skip to menu for this section</a>
+  </nav>
+
+
+
+
+
+  <!-- Header
+  ================================================== -->
+  <header role="banner" class="msd-header">
+    <div class="msd-container msd-header__divider">
+      <div class="msd-grid">
+
+        <div class="msd-grid__cell msd-grid--six-tenths">
+          <div class="msd-header__logotype">
+            <a href="/dist/html/index.html" class="msd-header__site-logo">
+              <span class="sr-only">Ministry of Social Development - Accessibility for MSD</span>
+              <svg role="img" class="msd-icon msd-icon__msd-logo" aria-labelledby="msd-logo" aria-hidden="true" focusable="false">
+                <title id="msd-logo">Ministry of Social Development</title>
+                <use href="../../../dist/images/sprites/sprite.svg#msd--logo"></use>
+              </svg>
+            </a>
+            <span class="msd-header__product-name" aria-hidden="true">
+              a11y for MSD
+            </span>
+          </div>
+        </div>
+
+        <div class="msd-grid__cell msd-grid--four-tenths">
+          <div class="msd-header__actions">
+
+            <!-- search -->
+            <div class="msd-search__header">
+              <form class="msd-search" role="search" action="/" method="get">
+                <label for="msd-accessibility-query" class="sr-only">Search</label>
+                <input type="text" class="msd-search__input" id="msd-accessibility-query" placeholder="Search" name="query">
+                <button class="msd-search__button"><span class="sr-only">Submit search</span></button>
+              </form>
+            </div>
+
+            <!-- mobile nav button -->
+            <section class="msd-navigation__toggle--wrapper">
+              <button aria-expanded="false" aria-label="Mobile menu" class="msd-navigation__toggle">Menu</button>
+            </section>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+
+
+
+  <!-- Navigation
+  ============================================== -->
+  <nav role="navigation" class="msd-navigation" aria-label="main menu">
+    <ul class="msd-navigation__list msd-navigation__level-one">
+
+      <li class="msd-navigation__list-item">
+
+        <a class="msd-link msd-navigation-link" href="/dist/html/overview/index.html"  aria-current="page">Overview</a>
+
+        <div class="msd-navigation-sr-expand__wrapper">
+          <button class="msd-navigation-sr-expand__btn">
+            <span class="sr-only">Show the submenu for "Accessibility Overview"</span>
+          </button>
+        </div>
+        <button aria-expanded="false" class="msd-navigation__toggle-level">
+          <span class="sr-only">Accessibility Overview Menu</span>
+        </button>
+        <ul class="msd-navigation__level-two">
+          <li class="msd-navigation__list-item">
+            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/digital-accessibility.html">Digital Accessibility</a>
+          </li>              
+          <li class="msd-navigation__list-item">
+            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/accessibility-principles.html">Accessibility principles</a>
+          </li>
+          <li class="msd-navigation__list-item">
+            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/accessibility-testing.html">Accessibility testing</a>
+          </li>
+          <li class="msd-navigation__list-item">
+            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/accessibility-auditing.html">Accessibility auditing</a>
+          </li>
+          <li class="msd-navigation__list-item">
+            <a class="msd-link msd-navigation__level-two-link" href="/dist/html/overview/training-and-development.html">Training and Development</a>
+          </li>
+        </ul>
+
+      </li>
+
+      <li class="msd-navigation__list-item">
+
+        <a class="msd-link msd-navigation-link" href="/dist/html/product/index.html">
+          Product
+        </a>
+
+        <div class="msd-navigation-sr-expand__wrapper">
+            <button class="msd-navigation-sr-expand__btn">
+                <span class="sr-only">Show submenu for "Product"</span>
+            </button>
+        </div>
+
+        <button aria-expanded="false" class="msd-navigation__toggle-level">
+            <span class="sr-only">Product Menu</span>
+        </button>
+        <ul class="msd-navigation__level-two">
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/product/accessibility-basics.html">Accessibility basics</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/product/diverse-users.html">Diverse users</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/product/project-workflow.html">Project workflow</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/product/final-review.html">Final review</a>
+            </li>                
+        </ul>
+
+      </li>
+
+      <li class="msd-navigation__list-item">
+
+          <a class="msd-link msd-navigation-link" href="/dist/html/content/index.html">Content</a>
+
+          <div class="msd-navigation-sr-expand__wrapper">
+              <button class="msd-navigation-sr-expand__btn">
+                  <span class="sr-only">Show submenu for "Website Content"</span>
+              </button>
+          </div>
+          <button aria-expanded="false" class="msd-navigation__toggle-level">
+              <span class="sr-only">Website Content Menu</span>
+          </button>
+          <ul class="msd-navigation__level-two">
+              <li class="msd-navigation__list-item">
+                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/plain-language.html">Plain language</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/reference-materials.html">Reference materials</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/graphic-elements.html">Graphic elements</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/scannable-content.html">Scannable content</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/images.html">Images</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/links-and-buttons.html">Links and Buttons</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/information-architecture.html">Information architecture</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/content/video-and-multimedia.html">Video and Multimedia</a>
+              </li>
+          </ul>
+      </li>
+
+      <li class="msd-navigation__list-item">
+
+          <a class="msd-link msd-navigation-link" href="/dist/html/ux/index.html">User experience</a>
+
+          <div class="msd-navigation-sr-expand__wrapper">
+              <button class="msd-navigation-sr-expand__btn">
+                  <span class="sr-only">Show submenu for "User experience"</span>
+              </button>
+          </div>
+          <button aria-expanded="false" class="msd-navigation__toggle-level">
+              <span class="sr-only">User experience Menu</span>
+          </button>
+          <ul class="msd-navigation__list msd-navigation__level-two">
+              <li class="msd-navigation__list-item">
+                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/inclusive-design.html">Inclusive design</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/assistive-technology.html">Assistive technology</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/humanise-accessibility.html">Humanise accessibility</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/tab-order.html">Tab order</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/focus.html">Focus</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/navigation-shortcuts.html">Navigation shortcuts</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/forms.html">Forms</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/images.html">Images</a>
+              </li>
+              <li class="msd-navigation__list-item">
+                  <a class="msd-link msd-navigation__level-two-link" href="/dist/html/ux/touch-targets.html">Touch targets</a>
+              </li>
+          </ul>
+      </li>
+
+      <li class="msd-navigation__list-item">
+
+        <a class="msd-link msd-navigation-link" href="/dist/html/visual-design/index.html">Visual design</a>
+
+        <div class="msd-navigation-sr-expand__wrapper">
+            <button class="msd-navigation-sr-expand__btn">
+                <span class="sr-only">Show submenu for "Visual Design"</span>
+            </button>
+        </div>
+        <button aria-expanded="false" class="msd-navigation__toggle-level">
+            <span class="sr-only">Visual Design Menu</span>
+        </button>
+        <ul class="msd-navigation__level-two">
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/colour-and-contrast.html">Colour and Contrast</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/layout-and-hierarchy.html">Layout and Hierarchy</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/typography.html">Typography</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/graphics-and-images.html">Graphics and Images</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/flashing-and-motion.html">Flashing and Motion</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/data-visualisations.html">Data visualisations</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/forms.html">Forms</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/mobile.html">Mobile</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/keyboard-access.html">Keyboard access</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/visual-design/screen-reader.html">Screen reader</a>
+            </li>
+        </ul>
+      </li>
+
+      <li class="msd-navigation__list-item">
+
+        <a class="msd-link msd-navigation-link" href="/dist/html/development/index.html">Development</a>
+
+        <div class="msd-navigation-sr-expand__wrapper">
+            <button class="msd-navigation-sr-expand__btn">
+                <span class="sr-only">Show submenu for "Development"</span>
+            </button>
+        </div>
+        <button aria-expanded="false" class="msd-navigation__toggle-level">
+            <span class="sr-only">Development Menu</span>
+        </button>
+        <ul class="msd-navigation__level-two">
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/keyboard-access.html">Keyboard access</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/screen-reader.html">Screen reader</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/headings.html">Headings</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/page-structure.html">Page structure</a>
+            </li>
+            <li class="msd-navigation__list-item">
+              <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/css-dependence.html">CSS dependence</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/images.html">Images</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/links-and-buttons.html">Links and Buttons</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/colour-and-contrast.html">Colour and Contrast</a>
+            </li>
+            <li class="msd-navigation__list-item">
+                <a class="msd-link msd-navigation__level-two-link" href="/dist/html/development/automated-testing.html">Automated testing</a>
+            </li>
+
+        </ul>
+      </li>
+
+    </ul>
+  </nav>
+
+
+
+
+
+  <!-- Main 
+  ============================================== -->
+  <main role="main" aria-hidden="false" class="main-container">
+
+    <!-- Breadcrumbs -->
+    <div class="msd-pane__breadcrumb">
+      <div class="msd-container">
+        <div class="msd-grid">
+          <nav class="msd-breadcrumb" aria-label="breadcrumbs">
+            <p id="msd-breadcrumb__label" class="sr-only">You are here:</p>
+            <ol class="msd-breadcrumb__section" aria-labelledby="msd-breadcrumb__label">
+              <li class="msd-breadcrumb__list-item">
+                <a href="/dist/html/index.html" class="msd-breadcrumb__link">
+                  Home
+                </a>
+              </li>
+              <li class="msd-breadcrumb__list-item">
+                <a href="/dist/html/overview/index.html" class="msd-breadcrumb__link">
+                  Overview
+                </a>
+              </li>
+              <li class="msd-breadcrumb__list-item">
+                Digital Accessibility
+              </li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-container__content">
+      <div class="msd-container">
+        <div class="msd-grid">
+
+          <!-- Main content -->
+          <div id="main-content" class="msd-grid__cell msd-grid--two-thirds msd-order-2">
+
+            <h1 class="msd-h1">Digital Accessibility</h1>
+
+            <p class="lead">Digital Accessibility ensures all digital products are navigable and understood by everyone.</p>
+
+            <p>When we share content in a digital format (e.g. websites, email, documents, presentations) we must all take action to create an equal experience. Providing all users access to the same information, regardless of the impairments they may have.</p>
+
+            <p>There are many misconceptions about Digital Accessibility. People may feel it forces them to create an experience that is clunky and bland but accessible.</p>
+            
+            <p>Yet when correctly implemented you can still create positive experiences with your project.</p>
+
+            <h2 class="msd-h3">Designing for Accessibility</h2>
+
+            <p>The Web Content Accessibility Guidelines (WCAG) <a class="msd-link"href="../overview/accessibility-principles.html">Accessibility principles</a> has almost 50 individual success criteria. These are grouped into four principles under the acronym POUR:</p>
+
+            <div class="msd-list">
+              <ul class="msd-list__section msd-list__section--square">
+                <li class="msd-list__section--item">Perceivable - Information and user interface components must be presentable to users in ways they can perceive.</li>
+                <li class="msd-list__section--item">Operable - User interface components and navigation must be operable.</li>
+                <li class="msd-list__section--item">Understandable - Information and the operation of user interface must be understandable.</li>
+                <li class="msd-list__section--item">Robust - Content must be robust enough that it can be interpreted reliably by a wide variety of user agents, including assistive technologies.</li>
+              </ul>
+            </div>
+
+            <h2 class="msd-h3">Meeting Web Accessibility Standards</h2>
+
+            <p>All public service and non-public service agencies must meet the <a class="msd-link msd__link--external" href="https://www.digital.govt.nz/standards-and-guidance/nz-government-web-standards/web-accessibility-standard-1-1/">NZ Government Web Accessibility Standard 1.1<span class="sr-only">(this link opens an external website)</span></a>, all new or significantly updated applications must:</p>
+
+            <div class="msd-list">
+              <ul class="msd-list__section msd-list__section--square">
+                <li class="msd-list__section--item">meet <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">WCAG 2.1<span class="sr-only">(this link opens an external website)</span></a> level AA as a minimum</li>
+                <li class="msd-list__section--item">work on the most common assistive technologies. This includes screen magnifiers, screen readers and speech recognition tools</li>
+                <li class="msd-list__section--item">include people with a disability in <a class="msd-link" href="../ux/humanise-accessibility.html">user research</a>.</li>
+              </ul>
+            </div>
+
+            <p>Having an accessible website isn’t only about people with disabilities. Many users with a disability will leave a website that is not accessible.</p> 
+              
+            <p>Yet, users without disabilities find accessibility features help them navigate a site more effectively.</p> 
+
+            <p>When you maintain an accessible digital presence, all site visitors will benefit.</p>
+
+
+            <h2 class="msd-h3">Types of disabilities</h2>
+
+            <p>There are many types of disabilities which loosely fall into four categories. In addition, a person may have more than one disability.
+            </p>
+            <p>The categories below give a brief overview and design solutions specific to these conditions.</p>
+
+
+            <!-- Disabilities accordion -->
+            <div class="msd-accordion">
+              
+              <!-- Auditory -->
+              <details class="msd-accordion__details">
+                <summary role="button" class="msd-accordion__summary">
+                  <h2 class="msd-h4 msd-accordion__title">Auditory disabilities</h2> 
+                  <span aria-hidden="true"></span>
+                </summary>
+                
+                 <div class="msd-accordion__content">
+                  <p class="lead">Auditory disabilities exist on a continuum that can range from moderate, mild or severe through to profound hearing loss.</p>
+            
+                  <p>The <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/people-use-web/abilities-barriers/#auditory">W3C Web Accessibility Initiative</a> gives three examples of auditory disabilities:</p>
+            
+                  <ul class="msd-list__sub-list">
+                    <li class="msd-list__section--item msd-list__section--square"><strong>Hard of hearing:</strong>&nbsp;refers to a person who may experience mild to severe hearing loss in one or both ears. People in this category communicate with spoken words. Often reliant on hearing aids, assistive technologies, and captioning.</li>  
+                    <li class="msd-list__section--item msd-list__section--square"><strong>Deafness:</strong>&nbsp;usually refers to significant hearing loss that there is very little or no functional hearing.</li>              
+                    <li class="msd-list__section--item msd-list__section--square"><strong>Deaf-blind:</strong>&nbsp;individuals that are deaf-blind have profound, irreversible hearing and visual impairments.</li>
+                  </ul>
+                  
+            
+                  <h3 class="msd-h4">Auditory solutions</h3>
+            
+                  <p>Techniques undertaken when users have an auditory disability can vary, depending on the type of disability users may also have individual preferences.</p>
+            
+                  <p>Subtitles and transcripts are often associated with hearing and visual disabilities. Though people with cognitive impairments may also prefer to read the information, on its own or as the media plays.</p>
+            
+                  <h3 class="msd-h4">Transcripts for Audio and Video Content</h3>
+            
+                  <p>Text transcripts should be easy to locate, near the audio or video including links to the audio or video file(s).</p>
+            
+                  <p>The transcript should be thorough and descriptive with the speakers identified. Including key sounds such as footsteps or door knocking, and on-screen information captured.</p>
+            
+                  <p>Transcripts should provide all video and audio information, to the point it will make sense as its own document. Providing the transcript in HTML will also enhance accessibility for users and search engines.</p>
+            
+                 <h3 class="msd-h4">Adding subtitles to Video</h3>
+            
+                 <p>Subtitles are vital for ensuring videos are accessible for users with Auditory disabilities. There are two types of captions: open and  closed.</p>
+            
+                 <p>Open subtitles are text embedded into the video which can't be changed or removed by the viewer. This will give full control over how these subtitles will look. However, these are more difficult to change as this requires a re-edit of the video itself.</p>
+            
+                 <p>Closed subtitles are often used by media platforms such as YouTube. They have the benefit of editing closed subtitles separately from the video and uploaded.</p>
+               </div>
+              </details>
+            
+              <!-- Cognitive and Neurological -->
+              <details class="msd-accordion__details">
+                <summary  role="button" class="msd-accordion__summary">
+                  <h2 class="msd-h4 msd-accordion__title">Cognitive and Neurological disabilities</h2><span aria-hidden="true"></span></summary>
+                <div class="msd-accordion__content">
+                  <p class="lead">Cognitive and Neurological disabilities inhibit a person's mental process.</p>
+            
+                  <p>These conditions or impairments may be momentary, temporary or permanent and impact how people process information. This is inclusive of perception, memory, attention, problem solving and comprehension. The <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/people-use-web/abilities-barriers/#cognitive">W3C Web Accessibility Initiative</a> gives several examples of cognitive and neurological disabilities inclusive of:</p>
+            
+            
+                  <ul class="msd-list__sub-list">
+                    <li class="msd-list__section--item msd-list__section--square"><strong>Attention Deficit Hyperactivity Disorder (ADHD):</strong>&nbsp;involves difficulty focusing on a single task, focusing for longer periods, or being easily distracted.</li>  
+                    <li class="msd-list__section--item msd-list__section--square"><strong>Autism:</strong>&nbsp;refers to impairments of social communication and the ability to interact.</li>              
+                    <li class="msd-list__section--item msd-list__section--square"><strong>Mental health disabilities:</strong>&nbsp;Including anxiety, delirium, schizophrenia and mood disorders. These conditions may cause difficulty focusing,  processing, and understanding information.</li>
+                    <li class="msd-list__section--item msd-list__section--square"><strong>Memory impairments:</strong>&nbsp;involves short-term memory, missing long-term memory, or limited ability to recall language. Dementia is one among many different causes of memory impairments.</li>
+                    <li class="msd-list__section--item msd-list__section--square"><strong>Perceptual disabilities:</strong>&nbsp;This involves impairments in reading or dyslexia, writing or dysgraphia, managing mathematic concepts or dyscalculia.</li>
+                    <li class="msd-list__section--item msd-list__section--square"><strong>Seizure disorders:</strong>&nbsp;inclusive of different types of epilepsy and migraines. This is often in reaction to visual or audio stimulation.</li>
+                  </ul>
+                 
+                  <h3 class="msd-h4">Cognitive and Neurological solutions</h3>
+            
+                  <p>Users with a cognitive disorder rely on certain factors to ensure they understand information on the web or within applications.</p>
+            
+                  <p>Specific elements such as semantic markup, alt tags and colour contrast are often discussed. Whilst these are essential techniques, consider what is showing up on the screen. Consistency, page layout, navigation and focus are some of the most common issues:</p>
+            
+                  <h3 class="msd-h4">Consistency</h3>
+            
+                  <p>Users should be able to learn what to expect from each new page of one site. Features should be consistent with previous pages, in respect of style, location  and function.</p>
+            
+                  <h3 class="msd-h4">Page layout</h3>
+            
+                  <p>Adding structure to web content makes it more readable and comprehensible to everyone.</p>
+            
+                  <p>Users with certain cognitive or neurological disorders may find it difficult to read long sections of text. Placing all text within smaller sections with appropriate headings will improve readability.</p>
+            
+                  <h3 class="msd-h4">Navigation</h3>
+            
+                  <p>After website content site navigation is possibly the most important page element. It should be easy to identify with intuitive menu options, its position and functionality should not change across a site.</p>
+            
+                  <p>If the navigation is too complex, it can be very confusing for people with certain cognitive disorders.</p>
+            
+                  <h3 class="msd-h4">Focus</h3>
+            
+                  <p>Colour contrast, unexpected sound, motion and pop-ups are key aspects that influence the ability to focus on the page content.</p>
+            
+                  <p>A common issue for dyslexic individuals is text with too much contrast.  While high-contrast text is a requirement of accessible design, too much contrast can make text blur on a page for some users.</p>
+            
+                  <p>Unexpected sound on a webpage can be startling or distracting. Sounds that play without the user interacting with the source may cause confusion.</p>
+            
+                  <p>Motion, animation and flickering content can induce seizures in people with photosensitive epilepsy. Movement on a page can be distracting if it happens  automatically,  particularly when there is no warning.</p>
+            
+                  <p>Pop up windows and automatically loading content in new tabs moves attention away from the whole page — thus causing confusion.</p>
+            
+                  <p>The best strategy for cognitive and neurological users is to provide clear content in an easy to use interface with few distractions.</p>
+               </div>
+              </details>
+            
+              <!-- Physical -->
+              <details class="msd-accordion__details">
+                <summary role="button" class="msd-accordion__summary"><h2 class="msd-h4 msd-accordion__title">Physical disabilities</h2><span aria-hidden="true"></span></summary>
+                <div class="msd-accordion__content">
+                  <p class="lead">Physical or motor disabilities applies to conditions that impede sensation, movement or co-ordination.</p> 
+              
+                  <p>The cause of these impairments can result from two scenarios and may be permanent or temporary. Congenital conditions where the user is born with their physical condition or may emerge over time.</p>
+                  <p>Whereas acquired conditions may originate from infection, disease or accidents. This can also occur due to a medical condition or the side effects of medication.</p>
+                  <p> The <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/people-use-web/abilities-barriers/#physical">W3C Web Accessibility Initiative</a> gives examples of physical disabilities inclusive of:</p>
+            
+                  <ul class="msd-list__sub-list">
+                   <li class="msd-list__section--item msd-list__section--square"><strong>Arthritis:</strong>&nbsp;most common among the elderly but can also occur in young people. Joint pain caused by advanced arthritis can lead to fatigue when using a mouse or keyboard and may prompt a user to switch to alternative controls.</li>  
+                   <li class="msd-list__section--item msd-list__section--square"><strong>Cerebral palsy:</strong>&nbsp;a brain abnormality resulting in a loss of muscle control. The condition can cause spasms in the muscles, involuntary movements and speech impairments.</li>  
+                   <li class="msd-list__section--item msd-list__section--square"><strong>Limb loss:</strong>&nbsp;loss or damage may impact a user's ability to operate a computer when the injury has occurred to the arm or hand.</li>  
+                   <li class="msd-list__section--item msd-list__section--square"><strong>Multiple sclerosis:</strong>&nbsp;symptoms vary widely and tend to change over time,  including tremors, weakness, numbness, unstable walking, slurred speech, muscle stiffness, impaired memory, and partial or complete paralysis.</li>  
+                   <li class="msd-list__section--item msd-list__section--square"><strong>Parkinson’s disease:</strong>&nbsp;a central nervous system disorder causing both muscle rigidity and muscle tremors. Users with advanced cases may be unable to use a computer mouse, keyboard or voice interface. They may be reliant on complex assistive technologies to navigate the web. </li>  
+                 </ul>
+                  
+                   <h2 class="msd-h3">Assistive Technologies</h2>
+            
+                   <p>Assistive technology(AT) describes devices and software that help disabled user's live more independently.</p>
+                   <p>This includes screen readers, braille displays, screen magnifiers and screen readers. Devices more closely aligned to motor impairments may include head wands, sip-and-puff devices, eye-tracking devices and adaptive keyboards.</p>
+            
+                   <h2 class="msd-h3">Physical Disability solutions</h2>
+            
+                   <p>Assistive technologies alone are insufficient to make the web accessible to physically disabled users. Consider some of the following techniques, Focus & Hover, Forms, Time limits and Skip links when designing or upgrading digital products:</p>
+                   
+                   <h3 class="msd-h4">Focus and Hover</h3>
+            
+                   <p>All browsers display a visible outline around the element that currently has keyboard focus.</p>
+            
+                   <p>Focus styles are essential for people using keyboards and keyboard emulators. Default styles alone are insufficient as they may be difficult to see or are not noticeable on dark or saturated backgrounds.</p>
+            
+                   <p>Hover may show something is interactive when using a mouse, though may not work on touch devices. </p>
+            
+                   <p>Often new content only displays when the mouse pointer hovers over the trigger element. The same elements must also trigger when using focus for keyboard users.</p>
+            
+                   <h3 class="msd-h4">Forms</h3>
+            
+                   <p>For some users not just the mouse is hard to control, but the keyboard too. Though they may not be able to control either of these devices with a high level of precision.</p>
+            
+                   <p>Thus, it is important that all website forms are tolerant of any errors. For example highlighting submission errors or data entry errors.</p>
+            
+                   <p>Highlighting errors with clear visual indicators and clearly written instructions is essential.</p>
+            
+                   <h3 class="msd-h4">Time limits</h3>
+            
+                   <p>Online forms and surveys are often designed without physically impaired people in mind. Users may need more time than others to complete a task.</p>
+            
+                   <p>Generally people with physical disabilities need more time to complete these tasks.</p>
+            
+                   <p>If security concerns require a time limit its important to warn users in advance before the time limit expires.</p>
+            
+                   <h3 class="msd-h4">Skip links</h3>
+            
+                   <p>Keyboard only users interact with a website by using the tab key to skip through all links. Often a webpage may also include navigation down the left side of the page.</p>
+            
+                   <p>Mouse users can ignore the links and go directly to the main content. Though for keyboard only users fatigue can set in by using small muscle groups for every action.</p>
+            
+                   <p>The Skip links are always positioned at the top of the page. By using Skip links this enables the user to bypass navigation links to get to the main portions of the page.</p>
+            
+               </div>
+              </details>
+            
+              <!-- Speech -->
+              <details class="msd-accordion__details">
+                <summary role="button" class="msd-accordion__summary"><h2 class="msd-h4 msd-accordion__title">Speech disabilities</h2><span aria-hidden="true"></span></summary>
+                <div class="msd-accordion__content">
+                  <p class="lead">Speech disabilities prevent a person from producing or articulating recognisable spoken words.</p> 
+              
+                  <p>Some conditions may cause slurring or stuttering, preventing individuals from expressing themselves.</p>
+            
+                  <p>People with speech related disabilities may use communication boards or other assistive devices. They may also be accompanied by a communication support person. Several conditions include:</p>
+            
+                <ul class="msd-list__sub-list">
+                  <li class="msd-list__section--item msd-list__section--square"><strong>Dysarthria:</strong>&nbsp;weakness or paralysis of the muscles required to speak, including lips, lungs, throat, and tongue.</li>  
+                  <li class="msd-list__section--item msd-list__section--square"><strong>Stuttering:</strong>&nbsp;speaking with continued involuntary repetition of sounds, especially initial consonants.</li>  
+                  <li class="msd-list__section--item msd-list__section--square"><strong>Mutism:</strong>&nbsp;Characterized by a person’s inability to make any speech sound, this is the most extreme type of speech disorder. This can happen naturally at birth or may be genetic.</li> 
+                  <li class="msd-list__section--item msd-list__section--square"><strong>Apraxia:</strong>&nbsp;where the neural pathway between the brain and a person's speech function is lost or obscured. The person knows what they want to say but the brain is unable to send the correct messages.</li>  
+                </ul>
+            
+                <h3 class="msd-h4">Communication solutions</h3>
+            
+                <p>Voice activation and interaction is becoming more common within technology. One of the more common tools is the voice command in applications, websites and devices.</p>
+            
+                <p>This may be convenient, though users with speech impairments will need alternative options.</p>
+            
+                <p>Alternative options for speech-based commands are essential, always offer the choice to type information as opposed to speaking only (e.g. text-based chat, e-mail and feedback forms). Keep in mind that not every user will be able to speak to a representative or interact with AI in the same way.</p>
+            
+               </div>
+              </details>              
+              
+              <!-- Visual -->
+              <details class="msd-accordion__details">
+                <summary role="button" class="msd-accordion__summary"><h2 class="msd-h4 msd-accordion__title">Visual disabilities</h2><span aria-hidden="true"></span></summary>
+                <div class="msd-accordion__content">
+                  <p class="lead">Visual disabilities can range from mild vision loss in one or both eyes to significant or complete loss of vision in both eyes.</p> 
+              
+                  <p>As well as low vision, there are many other sight impairments which make it difficult for people to see websites. The <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/people-use-web/abilities-barriers/#visual">W3C Web Accessibility Initiative</a> gives several examples of visual disabilities including:</p>
+            
+            
+                <ul class="msd-list__sub-list">
+                 <li class="msd-list__section--item msd-list__section--square"><strong>Colour blindness:</strong>&nbsp;difficulty distinguishing between colours. Generally red and green, or  yellow and blue and sometimes the inability to perceive any colour.</li>   
+                 <li class="msd-list__section--item msd-list__section--square"><strong>Low vision:</strong>&nbsp;includes blurry vision, seeing only the middle of the visual field, seeing only the edges of the visual field, and clouded vision.</li>              
+                 <li class="msd-list__section--item msd-list__section--square"><strong>Blindness:</strong>&nbsp;substantial loss of vision in both eyes.</li>  
+               </ul>
+            
+               
+                 <h3 class="msd-h4">Visual solutions</h3>
+            
+                 <p>Visually impaired users often rely on assistive technology to access the internet. Familiar devices include screen readers, screen enlargement tools and braille displays.</p>
+            
+                 <p>Users with visual disabilities vary by the type and extent of their condition and may have specific preferences. HTML layout, Heading structure, Colour contrast, Keyboard accessibility, Non-HTML content, Navigation links and alt text are some of the more common issues:</p>
+            
+                 <h3 class="msd-h4">HTML layout</h3>
+            
+                 <p>Screen readers rely on HTML with no styling though some readers can be <a class="msd-link msd__link--external" href="https://blog.benmyers.dev/css-can-influence-screenreaders/">influenced by CSS styling</a> of a page. This can create issues when the screen reader is determining what should be read first on the page.</p>
+                 
+                 <p>Structure HTML in the same way as a printed document, in a logical order from left to right and top to bottom.</p>
+                 
+                 <h3 class="msd-h4">Heading structure</h3>
+            
+                 <p>Sighted users often skim pages by reading the visual headings. Though a screen reader user also skims the page by quickly traversing the headings.</p>
+                 <p>Heading (h1 to h6) elements are used to structure content. There should be only one h1 element per page, and no gaps in the heading structure. For example there should be no h3 heading element if there is no h2 element.</p>
+               
+                 <h3 class="msd-h4">Keyboard accessibility</h3>
+            
+                 <p>People with visual impairments may find the use of a mouse difficult, so use the keyboard to navigate.</p>
+                 <p>Any interactions and information that can be accessed with a mouse, must also be accessible with the keyboard.</p>
+            
+                 <h3 class="msd-h4">Non-HTML content</h3>
+            
+                 <p>Non-HTML content including PDF files, PowerPoint presentations or Word documents must be accessible. Tags can be added to PDF files for navigation by a screen reader, whilst PowerPoint and Word offer an Accessibility Checker function within the software.</p> 
+                 <p>If the original intention of a Non-HTML document was for print only, as soon as it is either emailed or put on a website accessibility standards apply.</p>           
+                 
+                 <h3 class="msd-h4">Navigation links</h3>
+            
+                 <p>If navigation is not coded well screen readers are unable to detect navigation if not coded well. And when the screen reader does find it on a page it won't know whether to skip over it.</p>     
+                 
+                 <p>Visually impaired users would have to listen to the navigation every time they load a new page. The addition of skip to content link and accurate assignment of ARIA roles will benefit screen reader users.</p>
+                 
+                 <h3 class="msd-h4">Alt text</h3>
+            
+                 <p>The alt text should be the most concise description possible of the image’s purpose. Where appropriate a short phrase or sentence is necessary for screen readers to decipher. The empty text alternative (alt="") is used to hide decorative images.</p>
+            
+               </div>
+              </details>
+            
+            </div>
+
+
+            <!-- References -->
+            <div class="msd-callout msd-callout__note">
+
+              <h2 class="msd-callout__title">References</h2>
+
+              <h3 class="msd-callout__sub-title">Resources</h3>
+
+              <ul class="msd-list__section msd-list__section--square">
+                <li class="msd-callout__link">
+                  <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/fundamentals/accessibility-intro/">Introduction to Web Accessibility (W3C)<span class="sr-only">(this link opens an external website)</span></a>
+                </li>
+                <li class="msd-callout__link">
+                  <a class="msd-link msd__link--external" href="https://www.youtube.com/watch?v=grrx2Lva7T0">Video: What is Digital Accessibility? (YouTube)<span class="sr-only">(this link opens an external website)</span></a>
+                </li>
+                <li class="msd-callout__link">
+                  <a class="msd-link msd__link--external" href="https://history.itp.nz/part-1/harrison.html">A history of digital accessibility in Aotearoa<span class="sr-only">(this link opens an external website)</span></a>
+                </li>
+              </ul>
+
+              <h3 class="msd-callout__sub-title">New Zealand Government</h3>
+
+              <ul class="msd-list__section msd-list__section--square">
+                <li class="msd-callout__link">
+                  <a class="msd-link msd__link--external" href="https://www.digital.govt.nz/standards-and-guidance/design-and-ux/accessibility/">Accessibility<span class="sr-only">(this link opens an external website)</span></a>
+                </li>
+              </ul>
+
+            </div>
+
+          </div>
+
+          <!-- Page navigation -->
+          <div id="page-nav" class="msd-grid__cell msd-grid--one-third msd-order-1">
+
+            <div class="msd-pane__sidenav">
+              <nav class="msd-sidenav" aria-label="Secondary">
+                <h2 class="msd-sidenav__header">
+                  <a class="msd-link msd-h3" href="/dist/html/overview/index.html">Overview</a>
+                </h2>
+                <ul class="msd-sidenav__section">
+
+                  <li class="msd-sidenav__section--item" aria-current="page">
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/overview/digital-accessibility.html">Digital Accessibility</a>
+                  </li>
+
+                  <li class="msd-sidenav__section--item">
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/overview/accessibility-principles.html">Accessibility principles</a>
+                  </li>
+
+                  <li class="msd-sidenav__section--item">
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/overview/accessibility-testing.html">Accessibility testing</a>
+                  </li>
+
+                  <li class="msd-sidenav__section--item">
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/overview/accessibility-auditing.html">Accessibility auditing</a>
+                  </li>
+
+                  <li class="msd-sidenav__section--item">
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/overview/training-and-development.html">Training and Development</a>
+                  </li>
+
+                </ul>
+
+              </nav>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+
+
+      <!-- Page utilities -->
+      <div class="msd-container">
+        <div class="msd-grid">
+
+          <div class="msd-grid__cell">
+            <div class="msd-utilities">
+
+              <p class="msd-utilities__last-modified">
+                Last modified:&nbsp;
+                <time datetime="2021-09-24">
+                  24 September 2021
+                </time>
+              </p>
+
+
+              <div class="msd-utilities__elements">
+
+                <!--Back to top-->
+                <button id="BackToTop" tabindex="0" href="javascript:void(0)" class="back-to-top">
+                  <span class="sr-only">Return to the top of the page</span>
+                  <span class="msd-utilities__btn--label" aria-hidden="true">Back to top</span>
+                </button>
+
+                <button id="msd-print-button" class="msd-link msd-print__button">
+                  <span class="sr-only">Print the page content</span>
+                  <span class="msd-utilities__btn--label">Print</span>
+                </button>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </main>
+
+
+
+
+
+  <!-- Footer
+  ============================================== -->
+  <footer role="contentinfo" class="msd-footer">
+    <div class="msd-container">
+
+      <div class="msd-grid">
+
+        <div class="msd-grid__cell msd-grid--one-half">
+
+          <div class="msd-footer__logotype">
+            <a href="https://www.govt.nz/" class="msd-footer__logotype--nz-govt-logo">
+              <span class="sr-only">New Zealand Government</span>
+              <svg class="msd-icon msd-icon__nz-govt-logo" role="img" aria-labelledby="NZ_Government" aria-hidden="true" focusable="false">
+                <title id="NZ_Government">New Zealand Government</title>
+                <use href="../../../dist/images/sprites/sprite.svg#nz-govt--logo"></use>
+              </svg>
+            </a>
+          </div>
+          <p class="msd-footer__small-text">Crown copyright <span id="year"></span></p>
+
+        </div>
+
+        <div class="msd-grid__cell msd-grid--one-half">
+          <div class="msd-grid__cell">
+            <ul class="msd-footer__list">
+              <li class="msd-footer__list-item">
+                <a class="msd-footer__link" href="#">Privacy</a>
+              </li>
+              <li class="msd-footer__list-item">
+                <a class="msd-footer__link" href="#">Accessibility</a>
+              </li>
+              <li class="msd-footer__list-item">
+                <a class="msd-footer__link" href="#">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="msd-grid">
+        <div class="msd-grid__cell">
+
+          <div class="msd-footer__copyright">
+            <p class="msd-footer__small-text">Contains public sector information licensed under the Open Government Licence v3.0.</p>
+
+
+            <a href="https://creativecommons.org/licenses/by/4.0/" class="msd-footer__copyright--logo">
+              <span class="sr-only">Creative Commons 4.0 International Licence</span>
+              <svg width="24px" height="24px" class="msd-icon__creative-commons" aria-hidden="true" focusable="false">
+                <use href="../../../dist/images/sprites/sprite.svg#icons--creative-commons"></use>
+              </svg>
+              &nbsp;
+              <svg width="24px" height="24px" class="msd-icon__creative-commons-attribution" aria-hidden="true" focusable="false">
+                <use href="../../../dist/images/sprites/sprite.svg#icons--creative-commons-attribution"></use>
+              </svg>
+            </a>
+
+            <p class="msd-footer__small-text">Unless indicated otherwise, all content is licensed for re-use under a
+
+              <a class="msd-footer__link msd-footer__link--external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International Licence
+      <span class="sr-only">(this link opens an external website)</span></a>&nbsp;.</p>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+
+
+  <!-- JavaScript
+  ================================================== -->
+  <script src="../../../dist/js/vendor/jquery-3.5.1.min.js"></script>
+  <script src="../../../dist/js/scripts.js?cb=1607455229852"></script>
+</body>
+
+</html>
