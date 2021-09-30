@@ -59,14 +59,22 @@ $color-map: (
     msd-brand                :           #121F6B,  
 
     //MSD secondary 
-    msd-blue                 :           #005987, 
-    msd-teal                 :           #005F63,  
-    msd-green                :           #316724,  
-    msd-tangerine            :           #C76D1F,  
-    msd-red-brick            :           #B32F21,  
-    msd-red                  :           #9F1C2B,  
-    msd-fuschia              :           #990F47,  
-    msd-indigo               :           #76346d, 
+    msd-blue                 :           #005688, 
+    msd-teal                 :           #005b62,  
+    msd-green                :           #3C691E,  
+    msd-tangerine            :           #F6A145,  
+    msd-red-brick            :           #B32A17,  
+    msd-red                  :           #A11922,  
+    msd-fuschia              :           #9A1745,  
+    msd-indigo               :           #7F366A,    
+    
+    //Codeview
+    code-view           :           #090a0b,
+    code-title          :           #f8f8f2,
+    class               :           #7bcc7b,  
+    class-value         :           #7bcc7b, 
+    highlight           :           #ee9912,
+    value-color         :           #dda0dd,
        
 ) !default;
 

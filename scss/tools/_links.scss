@@ -24,9 +24,9 @@
 @mixin linkColours ($link, $visited, $hover, $active) {
     border-bottom: 2px solid $link;
     color: $link;
-    line-height: 1.5;   
+    line-height: 1.67;   
     text-decoration: none;
-    padding-bottom: .125vh;
+    padding-bottom: 2px;
 
     &:visited {
         border-bottom-color: $visited;
@@ -42,7 +42,7 @@
     } 
     &:focus:not(:hover) {
         background-color: color(msd-focus);
-        border-bottom: 2px solid transparent;
+        border-bottom: none;
         box-shadow: 0 -2px color(msd-focus),0 4px color(govnz-link-active);
         color: color(govnz-link-active);
         outline: 3px solid transparent;
@@ -64,6 +64,8 @@
   
 // External links 
 .msd__link--external {
+    padding-right: 5px;
+
     &::after {
         left: 4px;
         top: 1px;
@@ -72,10 +74,10 @@
         display: inline-flex;
         width: 1rem;
 
-            //Windows High contrast mode
-    @media (-ms-high-contrast: active) and (forced-colors: active) {
-        filter: invert(0%) sepia(120%) saturate(5000%) hue-rotate(50deg) brightness(815%) contrast(125%);
-      }
+        //Windows High contrast mode
+        @media (-ms-high-contrast: active) and (forced-colors: active) {
+          filter: invert(0%) sepia(120%) saturate(5000%) hue-rotate(50deg) brightness(815%) contrast(125%);
+        }
 
     }  
 
@@ -99,5 +101,13 @@
 
 
 
+}
+
+
+.msd__image-link {
+
+    &:active {
+        color:inherit;
+    }
 }
 
