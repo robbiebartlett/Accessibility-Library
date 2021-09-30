@@ -1,5 +1,5 @@
 /* ==========================================================================
-   #Flag
+   #Media
    ========================================================================== */
 
 /*
@@ -200,3 +200,21 @@
 
  
  
+// Wrap around image
+
+/**
+ *  Wrap text around the image - apply class to <wrapper> 
+ *  e.g. <div class="msd-media__wrap--left">
+ *          <img src="" alt="">
+ *       </div>
+ */
+
+ .msd-media__wrap--left {
+    float: left;
+    margin-right: $null;
+ } 
+ 
+ .msd-media__wrap--right {
+    float: right;
+    margin-left: $null;
+ }
