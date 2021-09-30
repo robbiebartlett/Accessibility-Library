@@ -24,6 +24,7 @@ abbr {
   code {
     font-family: monospace;
     white-space: pre;
+    word-break: break-all;
   }
   
   // Highlighted text.
@@ -37,7 +38,26 @@ abbr {
 
   // Small print.
   small {
-    font-size: 1.5ex;
+    font-size: .75rem;
     font-weight: normal;
   }
+
+
+  // Code highlight
+  //
+  // Add background colour to emphasise code
+  .highlight {
+    background: color(code-view);
+    color: #f4f4ec;
+    font-size: 90%;
+    border-radius: var(--radius);
+    margin: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    overflow-wrap: initial;
+    padding: .375rem;
+    display: inline;
+}
+
+
   

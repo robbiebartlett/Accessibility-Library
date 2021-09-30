@@ -30,7 +30,7 @@
   .msd-callout {
     background-color: transparent;
     border-left: .1875rem solid color(govnz-mid-grey);
-    padding: $md $md $lg $md;
+    padding: $lg $md $lg $md;
     margin: $lg 0 $md;
 
     @include mq($from: tablet) {
