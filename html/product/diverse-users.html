@@ -12,7 +12,7 @@
   ================================================== -->
   <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=yes">
 
-  <title>Screen reader | Accessibility for MSD</title>
+  <title>Diverse users | Accessibility for MSD</title>
 
   <!-- Mobile Specific Metatags
   ================================================== -->
@@ -115,7 +115,7 @@
 
 
 
-  
+
   <!-- Navigation
   ============================================== -->
   <nav role="navigation" class="msd-navigation" aria-label="main menu">
@@ -170,7 +170,7 @@
       </li>
 
       <!-- Product -->
-      <li class="msd-navigation__list-item">
+      <li class="msd-navigation__list-item" aria-current="page">
 
         <a class="msd-link msd-navigation-link" href="/dist/html/product/index.html">
           Product
@@ -355,7 +355,7 @@
       </li>
 
       <!-- Visual design -->
-      <li class="msd-navigation__list-item" aria-current="page">
+      <li class="msd-navigation__list-item">
 
         <a class="msd-link msd-navigation-link" href="/dist/html/visual-design/index.html">Visual design</a>
 
@@ -500,8 +500,8 @@
 
 
 
-
-  <!-- Main
+  
+  <!-- Main 
   ============================================== -->
   <main role="main" aria-hidden="false" class="main-container">
 
@@ -514,16 +514,16 @@
             <ol class="msd-breadcrumb__section" aria-labelledby="msd-breadcrumb__label">
               <li class="msd-breadcrumb__list-item">
                 <a href="/dist/html/index.html" class="msd-breadcrumb__link">
-              Home
-            </a>
+                  Home
+                </a>
               </li>
               <li class="msd-breadcrumb__list-item">
-                <a href="/dist/html/visual-design/index.html" class="msd-breadcrumb__link">
-              Visual design
-            </a>
+                <a href="/dist/html/product/index.html" class="msd-breadcrumb__link">
+                  Product management
+                </a>
               </li>
               <li class="msd-breadcrumb__list-item" aria-current="page">
-                Screen reader
+                Diverse users
               </li>
             </ol>
           </nav>
@@ -538,45 +538,47 @@
           <!-- Main content -->
           <div id="main-content" class="msd-grid__cell msd-grid--two-thirds msd-order-2">
 
-            <h1 class="msd-h1">Screen reader</h1>
+            <h1 class="msd-h1">Diverse users</h1>
 
-            <p class="lead">Can you use a screen reader to access the page content?</p>
+            <p class="lead">Have you considered how everyone will use your product?</p>
 
             <h2 class="msd-h3">Why it’s important:</h2>
             <div class="msd-list">
               <ul class="msd-list__section msd-list__section--square">
-                <li class="msd-list__section--item">Evelyn is visually impaired and uses a screen reader to navigate the web.</li>
+                <li class="msd-list__section--item">Kaia has a newborn and her attention is often divided. Kaia needs to be able to understand a website’s contents at a glance.</li>
+                <li class="msd-list__section--item">Angus has a learning disability. He needs to be able to understand information about their student finance. People with learning disabilities need access to all types of information. Not just disability-specific information.</li>
               </ul>
-            </div>
+            </div> 
 
-            <h2 class="msd-h3">Next steps</h2>
-            <div class="msd-list">
-              <ol class="msd-list__section msd-list--number">
-                <li class="msd-list__section--item">Confirm a screen reader can select controls and announcement of information is correct. <a class="msd-link msd__link--external" href="https://www.nvaccess.org/download">Download NVDA screen reader (NV Access)</a> or request through your IT service provider.</li>
-                <li class="msd-list__section--item">Announcement of information should be in the appropriate order and context. For example labels before form fields, headers before content.</li>
-                <li class="msd-list__section--item">Check that HTML documents include a language attribute (html lang="en"). This will assist the screen reader to use the correct accent and pronunciation.</li>
-                <li class="msd-list__section--item">If forms are present, make sure the screen reader reads labels and instructions.</li>
-                <li class="msd-list__section--item">Some screen readers don't announce the asterisk character. Include 'required' in all labels or apply the <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/WCAG21/Techniques/aria/ARIA2">aria-required="true"</a> attribute.</li>
-                <li class="msd-list__section--item">Check contextualized page titles are in use, each web page needs its own title. If the page is part of a multi-step process such as a sign-up form or checkout flow, include the step number such as Step 1 of 3.</li>
-                <li class="msd-list__section--item">Make sure all links are descriptive. For example, the link text 'Read More' provides no context about where the user will go if they click it.'Read more about our services' describes what’s on the other side of the link.</li>
-              </ol>
-            </div>
+            <p>Digital users can be incredibly diverse -  a blend of cultures, interests and more.</p>
+            <p>It is only natural that digital accessibility supports a diverse range of web users too.</p>
+            <p>By acknowledging the broad scope of users who benefit from digital accessibility, you will gain a better understanding of its importance to all products and services.</p>
 
-            <!-- References -->
+              <h2 class="msd-h3">Next steps</h2>
+              <div class="msd-list">
+                <ol class="msd-list__section msd-list--number">
+                  <li class="msd-list__section--item">Never assume that your users don’t have accessibility needs. Any person may experience a situational disability, e.g. working in a loud environment. Or they may have a temporary disability such as having an arm in a cast, or develop a more permanent one.</li>
+                  <li class="msd-list__section--item">Include people with disabilities and older people in your <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/test-evaluate/involving-users/#video-intro">research and usability testing</a>.</li> 
+                  <li class="msd-list__section--item">Test your product with people in their own context. Consider people who use alternative reading devices, have colour blindness  or motor impairments.</li> 
+                  <li class="msd-list__section--item">Set a regular cadence for testing accessibility scenarios.</li>
+                </ol>
+             </div>        
+
             <div class="msd-callout msd-callout__note">
+
               <h2 class="msd-callout__title">References</h2>
 
               <h3 class="msd-callout__sub-title">Resources</h3>
 
               <ul class="msd-list__section msd-list__section--square">
                 <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://designmodo.com/screen-reader-accessible-design/">12 Screen reader facts for Accessible Web Design<span class="sr-only">(this link opens an external website)</span></a>
+                  <a class="msd-link msd__link--external" href="https://www.gov.uk/government/publications/understanding-disabilities-and-impairments-user-profiles">Profiles of users with disabilities (GOV.UK)<span class="sr-only">(this link opens an external website)</span></a>
+                </li>                
+                <li class="msd-callout__link">
+                  <a class="msd-link msd__link--external" href="https://www.usability.gov/how-to-and-tools/methods/personas.html">How to develop personas (Usability.gov)<span class="sr-only">(this link opens an external website)</span></a>
                 </li>
                 <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://webaim.org/techniques/screenreader/">Designing for Screen Reader Compatibility<span class="sr-only">(this link opens an external website)</span></a>
-                </li>
-                <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.youtube.com/watch?v=8Rn5pXCdZWU">Video: Web Accessibility Perspectives - Text to Speech<span class="sr-only">(this link opens an external website)</span></a>
+                  <a class="msd-link msd__link--external" href="https://webdesign.tutsplus.com/articles/making-the-web-accessible-for-everyone-with-inclusive-design-and-diverse-personas--cms-27505">Making the Web Accessible for Everyone With Inclusive Design and Diverse Personas<span class="sr-only">(this link opens an external website)</span></a>
                 </li>
               </ul>
 
@@ -584,70 +586,49 @@
 
               <ul class="msd-list__section msd-list__section--square">
                 <li class="msd-callout__link">
-                  <a class="msd-link msd__link--external" href="https://www.digital.govt.nz/standards-and-guidance/design-and-ux/accessibility/accessible-language/">Accessible language<span class="sr-only">(this link opens an external website)</span></a> 
-                  </li>
-                </ul>
+                  <a class="msd-link msd__link--external" href="https://www.digital.govt.nz/dmsdocument/170~digital-inclusion-user-insights-for-disabled-people/html">Digital inclusion user insights — Disabled people<span class="sr-only">(this link opens an external website)</span></a>
+                </li>                
+              </ul>
 
 
-                <h3 class="msd-callout__sub-title ">World Content Accessibility Guidelines</h3>
+              <h3 class="msd-callout__sub-title">World Content Accessibility Guidelines</h3>
 
-                <ul class="msd-list__section msd-list__section--square ">
-                  <li class="msd-callout__link ">
-                    <a class="msd-link msd__link--external " href="https://www.w3.org/WAI/WCAG21/quickref/?versions=2.0#info-and-relationships ">1.3.1 Info and Relationships<span class="sr-only ">(this link opens an external website)</span></a> 
-                  </li>                  
-                </ul>
+              <ul class="msd-list__section msd-list__section--square">
+                <li class="msd-callout__link">
+                  <a class="msd-link msd__link--external" href="https://www.w3.org/WAI/fundamentals/accessibility-usability-inclusion/">W3C - Accessibility, Usability, and Inclusion<span class="sr-only">(this link opens an external website)</span></a>
+                </li>
+              </ul>
 
             </div>
+
+
+
           </div>
 
           <!-- Page navigation -->
-          <div id="page-nav" class="msd-grid__cell msd-grid--one-third msd-order-1 ">
-    
-            <div class="msd-pane__sidenav ">
+          <div id="page-nav" class="msd-grid__cell msd-grid--one-third msd-order-1">
+
+            <div class="msd-pane__sidenav">
               <nav class="msd-sidenav" aria-label="Secondary">
                 <h2 class="msd-sidenav__header">
-                  <a class="msd-link msd-h3" href="/dist/html/visual-design/index.html">Visual design</a>
+                  <a class="msd-link msd-h3" href="/dist/html/product/index.html">Product</a>
                 </h2>
                 <ul class="msd-sidenav__section">
 
                   <li class="msd-sidenav__section--item">
-                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/colour-and-contrast.html">Colour and Contrast</a>
-                  </li>
-
-                  <li class="msd-sidenav__section--item">
-                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/layout-and-hierarchy.html">Layout and Hierarchy</a>
-                  </li>
-
-                  <li class="msd-sidenav__section--item">
-                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/typography.html">Typography</a>
-                  </li>
-
-                  <li class="msd-sidenav__section--item">
-                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/graphics-and-images.html">Graphics and Images</a>
-                  </li>
-
-                  <li class="msd-sidenav__section--item">
-                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/flashing-and-motion.html">Flashing and Motion</a>
-                  </li>
-
-                  <li class="msd-sidenav__section--item">
-                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/data-visualisations.html">Data visualisations</a>
-                  </li>
-
-                  <li class="msd-sidenav__section--item">
-                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/forms.html">Forms</a>
-                  </li>
-
-                  <li class="msd-sidenav__section--item">
-                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/mobile.html">Mobile</a>
-                  </li>
-
-                  <li class="msd-sidenav__section--item">
-                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/keyboard-access.html">Keyboard access</a>
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/product/accessibility-basics.html">Accessibility basics</a>
                   </li>
 
                   <li class="msd-sidenav__section--item" aria-current="page">
-                    <a class="msd-sidenav__link msd-link" href="/dist/html/visual-design/screen-reader.html">Screen reader</a>
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/product/diverse-users.html">Diverse users</a>
+                  </li>
+
+                  <li class="msd-sidenav__section--item">
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/product/project-workflow.html">Project workflow</a>
+                  </li>
+
+                  <li class="msd-sidenav__section--item">
+                    <a class="msd-sidenav__link msd-link" href="/dist/html/product/final-review.html">Final review</a>
                   </li>
 
                 </ul>
@@ -656,50 +637,50 @@
             </div>
 
           </div>
-      
+
         </div>
       </div>
 
 
-       <!-- Page utilities -->
-       <div class="msd-container ">
-        <div class="msd-grid ">
+      <!-- Page utilities -->
+      <div class="msd-container">
+        <div class="msd-grid">
 
-         <div class="msd-grid__cell ">
-           <div class="msd-utilities ">
+          <div class="msd-grid__cell">
+            <div class="msd-utilities">
 
-            <p class="msd-utilities__last-modified ">
-              Last modified:&nbsp;
-               <time datetime="2020-12-03 ">
-                 8 March 2021
-               </time>
+              <p class="msd-utilities__last-modified">
+                Last modified:&nbsp;
+                <time datetime="2021-09-17">
+                  17 September 2021
+                </time>
               </p>
-           
 
-            <div class="msd-utilities__elements ">
 
-              <!--Back to top-->
-              <button id="BackToTop " tabindex="0 " href="javascript:void(0) " class="back-to-top ">
-                <span class="sr-only ">Return to the top of the page</span>
-                <span class="msd-utilities__btn--label " aria-hidden="true ">Back to top</span>
-              </button>
-              
-              <button id="msd-print-button " class="msd-link msd-print__button ">
-                <span class="sr-only ">Print the page content</span>
-                <span class="msd-utilities__btn--label ">Print</span>
-              </button>
-          
+              <div class="msd-utilities__elements">
+
+                <!--Back to top-->
+                <button id="BackToTop" tabindex="0" href="javascript:void(0)" class="back-to-top">
+                  <span class="sr-only">Return to the top of the page</span>
+                  <span class="msd-utilities__btn--label" aria-hidden="true">Back to top</span>
+                </button>
+
+                <button id="msd-print-button" class="msd-link msd-print__button">
+                  <span class="sr-only">Print the page content</span>
+                  <span class="msd-utilities__btn--label">Print</span>
+                </button>
+
+              </div>
+
             </div>
-
-           </div>
           </div>
-        </div>  
+        </div>
       </div>
 
     </div>
 
   </main>
-  
+
 
 
 
@@ -709,67 +690,70 @@
   <footer role="contentinfo" class="msd-footer">
     <div class="msd-container">
 
-        <div class="msd-grid">
+      <div class="msd-grid">
 
-            <div class="msd-grid__cell msd-grid--one-half">
+        <div class="msd-grid__cell msd-grid--one-half">
 
-                <div class="msd-footer__logotype">
-                    <a href="https://www.govt.nz/" class="msd-footer__logotype--nz-govt-logo">
-                        <span class="sr-only">New Zealand Government</span>
-                        <svg class="msd-icon msd-icon__nz-govt-logo" role="img" aria-labelledby="NZ_Government" aria-hidden="true" focusable="false">
-                            <title id="NZ_Government">New Zealand Government</title>
-                            <use href="../../../dist/images/sprites/sprite.svg#nz-govt--logo"></use>
-                        </svg>
-                    </a>
-                </div>
-                <p class="msd-footer__small-text">Crown copyright <span id="year"></span></p>
-
-            </div>
-
-            <div class="msd-grid__cell msd-grid--one-half">
-                <div class="msd-grid__cell">
-                    <ul class="msd-footer__list">
-                        <li class="msd-footer__list-item">
-                            <a class="msd-footer__link" href="#">Privacy</a>
-                        </li>
-                        <li class="msd-footer__list-item">
-                            <a class="msd-footer__link" href="#">Accessibility</a>
-                        </li>
-                        <li class="msd-footer__list-item">
-                            <a class="msd-footer__link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+          <div class="msd-footer__logotype">
+            <a href="https://www.govt.nz/" class="msd-footer__logotype--nz-govt-logo">
+              <span class="sr-only">New Zealand Government</span>
+              <svg class="msd-icon msd-icon__nz-govt-logo" role="img" aria-labelledby="NZ_Government" aria-hidden="true" focusable="false">
+                <title id="NZ_Government">New Zealand Government</title>
+                <use href="../../../dist/images/sprites/sprite.svg#nz-govt--logo"></use>
+              </svg>
+            </a>
+          </div>
+          <p class="msd-footer__small-text">Crown copyright <span id="year"></span></p>
 
         </div>
 
-        <div class="msd-grid">
-            <div class="msd-grid__cell">
-
-                <div class="msd-footer__copyright">
-                    <p class="msd-footer__small-text">Contains public sector information licensed under the Open Government Licence v3.0.</p>
-
-
-                    <a href="https://creativecommons.org/licenses/by/4.0/" class="msd-footer__copyright--logo">
-                        <span class="sr-only">Creative Commons 4.0 International Licence</span>
-                        <svg width="24px" height="24px" class="msd-icon__creative-commons" aria-hidden="true" focusable="false">
-                            <use href="../../../dist/images/sprites/sprite.svg#icons--creative-commons"></use>
-                        </svg>
-                        &nbsp;
-                        <svg width="24px" height="24px" class="msd-icon__creative-commons-attribution" aria-hidden="true" focusable="false">
-                            <use href="../../../dist/images/sprites/sprite.svg#icons--creative-commons-attribution"></use>
-                        </svg>
-                    </a>
-
-                    <p class="msd-footer__small-text">Unless indicated otherwise, all content is licensed for re-use under a
-
-                        <a class="msd-footer__link msd-footer__link--external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International Licence
-          <span class="sr-only">(this link opens an external website)</span></a>&nbsp;.</p>
-                </div>
-
-            </div>
+        <div class="msd-grid__cell msd-grid--one-half">
+          <div class="msd-grid__cell">
+            <ul class="msd-footer__list">
+              <li class="msd-footer__list-item">
+                <a class="msd-footer__link" href="https://msd.govt.nz/about-msd-and-our-work/tools/copyright-statement.html">Privacy</a>
+              </li>
+                   <li class="msd-footer__list-item">
+                <a class="msd-footer__link" href="https://msd.govt.nz/about-msd-and-our-work/tools/accessibility-tools.html">Accessibility</a>
+              </li>
+              <li class="msd-footer__list-item">
+                <a class="msd-footer__link" href="/dist/html/sitemap.html">Sitemap</a>
+              </li>
+     <li class="msd-footer__list-item">
+                <a class="msd-footer__link" href="mailto:A11y_Team@msd.govt.nz">Contact</a>
+              </li>
+            </ul>
+          </div>
         </div>
+
+      </div>
+
+      <div class="msd-grid">
+        <div class="msd-grid__cell">
+
+          <div class="msd-footer__copyright">
+            <p class="msd-footer__small-text">Contains public sector information licensed under the Open Government Licence v3.0.</p>
+
+
+            <a href="https://creativecommons.org/licenses/by/4.0/" class="msd-footer__copyright--logo">
+              <span class="sr-only">Creative Commons 4.0 International Licence</span>
+              <svg width="24px" height="24px" class="msd-icon__creative-commons" aria-hidden="true" focusable="false">
+                <use href="../../../dist/images/sprites/sprite.svg#icons--creative-commons"></use>
+              </svg>
+              &nbsp;
+              <svg width="24px" height="24px" class="msd-icon__creative-commons-attribution" aria-hidden="true" focusable="false">
+                <use href="../../../dist/images/sprites/sprite.svg#icons--creative-commons-attribution"></use>
+              </svg>
+            </a>
+
+            <p class="msd-footer__small-text">Unless indicated otherwise, all content is licensed for re-use under a
+
+              <a class="msd-footer__link msd-footer__link--external" href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International Licence
+      <span class="sr-only">(this link opens an external website)</span></a>&nbsp;.</p>
+          </div>
+
+        </div>
+      </div>
 
     </div>
   </footer>
@@ -780,8 +764,9 @@
 
   <!-- JavaScript
   ================================================== -->
-  <script src="../../../dist/js/vendor/jquery-3.5.1.min.js "></script>
-  <script src="../../../dist/js/scripts.js?cb=1607455229852 "></script>
+  <script src="../../../dist/js/vendor/jquery-3.5.1.min.js"></script>
+  <script src="../../../dist/js/scripts.js?cb=1607455229852"></script>
 
 </body>
+
 </html>
