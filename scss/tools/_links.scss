@@ -1,0 +1,43 @@
+/* ========================================================================
+   #Links
+   ======================================================================== */
+
+/*
+ * The link mixin generates states for visited, hover, active and focus 
+ * position.
+ *
+ *  To adjust colours: ./core/link-colours.scss
+ */
+
+@mixin linkColours ($link, $visited, $hover, $active) {
+    border-bottom: 2px solid $link;
+    color: $link;
+    line-height: 1.67;   
+    text-decoration: none;
+    padding-bottom: .125vh;
+
+    &:visited {
+        border-bottom-color: $visited;
+        color: $visited;
+    } 
+    &:hover:not(:focus) {
+        border-bottom: 3px solid $hover;
+        color: $hover;
+    } 
+    &:active:not(:focus) {
+        border-bottom-color: $active;
+        color: $active;     
+    } 
+    &:focus:not(:hover) {
+        background-color: colour(msd-focus);
+        border-bottom: none;
+        box-shadow: 0 -2px colour(msd-focus),0 4px colour(govnz-link-active);
+        color: colour(govnz-link-active);
+        outline: 3px solid transparent;
+        text-decoration: none;
+    }
+
+}
+
+
+

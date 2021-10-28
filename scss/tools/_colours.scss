@@ -1,0 +1,42 @@
+/* ========================================================================
+  #Colours
+  ======================================================================== */
+ 
+ /**
+ * The colour function automatically calculates and updates css shorthand
+ * - edit colours at core/colour-palette.scss
+ * 
+ * .example {
+ *   background-color: colour(msd-brand);
+ *   color: colour(govnz-white, .95);
+ * }
+ *
+ *  will render as:
+ *
+ * .example {
+ *   background-color: #121f60;
+ *   color: #ffffff;
+ *   opacity: .95;
+ * }
+ *
+ */
+
+
+
+//Import colour settings
+@import "core/colour-palette";
+
+
+// Function to setup color by name and optionally give a color schema map  
+@function colour($name, $opacity:1, $schema:$colour-map) {
+    @if map-has-key($schema, $name) {
+        @return rgba(map-get($schema, $name),$opacity);
+    } @else {
+        @warn "The value #{$name} is not in the map '$schema'";
+    @return null;
+    }
+};
+
+
+
+

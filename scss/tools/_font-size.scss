@@ -1,0 +1,332 @@
+/* ========================================================================
+   #Font size
+   ======================================================================== */
+
+/**
+ * The font-size settings automatically calculate and update the font-size
+ * based on the dimensions of the browser viewport. 
+ *
+ * Reference: https://css-tricks.com/using-a-mixin-to-take-the-math-out-of-responsive-font-sizes/
+ *
+ * .example {
+ *   @include font-size(16px);
+ * }
+ *
+ */
+  
+
+// Configuration
+
+// Base value
+$responsive-font-base-value: 1.125rem !default;
+$responsive-font-unit: rem !default;
+
+
+@if $responsive-font-unit != rem and $responsive-font-unit != px {
+  @error "`#{$responsive-font-unit}` is not a valid unit for $responsive-font-unit. Use `px` or `rem`.";
+}
+
+// Breakpoint at where values start decreasing if screen width is smaller
+// Adjust desktop breakpoint if required
+$responsive-font-breakpoint: 1100px !default;
+$responsive-font-breakpoint-unit: px !default;
+
+
+@if $responsive-font-breakpoint-unit != px and $responsive-font-breakpoint-unit != em and $responsive-font-breakpoint-unit != rem {
+  @error "`#{$responsive-font-breakpoint-unit}` is not a valid unit for $responsive-font-breakpoint-unit. Use `px`, `em` or `rem`.";
+}
+
+
+// Resize values based on screen height and width
+$responsive-font-two-dimensional: false !default;
+
+// Factor of decrease
+$responsive-font-factor: 10 !default;
+
+@if type-of($responsive-font-factor) != number or $responsive-font-factor <= 1 {
+  @error "`#{$responsive-font-factor}` is not a valid  $responsive-font-factor, it must be greater than 1.";
+}
+
+// Mode. Possibilities: "min-media-query", "max-media-query"
+$responsive-font-mode: min-media-query !default;
+
+// Generate enable or disable classes. Possibilities: false, "enable" or "disable"
+$responsive-font-class: false !default;
+
+// 1 rem = $responsive-font-rem-value px
+$responsive-font-rem-value: 16 !default;
+
+// Safari iframe resize bug: https://github.com/ampproject/amphtml/issues/11133
+$responsive-font-safari-iframe-resize-bug-fix: false !default;
+
+// Disable responsive-font by setting $enable-responsive-font to false
+$enable-responsive-font: true !default;
+
+// Cache $responsive-font-base-value unit
+$responsive-font-base-value-unit: unit($responsive-font-base-value);
+
+// Remove px-unit from $responsive-font-base-value for calculations
+@if $responsive-font-base-value-unit == px {
+  $responsive-font-base-value: $responsive-font-base-value / ($responsive-font-base-value * 0 + 1);
+}
+@else if $responsive-font-base-value-unit == rem {
+  $responsive-font-base-value: $responsive-font-base-value / ($responsive-font-base-value * 0 + 1 / $responsive-font-rem-value);
+}
+
+// Cache $responsive-font-breakpoint unit to prevent multiple calls
+$responsive-font-breakpoint-unit-cache: unit($responsive-font-breakpoint);
+
+// Remove unit from $responsive-font-breakpoint for calculations
+@if $responsive-font-breakpoint-unit-cache == px {
+  $responsive-font-breakpoint: $responsive-font-breakpoint / ($responsive-font-breakpoint * 0 + 1);
+}
+@else if $responsive-font-breakpoint-unit-cache == rem or $responsive-font-breakpoint-unit-cache == "em" {
+  $responsive-font-breakpoint: $responsive-font-breakpoint / ($responsive-font-breakpoint * 0 + 1 / $responsive-font-rem-value);
+}
+
+// Calculate the media query value
+$responsive-font-mq-value: if($responsive-font-breakpoint-unit == px, #{$responsive-font-breakpoint}px, #{$responsive-font-breakpoint / $responsive-font-rem-value}#{$responsive-font-breakpoint-unit});
+$responsive-font-mq-property-width: if($responsive-font-mode == max-media-query, max-width, min-width);
+$responsive-font-mq-property-height: if($responsive-font-mode == max-media-query, max-height, min-height);
+
+
+
+
+
+// Mixins
+
+
+// Internal mixin used to determine which media query needs to be used
+@mixin _responsive-font-media-query {
+  @if $responsive-font-two-dimensional {
+    @if $responsive-font-mode == max-media-query {
+      @media (#{$responsive-font-mq-property-width}: #{$responsive-font-mq-value}), (#{$responsive-font-mq-property-height}: #{$responsive-font-mq-value}) {
+        @content;
+      }
+    }
+    @else {
+      @media (#{$responsive-font-mq-property-width}: #{$responsive-font-mq-value}) and (#{$responsive-font-mq-property-height}: #{$responsive-font-mq-value}) {
+        @content;
+      }
+    }
+  }
+  @else {
+    @media (#{$responsive-font-mq-property-width}: #{$responsive-font-mq-value}) {
+      @content;
+    }
+  }
+}
+
+// Internal mixin that adds disable classes to the selector if needed.
+@mixin _responsive-font-rule {
+  @if $responsive-font-class == disable and $responsive-font-mode == max-media-query {
+    // Adding an extra class increases specificity, which prevents the media query to override the property
+    &,
+    .disable-responsive-font &,
+    &.disable-responsive-font {
+      @content;
+    }
+  }
+  @else if $responsive-font-class == enable and $responsive-font-mode == min-media-query {
+    .enable-responsive-font &,
+    &.enable-responsive-font {
+      @content;
+    }
+  }
+  @else {
+    @content;
+  }
+}
+
+// Internal mixin that adds enable classes to the selector if needed.
+@mixin _responsive-font-media-query-rule {
+
+  @if $responsive-font-class == enable {
+    @if $responsive-font-mode == min-media-query {
+      @content;
+    }
+
+    @include _responsive-font-media-query {
+      .enable-responsive-font &,
+      &.enable-responsive-font {
+        @content;
+      }
+    }
+  }
+  @else {
+    @if $responsive-font-class == disable and $responsive-font-mode == min-media-query {
+      .disable-responsive-font &,
+      &.disable-responsive-font {
+        @content;
+      }
+    }
+    @include _responsive-font-media-query {
+      @content;
+    }
+  }
+}
+
+// Helper function to get the formatted non-responsive value
+@function responsive-font-value($values) {
+  // Convert to list
+  $values: if(type-of($values) != list, ($values,), $values);
+
+  $val: '';
+
+  // Loop over each value and calculate value
+  @each $value in $values {
+    @if $value == 0 {
+      $val: $val + ' 0';
+    }
+    @else {
+      // Cache $value unit
+      $unit: if(type-of($value) == "number", unit($value), false);
+
+      @if $unit == px {
+        // Convert to rem if needed
+        $val: $val + ' ' + if($responsive-font-unit == rem, #{$value / ($value * 0 + $responsive-font-rem-value)}rem, $value);
+      }
+      @else if $unit == rem {
+        // Convert to px if needed
+        $val: $val + ' ' + if($responsive-font-unit == px, #{$value / ($value * 0 + 1) * $responsive-font-rem-value}px, $value);
+      }
+      @else {
+        // If $value isn't a number (like inherit) or $value has a unit (not px or rem, like 1.5em) or $ is 0, just print the value
+        $val: $val + ' ' + $value;
+      }
+    }
+  }
+
+  // Remove first space
+  @return unquote(str-slice($val, 2));
+}
+
+// Helper function to get the responsive value calculated by responsive-font
+@function responsive-font-fluid-value($values) {
+  // Convert to list
+  $values: if(type-of($values) != list, ($values,), $values);
+
+  $val: '';
+
+  // Loop over each value and calculate value
+  @each $value in $values {
+    @if $value == 0 {
+      $val: $val + ' 0';
+    }
+
+    @else {
+      // Cache $value unit
+      $unit: if(type-of($value) == "number", unit($value), false);
+
+      // If $value isn't a number (like inherit) or $value has a unit (not px or rem, like 1.5em) or $ is 0, just print the value
+      @if not $unit or $unit != px and $unit != rem {
+        $val: $val + ' ' + $value;
+      }
+
+      @else {
+        // Remove unit from $value for calculations
+        $value: $value / ($value * 0 + if($unit == px, 1, 1 / $responsive-font-rem-value));
+
+        // Only add the media query if the value is greater than the minimum value
+        @if abs($value) <= $responsive-font-base-value or not $enable-responsive-font {
+          $val: $val + ' ' +  if($responsive-font-unit == rem, #{$value / $responsive-font-rem-value}rem, #{$value}px);
+        }
+        @else {
+          // Calculate the minimum value
+          $value-min: $responsive-font-base-value + (abs($value) - $responsive-font-base-value) / $responsive-font-factor;
+
+          // Calculate difference between $value and the minimum value
+          $value-diff: abs($value) - $value-min;
+
+          // Base value formatting
+          $min-width: if($responsive-font-unit == rem, #{$value-min / $responsive-font-rem-value}rem, #{$value-min}px);
+
+          // Use negative value if needed
+          $min-width: if($value < 0, -$min-width, $min-width);
+
+          // Use `vmin` if two-dimensional is enabled
+          $variable-unit: if($responsive-font-two-dimensional, vmin, vw);
+
+          // Calculate the variable width between 0 and $responsive-font-breakpoint
+          $variable-width: #{$value-diff * 100 / $responsive-font-breakpoint}#{$variable-unit};
+
+          // Return the calculated value
+          $val: $val + ' calc(' + $min-width + if($value < 0, ' - ', ' + ') + $variable-width + ')';
+        }
+      }
+    }
+  }
+
+  // Remove first space
+  @return unquote(str-slice($val, 2));
+}
+
+// responsive-font mixin
+@mixin responsive-font($values, $property: font-size) {
+  @if $values != null {
+    $val: responsive-font-value($values);
+    $fluidVal: responsive-font-fluid-value($values);
+
+    // Do not print the media query if responsive & non-responsive values are the same
+    @if $val == $fluidVal {
+      #{$property}: $val;
+    }
+    @else {
+      @include _responsive-font-rule {
+        #{$property}: if($responsive-font-mode == max-media-query, $val, $fluidVal);
+
+        // Include safari iframe resize fix if needed
+        min-width: if($responsive-font-safari-iframe-resize-bug-fix, (0 * 1vw), null);
+      }
+
+      @include _responsive-font-media-query-rule {
+        #{$property}: if($responsive-font-mode == max-media-query, $fluidVal, $val);
+      }
+    }
+  }
+}
+
+// Shorthand helper mixins
+@mixin font-size($value) {
+  @include responsive-font($value);
+}
+
+@mixin padding($value) {
+  @include responsive-font($value, padding);
+}
+
+@mixin padding-top($value) {
+  @include responsive-font($value, padding-top);
+}
+
+@mixin padding-right($value) {
+  @include responsive-font($value, padding-right);
+}
+
+@mixin padding-bottom($value) {
+  @include responsive-font($value, padding-bottom);
+}
+
+@mixin padding-left($value) {
+  @include responsive-font($value, padding-left);
+}
+
+@mixin margin($value) {
+  @include responsive-font($value, margin);
+}
+
+@mixin margin-top($value) {
+  @include responsive-font($value, margin-top);
+}
+
+@mixin margin-right($value) {
+  @include responsive-font($value, margin-right);
+}
+
+@mixin margin-bottom($value) {
+  @include responsive-font($value, margin-bottom);
+}
+
+@mixin margin-left($value) {
+  @include responsive-font($value, margin-left);
+}

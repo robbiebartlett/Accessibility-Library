@@ -1,0 +1,182 @@
+/* ==========================================================================
+   #Search
+   ========================================================================== */
+
+  /**
+   * Search input value is set to accomodate the standard user query length - 
+   *  typically about 27 characters 
+   *
+   *
+   * ref: https://www.algolia.com/blog/3-key-ux-design-elements-of-the-search-bar/
+   *
+   * Search results - :115
+   */
+   
+
+.msd-search__header, 
+.msd-search__widget {
+  display: flex;
+  margin: $xs 0;
+  position: relative;
+  width: 100%;
+
+
+  @include mq($from: mobile-wide) {
+    width: auto;
+  }
+  
+}
+
+.msd-search[role=search],
+.msd-search-listing[role=search] {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  z-index: z(header);
+
+  @include mq($from: mobile-wide) {
+    width: auto;
+  }
+
+}
+
+.msd-search__item,
+.msd-search-listing__item {
+  background-color: colour(govnz-white);
+  display: flex;
+  position: relative;
+  width: 100%;
+
+  @include mq($from: mobile-wide) {
+    width: auto;
+  }
+
+}
+
+.msd-search__label {
+  width: 100%;
+}
+
+.msd-search__input,
+.msd-search-listing__input {
+  border: 1px solid colour(msd-brand);
+  border-radius: 0;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  color: colour(govnz-slate);
+  line-height: 1.5;
+  margin-bottom: 0;
+  padding: $sm 2.5rem $sm $md;
+  width: 100%;
+
+  @include mq($from: mobile-wide) {
+    width: 27ch;
+  }
+
+  @include mq($from: tablet-wide) {
+    width: 30ch;
+  }
+
+  &:focus{
+    box-shadow: inset 0 0 0 3px colour(govnz-link-active);
+    outline: 3px solid colour(msd-focus);
+    outline-offset: 0;
+    border-color: colour(govnz-link-active);
+    border-width: 1px;
+  }
+}
+
+.msd-search__input {
+  @include input-placeholder {
+    color: colour(govnz-mid-grey);
+    font-size: 1.1rem;
+  }
+}
+
+.msd-search__button {
+  align-items: center;
+  background: transparent url("data:image/svg+xml;charset=utf-8,%3Csvg width='24' height='24' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 21.646l-6.255-6.205a9.63 9.63 0 001.872-5.711c0-5.365-4.4-9.73-9.809-9.73C4.4 0 0 4.365 0 9.73c0 5.366 4.4 9.73 9.808 9.73a9.81 9.81 0 005.531-1.698L21.627 24 24 21.646zM2.877 9.73c0-3.792 3.11-6.877 6.932-6.877 3.822 0 6.932 3.085 6.932 6.877s-3.11 6.877-6.932 6.877c-3.823 0-6.932-3.085-6.932-6.877z' fill='currentColor'/%3E%3C/svg%3E") no-repeat 50%;
+  border: none;
+  border-radius: 0;
+  color: colour(govnz-black);
+  cursor: pointer;
+  display: flex;
+  height: 1.5rem;
+  margin: 0;
+  line-height: 1.5;
+  padding: $null;
+  position: absolute;
+  right: $xs;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 1.5rem;
+
+  &:focus{
+    box-shadow: inset 0 0 0 3px colour(govnz-link-active);
+    outline: 3px solid colour(msd-focus);
+    outline-offset: 0;
+    border-color: colour(govnz-link-active);
+    border-width: 1px;
+  }
+  
+}
+
+
+
+//Search results
+.search-title {
+  margin-bottom: 1.5rem;
+}
+
+.msd-search__results-count {
+  @include font-size(18px);
+  margin-top: $md;
+  margin-bottom: $md;
+
+  @include mq($from: tablet-wide) {
+    margin-top: $lg;
+    margin-bottom: $lg;
+  }
+
+}
+
+.msd-search__result {
+  line-height: initial;
+  margin: initial;
+  padding: initial;
+}
+
+.msd-search__result--item {
+  list-style: none;
+  margin-bottom: $lg;
+  border-top: 1px solid colour(govnz-light-grey);
+  padding-top: $lg;
+
+  &:last-of-type {
+    border-bottom: 1px solid colour(govnz-light-grey);
+    padding-bottom: $lg;
+  }
+}     
+
+.msd-search__result--title {
+  font-weight: bold;
+  margin-bottom: $sm;
+  padding: 0;
+}
+
+.msd-search__inline-details {
+  color: colour(govnz-mid-grey);
+  @include font-size(16px);
+  margin-bottom: $sm;
+}
+
+.msd-search-listing__result-summary {
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+
+

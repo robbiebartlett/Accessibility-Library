@@ -1,0 +1,198 @@
+/* ==========================================================================
+   #Buttons
+   ========================================================================== */
+
+/**
+ * A button is an element that allows users to carry out an action on a page. 
+ * Common use cases include allowing a user to Start an application or Save and 
+ * continue their progress. A button should have a short text snippet that 
+ * describes what it will do.
+ * 
+ * Shorthand:
+ *
+ *  btn-pv = button-padding-vertical
+ *  btn-ph = button-padding-horizontal
+ *  btn-sm-pv = button-sm-padding-vertical
+ *  btn-sm-ph = button-sm-padding-horizontal
+ *  btn-lge-pv = button-lg-padding-vertical
+ *  btn-lge-ph = button-lg-padding-horizontal
+ *  btn-ghst-bdr = button-ghost-border-width
+ *
+ */
+
+ $btn-pv:              $xs !default;
+ $btn-ph:              $md !default;
+ $btn-transition:      $msd-transition !default;
+ $btn-radius:          $msd-radius !default;
+ 
+ $btn-sm-pv:           $xs !default;
+ $btn-sm-ph:           $sm !default;
+ 
+ $btn-lge-pv:          $null !default;
+ $btn-lge-ph:          $lg !default;
+ 
+ $btn-ghst-bdr-wdth:   .125rem;
+ 
+ /**
+  * 1. Allow user to style box model properties.
+  * 2. Line different sized buttons up a little nicer.
+  * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+  *    buttons).
+  * 4. Reset/normalize some styles.
+  * 5. Force all button-styled elements to appear clickable.
+  *
+  */
+ 
+ .msd-btn {
+   appearance: none;
+   -webkit-appearance: none;
+   border: 4px solid transparent;
+   display: inline-flex; /* [1] */
+   vertical-align: middle; /* [2] */
+   font: inherit; /* [3] */
+   line-height: 1.5;
+   text-align: center; /* [4] */
+   margin: 0; /* [4] */
+   cursor: pointer; /* [5] */
+   padding: $btn-pv $btn-ph;
+   position: relative;
+   transition: $btn-transition;
+   border-radius: $btn-radius;
+   text-align: center;
+
+   &:focus:not(:hover) {
+    background-color: colour(msd-focus);
+    border-bottom: 4px solid transparent;
+    border-color: colour(msd-focus);
+    box-shadow: 0 -2px colour(msd-focus),0 4px colour(govnz-link-active);
+    color: colour(govnz-link-active);  
+    margin-bottom: 0.25rem;       
+    outline: 3px solid transparent;
+    padding-bottom: 0.125rem;
+    text-decoration: none;
+   }
+ 
+ }
+ 
+ 
+ // Mixin
+@mixin msd-button($background, $border) {
+  background-color: $background;
+  border-color: $border;
+}
+
+ 
+ //Style variants
+ //@include background and border colour
+ .msd-btn--primary {
+  @include msd-button(colour(msd-brand), colour(msd-brand)); 
+ 
+   &,
+   &:hover,
+   &:active {
+     text-decoration: none; /* [4] */
+     color: colour(govnz-white);
+   }
+ 
+   &:hover:not(:focus), 
+   &:active:not(:focus) {
+    @include msd-button(colour(msd-blue), colour(msd-blue)); 
+   }   
+   
+
+ }
+ 
+ 
+ .msd-btn--secondary {
+   background-color: colour(msd-blue);
+   border-color: colour(msd-blue);
+ 
+   &,
+   &:hover,
+   &:active,
+   &:focus {
+     text-decoration: none;
+     color: colour(govnz-white);         
+   }
+ 
+   &:hover {
+     background-color: colour(govnz-slate);
+   }
+ 
+ }
+ 
+ 
+ .msd-btn--tertiary {
+   background-color: colour(govnz-white);
+   color: colour(msd-blue);
+ 
+   &,
+   &:hover,
+   &:active {
+     text-decoration: none;
+     color: colour(msd-brand);
+   }
+ 
+
+ 
+ }
+ 
+ 
+ 
+ 
+ 
+ // Size variants
+ .msd-btn--sm {
+   padding: $btn-sm-pv $btn-sm-ph;
+ }
+ 
+ .msd-btn--lg {
+   padding: $btn-lge-pv $btn-lge-ph;
+ }
+ 
+ 
+ 
+ 
+ 
+ //Ghost buttons
+ //Ghost buttons have see-through backgrounds and are bordered.
+ .msd-btn--ghost {
+   border: $btn-ghst-bdr-wdth solid currentColor;
+   padding: ($btn-pv - $btn-ghst-bdr-wdth) ($btn-ph - $btn-ghst-bdr-wdth);
+ 
+   &,
+   &:hover,
+   &:active,
+   &:focus {
+     background: none;
+   }
+ 
+   &.msd-btn--sm {
+     padding: ($btn-sm-pv - $btn-ghst-bdr-wdth) ($btn-sm-ph - $btn-ghst-bdr-wdth);
+   }
+ 
+   &.msd-btn--lg {
+     padding: ($btn-lge-pv - $btn-ghst-bdr-wdth) ($btn-lge-ph - $btn-ghst-bdr-wdth);
+   }
+ 
+   &.msd-btn--primary {
+     color: colour(govnz-link);
+ 
+     &:hover {
+       color: colour(govnz-link-hover);
+     }
+ 
+   }
+ 
+
+ 
+   &.msd-btn--tertiary {
+     color: colour(govnz-white);
+ 
+     &:hover {
+      color: colour(govnz-white);
+     }
+ 
+   }
+ 
+ }

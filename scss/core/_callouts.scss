@@ -1,0 +1,100 @@
+/* ==========================================================================
+   #Callouts
+   ========================================================================== */
+
+/**
+  * Default styling for callouts, often positioned to notify the user about 
+  * significant information.
+  *
+  * Reference: https://design.oit.ncsu.edu/docs/nc-state-shortcodes/callout/
+  *
+  * Border options :65 for _note, _highlight, _important. e.g.
+  *
+  *   <div class="msd-callout msd-callout__note"></div>
+  *
+  *   Will render as:
+  *
+  *   .msd-callout {
+  *       border-left: .375rem solid colour(govnz-mid-grey);
+  *       margin: 1.125rem 0;
+  *       padding: 1.125rem;
+  *    }
+  *
+  *   .msd-callout__note {
+  *       background-color: #f4f4f4;
+  *       border-left-color: #005987;
+  *    }
+  *
+  */
+
+  .msd-callout {
+    background-color: transparent;
+    border-left: .1875rem solid colour(govnz-mid-grey);
+    padding: $lg $md;
+    margin: $lg 0 $md;
+
+    @include mq($from: tablet) {
+      margin-bottom: $lg;
+    }
+
+  }
+
+  .msd-callout__title {
+    margin-top: 0;
+    margin-bottom: $md;
+    margin-left: $lg;
+  }
+
+  .msd-callout__sub-title {
+    font-weight: normal;
+    margin-left: $lg;
+    margin-top: $lg;
+  }
+
+  .msd-callout__text {
+    margin-top: $md;
+    margin-bottom: $xs;
+    margin-left: $sm;
+
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+  }
+
+  .msd-callout__link {
+    line-height: 1.5;
+    margin: $xs $xs $sm $lg;
+  }
+  
+  .msd-callout__code {
+    border-radius: $xs;
+  }
+
+  .msd-callout + .msd-callout {
+    margin-top: -$xs;
+  }
+
+
+// Mixin
+@mixin msd-callout($background, $border-color) {
+  background-color: $background;
+  border-left-color: $border-color;
+}
+
+
+
+
+// Variations
+.msd-callout__note { 
+  @include msd-callout(colour(govnz-off-white), colour(msd-blue)); 
+}
+
+.msd-callout__highlight { 
+  @include msd-callout(colour(govnz-off-white), colour(msd-green)); 
+}
+
+.msd-callout__important { 
+  @include msd-callout(colour(govnz-off-white), colour(msd-red-brick)); 
+}

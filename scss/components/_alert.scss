@@ -1,0 +1,47 @@
+/* ==========================================================================
+   #Alert
+   ========================================================================== */
+
+  /**
+   * Component to show a warning, success or information at the top of the page.
+   *
+   */
+
+.global-bar-message{
+    border-left: 3px solid;
+    margin-bottom: $null;
+    padding: $null;
+
+    &[aria-current] {
+      display: none !important;
+    }
+  
+    &.msd-warning {
+      background: colour(govnz-error);
+      border-color: colour(govnz-error);
+      color: colour(govnz-white);
+    }
+
+    &.msd-success {
+      background: colour(govnz-success);
+      border-color: colour(govnz-success);
+      color: colour(govnz-white);
+    }
+  
+    &.msd-info {
+      background: colour(govnz-info);
+      border-color: colour(govnz-info);
+      color: colour(govnz-white);
+    }
+  
+    p {
+      @include font(primary, bold);
+      @include font-size(20px);
+       
+    }
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+
+  }

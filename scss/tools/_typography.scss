@@ -1,0 +1,88 @@
+/* ========================================================================
+   #Typography
+   ======================================================================== */
+
+/**
+ * MSD global typography & font-optimization. Add additional locally hosted 
+ * fonts from line :45 
+ * 
+ * 
+ * Define font standards
+ *
+ * [1] IE11 Compatability Modes
+ * [2] Modern Browsers
+ * [3] Safari, Android, iOS
+ * [4] Safari, Android, iOS
+ * [5] Legacy iOS
+ */
+
+
+// Path to the fonts folder, relative to the compiled stylesheet
+// @type String
+
+@mixin font($directory, $family, $name, $style: normal, $weight: normal) {
+@font-face {
+    font-family: $family;
+    src:
+    url('#{$directory}/#{$family}/#{$name}/#{$name}.eot') format('eot'),   //  [1] 
+    url('#{$directory}/#{$family}/#{$name}/#{$name}.woff') format('woff'), //  [2] 
+    url('#{$directory}/#{$family}/#{$name}/#{$name}.ttf') format('truetype'),//[3] 
+    url('#{$directory}/#{$family}/#{$name}/#{$name}.svg') format('svg');  //   [4] 
+    font-style: $style;
+    font-weight: $weight;
+ }
+}
+
+
+// Locally hosted fonts directory
+$font-directory: '../assets/fonts/';
+
+
+
+// Fonts from directory by:          Family,                            Name,       Style,    Weight
+
+// VerdanaPro
+
+    @include font($font-directory,  'VerdanaPro-Regular',               'black',    normal,   400 );
+    @include font($font-directory,  'VerdanaPro-Italic',                'black',    normal,   400 );
+    @include font($font-directory,  'VerdanaPro-SemiBold',              'black',    normal,   600 );
+    @include font($font-directory,  'VerdanaPro-SemiBoldItalic',        'black',    normal,   600 );
+
+
+
+// Font shorthand through abstracted labels
+@mixin font($fontLabel, $weightLabel) {
+    $fonts: (body: (stack: 'Verdana', weights:(light: 300, regular: 400, medium: 500, semiBold: 600, bold: 700) )) !default;
+    $fontWeight: 400;
+    $fontStyle: normal;
+    $fontStack: 'None';
+
+    // Match given type with fontstacks
+    @each $fontKey, $font in $fonts {
+        @if $fontLabel == $fontKey {
+            // get stack and weights
+            @each $elem, $value in $font {
+                @if $elem == 'stack' {
+                    $fontStack: $value;
+                }
+
+                @if $elem == 'weights' {
+                    @each $weightKey, $weight in $value {
+                        @if $weightKey == $weightLabel {
+                            $fontWeight: $weight;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // set CSS
+    font-family: $fontStack;
+    font-weight: $fontWeight;
+}
+
+
+
+
+

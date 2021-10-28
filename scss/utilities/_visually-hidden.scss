@@ -1,0 +1,105 @@
+/* ========================================================================
+  #Visually hidden
+  ======================================================================== */
+
+/**
+ * Naming convention to hide only visually, but have it available for screen 
+ * readers:
+ *
+ * Hide an element visually, but have it available for screen readers whilst
+ * allowing the element to be focused when navigated to via the keyboard (i.e.
+ * for the skip link)
+
+ *
+ * Reference: https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * For long content, line feeds are not interpreted as spaces and small 
+ * widths causes content to wrap 1 word per line:
+ *
+ * Reference: https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe#.h4353gsyn
+ *
+ */ 
+
+//Mixins
+
+// Set $important [true] - Whether to mark as `!important`
+@mixin msd-visually-hidden($important: true) {
+  position: absolute if($important, !important, null);
+  width: 1px if($important, !important, null);
+  height: 1px if($important, !important, null);
+
+  // If margin is set to a negative value it can cause text to be announced in
+  // the wrong order in VoiceOver for OSX
+  left: 0 if($important, !important, null);
+  top: -500px if($important, !important, null);
+  margin: 0 if($important, !important, null);
+  padding: 0 if($important, !important, null);
+  overflow: hidden if($important, !important, null);
+  clip: rect(0 0 0 0) if($important, !important, null);
+  clip-path: inset(50%) if($important, !important, null);
+  border: 0 if($important, !important, null);
+  white-space: nowrap if($important, !important, null);
+}
+
+// Visually hidden but still focusable
+@mixin msd-visually-hidden-focusable($important: true) {
+  position: absolute if($important, !important, null);
+
+  width: 1px if($important, !important, null);
+  height: 1px if($important, !important, null);
+  // If margin is set to a negative value it can cause text to be announced in
+  // the wrong order in VoiceOver for OSX
+  margin: 0 if($important, !important, null);
+
+  overflow: hidden if($important, !important, null);
+  clip: rect(0 0 0 0) if($important, !important, null);
+  clip-path: inset(50%) if($important, !important, null);
+
+  // For long content, line feeds are not interpreted as spaces and small width
+  // causes content to wrap 1 word per line:
+  // https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+  white-space: nowrap if($important, !important, null);
+
+  &:active,
+  &:focus {
+    position: static if($important, !important, null);
+
+    width: auto if($important, !important, null);
+    height: auto if($important, !important, null);
+    margin: inherit if($important, !important, null);
+
+    overflow: visible if($important, !important, null);
+    clip: auto if($important, !important, null);
+    clip-path: none if($important, !important, null);
+
+    white-space: inherit if($important, !important, null);
+  }
+}
+
+
+
+
+
+
+
+
+// Hide visually and from screen readers.
+.hidden,
+[hidden] {
+  display: none!important;
+}
+
+// Hide visually and from screen readers, but maintain layout.
+.invisible {
+  visibility: hidden;
+}
+
+
+// Use the following classes
+.sr-only{
+   @include msd-visually-hidden;
+}
+
+.sr-only__focus {
+  @include msd-visually-hidden-focusable;
+}

@@ -1,0 +1,169 @@
+/* ==========================================================================
+   #Filter
+   ========================================================================== */
+
+  /**
+   * Filter used to refine search results and/or forms. <details> <summary>
+   * used for mobile dropdown.
+   *  
+   * https://www.scottohara.me/blog/2018/09/03/details-and-summary.html
+   * 
+   */
+
+.msd-filter {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+
+  @include mq($from: tablet) {
+    padding-right: $sm;
+  }
+
+}
+
+
+.msd-filter__details {
+
+
+  & > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  &[open] > .msd-filter__summary span::before {
+    height: 0;
+  }
+
+
+}
+
+
+ .msd-filter__icon {
+    display: block;
+    height: 1rem;
+    left: 0;
+    margin-top: 10px;
+    position: absolute;
+    top: 15%;
+    width: $null;
+
+  @include mq($from: tablet) {
+    display: none;
+  }
+   &:before, &:after{
+    content: "";
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 25%;
+    height: 25%;
+    margin: auto;
+    border: 2px solid transparent;
+    background-color: #2a2a2a;
+   }
+
+   &:after {
+    width: 100%;
+   }    
+   &:before {
+    height: 100%;
+   }    
+ }
+
+
+.msd-filter__summary {
+  box-shadow: 0 -2px transparent, 0 3px colour(govnz-slate);
+  cursor: pointer;
+  list-style: none;
+  margin: $xs 0 $lg;
+  padding: $xs 0;
+  pointer-events: visible;
+  position: relative;
+
+  @include mq($from: tablet) {
+    box-shadow: none;
+    pointer-events: none;
+  }
+
+  &:focus-visible {
+    outline: 0;
+  }
+
+  &:focus:not(:hover) h2 {
+    background-color: #fd0;
+    border-bottom: none;
+    box-shadow: 0 -2px #fd0, 0 4px #0b0c0c;
+    color: #0b0c0c;
+    outline: 3px solid transparent;
+    text-decoration: none;
+
+    @include mq($from: tablet) {
+      background-color: transparent;
+      border-bottom: none;
+      box-shadow: none;
+    }
+
+  }
+
+
+
+  .msd-h3 {
+    border-bottom: none;
+    color: colour(govnz-slate);
+    display: inline;
+    line-height: 1.67;
+    margin: 0 0 $lg 0;
+    outline: 2px solid transparent;
+    padding: 0 0 2px $lg;
+    text-decoration: none;
+    
+    @include mq($from: tablet) {
+      box-shadow: 0 -2px transparent, 0 3px colour(govnz-slate);
+      padding-left: 0;
+    }
+
+  }
+
+}
+  
+.msd-filter__section {
+  margin: 0 0 $sm;
+  padding: 0;
+
+    @include mq($from: tablet) {
+      border: none;
+      margin: 0;
+    }
+
+} 
+
+.msd-filter__section--items {
+  list-style-type: none;
+  margin: $lg 0 0 $xs;
+  position: relative;
+
+  @include mq($from: tablet) {
+    margin: $xs 0 $sm $xs;
+  }  
+
+}
+
+.msd-filter__section--item {
+  margin: $xs 0;
+}
+
+
+.msd-filter__section--label {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  padding-left: $xs;
+}
+  

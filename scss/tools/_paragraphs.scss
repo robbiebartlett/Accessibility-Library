@@ -1,0 +1,29 @@
+/* ========================================================================
+  #Paragraphs
+  ======================================================================== */
+ 
+// Mixin to set font spacing.
+ @mixin msd-fontwidth($val, $is-centered: false) {
+
+  @if type-of($val) == number {
+    $space: $val;
+
+    @if unitless($val) {
+      $space: ($val / 1000) * 1em;
+    }
+
+    @if $is-centered == true {
+      margin-left: $space;
+    }
+
+    font-kerning: normal;
+    letter-spacing: $space;
+  } @else {
+    @warn "✘ ‘#{$val}’ is not a number value.";
+  }
+
+}
+
+
+
+  

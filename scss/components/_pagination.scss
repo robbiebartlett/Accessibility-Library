@@ -1,0 +1,209 @@
+/* ==========================================================================
+   #Pagination
+   ========================================================================== */
+
+.msd-pagination {
+  display: flex;
+  justify-content: flex-start;
+  margin: $xl 0;
+}
+
+.msd-pagination__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.msd-pagination__item {
+  border-bottom-color: transparent;
+  font-size: $md;
+  line-height: 1.5;
+
+  & + .msd-pagination__item {
+    padding-left: $md;
+  }
+
+  &.disabled {
+    display: none;
+  }
+
+}
+
+.msd-pagination__link { 
+  color: colour(govnz-link);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  margin: 0 $xs;
+  padding: 0 $xs;
+  text-align: center;
+  text-decoration: none;
+
+  &:not(:focus):hover {
+    color: colour(govnz-link-hover);
+  }
+
+  &:not(:hover):focus {
+    background-color: colour(msd-focus);
+    border-bottom: 2px solid transparent;
+    box-shadow: 0 -2px colour(msd-focus),0 4px colour(govnz-link-active);
+    color: colour(govnz-link-active);
+    outline: 3px solid transparent;
+  }
+
+  //Current link
+  &[aria-current] {
+    color: colour(msd-text);
+    font-weight: bold;
+    position: relative;
+    top: -.375rem;
+  }
+
+}
+
+
+//Previous, Next arrows
+
+.msd-pagination__previous {
+  position: relative;
+
+  .msd-pagination__link {
+    margin-left: 0;
+    padding-left: 0;
+
+    &::before {
+      display: inline-block;
+      content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23005dbb' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
+      height: 1rem;
+      position: relative;
+      // transform: scaleX(-1);
+      margin-right: $sm;
+      top: 2px;
+      width: $null;
+    }
+
+    &:focus,
+    &:hover {
+
+      &:before {
+          content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000C48' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
+      }
+    }
+
+  }
+  
+ }
+
+ .msd-pagination__next {
+  position: relative;
+
+  .msd-pagination__link {
+    margin-right: 0;
+    padding-right: 0;
+
+    &::after {
+      display: inline-block;
+      content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23005dbb' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
+      height: 1rem;
+      position: relative;
+      transform: scaleX(-1);
+      margin-left: $sm;
+      top: 2px;
+      width: 1rem;
+    }
+
+    &:focus,
+    &:hover {
+
+      &:after {
+          content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23000C48' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
+      }
+    }
+
+
+  }
+
+  
+  
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  // .msd-pagination__next {
+  //   position: relative;
+  //   left: $null;
+  //   padding-right: $xs;
+  
+  //   &::before {
+  //     content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23005dbb' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
+  //     height: 1rem;
+  //     position: absolute;
+  //     right: -1rem;
+  //     padding-top: 1px;
+  //     padding-bottom: 21px;
+  //     top: 0;
+  //     transform: scaleX(-1);
+  //     width: 1rem;
+  //   }
+  
+  //     &:not(:focus):hover:before {
+  //        content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232A2A2A' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
+  //     }
+  
+  //     &:not(:hover):focus:before {
+  //       background-color: colour(msd-focus);
+  //       border-bottom: 2px solid transparent;
+  //       box-shadow: 0 -2px colour(msd-focus),0 4px colour(govnz-link-active);
+  //       content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232A2A2A' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
+  //       outline: 3px solid transparent;
+  //     }
+  
+  //   }
+
+
+
+
+
+  // &:not(:focus):hover:before {
+  //   content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232A2A2A' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
+  // }
+
+  // &:not(:hover):focus:before {
+  //   content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%232A2A2A' d='M5.2 11.9c0-.4.2-.9.5-1.2L15.9.6c.7-.7 1.7-.7 2.4 0s.7 1.7 0 2.4l-9.1 9 9.1 9.1c.7.7.7 1.7 0 2.4s-1.7.7-2.4 0L5.7 13.1c-.3-.3-.5-.8-.5-1.2z'/%3E%3C/svg%3E");
+  // }
+
+
+
+// .msd-pagination__next {
+
+    
+
+//   // Next arrow
+//   &::after {
+//     left: auto;
+//     right: -1rem;
+//     transform: scaleX(-1);
+//   }
+// }
+
+

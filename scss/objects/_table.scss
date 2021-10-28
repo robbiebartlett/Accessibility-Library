@@ -1,0 +1,99 @@
+/* ==========================================================================
+   #Tables
+   ========================================================================== */
+
+   /**
+   * A simple accessible object for manipulating the structure of HTML 
+   * table`s, e.g.
+   *
+   *
+   * <table class="msd-table">
+   *  <caption>Table title</caption>
+   *   <thead>
+   *    <tr>
+   *     <th scope="col">main heading</th>
+   *     <th scope="col">heading 1</th>
+   *     <th scope="col">heading 2</th>
+   *     <th scope="col">heading 3</th>
+   *    </tr>
+   *  </thead>
+   *  <tbody>
+   *    <tr>
+   *      <th scope="row">Content Title</th>
+   *      <td>Content 1</td>
+   *      <td>Content 2</td>
+   *      <td>Content 3</td>
+   *    </tr>
+   *    <tr>
+   *      <th scope="row">Content Title</th>
+   *      <td>Content 1</td>
+   *      <td>Content 2</td>
+   *      <td>Content 3</td>
+   *    </tr>
+   *  </tbody>
+   * </table>
+   *
+   * Reference: https://www.accessibility-developer-guide.com/examples/tables/good-example/
+   *
+   */
+
+
+
+
+
+// Equal-width table cells
+
+/*
+ * `table-layout: fixed` forces all cells within a table to occupy the same
+ * width as each other. This also has performance benefits: because the browser
+ * does not need to (re)calculate cell dimensions based on content it discovers,
+ * the table can be rendered very quickly. 
+ *
+ * Reference: https://developer.mozilla.org/en-US/docs/Web/CSS/table-layout#Values
+ * 
+ */
+
+.msd-table--fixed {
+  table-layout: fixed;
+}
+
+
+// Size variants
+.msd-table--sm {
+
+  th,
+  td {
+    padding: $xs;
+  }
+
+}
+
+
+.msd-table--sm {
+
+  th,
+  td {
+    padding: $sm;
+  }
+
+}
+
+
+.msd-table--lg {
+
+  th,
+  td {
+    padding: $xl;
+  }
+
+}
+
+
+.msd-table--xl {
+
+  th,
+  td {
+    padding: $xxl;
+  }
+
+}

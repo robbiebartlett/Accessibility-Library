@@ -1,0 +1,53 @@
+/* ========================================================================
+   #Global
+   ======================================================================== */
+
+   /**
+   * The global settings contains any site wide variables and elements that
+   * can be adjusted to affect the entire codebase.
+   * 
+   */   
+   
+   @import "settings/variables";
+
+ // Standardise UI treatments.
+
+ $msd-radius: .125rem !default;
+ $msd-transition: all .25s ease-in-out !default;
+ $msd-spacing: 1rem !default; //alias = $null
+ $msd-hr-spacing: 1.625rem !default;
+ 
+ 
+
+//Aliases to provide shorthand scripts for refining SASS code 
+
+//Extra small spacing 
+$xs   :   $msd-spacing-unit-xs;   //.375rem
+
+//Small spacing
+$sm    :   $msd-spacing-unit-sm;  //.750rem
+
+//Default spacing
+$null  :   $msd-spacing;          //1.0rem
+
+//Small plus
+$sp    :   $msd-spacing-unit-sp;  //1.125rem
+
+//Medium spacing
+$md    :   $msd-spacing-unit-md;  //1.5rem
+
+//Large spacing
+$lg    :   $msd-spacing-unit-lg;  //2.0rem
+
+//Extra large spacing
+$xl    :   $msd-spacing-unit-xl;  //3.0rem
+
+//Extra large spacing - plus size
+$xxl   :   $msd-spacing-unit-xxl; //6.0rem
+
+
+
+
+
+
+

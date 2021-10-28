@@ -1,0 +1,23 @@
+/* ========================================================================
+   #Fonts
+   ======================================================================== */
+
+/**
+ * Style the basic fontstack. Add additional fonts accordingly 
+ * ./tools/typography.scss
+ *
+ * .example {
+ *    @include font(primary, regular);
+ *  }
+ *
+ */
+
+ // Fonts
+$fonts: (
+  primary: (stack: (Verdana, Geneva, sans-serif), weights: (regular: 400, medium: 500, bold: 700)),
+  serif: (stack: (Merriweather, Georgia, 'Times New Roman', serif), weights: (regular: 400, medium: 500, bold: 700)),
+  blockquote: (stack: (Georgia, Times, Times New Roman, serif), weights: (regular: 400, medium: 500, bold: 700)),
+  mono: (stack: ('Source Code Pro', Courier, mono), weights: (regular: 400, medium: 500, bold: 700)),
+  verdanaPro: (stack: ('Verdana Pro', sans-serif), weights: (regular: 400)),
+  verdanaPro-SemiBold: (stack: ('Verdana Pro SemiBold', sans-serif), weights: (semiBold: 600)),
+);

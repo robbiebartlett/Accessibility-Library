@@ -1,0 +1,171 @@
+/* ==========================================================================
+   #Accordion
+   ========================================================================== */
+
+  /**
+   * Use accordions to provide a show/hide option for sections of content on 
+   * complex pages.
+   *
+   *
+   * Avoid using an accordion for content that is essential to all users. 
+   * Accordions hide content from users and prevent it from being found with 
+   * in-page (CTRL-F) search.
+   *
+   * Reference: https://www.hassellinclusion.com/blog/accessible-accordions-part-2-using-details-summary/
+   *
+   */
+
+    .msd-accordion {
+      display: flex;
+      flex-direction: column;
+      margin-top: $lg;
+      margin-bottom: $lg;
+    }
+
+    .msd-accordion__controls {
+      border-bottom: 1px solid colour(govnz-light-grey);
+      display: flex;
+      justify-content: flex-end;
+   
+    .msd-accordion__toggle {
+      background: none;
+      border-radius: 0;
+      border-width: 0;
+      border-bottom: none;
+      box-shadow: 0 -2px transparent, 0 2px colour(govnz-link);
+      color: colour(govnz-link);
+      cursor: pointer;
+      @include font-size(18px);
+      line-height: 1.65;
+      margin-bottom: $null;
+      padding: 0;
+      z-index: z(footer);
+
+      &:hover:not(:focus) {
+        border: none;
+        box-shadow: 0 -2px transparent, 0 3px colour(govnz-link-active);
+        color: colour(govnz-link-active);
+      }
+
+      &:focus-visible:not(:focus) {
+        outline: 3px solid transparent;
+        text-decoration: none;
+      }
+
+    }
+
+  }
+    
+    .msd-accordion__details {
+      border-bottom: 1px solid colour(govnz-light-grey);
+      color: colour(govnz-slate);
+      padding: 0;
+
+      & > summary::-webkit-details-marker {
+        display: none;
+      }
+
+      &[open] > .msd-accordion__summary span::before {
+        height: 0;
+      }
+
+    }
+
+    .msd-accordion__summary {
+      cursor: pointer;
+      list-style: none;
+      margin: $xs 0;
+      padding: $xs 0;
+      position: relative;
+
+      & > * {
+        display: inline;
+      }
+
+      & .lead {
+        display: block;
+        margin: $xs $lg 0 0;
+        max-width: 60ch;
+      }
+
+      &:focus:not(:hover) h2 {
+        background-color: colour(msd-focus);
+        border-bottom: none;
+        box-shadow: 0 -2px colour(msd-focus), 0 4px colour(govnz-link-active);
+        color: colour(govnz-link-active);
+        outline: 3px solid transparent;
+        text-decoration: none;
+      }
+
+      &:focus-visible {
+        outline: 0;
+      }
+
+      &:hover:not(:focus) h2 {
+        box-shadow: 0 -2px transparent, 0 2px colour(govnz-slate);
+        cursor: pointer;
+        outline: none;
+      }
+
+      &::-webkit-details-marker {
+        display: none;
+      }
+
+    }
+
+    .msd-accordion__icon {
+      height: 1rem;
+      left: 0;
+      margin-top: 1px;
+      position: absolute;
+      top: 15px;
+      width: 1rem;
+  
+        &:before, &:after{
+        content: "";
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 25%;
+        height: 25%;
+        margin: auto;
+        border: 2px solid transparent;
+        background-color: colour(govnz-slate);
+        }
+
+        &:after {
+        width: 100%;
+        }    
+        &:before {
+        height: 100%;
+        }    
+
+    }
+
+    .msd-accordion__title {
+      border-bottom-color: transparent;
+      font-size: 1.35rem;
+      line-height: 1.65;
+      margin: 0 $lg;
+      padding-bottom: .125vh;
+    }
+
+    .msd-accordion__content {
+        margin: $xs 0;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    

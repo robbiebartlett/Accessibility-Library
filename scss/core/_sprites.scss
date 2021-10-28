@@ -1,0 +1,97 @@
+/* ========================================================================
+  #Sprites
+  ======================================================================== */
+ 
+/**
+  * Sprites rendered through the Mustache template
+  *
+  *  _./templates/sprite_template.scss
+  *
+  * embed within _./components/icons.scss
+  *
+  * .example {
+  *   @extend .my--shape;
+  * }
+  *
+  */
+
+  .msd-icon {
+    display: inline-flex;
+    width: 1em;
+    height: 1em;
+    fill: currentColor;
+  }
+  
+  
+  .icons--accessibility {
+    font-size:(200/10)*1rem;
+    width:(200/200)*1em;
+  }
+  .icons--alert {
+    font-size:(35/10)*1rem;
+    width:(36/35)*1em;
+  }
+  .icons--arrow-down {
+    font-size:(24/10)*1rem;
+    width:(24/24)*1em;
+  }
+  .icons--arrow-left {
+    font-size:(24/10)*1rem;
+    width:(24/24)*1em;
+  }
+  .icons--arrow-right {
+    font-size:(24/10)*1rem;
+    width:(24/24)*1em;
+  }
+  .icons--arrow-up {
+    font-size:(24/10)*1rem;
+    width:(24/24)*1em;
+  }
+  .icons--back-to-top {
+    font-size:(17/10)*1rem;
+    width:(16/17)*1em;
+  }
+  .icons--content {
+    font-size:(200/10)*1rem;
+    width:(200/200)*1em;
+  }
+  .icons--creative-commons {
+    font-size:(32/10)*1rem;
+    width:(32/32)*1em;
+  }
+  .icons--creative-commons-attribution {
+    font-size:(32/10)*1rem;
+    width:(32/32)*1em;
+  }
+  .icons--development {
+    font-size:(176.1/10)*1rem;
+    width:(200/176.1)*1em;
+  }
+  .icons--printer {
+    font-size:(24/10)*1rem;
+    width:(24/24)*1em;
+  }
+  .icons--product {
+    font-size:(200/10)*1rem;
+    width:(200/200)*1em;
+  }
+  .icons--search {
+    font-size:(24/10)*1rem;
+    width:(24/24)*1em;
+  }
+  .icons--ux {
+    font-size:(200/10)*1rem;
+    width:(200/200)*1em;
+  }
+  .icons--visual {
+    font-size:(200/10)*1rem;
+    width:(200/200)*1em;
+  }
+  .msd--logo {
+    font-size:(148/10)*1rem;
+    width:(631/148)*1em;
+  }
+  .nz-govt--logo {
+    font-size:(338.07/10)*1rem;
+    width:(1504.69/338.07)*1em;
+  }

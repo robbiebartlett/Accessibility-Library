@@ -1,0 +1,43 @@
+/* ==========================================================================
+   #Column count
+   ========================================================================== */
+
+/**
+  * Default styling for creating paragraph columns, if no column-rule required
+  * use $null. 
+  *
+  * .msd-column-count {
+  *    @include column-split(2, 5%, 3px solid colour(govnz-slate)); 
+  *  }
+  *
+  * Will render as:
+  *
+  * .msd-column-count {
+  *   column-count: 2;
+  *   column-gap: 5%;
+  *   column-rule: 3px solid #d3d3d3;
+  * }
+  *
+  */
+
+  // Mixin
+  @mixin column-split($columns, $gap, $rule) {	
+
+    // Number of columns
+    -webkit-column-count: $columns;
+    -moz-column-count: $columns;
+    column-count: $columns;	
+
+    // Gap size
+    -webkit-column-gap: $gap;
+    -moz-column-gap: $gap;
+    column-gap: $gap;
+
+    // Column rule
+    -webkit-column-rule: $rule;
+    -moz-column-rule: $rule;
+    column-rule: $rule;
+  }
+
+
+

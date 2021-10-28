@@ -1,0 +1,34 @@
+/* ==========================================================================
+   #Device pixels
+   ========================================================================== */
+
+/**
+  * Media query for retina images (device-pixel-ratio)
+  * 
+  *
+  * Providing a @2x image for screens that support it:
+  *
+  * .example {
+  *   @include msd-device-pixel-ratio {
+  *     background-image: msd-image-url("my-image-2x.png");
+  *   }
+  *
+  * Using a custom ratio
+  *
+  * .example {
+  *   @include msd-device-pixel-ratio(3) {
+  *     background-image: msd-image-url("my-image-3x.png");
+  *   }
+  *
+  */ 
+
+@mixin msd-device-pixel-ratio($ratio: 2) {
+  @media only screen and (-webkit-min-device-pixel-ratio: $ratio),
+    only screen and (min--moz-device-pixel-ratio: $ratio),
+    only screen and (  -o-min-device-pixel-ratio: #{($ratio*10)} / 10),
+    only screen and (     min-device-pixel-ratio: $ratio),
+    only screen and (             min-resolution: #{($ratio*96)}dpi),
+    only screen and (             min-resolution: #{$ratio}dppx) {
+      @content;
+    }
+}

@@ -1,0 +1,123 @@
+/* ==========================================================================
+   #List
+   ========================================================================== */
+
+/**
+ * List-like with the addition of styles and indentation.
+ * 
+ * list-inline :72
+ * list-bare :92
+ */
+
+
+ .msd-list {
+   font-size: $null;
+   line-height: 1.5;
+   list-style: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E");
+   margin: $sm 0;
+   padding-left: 0;
+
+
+   > p {
+      margin-bottom: $xs;
+   }
+
+ }
+
+ /*
+  * Reference: https://www.scottohara.me/blog/2019/01/12/lists-and-safari.html
+  *
+  */
+ .msd-list__section {
+   font-size: 1.125rem;
+   margin-top: $xs;
+   margin-bottom: $lg;
+   margin-left: $xs;
+   padding-left: $sm;
+
+   &:last-of-type {
+     margin-bottom: 0;
+   }
+
+ }
+ 
+ .msd-list__section--square {
+   list-style-type: square;
+ }
+
+  .msd-list--bullet {
+    list-style-type: disc;
+  }
+
+  .msd-list--number{
+    list-style-type: decimal;
+  }
+
+  .msd-list__sub-list {
+    font-size: 1.125rem;
+    margin-top: $md;
+  }
+
+  .msd-list__section--item {
+    line-height: 1.5;
+    margin: $xs $xs $md $null;
+
+      &:last-of-type {
+        margin-bottom: $lg;
+      }
+ 
+  }
+
+
+
+
+//List inline
+
+  /*
+   * The list-inline object simply displays a list of items in one line.
+   */
+
+.msd-list-inline {
+  margin-bottom: $null;
+  margin-left: 0;
+  list-style: none;
+
+}
+
+.msd-list-inline__item {
+  color: colour(govnz-slate);
+  display: inline-flex;
+  margin-right: $null;
+
+  &> * {
+    margin-right: $xs;
+  }
+
+}
+
+
+
+
+//List bare
+
+/*
+ * Strip list-like appearance from lists by removing their bullets and any
+ * indentation.
+ *
+ * Note: Declaring the item class might not be necessary everywhere,
+ * but is for example in <dl> lists for the <dd> children.
+ */
+
+ .msd-list-bare {
+  list-style: none;
+  margin-left: 0;
+}
+
+  .msd-list-bare__item {
+    margin-left: 0;
+  }
+
+
+
+
+

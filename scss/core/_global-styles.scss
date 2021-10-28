@@ -1,0 +1,150 @@
+/* ========================================================================
+  #Global styles
+  ======================================================================== */
+
+/**
+ * Global styles for html, body, paragraph
+ * 
+ */
+
+
+ /**
+  * [1] Set the default `font-size` and `line-height` for the entire project,
+  * sourced from the default variables. The `font-size` is calculated to exist
+  * in %, the `line-height` is calculated to exist unitlessly.
+  * [2] Force scrollbars to always be visible to prevent ‘jumps’ when
+  * navigating between pages that do/don't have enough content to produce
+  * scrollbars naturally.
+  * 
+  * [3] Ensure the page always fills at least the entire height of the viewport
+  *
+  * [4] Prevent certain mobile browsers from automatically zooming fonts.
+  *
+  * [5] Use iOS hardware acceleration for native scrolling
+  *
+  * [6] For removing the highlight over a link while it's being tapped
+  *
+  * [7] Word spacing minimum .16 times the font size to meet accessiblity standards
+  *
+  */
+  html {
+    font-size: ($msd-font-size / 1rem) * 100%; /* [1] */
+    line-height: $msd-line-height / $msd-font-size; /* [1] */
+    overflow-y: scroll; /* [2] */
+    min-height: 100vh; /* [3] */
+    -ms-text-size-adjust: 100%; /* [4] */
+    text-size-adjust: 100%; /* [4] */
+    -webkit-overflow-scrolling: touch; /* [5] */
+    -webkit-tap-highlight-color: transparent; /* [6] */
+    word-spacing: ($msd-font-size / 1rem) * .16rem; /* [7] */
+  }
+  
+  
+
+
+
+
+  //Body
+  body {
+    background-color: colour(govnz-white);
+    color: colour(govnz-slate);
+    @include font(primary, medium);
+    padding: 0;
+  }
+  
+  // page wrapper
+  .msd-pane {
+    overflow-x: hidden;
+  }
+  
+  // <main> container
+  .main-container {
+    padding-bottom: $null;
+    min-height: 35vh;
+  }
+  
+  // <main> content
+  .main-container__content {
+    margin-top: $md;
+    
+    @include mq($from: desktop ) {
+      margin-top: $xl;
+    } 
+  
+  }
+  
+  
+  //Paragraphs
+  
+   /**
+   * Set paragraph leading. Change font-size if required line :39
+   *
+   * [1] Fonts on OSX will look more consistent with other systems that do not
+   *     render text using sub-pixel anti-aliasing.
+   *
+   * [2] Provides information to the rendering engine about what to optimize  
+   *     when rendering text
+   *
+   * [3] Paragraph line length is set to a maximum of 66 characters, to provide  
+   *     more efficient reading. Reference: 
+   *     http://web-accessibility.carnegiemuseums.org/design/font/
+   *
+   * [4] Font is set at legible size 
+   *
+   */
+  
+   p {
+    font-size: $sp; /* [4] */
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: $sp;
+    max-width: 66ch; /* [3] */
+    -moz-osx-font-smoothing: grayscale; /* [1] */
+    -webkit-font-smoothing: antialiased; /* [1] */ 
+    text-transform: none;
+    text-rendering: optimizeLegibility; /* [2] */
+  
+    &.lead {
+      @include font-size(20px);
+      max-width: 70ch;
+    }
+  
+  }
+  
+  
+  // First-line indentation style.
+  //
+  // Wrap paragraps with `indented` class to remove margin and indent first line
+  // of adjacent paragraphs.
+  //
+  .indented {
+  
+    p {
+  
+      + p {
+        margin-top: -#{$md};
+        text-indent: $md;
+      }
+    }
+  }
+
+
+// Column count
+  .msd-column-count { 
+    margin-bottom: $xl;
+    @include column-split(1, 0, $null); 
+
+    @include mq($from: tablet) {
+      @include column-split(2, 40px, $null); 
+    }
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+    
+  

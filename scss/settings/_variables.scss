@@ -1,0 +1,103 @@
+/* ========================================================================
+   #Settings
+   ======================================================================== */
+
+/**
+ * The settings file establishes key setup variables. They set how the SCSS
+ * framework functions, only modify and preconfigure with caution. 
+ *
+ * refer to core/global.scss for site wide variables & shorthand rules
+ * 
+ */
+
+
+
+ 
+// Baseline grid lines height. Every spacing metric is based on this.
+$msd-baseline: .375rem !default;
+
+
+// How many grid lines should the spacing unit variants span?
+// Each value should be a unitless integer.
+$msd-spacing-unit-factor-xs:      1 !default;   //  extra small .375rem
+$msd-spacing-unit-factor-sm:      2 !default;   //  small .750rem  
+$msd-spacing-unit-factor-sp:      3 !default;   //  small plus 1.125rem 
+$msd-spacing-unit-factor-md:      4 !default;   //  medium 1.5rem
+$msd-spacing-unit-factor-lg:      5 !default;   //  large 1.875rem
+$msd-spacing-unit-factor-xl:      8 !default;   //  extra large 3.0rem
+$msd-spacing-unit-factor-xxl:     16 !default;  //  extra extra large 6.0rem
+
+
+
+
+
+
+// Spacing values are determined based on the project’s global baseline grid.
+// It is not recommended that you modify the following variables
+$msd-spacing-unit-xs:    $msd-baseline * $msd-spacing-unit-factor-xs  !default;
+$msd-spacing-unit-sm:    $msd-baseline * $msd-spacing-unit-factor-sm  !default;
+$msd-spacing-unit-sp:    $msd-baseline * $msd-spacing-unit-factor-sp  !default;
+$msd-spacing-unit-md:    $msd-baseline * $msd-spacing-unit-factor-md  !default;
+$msd-spacing-unit-lg:    $msd-baseline * $msd-spacing-unit-factor-lg  !default;
+$msd-spacing-unit-xl:    $msd-baseline * $msd-spacing-unit-factor-xl  !default;
+$msd-spacing-unit-xxl:   $msd-baseline * $msd-spacing-unit-factor-xxl !default;
+
+
+
+
+
+
+// Base typographical styles.
+$msd-font-size:                1rem!default; 
+$msd-line-height:              $msd-spacing-unit-md !default;
+$msd-quote-width:              .41em !default;
+$msd-open-quote:               “ !default;
+$msd-close-quote:              ” !default;
+
+
+
+// Check that the chosen font rules are rem numbers.
+
+@each $_msd-font-globals in
+      $msd-font-size
+      $msd-line-height {
+
+  @if (type-of($_msd-font-globals) == number) {
+
+    @if (unit($_msd-font-globals) != "rem") {
+      @error "`#{$_msd-font-globals}` needs to be a rem value.";
+    }
+
+  } @else {
+    @error "`#{$_msd-font-globals}` needs to be a number.";
+  }
+
+}
+
+
+// Check that the chosen size factors are unitless, integer numbers.
+@each $_msd-spacing-unit in
+      $msd-spacing-unit-factor-xs
+      $msd-spacing-unit-factor-xs
+      $msd-spacing-unit-factor-sm
+      $msd-spacing-unit-factor-md
+      $msd-spacing-unit-factor-lg
+      $msd-spacing-unit-factor-xl
+      $msd-spacing-unit-factor-xxl {
+
+  @if (type-of($_msd-spacing-unit) == number) {
+
+    @if (unitless($_msd-spacing-unit) == false) {
+      @error "`#{$_msd-spacing-unit}` needs to be unitless.";
+    }
+
+    @if ($_msd-spacing-unit != ceil($_msd-spacing-unit)) {
+      @error "`#{$_msd-spacing-unit}` needs to be an integer.";
+    }
+
+  } @else {
+    @error "`#{$_msd-spacing-unit}` needs to be a number.";
+  }
+
+}
+
