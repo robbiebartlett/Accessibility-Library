@@ -3,253 +3,164 @@
    ========================================================================== */
 
 
+
+//Settings
+
 /**
- * This is where global variables and site settings are located. 
+ * Global variables and site settings. 
+ * This layer should not output any CSS.
  *
- * core.................core file establishes key setup variables.
  * global...............overall project variables and settings.
+ * variables............establishes key setup variables.
  */
+@import "./settings/global";
+@import "./settings/variables";
 
 
 
 
 
-//TOOLS 
+// Tools
 
 /**
- * The tools folder defines the project mixins and functions
+* Mixins or functions that implement either logic (e.g. conditionally 
+* outputting CSS) or calculations, and that need to be made available globally.
+* This layer should not output any CSS.
+*/
+@import "./tools/border";
+@import "./tools/border-radius";
+@import "./tools/clearfix";
+@import "./tools/colours";
+@import "./tools/columns";
+@import "./tools/device-pixels";
+@import "./tools/font-size";
+@import "./tools/horizontal-rule";
+@import "./tools/links";
+@import "./tools/masthead";
+@import "./tools/media-queries"; 
+@import "./tools/paragraphs";
+@import "./tools/placeholder";
+@import "./tools/spacings";
+@import "./tools/typography";
+@import "./tools/z-index";
+
+
+
+
+
+//Generic
+
+/**
+ * Low-specificity, far-reaching rule sets such as normalize.css and reset.
  *
- * typography...........Functions & Mixins to establish font stack and weight.
- * font-size............Mixin to automatically scale font size.
- * clearfix.............Micro clearfix Mixin.
- * colours..............colours & function to setup colour values by name.
- * links................shorthand for paragraph anchor links.
- * aliases..............shorthand for longer naming conventions.
- * z-index..............function to setup z-index by names.
- * media queries........default media query manager.
- * sprites..............function & mixins for SVG elements
- * border...............border function generated as classes.
- * border-radius........one line methodology for setting border-radius.
- * columns..............set column count, gaps and rules.
- * placeholder..........style all browser placeholder settings.
- * masthead.............mixin to set the masthead image to device width
  */
+
+ @import "./generic/box-sizing";
+ @import "./generic/normalize";
+ @import "./generic/reset";
+ @import "./generic/shared";
+
  
 
 
 
-
-//GENERIC
-
-/**
- * Low-specificity, far-reaching rulesets such as normalize.css and reset.
- *
- * box-sizing...........default `box-sizing`.
- * normalize.css........render browsers more consistently with modern standards.
- * reset................reset to complement Normalize.css.
- * shared...............sensibly and tersely share some global commonalities.
-    
  
-
-
-
-//ELEMENTS
+//Core
 
 /**
- * Styles required for unclassed HTML elements - links, blockquotes, 
- * pages, images, tables etc. - create simple stylesheets in this folder
- * 
- * page.................document’s default font-size, line-height, word-spacing
- * headings.............minimal (i.e. only font-size information) for
- *                      headings 1 through 6.
- * images...............base image styles.
- * tables...............accessible table styles.
- * blockquote...........simple blockquote styles.
- * paragraph............set paragraph leading
- * phrasing.............phrasing-level elements, abbreviations & acronyms
- * horizontal-rule......set horizontal rule styles.
- * callouts.............base callout styles.
-
-
-
-
-
-
-//OBJECTS 
-
-/**
- * Place objects, abstractions, and design patterns here (i.e. .layout {})
- *
- * container............page width constraint object.
- * flexbox..............generic layout module utlizing Flexbox.
- * media................image and text-like content side by side. 
- * list.................lists with bullet and indent options.
- * list-bare............lists with no bullets or indents.
- * list-inline..........A list whose items all site in a line.
- * box..................simple boxing abstraction.
- * block................image-on-top-of-text object.
- * ratio................container for maintaining aspect ratio of content.
- * crop.................provide a cropping context for media (images, etc.).
- * table................classes for manipulating `table`s.
-
-
-
-
-
-
-
-//UTILITIES
-
-/**
- * This folder is for all the high-specificity, very explicit selectors 
- * including overrides and helpers. (i.e. .hidden)
- * 
- * hidden...............correct semantics for inclusive design
- * headings.............reassigning heading styles to helper classes.
- * print................reset-like styles taken from the HTML5 Boilerplate.
- * spacings.............nudge bits of the DOM with these spacing classes.                      
- * widths...............simple width helper classes.
+ * Basic content styles for typography, links etc. The classes defined in this 
+ * layer would generally correspond to an HTML element - for example paragraphs,  
+ * headings, lists or links.
  */
 
+@import "./core/blockquotes";
+@import "./core/callouts";
+@import "./core/colour-palette";
+@import "./core/fonts";
+@import "./core/global-styles";
+@import "./core/headings";
+@import "./core/images";
+@import "./core/link-colours";
+@import "./core/phrasing";
+@import "./core/sprites";
+@import "./core/tables";
 
 
 
-  
+
+
+
+
+
+
+
+
+//Objects 
+
+/**
+ * Objects, abstractions, and design patterns can range from simple elements 
+ * such as a wrapper element, to layout systems.They can be used in any
+ * number of unrelated contexts to the one you can see it in. 
+ * Modifications to these classes may have site wide knock-on effects
+ * 
+ */
+
+@import './objects/container';
+@import './objects/crop';
+// @import './objects/css-grid';
+@import './objects/flexbox';
+@import './objects/list';
+@import './objects/media';
+@import './objects/ratio';
+@import './objects/table';
+@import './objects/widths';
+
+
+
+
+
 //Components 
 
 /**
- * Contains specific sections of UI modules such as sliders, loaders, widgets  
- * (i.e. .msd-checkbox {}).
- * 
- * Alert................Alerts below the header for events of significance
- * Back to top..........Standard return to the top of page link
- * Body.................Base body styles, font, background etc
- * Buttons..............An example button component, and how it fits into the
- * Caption..............Used as a subject prior to a main title
- * Checkbox.............mixin  & function to setup checkboxes 
- * Divider..............Base element divider
- * Icons................Style icon elements against the Sprite mixin 
- * Page-header..........Generic Header
- * Page-footer..........Generic footer
- * Navigation...........Generic navigation
- * Search...............Generic search bar
- * Filter...............Filter used to refine search results or forms
- * Masthead.............Page banner settings
- * Utilities............Page sub footer utilties, date, print, return to top
- * Pagination...........Generic pagination
+ * Contains specific sections of UI modules such as sliders, loaders,   
+ * accordion etc.
  */
 
-
-
-
-
-
-// SETTINGS
-@import "./settings/core";
-@import "./settings/global";
-
-
-
-
-
-// TOOLS
-@import "./tools/typography";
-@import "./tools/font-size";
-@import "./tools/clearfix";
-@import "./tools/colors";
-@import "./tools/links";
-@import "./tools/aliases";
-@import "./tools/z-index";
-@import "./tools/media-queries"; 
-@import "./tools/sprites";
-@import "./tools/border";
-@import "./tools/border-radius";
-@import "./tools/columns";
-@import "./tools/placeholder";
-@import "./tools/masthead";
-
-
-
-
-
-
-// GENERIC
-@import "./generic/box-sizing";
-@import "./generic/normalize";
-@import "./generic/reset";
-@import "./generic/shared";
-
-
-
-
-
-// ELEMENTS
-@import "./elements/page";
-@import "./elements/headings";
-@import "./elements/images";
-@import "./elements/tables";
-@import "./elements/blockquotes";
-@import "./elements/paragraphs";
-@import "./elements/phrasing";
-@import "./elements/horizontal-rule";
-@import "./elements/callouts";
-
-
-
-
-
-// OBJECTS
-@import './objects/container';
-@import './objects/flexbox';
-@import './objects/media';
-@import './objects/list';
-@import './objects/list-bare';
-@import './objects/list-inline';
-@import './objects/box';
-@import './objects/block';
-@import './objects/ratio';
-@import './objects/crop';
-@import './objects/table';
-
-
-
-
-
-// UTILITIES
-@import "./utilities/hidden";
-@import "./utilities/headings";
-@import "./utilities/print";
-@import "./utilities/spacings";
-@import "./utilities/widths";
-
-
-
-
-
-// COMPONENTS
 @import "./components/accordion";
 @import "./components/alert";
+@import "./components/articles";
 @import './components/back-to-top';
-@import "./components/body";
 @import "./components/buttons";
 @import "./components/breadcrumbs";
 @import './components/caption';
 @import './components/card';
-@import './components/checkbox';
+@import './components/checkboxes';
 @import "./components/divider";
-@import "./components/icons";
-@import "./components/page-header";
-@import "./components/page-footer";
-@import "./components/navigation";
-@import "./components/search";
 @import "./components/filter";
-@import "./components/skip-links";
+@import "./components/icons";
 @import "./components/masthead";
-@import "./components/articles";
-@import "./components/page-utilities";
+@import "./components/navigation";
+@import "./components/page-footer";
+@import "./components/page-header";
 @import "./components/pagination";
+@import "./components/page-utilities";
+@import "./components/search";
+@import "./components/skip-links";
 
 
 
 
 
+
+
+
+//Utilities
+
+/**
+ * Utility classes are high-specificity, very explicit selectors 
+ * including overrides and helpers. (e.g. visually-hidden)
+ * 
+ */
+
+ @import "./utilities/visually-hidden";
+ @import "./utilities/print";
