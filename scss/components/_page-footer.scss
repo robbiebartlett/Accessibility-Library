@@ -3,16 +3,16 @@
    ========================================================================== */
 
 .msd-footer {
-    background-color: color(govnz-dark-grey);
+    background-color: colour(govnz-dark-grey);
     padding: $lg 0 $null;
     position: relative;
     z-index: z(footer);
 }
 
 .msd-footer__small-text {
-    color: color(govnz-white);
+    color: colour(govnz-white);
     font-size: $sm;
-    margin-bottom: $sm;
+    margin-bottom: $sp;
     @include font(primary, regular);
 
      // External icon size
@@ -22,10 +22,6 @@
         width: $sm;
     }
 }
-
-
-
-
 
 .msd-footer__logotype {
     align-items: center;
@@ -41,7 +37,7 @@
 
 //NZ gov logo
 .msd-footer__logotype--nz-govt-logo {
-    color: color(govnz-white);
+    color: colour(govnz-white);
     display: flex;
     flex-direction: column;
     font-size: $sm;
@@ -50,16 +46,16 @@
     &:hover:not(:focus) {
       background-color: transparent;
       box-shadow: none;
-      color: color(govnz-off-white);
+      color: colour(govnz-off-white);
       outline: 3px solid transparent;
       padding: 0;
       text-decoration: none;
     } 
 
     &:focus:not(:hover) {
-      background-color: color(msd-focus);
-      box-shadow: 0 -2px color(msd-focus),0 4px color(govnz-link-active);
-      color: color(govnz-link-active);
+      background-color: colour(msd-focus);
+      box-shadow: 0 -2px colour(msd-focus),0 4px colour(govnz-link-active);
+      color: colour(govnz-link-active);
       outline: 3px solid transparent;
       padding: 0;
       text-decoration: none;
@@ -106,8 +102,12 @@
     }
 
     @include mq($from: mobile) {
-        margin: $xs $md;
-        padding: $sm $sm; 
+        margin: $xs $null;
+    }   
+    
+    @include mq($from: desktop) {
+        margin: $xs $null;
+        padding: $sm; 
     }
 
 }
@@ -116,7 +116,7 @@
 
 //links
 .msd-footer__nz-govt--link {
-    color: color(govnz-white);
+    color: colour(govnz-white);
     font-family: arial;
     text-decoration: none;
     position: absolute;
@@ -127,17 +127,22 @@
 }
 
 .msd-footer__link {
+    @include font-size(16px);
     @include font(primary, regular);
-    @include linkColours ((color(govnz-off-white)), (color(govnz-off-white)), 
-    (color(govnz-white)), (color(govnz-white)));
+    @include linkColours ((colour(govnz-off-white)), (colour(govnz-off-white)), 
+    (colour(govnz-white)), (colour(govnz-white)));
     border-bottom-color: transparent;
+
+    &:hover:not(:focus) {
+      border-bottom-width: 2px;
+    }
 }
 
 // External links 
 // base64 format used as background image
 .msd-footer__link--external {
 
-&::after {
+  &::after {
     content: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 576 512'%3E%3Cpath fill='%23D3D3D3' d='M576 24v127.984c0 21.461-25.96 31.98-40.971 16.971l-35.707-35.709-243.523 243.523c-9.373 9.373-24.568 9.373-33.941 0l-22.627-22.627c-9.373-9.373-9.373-24.569 0-33.941L442.756 76.676l-35.703-35.705C391.982 25.9 402.656 0 424.024 0H552c13.255 0 24 10.745 24 24zM407.029 270.794l-16 16A23.999 23.999 0 00384 303.765V448H64V128h264a24.003 24.003 0 0016.97-7.029l16-16C376.089 89.851 365.381 64 344 64H48C21.49 64 0 85.49 0 112v352c0 26.51 21.49 48 48 48h352c26.51 0 48-21.49 48-48V287.764c0-21.382-25.852-32.09-40.971-16.97z'/%3E%3C/svg%3E");
     display: inline-flex;
     left: 4px;
@@ -168,33 +173,33 @@
 
 //copyright
 .msd-footer__copyright {
-    color: color(govnz-off-white);
+    color: colour(govnz-off-white);
     margin-top: $lg;
     text-decoration: none;
 
     &:hover:not(:focus) {
-        color: color(govnz-white);
+        color: colour(govnz-white);
     }
 }
 
 .msd-footer__copyright--logo {
-    color: color(govnz-off-white);
-    margin: $xs $null$md 0;
+    color: colour(govnz-off-white);
+    margin: $xs $null $md 0;
     align-items: center;
     display: inline-flex;
     text-decoration: none;
 
     &:focus:not(:hover) {
-        background-color: color(msd-focus);
-        box-shadow: 0 -2px color(msd-focus),0 4px color(govnz-link-active);
-        color: color(govnz-slate);
+        background-color: colour(msd-focus);
+        box-shadow: 0 -2px colour(msd-focus),0 4px colour(govnz-link-active);
+        color: colour(govnz-slate);
         outline: 3px solid transparent;
         padding: 0;
         text-decoration: none;
     }
 
     &:hover:not(:focus) {
-        color: color(govnz-white);
+        color: colour(govnz-white);
     }
 
     @include mq($from: mobile) {

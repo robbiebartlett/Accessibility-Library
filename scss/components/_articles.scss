@@ -47,8 +47,8 @@
 }
 
 .msd-article--link {
-  border-bottom: 2px solid color(govnz-link);
-  color: color(govnz-link);
+  border-bottom: 2px solid colour(govnz-link);
+  color: colour(govnz-link);
   @include font(primary, bold);
   @include font-size(20px);
   line-height: 1.5;
@@ -56,16 +56,16 @@
   text-decoration: none;
 
   &:hover:not(:focus) {
-    border-bottom: 2px solid color(govnz-link-hover);
-    color: color(govnz-link-hover);
+    border-bottom: 3px solid colour(govnz-link-hover);
+    color: colour(govnz-link-hover);
     outline: none;
   }
 
   &:focus:not(:hover) {
-    background-color: color(msd-focus);
+    background-color: colour(msd-focus);
     border-bottom: 2px solid transparent;
-    box-shadow: 0 -2px color(msd-focus),0 4px color(govnz-link-active);
-    color: color(govnz-link-active);
+    box-shadow: 0 -2px colour(msd-focus),0 4px colour(govnz-link-active);
+    color: colour(govnz-link-active);
     outline: 3px solid transparent;
     padding: 0;
     text-decoration: none;

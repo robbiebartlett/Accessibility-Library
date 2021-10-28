@@ -3,14 +3,17 @@
    ========================================================================== */
 
   /**
-   * In this markup the <nav> element has an aria-label="breadcrumb" to announce 
+   * The Breadcrumbs component helps users to understand where they are within 
+   * a website’s structure and move between levels.
+   *
+   * In this markup the <nav> element uses an aria-label="breadcrumb" to announce 
    * this as a "breadcrumb navigation" to screen readers. 
    *
    * The aria-current="page" is placed on the last element in the breadcrumb  
    * navigation to append "current page to the announcement of the accessible  
    * name of the link. 
    *
-   * i.e. "About, current page"
+   * e.g. "About, current page"
    *  
    */
 
@@ -26,12 +29,12 @@
       display: flex;
       flex-wrap: wrap;
       margin-top: $sm;
-      margin-left: $null;
+      margin-left: $xs;
       padding: $sm;
     }
 
     .msd-breadcrumb__list-item {   
-      @include font-size(15px);
+      @include font-size(16px);
       line-height: 1.67;
 
       & + .msd-breadcrumb__list-item {
@@ -39,7 +42,7 @@
       }
 
       & + .msd-breadcrumb__list-item::before {
-         color: color(govnz-dark-grey);
+         color: colour(govnz-dark-grey);
          content: "/";
          display: inline-flex;
          padding-right: $xs;
@@ -47,7 +50,7 @@
 
      //Current link
      &[aria-current] {
-       color: color(msd-text);
+       color: colour(msd-text);
      }
 
      //Hide current link in mobile
@@ -63,21 +66,22 @@
     }
 
    .msd-breadcrumb__link {
-      border-bottom: 2px solid color(govnz-link);
-      color: color(govnz-link);
+      border-bottom: 2px solid colour(govnz-link);
+      color: colour(govnz-link);
       padding-bottom: 2px;
       text-decoration: none;
 
      &:hover:not(:focus) {
-         border-bottom-color: color(govnz-link-hover);
-         color: color(govnz-link-hover);
+         border-bottom-color: colour(govnz-link-hover);
+         border-bottom-width: 3px;
+         color: colour(govnz-link-hover);
      }
 
      &:focus:not(:hover) {
-      background-color: color(msd-focus);
+      background-color: colour(msd-focus);
       border-bottom-color: transparent;
-      box-shadow: 0 -2px color(msd-focus), 0 4px color(govnz-link-active);
-      color: color(govnz-link-active);
+      box-shadow: 0 -2px colour(msd-focus), 0 4px colour(govnz-link-active);
+      color: colour(govnz-link-active);
       outline: 3px solid transparent;
       padding-bottom: 0;
       text-decoration: none;

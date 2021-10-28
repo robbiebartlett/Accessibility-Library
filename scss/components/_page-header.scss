@@ -3,7 +3,7 @@
    ========================================================================== */
 
 .msd-header {
-  background-color: color(msd-brand);
+  background-color: colour(msd-brand);
   margin: 0;
   padding: $null 0 0;
   position: relative;
@@ -23,7 +23,7 @@
     padding-bottom: $null;
 
     @include mq($from: tablet) {
-      border-bottom: 1px solid color(govnz-off-white);
+      border-bottom: 1px solid colour(govnz-off-white);
    }
 }               
 
@@ -49,21 +49,21 @@
 }
 
 .msd-header__site-logo:focus {
-  background-color: color(msd-focus);
-  color: color(govnz-link-active);
-  box-shadow: 0 -2px color(msd-focus), 0 4px color(govnz-link-active);
+  background-color: colour(msd-focus);
+  color: colour(govnz-link-active);
+  box-shadow: 0 -2px colour(msd-focus), 0 4px colour(govnz-link-active);
   outline: 3px solid transparent;
   padding: 0;
   text-decoration: none;
 
   .msd-icon__msd-logo {
-    color: color(govnz-link-active);
+    color: colour(govnz-link-active);
   }
 
 }
 
 .msd-header__product-name {
-  color: color(govnz-white);
+  color: colour(govnz-white);
   font-size: calc(16px + (22 - 16) * ((100vw - 250px) / (1800 - 250)));
   font-weight: 500;
   line-height: 1.5;

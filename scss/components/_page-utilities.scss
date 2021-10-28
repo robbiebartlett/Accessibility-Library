@@ -9,7 +9,7 @@
     */
 
   .msd-utilities {
-    border-top: 2px solid color(govnz-light-grey);
+    border-top: 2px solid colour(govnz-light-grey);
     display: flex;
     flex-direction: column;
     margin-top: $xl;
@@ -25,9 +25,9 @@
   .msd-utilities__last-modified {
     display: inline-flex;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: $null;
     justify-content: flex-start;
-    margin-bottom: 1rem;
+    margin-bottom: $null;
     padding: 0;
     width: 100%;
 
@@ -53,13 +53,12 @@
     background-color: transparent;
     border: none;
     border-bottom: 2px solid transparent;
-    color:color(msd-text);
+    color:colour(msd-text);
     cursor: pointer;
     display: flex;
     font-weight: 400;
     height: 1.5rem;
     margin-top: 1px;
-    margin-left: 1.75rem;
     padding: 0 0 .125vh 1.75rem;
     position: relative;
     text-decoration: none;
@@ -82,7 +81,7 @@
     }
 
     &:hover {
-      border-bottom-color: color(msd-text);
+      border-bottom-color: colour(msd-text);
       text-decoration: none;
       padding-bottom: .125vh;
     }
@@ -92,5 +91,9 @@
   .msd-utilities__btn--label {
     align-items: center;
     display: flex;
-    font-size: 1rem;
+    font-size: $null;
+
+    &:focus-visible {
+      outline: 0;
+    }
   }

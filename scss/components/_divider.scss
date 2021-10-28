@@ -18,13 +18,13 @@
 
 //Divider base styles
 .msd-divider {
-  @include horizontal-rule(color(govnz-dark-grey), solid, $xs/3);
+  @include horizontal-rule(colour(govnz-dark-grey), solid, $xs/3);
   height: 1px;
-  margin: $msd-hr-spacing 0;
+  margin: $null 0;
 }
 
 .msd-divider--light {
-  color: color(govnz-light-grey);
+  color: colour(govnz-light-grey);
 }
 
 
@@ -32,11 +32,15 @@
 
 //Divider applied on existing element
 .msd-add-divider {
-  border-bottom-color: color(govnz-dark-grey);
+  border-bottom-color: colour(govnz-dark-grey);
   border-bottom-width: 1px;
   border-bottom-style: solid; 
+  margin-bottom: $lg;
 }
 
 .msd-add-divider--light {
-  border-bottom-color: color(govnz-light-grey);
+  border-bottom-color: colour(govnz-light-grey);
+  border-bottom-width: 1px;
+  border-bottom-style: solid; 
+  margin-bottom: $lg;
 }

@@ -9,7 +9,7 @@
   */
 
   .skip-link {
-    color: color(msd-text);
+    color: colour(msd-text);
     @include font-size(18px);
     @include font(primary, regular);
     position: absolute;
@@ -45,9 +45,9 @@
   
   .skip-link:focus {
     outline: 3px solid transparent;
-    color: color(govnz-link-active);
-    background-color: color(msd-focus);
-    box-shadow: 0 -2px color(msd-focus), 0 4px color(govnz-link-active);
+    color: colour(govnz-link-active);
+    background-color: colour(msd-focus);
+    box-shadow: 0 -2px colour(msd-focus), 0 4px colour(govnz-link-active);
     padding: $xs;
     text-decoration: none;
   }

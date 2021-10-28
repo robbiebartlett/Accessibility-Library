@@ -3,7 +3,12 @@
    ========================================================================== */
 
 /**
- *  Shorthand:
+ * A button is an element that allows users to carry out an action on a page. 
+ * Common use cases include allowing a user to Start an application or Save and 
+ * continue their progress. A button should have a short text snippet that 
+ * describes what it will do.
+ * 
+ * Shorthand:
  *
  *  btn-pv = button-padding-vertical
  *  btn-ph = button-padding-horizontal
@@ -15,16 +20,16 @@
  *
  */
 
- $btn-pv:              $msd-spacing-unit-xs !default;
- $btn-ph:              $msd-spacing-unit !default;
+ $btn-pv:              $xs !default;
+ $btn-ph:              $md !default;
  $btn-transition:      $msd-transition !default;
  $btn-radius:          $msd-radius !default;
  
- $btn-sm-pv:           $msd-spacing-unit-xs !default;
- $btn-sm-ph:           $msd-spacing-unit-sm !default;
+ $btn-sm-pv:           $xs !default;
+ $btn-sm-ph:           $sm !default;
  
- $btn-lge-pv:          $msd-spacing-unit !default;
- $btn-lge-ph:          $msd-spacing-unit-lg !default;
+ $btn-lge-pv:          $null !default;
+ $btn-lge-ph:          $lg !default;
  
  $btn-ghst-bdr-wdth:   .125rem;
  
@@ -56,11 +61,11 @@
    text-align: center;
 
    &:focus:not(:hover) {
-    background-color: color(msd-focus);
+    background-color: colour(msd-focus);
     border-bottom: 4px solid transparent;
-    border-color: color(msd-focus);
-    box-shadow: 0 -2px color(msd-focus),0 4px color(govnz-link-active);
-    color: color(govnz-link-active);  
+    border-color: colour(msd-focus);
+    box-shadow: 0 -2px colour(msd-focus),0 4px colour(govnz-link-active);
+    color: colour(govnz-link-active);  
     margin-bottom: 0.25rem;       
     outline: 3px solid transparent;
     padding-bottom: 0.125rem;
@@ -80,18 +85,18 @@
  //Style variants
  //@include background and border colour
  .msd-btn--primary {
-  @include msd-button(color(msd-brand), color(msd-brand)); 
+  @include msd-button(colour(msd-brand), colour(msd-brand)); 
  
    &,
    &:hover,
    &:active {
      text-decoration: none; /* [4] */
-     color: color(govnz-white);
+     color: colour(govnz-white);
    }
  
    &:hover:not(:focus), 
    &:active:not(:focus) {
-    @include msd-button(color(msd-blue), color(msd-blue)); 
+    @include msd-button(colour(msd-blue), colour(msd-blue)); 
    }   
    
 
@@ -99,33 +104,33 @@
  
  
  .msd-btn--secondary {
-   background-color: color(msd-blue);
-   border-color: color(msd-blue);
+   background-color: colour(msd-blue);
+   border-color: colour(msd-blue);
  
    &,
    &:hover,
    &:active,
    &:focus {
      text-decoration: none;
-     color: color(govnz-white);         
+     color: colour(govnz-white);         
    }
  
    &:hover {
-     background-color: color(govnz-slate);
+     background-color: colour(govnz-slate);
    }
  
  }
  
  
  .msd-btn--tertiary {
-   background-color: color(govnz-white);
-   color: color(msd-blue);
+   background-color: colour(govnz-white);
+   color: colour(msd-blue);
  
    &,
    &:hover,
    &:active {
      text-decoration: none;
-     color: color(msd-brand);
+     color: colour(msd-brand);
    }
  
 
@@ -171,10 +176,10 @@
    }
  
    &.msd-btn--primary {
-     color: color(govnz-link);
+     color: colour(govnz-link);
  
      &:hover {
-       color: color(govnz-link-hover);
+       color: colour(govnz-link-hover);
      }
  
    }
@@ -182,10 +187,10 @@
 
  
    &.msd-btn--tertiary {
-     color: color(govnz-white);
+     color: colour(govnz-white);
  
      &:hover {
-      color: color(govnz-white);
+      color: colour(govnz-white);
      }
  
    }

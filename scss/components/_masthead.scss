@@ -3,10 +3,10 @@
    ======================================================================== */
 
 /**
- * Background-image @mixin is imported, file naming format ends with -sm, -md, 
+ * Background-image @mixin is imported, file naming format ends with -sm, -sm, 
  * -lg include image name and file type, i.e.
  *
- * File name: image-sm.jpg, image-md.jpg, image-lg.jpg
+ * File name: image-sm.jpg, image-sm.jpg, image-lg.jpg
  *
  * .example {
  *   @include background-image("image-name", jpg);
@@ -24,7 +24,7 @@
 //Accessibility banner
 .msd-masthead__accessibility {
   align-items: center;
-  background-color: color(govnz-off-white);
+  background-color: colour(govnz-off-white);
   @include background-image("accessibility", jpg);
   display: flex;
   margin-bottom: $md;
@@ -32,10 +32,10 @@
 
 // Banner content
 .msd-masthead__content {
-  background-color: color(msd-blue);
+  background-color: colour(msd-blue);
   margin: $md auto;
   padding: $sm;
-  color: color(govnz-white);
+  color: colour(govnz-white);
   width: 100%;
 
   @include mq($from: mobile-wide ) {

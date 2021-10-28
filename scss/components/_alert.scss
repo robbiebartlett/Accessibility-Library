@@ -3,8 +3,7 @@
    ========================================================================== */
 
   /**
-   * The alert bar can be used to notify users of significant information:
-   * warning, success and information.
+   * Component to show a warning, success or information at the top of the page.
    *
    */
 
@@ -18,21 +17,21 @@
     }
   
     &.msd-warning {
-      background: color(govnz-error);
-      border-color: color(govnz-error);
-      color: color(govnz-white);
+      background: colour(govnz-error);
+      border-color: colour(govnz-error);
+      color: colour(govnz-white);
     }
 
     &.msd-success {
-      background: color(govnz-success);
-      border-color: color(govnz-success);
-      color: color(govnz-white);
+      background: colour(govnz-success);
+      border-color: colour(govnz-success);
+      color: colour(govnz-white);
     }
   
     &.msd-info {
-      background: color(govnz-info);
-      border-color: color(govnz-info);
-      color: color(govnz-white);
+      background: colour(govnz-info);
+      border-color: colour(govnz-info);
+      color: colour(govnz-white);
     }
   
     p {

@@ -14,7 +14,7 @@
 
 //Import rendered sprites, updated when additional elements added to the
 //source folder
- @import "tools/sprites";
+ @import "core/sprites";
 
 
 //Fill colour based on icon colour value
@@ -25,7 +25,7 @@
 //MSD logo
 .msd-icon__msd-logo {
     @extend .msd--logo;
-    color: color(govnz-off-white);
+    color: colour(govnz-off-white);
     @include font-size(61px);
     max-width: 100%;
 }
@@ -33,7 +33,7 @@
 //New Zealand Government logo
 .msd-icon__nz-govt-logo {
     @extend .nz-govt--logo;
-    fill: color(govnz-off-white);
+    fill: colour(govnz-off-white);
     @include font-size(100px);
     max-width: 100%;
 
@@ -42,7 +42,7 @@
    }
 
     &:hover {
-      fill: color(govnz-white); 
+      fill: colour(govnz-white); 
     }
 
 }
@@ -50,31 +50,31 @@
 
 .msd-icon__creative-commons {
   @extend .icons--creative-commons;
-  fill: color(govnz-off-white);
+  fill: colour(govnz-off-white);
   font-size: 2rem;
   height: 30px;
 
   &:hover {
-    fill: color(govnz-white); 
+    fill: colour(govnz-white); 
  }
 
 }
 
 .msd-icon__creative-commons-attribution {
   @extend .icons--creative-commons-attribution;
-  fill: color(govnz-off-white);
+  fill: colour(govnz-off-white);
   font-size: 2rem;
   height: 30px;
 
   &:hover {
-    fill: color(govnz-white); 
+    fill: colour(govnz-white); 
  }
  
 }
 
 .msd-icon__search {
   @extend .icons--search;
-  color: color(govnz-slate);
+  color: colour(govnz-slate);
   font-size: 1.4rem;
   min-width: 1.2rem;
 
@@ -90,7 +90,7 @@
 .msd-icon__arrow-down {
   @extend .icons--arrow-down;
   bottom: 0;
-  fill: color(govnz-slate);
+  fill: colour(govnz-slate);
   font-size: 1rem;
   margin: auto;
   position: absolute;
@@ -107,37 +107,37 @@
 
 .msd-icon__accessibility {
   @extend .icons--accessibility;
-  color: color(msd-blue);
+  color: colour(msd-blue);
   @include font-size(100px);
 } 
 
 .msd-icon__product {
   @extend .icons--product;
-  color: color(msd-blue);
+  color: colour(msd-blue);
   @include font-size(100px);
 } 
 
 .msd-icon__content {
   @extend .icons--content;
-  color: color(msd-blue);
+  color: colour(msd-blue);
   @include font-size(100px);
 } 
 
 .msd-icon__ux {
   @extend .icons--ux;
-  color: color(msd-blue);
+  color: colour(msd-blue);
   @include font-size(100px);
 } 
 
 .msd-icon__visual {
   @extend .icons--visual;
-  color: color(msd-blue);
+  color: colour(msd-blue);
   @include font-size(100px);
 } 
 
 .msd-icon__development {
   @extend .icons--development;
-  color: color(msd-blue);
+  color: colour(msd-blue);
   @include font-size(100px);
 } 
 

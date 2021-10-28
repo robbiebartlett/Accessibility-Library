@@ -3,9 +3,12 @@
    ========================================================================== */
 
  /**
-  *  Default navigation, current link referenced via 'aria'current' line :203
+  *  Default navigation, current link referenced via 'aria'current' line :221
+  *
+  *  An additional link is added to mobile view to avoid Split navigation:
+  *  https://www.nngroup.com/articles/split-buttons-navigation/
   * 
-  *  Sidebar/secondary navigation line: 390
+  *  Sidebar/secondary navigation line: 470
   *
   */
 
@@ -25,12 +28,13 @@
 }
 
 .msd-navigation__toggle {
-  background-color: color(msd-brand);
-  border: 1px solid color(govnz-white);
+  background-color: colour(msd-brand);
+  border: 1px solid colour(govnz-white);
+  border-radius: 0;
   box-shadow: none;
-  color: color(govnz-white);
+  color: colour(govnz-white);
   cursor: pointer;
-  line-height: 1.25;
+  line-height: 1.4;
   margin: 0;
   outline: none;
   overflow: hidden;
@@ -47,10 +51,10 @@
   &:active:focus:not(:hover),
   &:focus:not(:hover),
   &:hover:not(:focus):focus:not(:hover) {
-    box-shadow: inset 0 0 0 3px color(govnz-link-active);
-    outline: 3px solid color(msd-focus);
+    box-shadow: inset 0 0 0 3px colour(govnz-link-active);
+    outline: 3px solid colour(msd-focus);
     outline-offset: 0;
-    border-color: color(govnz-link-active);
+    border-color: colour(govnz-link-active);
     border-width: 1px;
   }
 
@@ -58,7 +62,7 @@
 
 // Primary navigation
 .msd-navigation {
-  background-color: color(govnz-off-white);
+  background-color: colour(govnz-off-white);
   display: none;
   @include font-size(18px);
   position: relative;
@@ -69,10 +73,8 @@
     display: block;
   }
 
-
-
   @include mq($from: tablet) {
-    background-color: color(msd-brand);
+    background-color: colour(msd-brand);
     display: block;
     @include font-size(16px);
     position: static;
@@ -90,7 +92,7 @@
   margin: 0;
   padding: 0;
   position: relative;
-  border-bottom: 1px solid color(govnz-light-grey);
+  border-bottom: 1px solid colour(govnz-light-grey);
 
   @include mq($from: tablet) {
     border-bottom: none;
@@ -111,9 +113,14 @@
 
 .msd-navigation__list-item {
   border-bottom: none;
-  cursor: pointer;
-  padding: $null 0;  
+  padding: 0;  
   position: relative;
+
+  //hide last bottom-border
+  &:last-of-type .msd-navigation__mobile-toggle:after {
+    display: none;
+  }
+
 
   //expand secondary navigation in mobile
   &.active > .msd-navigation__level-two {
@@ -128,15 +135,39 @@
   @include mq($from: tablet) {
     display: flex;
     padding: 0;  
-    text-align: center;
     margin: 0 $xs;
 
-    &:hover > .msd-navigation-link:after,
+    //underline
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -1px;
+      top: auto;
+      left: 0;
+      height: 8px;
+      background-color: transparent;
+      z-index: z(modal);
+      width: 100%;
+      transition: all 0s ease;
+      transition-delay: .25s;
+    }
+
+    //underline:hover 
+    &:not(:focus):hover:after {
+      background-color: colour(govnz-white);
+    }
+
+    //current page
+    &[aria-current="page"] {
+      box-shadow: inset 0 -7px 0 0 colour(govnz-white);
+    }
+
+    &:not(:focus):hover > .msd-navigation-link:after,
     &.js-focus > .msd-navigation-link:after {
       left: 0;
     }
 
-    &:hover > .msd-navigation__level-two,
+    &:not(:focus):hover > .msd-navigation__level-two,
     &.js-focus > .msd-navigation__level-two {
         left: 0;
         visibility: visible;
@@ -170,8 +201,8 @@
 
 .msd-navigation-link {
   border-bottom: 2px solid transparent;
-  display: inline;
-  color: color(govnz-slate);
+  display: none;
+  color: colour(govnz-slate);
   margin: 0 $md;
   
   &:hover,
@@ -180,60 +211,42 @@
   }
 
   @include mq($from: tablet) {
-      color: color(govnz-white);
-      padding: 0;
-      position: relative;
-      margin: $null 0;
+    color: colour(govnz-white);
+    display: inline;
+    padding: 0;
+    position: relative;
+    margin: $null 0;
+    text-align: center;
 
-      &:active, 
-      &:visited,
-      &:not(:focus):hover {
-        border-bottom: 2px solid transparent;
-        color: color(govnz-white);
-        outline: none;
-        text-decoration: none;
-      }
-
-      &:after {
-        content: "";
-        position: absolute;
-        bottom: -20px;
-        top: auto;
-        left: -9999em;
-        height: 8px;
-        background: color(govnz-white);
-        z-index: z(modal);
-        transition: all 0s ease;
-        transition-delay: 0.25s;
-        width: 100%;
-      }
-    
-  }
-
-  &[aria-current]::after {
-    box-shadow: inset 0 -6px 0 0 color(govnz-white);
-    left: 0;
-    position: absolute;
+    &:active, 
+    &:visited,
+    &:not(:focus):hover {
+      border-bottom: 2px solid transparent;
+      color: colour(govnz-white);
+      outline: none;
+      text-decoration: none;
+    }
   }
 
 }
 
 .msd-navigation__level-two {
   display: none;
-  background-color: color(govnz-white);
-  border-top: 1px solid color(govnz-light-grey);
-  border-bottom: 1px solid color(govnz-light-grey);
+  background-color: colour(govnz-white);
+  border-top: 1px solid colour(govnz-light-grey);
+  border-bottom: 1px solid colour(govnz-light-grey);
   list-style-type: none;
-  margin: $null 0 0;
-  padding: $null 0;
+  margin: 0;
+  padding: 0;
   width: 100%;
 
   @include mq($from: tablet) {
+    border-bottom: 5px solid colour(msd-blue );
     box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.5);
     display: block;
     left: -9999em;
     margin: 0;
-    padding: $sm $xs;
+    padding: $md $xs;
     position: absolute;
     top: 100%;
     transition: all 0s ease;
@@ -248,46 +261,82 @@
     width: 320px;
   }
 
+  .msd-navigation__list-item {
+     margin: 2.0rem $null 2.0rem 3.5rem;
+
+    @include mq($from: tablet) {
+      margin: 0;
+    }
+  }
+
 }
 
-.msd-navigation__toggle-level {
-  background: color(govnz-off-white);
+//Mobile toggle button
+.msd-navigation__mobile-toggle {
+  background: colour(govnz-off-white);
   border: 0;
-  box-shadow: inset 1px 0 0 0 color(govnz-mid-grey), inset 0 1px 0 0 transparent, inset 0 0 1px 0 transparent, inset 0 0 0 1px transparent;
+  border-radius: 0;
   cursor: pointer;
-  height: 2.75rem;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  right: $xs;
-  top: $sm;
-  width: 2.75rem;
+  display: flex;
+  margin: 0 $null;
+  padding: 1.5rem 0;
+  position: relative;
+  width: calc(100% - 2rem);
+
+  .msd-h3 {
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-left: $xl;
+  }
 
   &:after {
-    border-top: 2px solid color(govnz-mid-grey);
-    border-right: 2px solid color(govnz-mid-grey);
+    background-color: #d3d3d3;
+    content: " ";
+    display: block;
+    height: 1px;
+    left: 0;
+    right: 0;
+    position: absolute;
+    bottom: 0;
+  }
+
+  //Hide border when dropdown open
+  &[aria-expanded="true"]::after {
+    display: none;
+  }
+
+
+  &:before {
+    border-top: 3px solid colour(govnz-slate);
+    border-right: 3px solid colour(govnz-slate);
     content: "";
     height: $sm;
     left: $sm;
+    margin-top: -.025rem;
     pointer-events: none;
     position: absolute;
-    top: .5rem;
+    top: 35%;
     transform: rotate(135deg) translateY(-50%);
     width: $sm;
   }
 
-   &[aria-expanded="true"]::after {
+   &[aria-expanded="true"]::before {
     transform: rotate(315deg) translate(-35%,75%);
   }
 
-  &:active:focus:not(:hover),
-  &:active:focus-within:not(:hover), 
-  &:focus:not(:hover),
-  &:focus-within:not(:hover) {
-    box-shadow: inset 0 0 0 4px color(govnz-link-active);
-    color: color(govnz-white);
-    outline: 3px solid color(msd-focus);
-    outline-offset: -2px;
+  &:focus-visible {
+    outline: 0;
+  }
+
+  &:active:focus:not(:hover) .msd-h3,
+  &:active:focus-within:not(:hover) .msd-h3, 
+  &:focus:not(:hover) span,
+  &:focus-within:not(:hover) .msd-h3 {
+    background-color: #fd0;
+    box-shadow: 0 -2px #fd0,0 4px #0b0c0c;
+    color: #0b0c0c;
+    outline: 3px solid transparent;
+    text-decoration: none;
   }
 
   @include mq($from: tablet) {
@@ -296,28 +345,54 @@
 
 }
 
-.msd-navigation__level-two-link {
-  border-bottom: 2px solid transparent;
-  margin: $sm $null;
+//Navigation links
+.msd-navigation__list-link {
+  border-bottom-color: transparent;
+  color: colour(govnz-link);
+  display: flex;
+  margin: $sm;
   position: relative;
-  text-align: left;
+  text-decoration: none;
+  width: 100%;
 
-  &:not(:focus) {
-    border-bottom-color: transparent;
-    color: color(govnz-link);
+  &:focus-within:not(:hover),
+  &:focus {
+    outline: 0;
+  } 
+
+  // Title within span to avoid full-width underline 
+  .msd-navigation__list-title {
+    border-bottom: 2px solid transparent;
+    color: colour(govnz-link);
   }
 
-  @include mq($from: desktop) {
-    display: flex;
-    color: color(govnz-slate);
-    text-align: left;
-    margin: $sm 0;
 
-    &:active, 
     &:not(:focus):hover {
-      color: color(govnz-link-hover);
-  }
+      border-bottom-color: transparent;
+      color: colour(govnz-link-hover);
+  
+       span {
+        border-bottom-color: colour(govnz-link);
+         border-bottom-width: 2px;
+       }
+    }
 
+    &:not(:hover):focus span {
+      background-color: colour(msd-focus);
+      box-shadow: 0 -2px colour(msd-focus), 0 4px colour(govnz-link-active);
+      color: colour(govnz-link-active);
+      outline: 3px solid transparent;
+      text-decoration: none;
+    }
+
+}
+
+//Mobile view only links
+.msd-navigation__mobile-link {
+  display: block;
+
+  @include mq($from: tablet) {
+    display: none;
   }
 
 }
@@ -349,15 +424,16 @@
     width: 1px;
 
     &:focus {
-        background: color(msd-brand);
+        background: colour(msd-brand);
         border: none;
-        box-shadow: inset 0 0 0 4px color(msd-brand);
+        border-radius: 0;
+        box-shadow: inset 0 0 0 4px colour(msd-brand);
         clip: auto;
         height: 14px;
         margin: 0;
         overflow: visible;
         position: absolute;
-        outline: 2px solid color(msd-focus);
+        outline: 2px solid colour(msd-focus);
         padding: 0;
         right: -18px;
         top: 40%;
@@ -366,8 +442,8 @@
 
         &::after {
           content: "";
-          border-right: 2px solid color(govnz-white);
-          border-bottom: 2px solid color(govnz-white);
+          border-right: 2px solid colour(govnz-white);
+          border-bottom: 2px solid colour(govnz-white);
           height: 10px;
           left: 2px;
           position: absolute;
@@ -410,7 +486,7 @@
 .msd-sidenav {
   display: none;
   font-size: $null;
-  line-height: 1.5;
+  line-height: 1.67;
   margin-top: $sm;
   padding-right: $md;
 
@@ -426,8 +502,18 @@
   display: flex;
 
   .msd-link {
-    border-bottom-color: color(govnz-slate);
-    color: color(govnz-slate);
+    border-bottom: none;
+    box-shadow: 0 -2px transparent,0 3px colour(govnz-slate);
+    color: colour(govnz-slate);
+    line-height: 1.67;
+    outline: 2px solid transparent;
+    padding: 0;
+    text-decoration: none;
+
+    &:hover:not(:focus) {
+      border-bottom: none;
+    }
+
   }
   
 }
@@ -438,7 +524,7 @@
   padding: 0;
 
   & [aria-current] {
-    border-left: 4px solid color(govnz-link);
+    border-left: 4px solid colour(govnz-link);
     font-weight: 600;       
     margin-left: -$sm;
     padding: 0 $xs 0 .5rem;
@@ -454,12 +540,12 @@
 .msd-sidenav__link {
   border-bottom-color: transparent;
   font-size: 1.125rem;
-  line-height: 1.65;
   padding-bottom: .125vh;
 }
 
 .msd-sidenav__link:not(:focus):hover, 
 .msd-sidenav__button:hover {
-  color: color(govnz-link);
-  border-bottom-color: color(govnz-link);
+  color: colour(govnz-link);
+  border-bottom-color: colour(govnz-link);
+  border-bottom-width: 2px;
 }
