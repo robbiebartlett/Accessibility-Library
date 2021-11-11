@@ -1,7 +1,7 @@
 // Initialize modules
 /*jshint esversion: 6 */
 
-// Importing specific gulp API functions will let you write them below 
+// Importing specific gulp API functions lets you write them below 
 // as series() instead of gulp.series()
 const { src, dest, watch, series, parallel } = require('gulp');
 const gulpSVGSprite = require('gulp-svg-sprite');
@@ -223,6 +223,7 @@ exports.default = series(
     cacheTask,
     watchTask
 );
+
 
 
 

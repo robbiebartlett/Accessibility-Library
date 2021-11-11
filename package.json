@@ -1,7 +1,7 @@
 {
-  "name": "GULP",
+  "name": "a11y",
   "version": "1.0.0",
-  "description": "Gulp establishment",
+  "description": "a11y (accessibility) guidance",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://bitbucket.ssi.govt.nz/projects/WDT/repos/accessibility.git"
+    "url": "https://bitbucket.ssi.govt.nz/projects/WDT/repos/accessibility"    
   },
   "keywords": [],
   "author": "",

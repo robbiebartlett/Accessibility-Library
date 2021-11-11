@@ -1,12 +1,16 @@
-Accessibility Standards
+MSD Accessibility Standards
 
-This project is an accessibility reference system to meet Web Accessibility standards, WCAG 2.1, usability and design methodologies.
+This is an accessibility reference system to meet Government standards, WCAG 2.1 and Ministry of Social Development methodologies.
 
-An inclusive design approach is undertaken where accessibility is integrated at the earliest phase of the design process to limit updates within testing.
+An inclusive design approach has been undertaken where accessibility is integrated at the earliest phase of the design process to limit updates within testing.
 
-Currently there is guidance for Overview, Product, Content, UX, Visual Design and Development with there appropriate subsidiaries. 
+Currently there is guidance for Product, Content Design, UX, Visual Design and Development with there appropriate subsidiaries. The intention is to provide 
+direction for both our staff internally and our vendors to work towards MSD protocols.
+
+The framework is initially based off the All of Government (AoG) alpha release, references to gov.uk and and digital.govt.nz.
+This will create a minimal transition when AoG reaches production.
 
 
+Files hosted at https://bitbucket.ssi.govt.nz/projects/WDT/repos/accessibility/browse
 
-
-
+Any questions please email A11y_Team@msd.govt.nz
