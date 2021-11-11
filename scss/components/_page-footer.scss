@@ -15,6 +15,10 @@
     margin-bottom: $sp;
     @include font(primary, regular);
 
+    a {
+        font-size: $sm;
+    }
+
      // External icon size
      .msd-footer__link--external::after {
         left: 0;

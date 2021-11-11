@@ -1,0 +1,88 @@
+/* ==========================================================================
+   #Side bar navigation
+   ========================================================================== */
+
+ /**
+  *  A vertical list of links for site navigation typically placed next to 
+  *  the body content.
+  * 
+  *
+  */
+
+  //Sidebar navigation
+.msd-pane__sidenav {
+  position: relative;
+
+  @include mq($from: tablet) {
+    position: sticky;
+    top: 10px;
+  }
+
+}
+
+.msd-sidenav {
+  display: none;
+  font-size: $null;
+  line-height: 1.67;
+  margin-top: $sm;
+  padding-right: $md;
+
+
+  @include mq($from: tablet) {
+    display: flex;
+    flex-direction: column;
+  }
+  
+}
+
+.msd-sidenav__header {
+  display: flex;
+
+  .msd-link {
+    border-bottom: none;
+    box-shadow: 0 -2px transparent,0 3px colour(govnz-slate);
+    color: colour(govnz-slate);
+    line-height: 1.67;
+    outline: 2px solid transparent;
+    padding: 0;
+    text-decoration: none;
+
+    &:hover:not(:focus) {
+      border-bottom: none;
+    }
+
+  }
+  
+}
+
+.msd-sidenav__section {
+  list-style-type: none;
+  margin: 0 0 $md;
+  padding: 0;
+
+  & [aria-current] {
+    border-left: 4px solid colour(govnz-link);
+    font-weight: 600;       
+    margin-left: -$sm;
+    padding: 0 $xs 0 .5rem;
+  }
+
+}
+
+.msd-sidenav__section--item {
+  margin-top: $xs;
+  margin-bottom: $md;
+}
+
+.msd-sidenav__link {
+  border-bottom-color: transparent;
+  font-size: 1.125rem;
+  padding-bottom: .125vh;
+}
+
+.msd-sidenav__link:not(:focus):hover, 
+.msd-sidenav__button:hover {
+  color: colour(govnz-link);
+  border-bottom-color: colour(govnz-link);
+  border-bottom-width: 2px;
+}

@@ -5,7 +5,7 @@
   /**
    * Use accordions to provide a show/hide option for sections of content on 
    * complex pages.
-   *
+   * 
    *
    * Avoid using an accordion for content that is essential to all users. 
    * Accordions hide content from users and prevent it from being found with 
@@ -75,6 +75,7 @@
       cursor: pointer;
       list-style: none;
       margin: $xs 0;
+      outline: none;
       padding: $xs 0;
       position: relative;
 

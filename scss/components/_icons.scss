@@ -108,36 +108,61 @@
 .msd-icon__accessibility {
   @extend .icons--accessibility;
   color: colour(msd-blue);
-  @include font-size(100px);
+  @include font-size(200px);
+
+  @include mq($from: tablet) {
+    @include font-size(100px);
+  }  
+
 } 
 
 .msd-icon__product {
   @extend .icons--product;
   color: colour(msd-blue);
-  @include font-size(100px);
+  @include font-size(200px);
+
+  @include mq($from: tablet) {
+    @include font-size(100px);
+  }  
 } 
 
 .msd-icon__content {
   @extend .icons--content;
   color: colour(msd-blue);
-  @include font-size(100px);
+  @include font-size(200px);
+
+  @include mq($from: tablet) {
+    @include font-size(100px);
+  }  
 } 
 
 .msd-icon__ux {
   @extend .icons--ux;
   color: colour(msd-blue);
-  @include font-size(100px);
+  @include font-size(200px);
+
+  @include mq($from: tablet) {
+    @include font-size(100px);
+  }  
 } 
 
 .msd-icon__visual {
   @extend .icons--visual;
   color: colour(msd-blue);
-  @include font-size(100px);
+  @include font-size(200px);
+
+  @include mq($from: tablet) {
+    @include font-size(100px);
+  }  
 } 
 
 .msd-icon__development {
   @extend .icons--development;
   color: colour(msd-blue);
-  @include font-size(100px);
+  @include font-size(200px);
+
+  @include mq($from: tablet) {
+    @include font-size(100px);
+  }  
 } 
 
