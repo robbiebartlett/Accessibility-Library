@@ -122,8 +122,10 @@
 //Components 
 
 /**
- * Contains specific sections of UI modules such as sliders, loaders,   
- * accordion etc.
+ * Contains specific sections of UI modules such as sliders, loaders, 
+ * accordion etc. This is where most code chunks live, whether built 
+ * manually or through React, Vue etc.
+ *
  */
 
 @import "./components/accordion";
@@ -139,7 +141,8 @@
 @import "./components/filter";
 @import "./components/icons";
 @import "./components/masthead";
-@import "./components/navigation";
+@import "./components/primary-nav";
+@import "./components/side-nav";
 @import "./components/page-footer";
 @import "./components/page-header";
 @import "./components/pagination";
