@@ -1,5 +1,5 @@
 /* ==========================================================================
-   #PHRASING 
+   #Phrasing
    ========================================================================== */
 
 /**
@@ -20,12 +20,7 @@ abbr {
   }
   
 
-  // Codeblocks.
-  code {
-    font-family: monospace;
-    white-space: pre;
-    word-break: break-all;
-  }
+
   
   // Highlighted text.
   //
@@ -60,4 +55,35 @@ abbr {
 }
 
 
-  
+
+
+/**
+ * Keyboard strokes.
+ * Code snippets and code blocks.
+ */
+ kbd,
+ code,
+ samp {
+   background-color: colour(code-view);
+   border-radius: $xs;
+   color:colour(code-class);
+   display: inline-block;
+   @include font(mono, medium);
+   margin: $xs;
+   padding: $xs;
+ }
+
+ code {
+  white-space: break-spaces;
+  word-break: break-all;
+}
+
+ pre {
+   @include font(mono, medium);
+ }
+
+ pre code {
+   display: block;
+   padding: $null;
+   tab-size: 4;
+ }

@@ -3,8 +3,20 @@
   ======================================================================== */
 
 /**
- * Global styles for html, body, paragraph
  * 
+ * Primarily target these: https://w3c.github.io/html/textlevel-semantics.html
+ *
+ * Global styles for:
+ *
+ *  - HTML
+ *  - Body
+ *  - <main> container
+ *  - paragraphs
+ *  - indentation
+ *  - column count
+ *  - first definition 
+ *  - variables (var) and nested indices (sup and sub)
+ *
  */
 
 
@@ -43,7 +55,6 @@
 
 
 
-
   //Body
   body {
     background-color: colour(govnz-white);
@@ -51,19 +62,17 @@
     @include font(primary, medium);
     padding: 0;
   }
+
   
-  // page wrapper
-  .msd-pane {
-    overflow-x: hidden;
-  }
-  
+
+
+
   // <main> container
   .main-container {
     padding-bottom: $null;
     min-height: 35vh;
   }
   
-  // <main> content
   .main-container__content {
     margin-top: $md;
     
@@ -74,6 +83,9 @@
   }
   
   
+
+
+
   //Paragraphs
   
    /**
@@ -112,11 +124,14 @@
   }
   
   
-  // First-line indentation style.
-  //
-  // Wrap paragraps with `indented` class to remove margin and indent first line
-  // of adjacent paragraphs.
-  //
+
+ /**
+  * First-line indentation style.
+  *
+  * Wrap paragraps with `indented` class to remove margin and indent first line
+  * of adjacent paragraphs.
+  *
+  */
   .indented {
   
     p {
@@ -129,7 +144,16 @@
   }
 
 
-// Column count
+
+
+
+ /**
+  * Paragraph columns
+  *
+  * Default styling for creating paragraph columns
+  * mixin: ./tools/columns.scss
+  *
+  */
   .msd-column-count { 
     margin-bottom: $xl;
     @include column-split(1, 0, $null); 
@@ -140,8 +164,69 @@
   
   }
   
-  
-  
+
+
+
+ /**
+  * `s`: represents contents no longer accurate/relevant.
+  * del` & `ins`: editorial markup.
+  */
+	s,
+	del {
+		text-decoration: line-through;
+	}
+
+	ins {
+		text-decoration-line: underline;
+		text-decoration-style: dashed; 
+		text-decoration-skip-ink: auto;
+	}
+
+
+
+
+ /**
+  * Variables, eg. as used in mathematical expressions.
+  *
+  * We also provide semantic support for nested vars, and things like indices.
+  */
+var {
+  font-style: italic;
+  font-family: serif; //mathematical notation to use serif vars per convention.
+  padding: 0 1px;
+
+  sup,
+  sub {
+    @include font(serif, medium);
+    font-style: normal;
+    padding: 0 1px;
+  }
+}
+
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+  sub,
+  sup {
+    margin: $xs 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+
+  sub {
+    bottom: -0.25em;
+  }
+
+  sup {
+    top: -0.5em;
+  }
+
+
+
+
+
+
   
   
   
