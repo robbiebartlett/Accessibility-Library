@@ -22,7 +22,7 @@
   background-size: cover;
 
     @include mq($from: tablet ) {
-      background-image: url('#{$imgPath}/#{$image}-sm.#{$extension}');
+      background-image: url('#{$imgPath}/#{$image}-md.#{$extension}');
     }  
     
     @include mq($from: desktop ) {
